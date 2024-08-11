@@ -1,0 +1,72 @@
+.language-list > * {
+  display: block;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.language-list > *:hover {
+  color: var(--primary-red);
+}
+.fixed-section {
+  background-attachment: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.more_btn.buisness-brands > img{
+    filter: brightness(0%);
+}
+
+.more_btn.buisness-brands:hover > img{
+    filter: brightness(100%);
+}
+
+.more_btn.services > img{
+    filter: brightness(100%);
+}
+
+.more_btn.services:hover > img{
+    filter: brightness(500%);
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
