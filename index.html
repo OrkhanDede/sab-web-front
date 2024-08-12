@@ -33,7 +33,7 @@
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="w-screen overflow-x-hidden">
     <!-- Header -->
@@ -76,23 +76,11 @@
         ></a>
       </div>
       <button
-        class="font-montserrat bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
+        class="font-montserrat hover:text-primary transition-colors bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
         data-translate="language"
-        id="dropdownDefaultButton"
-        data-dropdown-toggle="dropdown"
+        onclick="changeLanguageWithBtn()"
         type="button"
       ></button>
-      <!-- Dropdown menu -->
-      <div
-        id="dropdown"
-        class="z-10 hidden bg-[#F0F0F0] divide-y divide-gray-100 rounded-xl shadow w-24"
-      >
-        <ul
-          data-language-list
-          class="py-2 text-sm language-list text-gray-700"
-          aria-labelledby="dropdownDefaultButton"
-        ></ul>
-      </div>
     </div>
     <!-- End of header -->
     <!-- Banner -->
@@ -145,7 +133,7 @@
           ></h1>
         </div>
         <div
-          class="relative w-full h-screen buisness_direction_section_second_content"
+          class="relative w-full fade-out h-screen buisness_direction_section_second_content"
         >
           <div class="w-full buisness-directions-bg h-full">
             <img
@@ -233,16 +221,16 @@
             <section class="splide" id="splide">
               <div class="splide__track">
                 <ul class="splide__list">
-                  <li class="splide__slide">
+                  <li data-splide-interval="2000" class="splide__slide">
                     <img src="/assets/images/services/labaratory.png" alt="" />
                   </li>
-                  <li class="splide__slide">
+                  <li data-splide-interval="2000" class="splide__slide">
                     <img
                       src="/assets/images/services/fridge-storage.png"
                       alt=""
                     />
                   </li>
-                  <li class="splide__slide">
+                  <li data-splide-interval="2000" class="splide__slide">
                     <img src="/assets/images/services/packaging.png" alt="" />
                   </li>
                 </ul>
@@ -251,6 +239,15 @@
           </div>
         </div>
       </section>
+      <!-- <section class="h-screen section flex flex-col justify-start md:px-[70px] font-montserrat px-[30px] font-montserrat bg-[#F0F0F0]">
+        <div class="grid pt-[150px] md:gird-cols-2 grid-cols-1">
+          <div class="bg-white">
+            <h2 class="md:text-[100px] text-[60px] font-semibold text-primary">1</h2>
+            <h6 class="text-xl font-medium text-primary" data-translate="plate_title"></h6>
+            <p></p>
+          </div>
+        </div>
+      </section> -->
     </div>
     <!-- End of Business and Directions -->
     <!-- Scripts -->
@@ -262,7 +259,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
       integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="/js/home.js"></script>
     <script src="/js/packages/fullpage.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

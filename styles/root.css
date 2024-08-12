@@ -1,6 +1,11 @@
-:root{
-    --primary-red: #EE3239;
-    --swiper-theme-color: #FFF !important;
-    --swiper-pagination-color: var(--primary-red);
-    --swiper-pagination-bullet-inactive-color: #FFFF;
+:root {
+  --primary-red: #ee3239;
+  --swiper-theme-color: #fff !important;
+  --swiper-pagination-color: var(--primary-red);
+  --swiper-pagination-bullet-inactive-color: #ffff;
+}
+
+::selection {
+  background: var(--primary-red);
+  color: #fff;
 }

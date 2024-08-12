@@ -33,6 +33,10 @@
   animation: fadeOut 1s forwards;
 }
 
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
 .more_btn.buisness-brands > img{
     filter: brightness(0%);
 }

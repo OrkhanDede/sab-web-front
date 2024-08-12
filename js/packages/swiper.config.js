@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: ".swiper-pagination",
     },
+    autoplay: {
+      delay: 2000,
+    },
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -40,8 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var splide = new Splide(".splide", {
-    type: "slide",
+    type: "loop",
     gap: "2rem",
+    autoplay: true,     
+    pauseOnHover: false, 
+    pauseOnFocus: false, 
+    resetProgress: false,     
     padding: "5rem",
     easing: "ease",
     pagination: true,
@@ -75,20 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     customArrows.appendChild(prevArrow);
     customArrows.appendChild(nextArrow);
-
-    let splideList = document.querySelector(".splide__list");
-
-    // servicesData.map((serviceData) => {
-    //   const element = document.createElement("li");
-    //   element.classList.add("splide__slide");
-    //   const img = document.createElement("img");
-    //   img.src = serviceData.image;
-    //   element.appendChild(img);
-    //   splideList.appendChild(element);
-    //   //   <li class="splide__slide">
-    //   //   <img src="/assets/images/services/labaratory.png" alt="" />
-    //   // </li>
-    // });
   });
 
   splide.mount();

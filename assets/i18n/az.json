@@ -1,5 +1,5 @@
 {
-  "language": "az",
+  "language": "en",
   "about_us_title": "Haqqımızda",
   "buisness_brands_title": "Biznes və brendlər",
   "buisness_directions_title": "Biznes istiqamətləri",
@@ -10,5 +10,6 @@
   "meat_products_title": "Ət məhsulları",
   "diary_products_title": "Gündəlik məhsullar",
   "more_btn": "Ətraflı",
-  "services_title": "Xidmətlər"
+  "services_title": "Xidmətlər",
+  "plate_title": "yer"
 }

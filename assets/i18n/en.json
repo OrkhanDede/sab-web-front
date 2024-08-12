@@ -1,5 +1,5 @@
 {
-  "language": "en",
+  "language": "az",
   "about_us_title": "About us",
   "buisness_brands_title": "Buisness and brands",
   "buisness_directions_title": "Buisness directions",
@@ -10,5 +10,6 @@
   "meat_products_title": "Meat products",
   "diary_products_title": "Diary products",
   "more_btn": "More",
-  "services_title": "Services"
+  "services_title": "Services",
+  "plate_title": "place"
 }
