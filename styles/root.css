@@ -9,3 +9,29 @@
   background: var(--primary-red);
   color: #fff;
 }
+
+@font-face {
+  font-family: "Myanmar Text Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myanmar Text Regular"), url("/assets/fonts/mmrtext.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myanmar Text Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Myanmar Text Bold"), url("/assets/fonts/mmrtextb.woff") format("woff");
+}
+
+.font-myanmar{
+  font-family: "Myanmar Text Regular";
+}
+
+.font-myanmar-bold{
+  font-family: "Myanmar Text Bold";
+}
+.fp-overflow{
+  overflow-y: hidden !important;
+  height: 100%;
+}

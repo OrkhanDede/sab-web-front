@@ -10,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (section === 1) {
         const firstContent = document.querySelector(".buisness_direction_section_first_content");
         const secondContent = document.querySelector(".buisness_direction_section_second_content");
-
         firstContent.classList.add("fade-out");
-
         secondContent.classList.remove("fade-in");
         secondContent.classList.add("fade-in");
       }
@@ -22,12 +20,31 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         const firstContent = document.querySelector(".buisness_direction_section_first_content");
         const secondContent = document.querySelector(".buisness_direction_section_second_content");
-
         firstContent.classList.remove("fade-out");
         firstContent.classList.add("fade-in");
-
         secondContent.classList.remove("fade-in");
         secondContent.classList.add("fade-out");
+      }
+      // Distributing
+      if (section === 4) {
+        const firstContent = document.querySelector(".distributing_first_section");
+        const secondContent = document.querySelector(".distributing_second_section");
+        firstContent.classList.add("slide-down-animation");
+        firstContent.classList.add("hidden");
+        secondContent.classList.remove("slide-up-animation");
+        secondContent.classList.add("slide-up-animation");
+      }
+      if ((section === 3 && direction == 'up') 
+        // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 23 cü sətri kommentə al
+        // || (section === 2 && direction == 'down')
+      ) {
+        const firstContent = document.querySelector(".distributing_first_section");
+        const secondContent = document.querySelector(".distributing_second_section");
+        firstContent.classList.remove("slide-down-animation");
+        firstContent.classList.remove("hidden");
+        firstContent.classList.add("slide-up-animation");
+        secondContent.classList.remove("slide-up-animation");
+        secondContent.classList.add("slide-down-animation");
       }
     },
   });
