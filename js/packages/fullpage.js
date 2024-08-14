@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     afterLoad: function (origin, destination, direction) {
       const section = destination.index;
-
+      
       // Buisness and direcctions
       if (section === 1) {
         const firstContent = document.querySelector(".buisness_direction_section_first_content");
@@ -29,23 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (section === 4) {
         const firstContent = document.querySelector(".distributing_first_section");
         const secondContent = document.querySelector(".distributing_second_section");
-        firstContent.classList.add("slide-down-animation");
-        firstContent.classList.add("hidden");
-        secondContent.classList.remove("slide-up-animation");
-        secondContent.classList.add("slide-up-animation");
+        firstContent.classList.add("fade-out");
+        secondContent.classList.remove("fade-in");
+        secondContent.classList.add("fade-in");
       }
-      if ((section === 3 && direction == 'up') 
-        // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 23 cü sətri kommentə al
-        // || (section === 2 && direction == 'down')
-      ) {
-        const firstContent = document.querySelector(".distributing_first_section");
-        const secondContent = document.querySelector(".distributing_second_section");
-        firstContent.classList.remove("slide-down-animation");
-        firstContent.classList.remove("hidden");
-        firstContent.classList.add("slide-up-animation");
-        secondContent.classList.remove("slide-up-animation");
-        secondContent.classList.add("slide-down-animation");
-      }
+      // if ((section === 3 && direction == 'up') 
+      //   // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 38 ci sətri kommentə al
+      //   // || (section === 2 && direction == 'down')
+      // ) {
+      //   const firstContent = document.querySelector(".distributing_first_section");
+      //   const secondContent = document.querySelector(".distributing_second_section");
+      //   firstContent.classList.remove("fade-out");
+      //   firstContent.classList.add("fade-in");
+      //   secondContent.classList.remove("fade-in");
+      //   secondContent.classList.add("fade-out");
+      // }
     },
   });
 });

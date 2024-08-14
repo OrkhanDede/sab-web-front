@@ -33,5 +33,6 @@
 }
 .fp-overflow{
   overflow-y: hidden !important;
+  overflow-x: hidden !important;
   height: 100%;
 }

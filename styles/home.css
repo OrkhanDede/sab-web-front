@@ -80,15 +80,21 @@
   filter: brightness(1000%);
 }
 .slide-up-animation{
-  transform: translateY(-20px);
+  /* transform: translateY(-20px); */
   animation: fadeIn 1s forwards;
 }
 
 .slide-down-animation{
-  transform: translateY(0);
+  /* transform: translateY(0); */
   animation: fadeOut 1s forwards;
 }
 
+.partner_section{
+  background-image: url(/assets/images/@core/partner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F0F0F0;
+}
 
 @keyframes fadeOut {
   from {
@@ -106,4 +112,18 @@
   to {
     opacity: 1;
   }
+}
+
+.partners_list::-webkit-scrollbar {
+  width: 0;
+}
+.splide-home-partners {
+  transition: transform 0.5s ease-in-out;
+}
+
+.partner_section_title{
+  transition: opacity 0.48s ease-in;
+}
+.splide-home-partners:hover ~ .partner_section_title {
+  opacity: 0;
 }
