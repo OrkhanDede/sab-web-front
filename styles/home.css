@@ -53,8 +53,16 @@
     filter: brightness(500%);
 }
 
-.fade-in {
+.fade-in-distributing {
   animation: fadeIn 1s forwards;
+  z-index: 2;
+  position: relative;
+}
+
+.fade-out-distributing {
+  animation: fadeOut 1s forwards;
+  z-index: 1;
+  position: absolute;
 }
 
 .first-place-item .first-place-item-img{

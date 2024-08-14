@@ -29,21 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
       if (section === 4) {
         const firstContent = document.querySelector(".distributing_first_section");
         const secondContent = document.querySelector(".distributing_second_section");
-        firstContent.classList.add("fade-out");
-        secondContent.classList.remove("fade-in");
-        secondContent.classList.add("fade-in");
+        
+        firstContent.classList.add("fade-out-distributing");
+        setTimeout(() => {
+          secondContent.classList.add("fade-in-distributing");
+          secondContent.classList.remove("fade-out-distributing");
+        }, 500); // Delay to allow first section to fade out before second section fades in
+      } else if (
+        (section === 3 && direction == 'up') ||
+        (section === 2 && direction == 'down')
+      ) {
+        const firstContent = document.querySelector(".distributing_first_section");
+        const secondContent = document.querySelector(".distributing_second_section");
+        
+        secondContent.classList.remove("fade-in-distributing");
+        secondContent.classList.add("fade-out-distributing");
+        setTimeout(() => {
+          firstContent.classList.remove("fade-out-distributing");
+          firstContent.classList.add("fade-in-distributing");
+        }, 500);
       }
-      // if ((section === 3 && direction == 'up') 
-      //   // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 38 ci sətri kommentə al
-      //   // || (section === 2 && direction == 'down')
-      // ) {
-      //   const firstContent = document.querySelector(".distributing_first_section");
-      //   const secondContent = document.querySelector(".distributing_second_section");
-      //   firstContent.classList.remove("fade-out");
-      //   firstContent.classList.add("fade-in");
-      //   secondContent.classList.remove("fade-in");
-      //   secondContent.classList.add("fade-out");
-      // }
     },
   });
 });
