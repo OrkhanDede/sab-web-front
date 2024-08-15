@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // AOS.init({
+  //   once: true
+  // });
+
   new fullpage("#fullpage", {
     autoScrolling: true,
     scrollHorizontally: true,
@@ -14,6 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.remove("fade-in");
         secondContent.classList.add("fade-in");
       }
+      if((section === 2 && direction == 'down') 
+        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+        // || (section === 2 && direction == 'up')
+      ){
+          const animatedText = document.querySelectorAll('[data-aos]');
+          animatedText.forEach((element) => {
+            element.style.opacity = 1; 
+            element.classList.add("fade-in-up");
+          });
+      }
+      // her defe animasiya olmasini istiyirsense commenti ac
+      // else{
+      //   const animatedText = document.querySelectorAll('[data-aos]');
+      //   animatedText.forEach((element) => {
+      //     element.style.opacity = 0; 
+      //     element.classList.remove("fade-in-up");
+      //   });
+      // }
       if ((section === 0 && direction == 'up') 
         // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 23 cü sətri kommentə al
         // || (section === 2 && direction == 'down')
@@ -49,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
           firstContent.classList.add("fade-in-distributing");
         }, 500);
       }
+      
     },
   });
 });

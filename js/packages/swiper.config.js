@@ -42,6 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
     showOverlay("left");
     setTimeout(hideOverlay, 300);
   });
-
-  AOS.init();
 });

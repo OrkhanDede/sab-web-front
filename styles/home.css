@@ -59,6 +59,15 @@
   position: relative;
 }
 
+.world-map{
+  transform: scale(0.8);
+  transition: 1.5s ease-in-out;
+}
+
+.fade-in-distributing.world-map{
+  transform: scale(1);
+}
+
 .fade-out-distributing {
   animation: fadeOut 1s forwards;
   z-index: 1;
@@ -104,6 +113,21 @@
   background-color: #F0F0F0;
 }
 
+.partners_list::-webkit-scrollbar {
+  width: 0;
+}
+.splide-home-partners {
+  transition: transform 0.5s ease-in-out;
+}
+
+.partner_section_title{
+  transition: opacity 0.48s ease-in;
+}
+.splide-home-partners:hover ~ .partner_section_title {
+  opacity: 0;
+}
+
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -122,16 +146,18 @@
   }
 }
 
-.partners_list::-webkit-scrollbar {
-  width: 0;
-}
-.splide-home-partners {
-  transition: transform 0.5s ease-in-out;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.partner_section_title{
-  transition: opacity 0.48s ease-in;
-}
-.splide-home-partners:hover ~ .partner_section_title {
+.fade-in-up {
   opacity: 0;
+  animation: fadeInUp 1s ease forwards; 
 }
