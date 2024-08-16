@@ -1,629 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sab.az</title>
-    <!-- Scripts -->
-    <script src="/js/translate.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/packages/tailwind.config.js"></script>
-    <!-- Links -->
-    <link rel="stylesheet" href="/styles/root.css" />
-    <link rel="stylesheet" href="/styles/app.css" />
-    <link rel="stylesheet" href="/styles/home.css" />
-    <link rel="stylesheet" href="/styles/packages/swiper.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.css"
-      integrity="sha512-CWyM/Ni2h1mWRsWWmOswyfpQFadUhIaq89gkx6pfykOtbEhMvXutCrvbNR7fWQAh4QNss2pVndPw6InDfKhdXw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Links CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-      rel="stylesheet"
-    />
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
-  </head>
 
-  <body class="w-screen overflow-x-hidden">
-    <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sab.az</title>
+  <!-- Scripts -->
+  <script src="/js/translate.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/packages/tailwind.config.js"></script>
+  <!-- Links -->
+  <link rel="stylesheet" href="/styles/root.css" />
+  <link rel="stylesheet" href="/styles/app.css" />
+  <link rel="stylesheet" href="/styles/home.css" />
+  <link rel="stylesheet" href="/styles/packages/swiper.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.css"
+    integrity="sha512-CWyM/Ni2h1mWRsWWmOswyfpQFadUhIaq89gkx6pfykOtbEhMvXutCrvbNR7fWQAh4QNss2pVndPw6InDfKhdXw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Links CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+</head>
+
+<body class="w-screen overflow-x-hidden">
+  <!-- Header -->
+  <div class="flex z-30 fixed w-full items-center top-[48px] px-[70px] justify-between">
+    <a href="/index.html" class="w-[114px] h-[59px] transition-all logo_anchor">
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
     <div
-      class="flex z-30 fixed w-full items-center top-[48px] px-[70px] justify-between"
-    >
-      <a
-        href="/index.html"
-        class="w-[114px] h-[59px] transition-all logo_anchor"
-      >
-        <img src="/assets/logos/logo.svg" class="w-full" alt="logo" />
-      </a>
-      <div
-        class="font-montserrat bg-[#F0F0F0] rounded-full border border-gray-300 flex items-center whitespace-nowrap text-[17px] font-[600]"
-      >
-        <a
-          href=""
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="about_us_title"
-        ></a>
-        <a
-          href=""
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="buisness_brands_title"
-        ></a>
-        <a
-          href=""
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="our_activities_title"
-        ></a>
-        <a
-          href=""
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="contact_us_title"
-        ></a>
-        <a
-          href=""
-          class="py-[18px] px-[35px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
-          data-translate="career_title"
-        ></a>
+      class="font-montserrat bg-[#F0F0F0] rounded-full border border-gray-300 flex items-center whitespace-nowrap text-[17px] font-[600]">
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="about_us_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="buisness_brands_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="our_activities_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="contact_us_title"></a>
+      <a href="" class="py-[18px] px-[35px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
+        data-translate="career_title"></a>
+    </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
+      data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+  </div>
+  <!-- End of header -->
+  <!-- Banner -->
+  <div id="fullpage">
+    <section class="w-full section h-screen overflow-x-hidden">
+      <div class="swiper-container">
+        <div class="swiper-wrapper w-full">
+          <div class="swiper-slide w-full h-screen">
+            <img class="w-full h-full object-cover" src="/assets/images/banner/1.png" alt="" />
+          </div>
+          <div class="swiper-slide w-full h-screen">
+            <img class="w-full h-full object-cover" src="/assets/images/banner/2.png" alt="" />
+          </div>
+          <div class="swiper-slide w-full h-screen">
+            <img class="w-full h-full object-cover" src="/assets/images/banner/3.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next select-none"></div>
+        <div class="swiper-button-prev select-none"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
-        data-translate="language"
-        onclick="changeLanguageWithBtn()"
-        type="button"
-      ></button>
-    </div>
-    <!-- End of header -->
-    <!-- Banner -->
-    <div id="fullpage">
-      <section class="w-full section h-screen overflow-x-hidden">
-        <div class="swiper-container">
-          <div class="swiper-wrapper w-full">
-            <div class="swiper-slide w-full h-screen">
-              <img
-                class="w-full h-full object-cover"
-                src="/assets/images/banner/1.png"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide w-full h-screen">
-              <img
-                class="w-full h-full object-cover"
-                src="/assets/images/banner/2.png"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide w-full h-screen">
-              <img
-                class="w-full h-full object-cover"
-                src="/assets/images/banner/3.png"
-                alt=""
-              />
+      <div>
+        <h1
+          class="absolute top-1/4 z-20 bg-[#ED1C24] py-6 uppercase left-1/2 max-w-[700px] leading-[1.1em] rounded-[30px] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold text-[60px] font-montserrat"
+          data-translate="banner_text_first"></h1>
+        <h1
+          class="absolute top-1/4 z-20 md:p-10 left-1/2 max-w-[700px] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-48 text-white font-bold text-[60px] font-montserrat"
+          data-translate="banner_text_second"></h1>
+      </div>
+    </section>
+    <!-- End of banner -->
+    <!-- Business and Directions -->
+    <section class="block section bg-white relative buisness_direction_section h-screen bg-primary">
+      <div class="buisness_direction_section_first_content absolute top-0 left-0 w-full bg-primary h-screen">
+        <h1 class="text-[70px] font-bold text-white text-center uppercase font-montserrat pt-10"
+          data-translate="buisness_directions_title"></h1>
+      </div>
+      <div class="relative w-full fade-out h-screen buisness_direction_section_second_content">
+        <div class="w-full buisness-directions-bg h-full">
+          <img class="w-full h-full object-cover" src="/assets/images/buisness-directions/background.png"
+            alt="daily products" />
+        </div>
+        <div class="absolute font-montserrat w-full flex bottom-10 px-10">
+          <div class="w-1/2 flex items-center gap-8">
+            <h4 class="text-[50px] font-bold text-black" data-translate="meat_products_title"></h4>
+            <a href="/pages/buisness-brands.html"
+              class="border rounded-full w-28 more_btn buisness-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <span data-translate="more_btn"></span>
+              <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right" />
+            </a>
+          </div>
+          <div class="w-1/2 flex items-center gap-8">
+            <h4 class="text-[50px] font-bold text-black" data-translate="diary_products_title"></h4>
+            <a href="/pages/buisness-brands.html"
+              class="border rounded-full w-28 more_btn buisness-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <span data-translate="more_btn"></span>
+              <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- For services -->
+    <section data-aos="fade-up"
+      class="h-screen section flex flex-col justify-start md:px-[70px] px-[30px] font-montserrat bg-white">
+      <div class="pt-[200px] h-full pb-5 flex gap-3">
+        <div class="flex w-1/2 flex-col justify-between">
+          <div class="flex gap-8">
+            <h4 class="text-primary uppercase text-[30px] font-bold" data-translate="services_title"></h4>
+            <div class="flex flex-col gap-3">
+              <h3 id="slide-title" class="font-bold text-5xl"></h3>
+              <p id="slide-description" class="font-medium leading-6 text-[#494949] text-xl"></p>
             </div>
           </div>
-          <div class="swiper-button-next select-none"></div>
-          <div class="swiper-button-prev select-none"></div>
-          <div class="swiper-pagination"></div>
+          <div class="flex justify-between">
+            <div id="splide_custom_pagination"></div>
+            <div id="custom_arrows_services" class="flex gap-2"></div>
+            <a href="/pages/buisness-brands.html"
+              class="border rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary hover:bg-primary hover:border-primary hover:text-white transition-colors border-primary flex gap-2 justify-center items-center">
+              <span data-translate="more_btn"></span>
+              <img class="w-4" src="/assets/icons/arrow-right-red.svg" alt="arrow-right" />
+            </a>
+          </div>
         </div>
-        <div>
-          <h1
-            class="absolute top-1/4 z-20 bg-[#ED1C24] py-6 uppercase left-1/2 max-w-[700px] leading-[1.1em] rounded-[30px] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold text-[60px] font-montserrat"
-            data-translate="banner_text_first"
-          ></h1>
-          <h1
-            class="absolute top-1/4 z-20 md:p-10 left-1/2 max-w-[700px] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-48 text-white font-bold text-[60px] font-montserrat"
-            data-translate="banner_text_second"
-          ></h1>
+        <div class="w-1/2 h-full">
+          <section class="splide h-full" id="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img src="/assets/images/services/labaratory.png" alt="Laboratory" />
+                </li>
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img src="/assets/images/services/fridge-storage.png" alt="Fridge Storage" />
+                </li>
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img src="/assets/images/services/packaging.png" alt="Packaging" />
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
-      </section>
-      <!-- End of banner -->
-      <!-- Business and Directions -->
-      <section
-        class="block section bg-white relative buisness_direction_section h-screen bg-primary"
-      >
+      </div>
+    </section>
+    <!-- First place -->
+    <section class="h-screen section flex flex-col justify-start md:px-[70px] px-[30px] font-montserrat bg-[#F0F0F0]">
+      <div class="grid pt-[150px] xl:grid-cols-2 grid-cols-1 h-1/2 gap-10">
         <div
-          class="buisness_direction_section_first_content absolute top-0 left-0 w-full bg-primary h-screen"
-        >
-          <h1
-            class="text-[70px] font-bold text-white text-center uppercase font-montserrat pt-10"
-            data-translate="buisness_directions_title"
-          ></h1>
-        </div>
-        <div
-          class="relative w-full fade-out h-screen buisness_direction_section_second_content"
-        >
-          <div class="w-full buisness-directions-bg h-full">
-            <img
-              class="w-full h-full object-cover"
-              src="/assets/images/buisness-directions/background.png"
-              alt="daily products"
-            />
-          </div>
-          <div class="absolute font-montserrat w-full flex bottom-10 px-10">
-            <div class="w-1/2 flex items-center gap-8">
-              <h4
-                class="text-[50px] font-bold text-black"
-                data-translate="meat_products_title"
-              ></h4>
-              <a
-                href="/pages/buisness-brands.html"
-                class="border rounded-full w-28 more_btn buisness-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
-              >
-                <span data-translate="more_btn"></span>
-                <img
-                  class="w-4"
-                  src="/assets/icons/arrow-right.svg"
-                  alt="arrow-right"
-                />
-              </a>
-            </div>
-            <div class="w-1/2 flex items-center gap-8">
-              <h4
-                class="text-[50px] font-bold text-black"
-                data-translate="diary_products_title"
-              ></h4>
-              <a
-                href="/pages/buisness-brands.html"
-                class="border rounded-full w-28 more_btn buisness-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
-              >
-                <span data-translate="more_btn"></span>
-                <img
-                  class="w-4"
-                  src="/assets/icons/arrow-right.svg"
-                  alt="arrow-right"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- For services -->
-      <section
-        class="h-screen section flex flex-col justify-start md:px-[70px] px-[30px] font-montserrat bg-white"
-      >
-        <div class="pt-[200px] h-full pb-5 flex gap-3">
-          <div class="flex w-1/2 flex-col justify-between">
-            <div class="flex gap-8">
-              <h4
-                data-aos="fade-up"
-                class="text-primary uppercase text-[30px] font-bold"
-                data-translate="services_title"
-              ></h4>
-              <div class="flex flex-col gap-3">
-                <h3
-                  id="slide-title"
-                  data-aos="fade-up"
-                  class="font-bold text-5xl"
-                ></h3>
-                <p
-                  id="slide-description"
-                  data-aos="fade-up"
-                  class="font-medium leading-6 text-[#494949] text-xl"
-                ></p>
-              </div>
-            </div>
-            <div class="flex justify-between">
-              <div id="splide_custom_pagination"></div>
-              <div id="custom_arrows_services" class="flex gap-2"></div>
-              <a
-                href="/pages/buisness-brands.html"
-                class="border rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary hover:bg-primary hover:border-primary hover:text-white transition-colors border-primary flex gap-2 justify-center items-center"
-              >
-                <span data-translate="more_btn"></span>
-                <img
-                  class="w-4"
-                  src="/assets/icons/arrow-right-red.svg"
-                  alt="arrow-right"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="w-1/2">
-            <section class="splide" data-aos="fade-up" id="splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li data-splide-interval="2000" class="splide__slide h-full">
-                    <img
-                      src="/assets/images/services/labaratory.png"
-                      alt="Laboratory"
-                    />
-                  </li>
-                  <li data-splide-interval="2000" class="splide__slide h-full">
-                    <img
-                      src="/assets/images/services/fridge-storage.png"
-                      alt="Fridge Storage"
-                    />
-                  </li>
-                  <li data-splide-interval="2000" class="splide__slide h-full">
-                    <img
-                      src="/assets/images/services/packaging.png"
-                      alt="Packaging"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-      <!-- First place -->
-      <section
-        class="h-screen section flex flex-col justify-start md:px-[70px] px-[30px] font-montserrat bg-[#F0F0F0]"
-      >
-        <div class="grid pt-[150px] xl:grid-cols-2 grid-cols-1 h-1/2 gap-10">
-          <div
-            class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-24 h-full items-center rounded-[30px]"
-          >
-            <h2
-              class="md:text-[250px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary"
-            >
-              1
-            </h2>
-            <div>
-              <h6
-                class="text-4xl uppercase font-[700] text-primary"
-                data-translate="plate_title"
-              ></h6>
-              <p
-                data-translate="plate_text"
-                class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"
-              ></p>
-            </div>
-            <img
-              class="object-cover first-place-item-img transition-transform"
-              src="/assets/images/first_place/sausage.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-24 h-full items-center rounded-[30px]"
-          >
-            <h2
-              class="md:text-[250px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary"
-            >
-              1
-            </h2>
-            <div>
-              <h6
-                class="text-4xl uppercase font-[700] text-primary"
-                data-translate="plate_title"
-              ></h6>
-              <p
-                data-translate="plate_text_2"
-                class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"
-              ></p>
-            </div>
-            <img
-              class="object-cover first-place-item-img transition-transform"
-              src="/assets/images/first_place/halal.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div
-          class="bg-white border border-gray-300 mt-[55px] font-montserrat flex xl:flex-row flex-col w-full rounded-[30px]"
-        >
-          <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-l-[30px] items-center w-full py-7 border-r border-gray-300"
-          >
-            <img
-              class="w-[70px] icon"
-              src="/assets/images/first_place/product_range.svg"
-              alt="icon"
-            />
-            <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
-              100+
-            </h3>
-            <p
-              class="text-3xl font-bold text-black"
-              data-translate="product_range"
-            ></p>
-          </div>
-          <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full py-7 border-r border-gray-300"
-          >
-            <img
-              class="w-[70px] icon"
-              src="/assets/images/first_place/market_share.svg"
-              alt="icon"
-            />
-            <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
-              15%
-            </h3>
-            <p
-              class="text-3xl font-bold text-black"
-              data-translate="market_share"
-            ></p>
-          </div>
-          <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full py-7 border-r border-gray-300"
-          >
-            <img
-              class="w-[70px] icon"
-              src="/assets/images/first_place/parnetrs.svg"
-              alt="icon"
-            />
-            <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
-              200+
-            </h3>
-            <p
-              class="text-3xl font-bold text-black"
-              data-translate="partners"
-            ></p>
-          </div>
-          <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-r-[30px] items-center w-full py-7"
-          >
-            <img
-              class="w-[70px] icon"
-              src="/assets/images/first_place/export_countries.svg"
-              alt="icon"
-            />
-            <h3 class="md:text-[85px] text-[40px] font-bold text-primary">3</h3>
-            <p
-              class="text-3xl font-bold text-black"
-              data-translate="export_countries"
-            ></p>
-          </div>
-        </div>
-      </section>
-      <!-- Distributing -->
-      <section
-        class="section bg-white relative buisness_direction_section h-screen"
-      >
-        <div
-          class="distributing_first_section absolute top-0 left-0 w-full bg-primary h-screen"
-        >
-          <h1
-            data-translate="distributing_products_title"
-            class="text-[70px] font-bold text-white text-center uppercase"
-          ></h1>
-          <div class="pt-[100px] z-1 w-full flex justify-center">
-            <img
-              class="w-3/4 z-1"
-              src="/assets/images/distributing/first.png"
-              alt="img"
-            />
-          </div>
-        </div>
-        <div class="flex justify-center w-full">
-          <div
-            class="relative world-map w-3/4 pt-[180px] h-screen distributing_second_section"
-          >
-            <div class="absolute w-1/2 z-3 left-[40%] -translate-x-[40%]">
-              <img
-                class="z-3 w-full h-full"
-                src="/assets/images/distributing/countries_name.png"
-                alt=""
-              />
-            </div>
-            <img
-              class="z-2 w-full"
-              src="/assets/images/distributing/world_red.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
-      <!-- Partners -->
-      <section
-        class="section partner_section md:px-10 px-5 bg-opacity-10 h-screen font-montserrat"
-      >
-        <div class="pt-[130px]">
+          class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-24 h-full items-center rounded-[30px]">
           <h2
-            class="text-primary uppercase text-[45px] w-2/3 font-bold"
-            data-translate="trusted_partner_title"
-          ></h2>
-          <div
-            class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4"
-          >
-            <section
-              class="splide-home-partners w-full cursor-pointer relative translate-x-1/3 hover:-translate-x-[150px]"
-              id="splide-home-partners"
-            >
-              <div class="splide__track">
-                <ul
-                  class="splide__list flex gap-5 partners_list overflow-x-scroll"
-                >
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/araz.png"
-                      alt="araz"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/rahat.png"
-                      alt="rahat"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/bravo.jpg"
-                      alt="bravo"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/bazarstore.jpeg"
-                      alt="bazarstore"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/araz.png"
-                      alt="araz"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/bravo.jpg"
-                      alt="bravo"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <h4
-              class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold"
-            >
-              Retail
-            </h4>
+            class="md:text-[250px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary">
+            1
+          </h2>
+          <div>
+            <h6 class="text-4xl uppercase font-[700] text-primary" data-translate="plate_title"></h6>
+            <p data-translate="plate_text"
+              class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"></p>
           </div>
-          <div
-            class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4"
-          >
-            <section
-              class="splide-home-partners w-full cursor-pointer relative translate-x-1/3 hover:-translate-x-[150px]"
-              id="splide-home-partners"
-            >
-              <div class="splide__track">
-                <ul
-                  class="splide__list flex gap-5 partners_list overflow-x-scroll"
-                >
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/subway.png"
-                      alt="subway"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/popeyes.png"
-                      alt="popeyes"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/arbys.png"
-                      alt="arbys"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/subway.png"
-                      alt="subway"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/popeyes.png"
-                      alt="popeyes"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/arbys.png"
-                      alt="arbys"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <h4
-              class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold"
-            >
-              Horeca
-            </h4>
-          </div>
-          <div
-            class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4"
-          >
-            <section
-              class="splide-home-partners w-full cursor-pointer relative translate-x-1/3"
-              id="splide-home-partners"
-            >
-              <div class="splide__track">
-                <ul
-                  class="splide__list flex gap-5 partners_list overflow-x-scroll"
-                >
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/mudafie_nazirliyi.png"
-                      alt="mm"
-                    />
-                  </li>
-                  <li
-                    class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
-                  >
-                    <img
-                      class="w-full h-full object-contain"
-                      src="/assets/images/partners/edliyye_nazirliyi.png"
-                      alt="edliyye_nazirliyi"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <h4 class="text-[40px] w-[200px] text-[#929292] font-bold">B2G</h4>
-          </div>
+          <img class="object-cover first-place-item-img transition-transform"
+            src="/assets/images/first_place/sausage.png" alt="" />
         </div>
-      </section>
-    </div>
-    <!-- End of Business and Directions -->
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/js/packages/swiper.config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
-      integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/js/home.js"></script>
-    <script src="/js/packages/fullpage.js"></script>
-    <script src="/js/packages/splide.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-  </body>
+        <div
+          class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-24 h-full items-center rounded-[30px]">
+          <h2
+            class="md:text-[250px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary">
+            1
+          </h2>
+          <div>
+            <h6 class="text-4xl uppercase font-[700] text-primary" data-translate="plate_title"></h6>
+            <p data-translate="plate_text_2"
+              class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"></p>
+          </div>
+          <img class="object-cover first-place-item-img transition-transform" src="/assets/images/first_place/halal.png"
+            alt="" />
+        </div>
+      </div>
+      <div
+        class="bg-white border border-gray-300 mt-[55px] font-montserrat flex xl:flex-row flex-col w-full rounded-[30px]">
+        <div
+          class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-l-[30px] items-center w-full py-7 border-r border-gray-300">
+          <img class="w-[70px] icon" src="/assets/images/first_place/product_range.svg" alt="icon" />
+          <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
+            100+
+          </h3>
+          <p class="text-3xl font-bold text-black" data-translate="product_range"></p>
+        </div>
+        <div
+          class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full py-7 border-r border-gray-300">
+          <img class="w-[70px] icon" src="/assets/images/first_place/market_share.svg" alt="icon" />
+          <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
+            15%
+          </h3>
+          <p class="text-3xl font-bold text-black" data-translate="market_share"></p>
+        </div>
+        <div
+          class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full py-7 border-r border-gray-300">
+          <img class="w-[70px] icon" src="/assets/images/first_place/parnetrs.svg" alt="icon" />
+          <h3 class="md:text-[85px] text-[40px] font-bold text-primary">
+            200+
+          </h3>
+          <p class="text-3xl font-bold text-black" data-translate="partners"></p>
+        </div>
+        <div
+          class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-r-[30px] items-center w-full py-7">
+          <img class="w-[70px] icon" src="/assets/images/first_place/export_countries.svg" alt="icon" />
+          <h3 class="md:text-[85px] text-[40px] font-bold text-primary">3</h3>
+          <p class="text-3xl font-bold text-black" data-translate="export_countries"></p>
+        </div>
+      </div>
+    </section>
+    <!-- Distributing -->
+    <section class="section bg-white relative buisness_direction_section h-screen">
+      <div class="distributing_first_section absolute top-0 left-0 w-full bg-primary h-screen">
+        <h1 data-translate="distributing_products_title" class="text-[70px] distributing_products_title font-bold text-white text-center uppercase">
+        </h1>
+        <div class="pt-[100px] z-1 w-full flex justify-center">
+          <img class="w-3/4 z-1 first-world-img" src="/assets/images/distributing/first.png" alt="img" />
+        </div>
+      </div>
+      <div class="flex justify-center w-full">
+        <div class="relative w-3/4 pt-[180px] h-screen distributing_second_section transition-all opacity-0">
+          <div class="absolute w-1/2 z-3 left-[40%] -translate-x-[40%]">
+            <img class="z-3 w-full h-full" src="/assets/images/distributing/countries_name.png" alt="" />
+          </div>
+          <img class="z-2 world-map w-full" src="/assets/images/distributing/world_red.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Partners -->
+    <section class="section partner_section md:px-10 px-5 bg-opacity-10 h-screen font-montserrat">
+      <div class="pt-[130px]">
+        <h2 class="text-primary uppercase text-[45px] w-2/3 font-bold" data-translate="trusted_partner_title"></h2>
+        <div class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4">
+          <section
+            class="splide-home-partners w-full cursor-pointer relative translate-x-1/3 hover:-translate-x-[150px]"
+            id="splide-home-partners">
+            <div class="splide__track">
+              <ul class="splide__list flex gap-5 partners_list overflow-x-scroll">
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/araz.png" alt="araz" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/rahat.png" alt="rahat" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/bravo.jpg" alt="bravo" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/bazarstore.jpeg"
+                    alt="bazarstore" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/araz.png" alt="araz" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/bravo.jpg" alt="bravo" />
+                </li>
+              </ul>
+            </div>
+          </section>
+          <h4 class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold">
+            Retail
+          </h4>
+        </div>
+        <div class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4">
+          <section
+            class="splide-home-partners w-full cursor-pointer relative translate-x-1/3 hover:-translate-x-[150px]"
+            id="splide-home-partners">
+            <div class="splide__track">
+              <ul class="splide__list flex gap-5 partners_list overflow-x-scroll">
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/subway.png" alt="subway" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/popeyes.png" alt="popeyes" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/arbys.png" alt="arbys" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/subway.png" alt="subway" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/popeyes.png" alt="popeyes" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/arbys.png" alt="arbys" />
+                </li>
+              </ul>
+            </div>
+          </section>
+          <h4 class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold">
+            Horeca
+          </h4>
+        </div>
+        <div class="pt-10 partners_container flex flex-row-reverse items-center relative gap-4">
+          <section class="splide-home-partners w-full cursor-pointer relative translate-x-1/3"
+            id="splide-home-partners">
+            <div class="splide__track">
+              <ul class="splide__list flex gap-5 partners_list overflow-x-scroll">
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/mudafie_nazirliyi.png"
+                    alt="mm" />
+                </li>
+                <li
+                  class="splide__slide w-[200px] h-[120px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]">
+                  <img class="w-full h-full object-contain" src="/assets/images/partners/edliyye_nazirliyi.png"
+                    alt="edliyye_nazirliyi" />
+                </li>
+              </ul>
+            </div>
+          </section>
+          <h4 class="text-[40px] w-[200px] text-[#929292] font-bold">B2G</h4>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End of Business and Directions -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/packages/swiper.config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
+    integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/home.js"></script>
+  <script src="/js/packages/fullpage.js"></script>
+  <script src="/js/packages/splide.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+</body>
+
 </html>

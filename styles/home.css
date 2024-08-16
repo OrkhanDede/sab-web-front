@@ -59,19 +59,28 @@
   position: relative;
 }
 
-.world-map{
-  transform: scale(0.8);
-  transition: 1.5s ease-in-out;
-}
+/* .world-map{
+  transform: scale(0.9);
+  transition: 1s ease-in;
+} */
 
-.fade-in-distributing.world-map{
+/* .fade-in-distributing .world-map{
   transform: scale(1);
-}
+} */
 
 .fade-out-distributing {
   animation: fadeOut 1s forwards;
   z-index: 1;
   position: absolute;
+}
+
+.first-world-img{
+  transform: scale(0.9);
+}
+
+.fade-out-distributing .first-world-img{
+  transform: scale(1);
+  transition: transform 2s ease-in;
 }
 
 .first-place-item .first-place-item-img{
@@ -97,12 +106,10 @@
   filter: brightness(1000%);
 }
 .slide-up-animation{
-  /* transform: translateY(-20px); */
   animation: fadeIn 1s forwards;
 }
 
 .slide-down-animation{
-  /* transform: translateY(0); */
   animation: fadeOut 1s forwards;
 }
 
@@ -149,7 +156,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(80px);
+    transform: translateY(180px);
   }
   to {
     opacity: 1;
