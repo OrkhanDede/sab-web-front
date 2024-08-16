@@ -1,19 +1,34 @@
 const slideContent = [
     {
-        title: "Laboratory",
-        description:
-            "Our laboratory services ensure precise analysis and quality control in every process.",
+        title: {
+            az: "Labaratoriya",
+            en: "Laboratory",
+        },
+        description: {
+            az: "Laboratoriya xidmətlərimiz hər bir prosesdə dəqiq analiz və keyfiyyətə nəzarəti təmin edir.",
+            en: "Our laboratory services ensure precise analysis and quality control in every process."
+        }
     },
     {
-        title: "Fridge Storage",
-        description:
-            "Keep your products fresh and secure with our state-of-the-art fridge storage solutions.",
+        title: {
+            az: "Dondurulma deposu",
+            en: "Fridge storage",
+        },
+        description: {
+            az: "Məhsullarınızı təzə və təhlükəsiz saxlamaq üçün müasir soyuducu saxlama həllərimizdən istifadə edin.",
+            en: "Keep your products fresh and secure with our state-of-the-art fridge storage solutions."
+        }
     },
     {
-        title: "Packaging",
-        description:
-            "High-quality packaging that ensures your products are protected and presented perfectly.",
-    },
+        title: {
+            az: "Paketləmə",
+            en: "Packaging",
+        },
+        description: {
+            az: "Məhsullarınızın mükəmməl qorunmasını və təqdimatını təmin edən yüksək keyfiyyətli qablaşdırma.",
+            en: "High-quality packaging that ensures your products are protected and presented perfectly."
+        }
+    }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,8 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const titleElement = document.getElementById("slide-title");
         const descriptionElement = document.getElementById("slide-description");
 
-        titleElement.textContent = slideContent[index].title;
-        descriptionElement.textContent = slideContent[index].description;
+        const currentLang = localStorage.getItem("language");
+        const newLang = currentLang === "en" ? 'en' : "az";
+        
+        titleElement.textContent = slideContent[index].title[newLang];
+        descriptionElement.textContent = slideContent[index].description[newLang];
     }
 
     updateSlideContent(0);
@@ -80,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
         afterLoad: function (origin, destination, direction) {
             const section = destination.index;
 
-            // Buisness and direcctions
+            // Business and direcctions
             if (section === 1) {
-                const firstContent = document.querySelector(".buisness_direction_section_first_content");
-                const secondContent = document.querySelector(".buisness_direction_section_second_content");
+                const firstContent = document.querySelector(".business_direction_section_first_content");
+                const secondContent = document.querySelector(".business_direction_section_second_content");
                 firstContent.classList.add("fade-out");
                 secondContent.classList.remove("fade-in");
                 secondContent.classList.add("fade-in");
@@ -92,8 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // aşağıdan yuxarı scroll olanda animasiya olmağını istəmirsənsə 23 cü sətri kommentə al
                 // || (section === 2 && direction == 'down')
             ) {
-                const firstContent = document.querySelector(".buisness_direction_section_first_content");
-                const secondContent = document.querySelector(".buisness_direction_section_second_content");
+                const firstContent = document.querySelector(".business_direction_section_first_content");
+                const secondContent = document.querySelector(".business_direction_section_second_content");
                 firstContent.classList.remove("fade-out");
                 firstContent.classList.add("fade-in");
                 secondContent.classList.remove("fade-in");
@@ -110,17 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     element.classList.add("fade-in-up");
                 });
             }
-            if (section === 2 && !splideInitialized) {
-                splideInitialized = true;
-                splide.mount();
-            }
-            // her defe animasiya olmasini istiyirsense commenti ac
             else {
                 const animatedText = document.querySelectorAll('[data-aos]');
                 animatedText.forEach((element) => {
                     element.style.opacity = 0;
                     element.classList.remove("fade-in-up");
                 });
+            }
+            if (section === 2 && !splideInitialized) {
+                splideInitialized = true;
+                splide.mount();
             }
             // Distributing
             if (section === 4) {

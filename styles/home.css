@@ -37,11 +37,11 @@
   animation: fadeIn 1s forwards;
 }
 
-.more_btn.buisness-brands > img{
+.more_btn.business-brands > img{
     filter: brightness(0%);
 }
 
-.more_btn.buisness-brands:hover > img{
+.more_btn.business-brands:hover > img{
     filter: brightness(100%);
 }
 
@@ -59,28 +59,28 @@
   position: relative;
 }
 
-/* .world-map{
-  transform: scale(0.9);
-  transition: 1s ease-in;
-} */
+.world-map{
+  transform: scale(0.8) translateY(50px);
+}
 
-/* .fade-in-distributing .world-map{
-  transform: scale(1);
-} */
+.fade-in-distributing .world-map{
+  transform: scale(1) translateY(0);
+  transition: transform 1.5s ease-in;
+}
 
 .fade-out-distributing {
-  animation: fadeOut 1s forwards;
+  animation: fadeOut 1.5s forwards;
   z-index: 1;
   position: absolute;
 }
 
 .first-world-img{
-  transform: scale(0.9);
+  transform: scale(0.8) translateY(50px);
 }
 
 .fade-out-distributing .first-world-img{
-  transform: scale(1);
-  transition: transform 2s ease-in;
+  transform: scale(1) translateY(0);
+  transition: transform 1.5s ease-in;
 }
 
 .first-place-item .first-place-item-img{
@@ -118,6 +118,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #F0F0F0;
+  height: calc(100vh - 100px);
 }
 
 .partners_list::-webkit-scrollbar {
@@ -167,4 +168,8 @@
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 1s ease forwards; 
+}
+
+.fp-warning, .fp-watermark{
+  display: none !important;
 }

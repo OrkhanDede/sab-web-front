@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   getTranslate();
+  getCurrentYear();
 });
 
 function getTranslate(lang = null) {
@@ -33,10 +34,7 @@ function changeLanguage(value) {
   localStorage.setItem("language", value);
   translatePage(value);
   document.querySelector("html").lang = value;
-}
-
-function getLanguageLocal() {
-  return localStorage.getItem("language");
+  location.reload();
 }
 
 async function translatePage(targetLanguage) {
@@ -55,4 +53,17 @@ function changeLanguageWithBtn() {
   const currentLang = getLanguageLocal();
   const newLang = currentLang === "az" ? "en" : "az";
   changeLanguage(newLang);
+}
+
+function getCurrentYear(){
+  const element = document.querySelector('[data-currYear]');
+  if(element){
+    const date = new Date();
+    const year = date.getFullYear();
+    element.textContent = year;    
+  }
+}
+
+function getLanguageLocal() {
+  return localStorage.getItem("language");
 }
