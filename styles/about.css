@@ -1,0 +1,21 @@
+.meet-slider img{
+    clip-path: circle(60%);
+}
+/* .meet-titles::before{
+    display: block;
+    content: "";
+    height: 2px;
+    background-color: #989898;
+    position: absolute;
+    left: -33px;
+    top: 50%;
+}
+.meet.meet-titles::before{
+    width: 40px;
+}
+.turkey.meet-titles::before{
+    width: 30px;
+}
+.chicken.meet-titles::before{
+    width: 30px;
+} */

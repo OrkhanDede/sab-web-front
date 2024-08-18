@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="/assets/logos/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/logos/favicon.png">
+  <title>SAB</title>
+  <!-- Scripts -->
+  <script src="/js/translate.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/packages/tailwind.config.js"></script>
+  <!-- Links -->
+  <!-- Links CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.css"
+  integrity="sha512-CWyM/Ni2h1mWRsWWmOswyfpQFadUhIaq89gkx6pfykOtbEhMvXutCrvbNR7fWQAh4QNss2pVndPw6InDfKhdXw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+  <!-- Inside Links -->
+  <link rel="stylesheet" href="/styles/root.css" />
+  <link rel="stylesheet" href="/styles/app.css" />
+  <link rel="stylesheet" href="/styles/about.css" />
+  <link rel="stylesheet" href="/styles/packages/swiper.css" />
+</head>
+
+<body class="w-screen overflow-x-hidden">
+  <!-- Header -->
+  <div class="flex z-30 fixed w-full items-center top-[48px] px-[70px] justify-between">
+    <a href="/index.html" class="w-[114px] h-[59px] transition-all logo_anchor">
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
+    <div
+      class="font-montserrat bg-[#F0F0F0] rounded-full border border-gray-300 flex items-center whitespace-nowrap text-[17px] font-[600]">
+      <a href="" class="py-[18px] bg-white text-[#EE3239] border border-primary transition-colors rounded-full px-[35px]"
+        data-translate="about_us_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="business_brands_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="our_activities_title"></a>
+      <a href="" class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
+        data-translate="contact_us_title"></a>
+      <a href="" class="py-[18px] px-[35px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
+        data-translate="career_title"></a>
+    </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
+      data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+  </div>
+  <!-- End of header -->
+  <!-- Banner -->
+  <div id="fullpage">
+    <!-- About company -->
+    <section data-aos="fade-up"
+      class="h-screen section flex flex-col justify-start md:px-[70px] py-5 px-[30px] font-montserrat bg-white">
+      <div class="lg:pt-[160px] md:pt-[130px] pt-[90px] h-full pb-5 flex gap-3">
+        <div class="flex w-1/3 flex-col justify-between">
+          <div class="flex gap-8">
+            <div class="flex flex-col gap-3">
+              <h3 data-translate="about_company_title" innerHTML class="font-bold text-primary text-5xl"></h3>
+              <p id="slide-description" class="font-medium leading-7 text-[#000001] text-xl"></p>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div id="splide_custom_pagination"></div>
+            <div id="custom_arrows_services" class="flex gap-2"></div>
+          </div>
+        </div>
+        <div class="w-2/3 h-full">
+          <section class="splide h-full" id="splide">
+            <div class="splide__track h-full">
+              <ul class="splide__list h-full">
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img class="h-full object-cover rounded-[30px]" src="/assets/images/about-us/1.png" alt="slide image" />
+                </li>
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img class="h-full object-cover rounded-[30px]" src="/assets/images/about-us/2.png" alt="slide image" />
+                </li>
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img class="h-full object-cover rounded-[30px]" src="/assets/images/about-us/3.png" alt="slide image" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>  
+    <section class="h-screen flex overflow-hidden section font-montserrat bg-[#F0F0F0]">
+      <div class="flex h-full overflow-hidden">
+        <div class="w-1/2 h-full relative">
+          <div class="h-[137vh] w-[100vw] absolute left-[-50vw] top-[-17vh] p-10 rounded-full border border-[#7A7878] meet-slider">
+            <img id="meat-image" class="w-full px-10 rounded-full h-full object-cover" src="/assets/images/about-us/meet.png" alt="meet">
+          </div>
+        </div>
+        <div class="w-1/2 h-full relative meet_section_info flex flex-col justify-center">
+          <h3 data-translate="made_with_halal_ingredients" class="text-primary pl-14 2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[25px] text-[20px] font-bold"></h3>
+          <div class="flex flex-col xl:gap-8 md:gap-5 gap-3 mt-10">
+            <div class="flex cursor-pointer items-center -translate-x-2 meet-option" data-img-src="/assets/images/about-us/meet.png">
+              <div class="border border-[#989898] bg-white flex justify-center items-center w-4 h-4 rounded-full indicator">
+              </div>
+              <div class="bg-[#7A7878] w-14 h-[1px] line"></div>
+              <h5 class="2xl:text-[35px] pl-3 xl:text-[30px] lg:text-[25px] md:text-[20px] text-[15px] capitalize font-bold meet-titles meet text-primary" data-translate="beef_title">Beef</h5>
+            </div>
+            <div class="flex cursor-pointer items-center -translate-x-[13px] meet-option" data-img-src="/assets/images/about-us/turkey.png">
+              <div class="border border-[#989898] bg-white flex justify-center items-center w-4 h-4 rounded-full indicator">
+              </div>
+              <div class="bg-[#7A7878] w-[61px] h-[1px] line"></div>
+              <h5 class="2xl:text-[35px] pl-3 xl:text-[30px] lg:text-[25px] md:text-[20px] text-[15px] capitalize font-bold meet-titles turkey text-[#7A7878]" data-translate="turkey_title">Turkey</h5>
+            </div>
+            <div class="flex cursor-pointer items-center -translate-x-6 meet-option" data-img-src="/assets/images/about-us/chicken.png">
+              <div class="border border-[#989898] bg-white flex justify-center items-center w-4 h-4 rounded-full indicator">
+              </div>
+              <div class="bg-[#7A7878] w-[72px] h-[1px] line"></div>
+              <h5 class="2xl:text-[35px] pl-3 xl:text-[30px] lg:text-[25px] md:text-[20px] text-[15px] capitalize font-bold meet-titles chicken text-[#7A7878]" data-translate="chicken_title">Chicken</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-aos="fade-up"
+      class="h-screen section flex flex-col justify-start md:px-[70px] py-5 px-[30px] font-montserrat bg-white">
+      <div class="lg:pt-[160px] md:pt-[130px] pt-[90px] h-full pb-5 flex gap-3">
+        <div class="flex w-1/2 flex-col justify-between">
+          <div class="flex gap-8">
+            <div class="flex flex-col gap-6">
+              <h3 data-translate="our_history_title" class="font-bold uppercase text-5xl"></h3>
+              <p id="slide-description-year" class="font-bold leading-7 text-primary py-4 2xl:text-[110px] xl:text-[85px] lg:text-[60px] md:text-[45px] text-[20px]"></p>
+              <p id="slide-description-history" class="font-medium leading-8 text-[#000001] text-xl"></p>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div id="custom_arrows_services_history" class="flex gap-3"></div>
+          </div>
+          <div id="history_arrow">
+
+          </div>
+        </div>
+        <div class="w-1/2 h-full">
+          <section class="history-splide splide h-full" id="splide">
+            <div class="splide__track h-full">
+              <ul class="splide__list h-full">
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img class="h-full object-cover rounded-[30px]" src="/assets/images/about-us/history_1.png" alt="slide image" />
+                </li>
+                <li data-splide-interval="4000" class="splide__slide h-full">
+                  <img class="h-full object-cover rounded-[30px]" src="/assets/images/about-us/history_2.png" alt="slide image" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End of Business and Directions -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/packages/swiper.config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
+    integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/about-us.js"></script>
+  <script src="/js/packages/fullpage.js"></script>
+  <script src="/js/packages/splide.js"></script>
+</body>
+</html>

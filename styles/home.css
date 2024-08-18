@@ -169,7 +169,3 @@
   opacity: 0;
   animation: fadeInUp 1s ease forwards; 
 }
-
-.fp-warning, .fp-watermark{
-  display: none !important;
-}

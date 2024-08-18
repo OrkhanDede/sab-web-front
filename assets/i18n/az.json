@@ -9,7 +9,7 @@
   "banner_text_first": "halal məhsullar",
   "banner_text_second": "sizin süfrəniz üçün",
   "meat_products_title": "Ət məhsulları",
-  "diary_products_title": "Gündəlik məhsullar",
+  "diary_products_title": "Süd məhsulları",
   "more_btn": "Ətraflı",
   "services_title": "XİDMƏTLƏR",
   "plate_title": "yer",
@@ -20,5 +20,11 @@
   "market_share": "market payı",
   "partners": "partnyorlar",
   "export_countries": "ixrac edilən ölkə",
-  "trusted_partner_title": "yüksək keyfiyyətli məhsullar üçün etibarlı tərəfdaşınız"
+  "trusted_partner_title": "yüksək keyfiyyətli məhsullar üçün etibarlı tərəfdaşınız",
+  "about_company_title": "ŞİRKƏT HAQQINDA",
+  "made_with_halal_ingredients": "Yalnız HALAL inqrediyentlərdən hazırlanmış məhsullar",
+  "beef_title": "mal",
+  "turkey_title": "hinduşka",
+  "chicken_title": "toyuq",
+  "our_history_title": "Bizim tariximiz"
 }

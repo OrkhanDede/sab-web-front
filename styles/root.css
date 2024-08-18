@@ -36,3 +36,7 @@
   overflow-x: hidden !important;
   height: 100%;
 }
+
+.fp-warning, .fp-watermark{
+  display: none !important;
+}
