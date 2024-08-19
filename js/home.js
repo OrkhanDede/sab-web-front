@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
           el: ".swiper-pagination",
         },
         autoplay: {
-          delay: 2000,
+          delay: 5000,
         },
         loop: true,
         navigation: {

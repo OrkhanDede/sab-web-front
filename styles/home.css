@@ -135,7 +135,6 @@
   opacity: 0;
 }
 
-
 @keyframes fadeOut {
   from {
     opacity: 1;

@@ -40,12 +40,12 @@ const historySlide = [
     year: 1998,
     description: {
       en: `Sabir Babayev founded "Zahmat-Ruzi" LLC and opens the first factory of the company at 111 Heydar Aliyev avenue, 
-      Narimanov district, Baku. The enthusiastic welcome of buyers in the early stages of their products gives 
-      a strong impetus to future work.`,
+      Narimanov district, Baku. The enthusiastic welcome of buyers in the early stages of their products gives a strong impetus to future work.`,
+
       az: `
-      Sabir Babayev "Zəhmət-Ruzi" MMC-ni təsis edib və şirkətin ilk fabrikini Bakı şəhəri, Nərimanov rayonu, 
-      Heydər Əliyev prospekti 111 ünvanında açıb. Məhsullarının ilkin mərhələlərində alıcılar tərəfindən böyük 
-      maraqla qarşılanması gələcək işlərə güclü təkan verir..`,
+      Sabir Babayev "Zəhmət-Ruzi" MMC-ni təsis edir və şirkətin Bakı şəhəri Nərimanov rayonu, Heydər Əliyev prospekti 111
+       ünvanında ilk zavodu açılır. Elə ilk dövrlərdəcə istehsal edilən məhsulların alıcılar tərəfindən rəğbətlə 
+       qarşılanması gələcək işlərə böyük stimul verir.`,
     },
   },
   {
@@ -53,16 +53,80 @@ const historySlide = [
     description: {
       en: `
       “Zahmat-Ruzi” LLC is already beginning to produce its products under the trademark “SAB”. 
-      The word "SAB" is derived from the first letters of the name and father’s name of the 
-      founder of the company, Sabir Atamali Babayev.`,
+      The word "SAB" is derived from the first letters of the name and father’s name of the founder of 
+      the company, Sabir Atamali Babayev.`,
       az: `
-      “Zəhmət-Ruzi” MMC artıq məhsullarını “SAB” ticarət nişanı altında istehsal etməyə başlayır. 
-      “SAB” sözü şirkətin təsisçisi Sabir Atamalı Babayevin adının və atasının adının ilk hərflərindən yaranıb.`,
+      “Zəhmət-Ruzi” MMC artıq öz məhsullarını “SAB” ticarət nişanı altında istehsal etməyə başlayır. 
+      “SAB” sözünün açıqlaması şirkətin qurucusu olan Sabir Atəməli oğlu Babayevin ad, soyad və 
+      atasının adının ilk hərflərindən götürülmüşdür.`,
+    },
+  },
+  {
+    year: 2012,
+    description: {
+      en: `
+      Zahmat-Ruzi LLC is building a new factory on 3 hectares in the new address –Khirdalan city, 
+      academic Hasan Aliyev Street 38, and the thus production process will be moved to this factory. 
+      The factory, laboratories, production shops, and warehouses are equipped with the most modern equipment, 
+      transportation systems are reconstructed.`,
+      az: `
+      "Zəhmət-Ruzi" MMC yeni ünvanda - Xırdalan şəhəri, akademik Həsən Əliyev küçəsi, 38-də 3 hektar 
+      ərazidə müasir zavod tikilir və istehsal həmin zavoda köçürülür. Zavodda laboratoriyalar, 
+      istehsal sexləri və anbar ən müasir avadanlıqlarla təchiz edilir, daşınma sistemləri yenidən qurulur.`,
+    },
+  },
+  {
+    year: 2014,
+    description: {
+      en: `
+     SAB products are awarded the Gold Medal of the international “Moscow Halal - Expo – 2014”. 
+     Besides, the company is fully certified in 2014 by the State Committee on Standardization 
+     Metrology and Patents. Besides, SAB is the only brand guaranteed by the Caucasian Muslims Office.`,
+      az: `
+      "SAB" məhsulları "Moscow Halal - Expo - 2014" beynəlxalq qida sərgisinin qızıl medalına layiq görülür. 
+      Bundan başqa şirkət 2014-cü ildə Standartlaşma Metrologiya və Patent üzrə Dövlət Komitəsi tərəfindən 
+      tam sertifikatlaşdırılır. Bundan başqa "SAB" Qafqaz Müsəlmanları İdarəsinin halallıq zəmanəti verdiyi yeganə brenddir.`,
+    },
+  },
+  {
+    year: 2015,
+    description: {
+      en: `
+      Products won the Grand Prix Prize at the Food Exhibition in Kazakhstan and a gold medal at the Moscow Halal Expo-2015 for the second time.`,
+      az: `
+      Məhsullar Qazaxıstanda keçirilən qida sərgisinin əsas mükafatı olan "Qrand Prix" mükafatını və ikinci dəfə "Moscow Halal - Expo - 2015" sərgisinin qızıl medalını qazandı.`,
+    },
+  },
+  {
+    year: 2016,
+    description: {
+      en: `
+      SAB is awarded the Platinium mark of the Azerbaijan Consumer Food Safety label (AICTN Quality Mark), 
+      established by the Free Consumers Union, with the support of USAID. The brand is also awarded a gold 
+      medal at the Moscow Halal - Expo - 2016 for high-quality products.`,
+      az: `
+      "SAB" ticarət nişanı USAİD Təşkilatının dəstəyi ilə Azad İstehlakçılar Birliyinin təsis etdiyi "Azərbaycan İstehlakçılarının 
+      Qida Təhlükəsizliyi nişanı"nın (AİQTN Keyfiyyət Nişanı) "Platinium" nişanına layiq görülür. Həmçinin brend 
+      yüksək keyfiyyətli məhsullara görə "Moscow Halal - Expo - 2016" sərgisində yenidən qızıl medalla mükafatlandırılır.`,
+    },
+  },
+  {
+    year: 2017,
+    description: {
+      en: `
+      On November 16, 2017, President of the Republic of Azerbaijan Ilham Aliyev reviewed the activities of 
+      “Zahmat-Ruzi” LLC in Absheron. President Ilham Aliyev will present 60 kinds of meat and 40 types 
+      of dairy products under the brand SAB - Made In Azerbaijan.`,
+      az: `
+      Azərbaycan Respublikasının Prezidenti İlham Əliyev 16 noyabr 2017-ci il tarixində Abşeron rayonunda “Zəhmət-Ruzi” 
+      MMC-nin fəaliyyəti ilə tanış olur. Prezident İlham Əliyevin diqqətinə “SAB” – “Made In Azerbaijan” 
+      markası ilə bazarlara çıxarılan 60 növ ət və 40 növ süd məhsullarının nümunələri təqdim edilir.`,
     },
   },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  slideMounted = false;
   var splide = new Splide(".splide", {
     type: "loop",
     gap: "2rem",
@@ -78,10 +142,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var historySplide = new Splide(".history-splide", {
     type: "fade",
+    autoplay: true,
     rewind: true,
-    pagination: false
+    pagination: false,
   });
 
+  var yearSplide = new Splide(".year-splide", {
+    perPage: 6,
+    perMove: 1,
+    gap: "2rem",
+    arrows: false,
+    pagination: false,
+  });
+
+  // Function to update slide content based on the active index
   function updateSlideContent(index, id, slideName, yearElementId = null) {
     const descriptionElement = document.getElementById(id);
     const yearElement = document.getElementById(yearElementId);
@@ -95,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Initial content update
   updateSlideContent(0, "slide-description", aboutCompanySlide);
   updateSlideContent(
     0,
@@ -103,18 +178,69 @@ document.addEventListener("DOMContentLoaded", () => {
     "slide-description-year"
   );
 
-  splide.on("moved", function (newIndex) {
-    updateSlideContent(newIndex, "slide-description", aboutCompanySlide);
-  });
-
+  // Handle movements and sync with yearSplide
   historySplide.on("moved", function (newIndex) {
-    updateSlideContent(newIndex, "slide-description-history", historySlide);
+    updateSlideContent(
+      newIndex,
+      "slide-description-history",
+      historySlide,
+      "slide-description-year"
+    );
+
+    // Move yearSplide to match the historySplide movement and update the active year style
+    yearSplide.go(newIndex);
+    updateActiveYear(newIndex);
   });
 
-  function mountSlide(slideName, customPagniationId, customArrowServiceId) {
+  yearSplide.on("moved", function (newIndex) {
+    updateSlideContent(
+      newIndex,
+      "slide-description-history",
+      historySlide,
+      "slide-description-year"
+    );
+    updateActiveYear(newIndex);
+  });
+
+  // Function to update the active year style
+  function updateActiveYear(activeIndex) {
+    const yearItems = document.querySelectorAll(".year-splide .year-item");
+
+    yearItems.forEach((item, index) => {
+      if (index === activeIndex) {
+        item.classList.add("text-primary", "border-primary");
+        item.classList.remove("text-gray-300", "border-gray-300");
+      } else {
+        item.classList.remove("text-primary", "border-primary");
+        item.classList.add("text-gray-300", "border-gray-300");
+      }
+    });
+  }
+
+  // Add click event to year items to change slides
+  function addYearItemClickEvents() {
+    const yearItems = document.querySelectorAll(".year-splide .year-item");
+
+    yearItems.forEach((item, index) => {
+      item.addEventListener("click", function () {
+        // Move both sliders to the selected index
+        historySplide.go(index);
+        yearSplide.go(index);
+
+        // Update the active year styling
+        updateActiveYear(index);
+      });
+    });
+  }
+
+  // Call the function to add the click events
+  addYearItemClickEvents();
+
+  // Custom pagination and arrows setup
+  function mountSlide(slideName, customPaginationId, customArrowServiceId) {
     slideName.on("mounted", function () {
       var paginationItems = slideName.Components.Pagination.items;
-      var customPagination = document.getElementById(customPagniationId);
+      var customPagination = document.getElementById(customPaginationId);
 
       var prevArrow = slideName.Components.Arrows.arrows.prev;
       var nextArrow = slideName.Components.Arrows.arrows.next;
@@ -134,34 +260,47 @@ document.addEventListener("DOMContentLoaded", () => {
       prevArrow.appendChild(prevIcon);
       nextArrow.appendChild(nextIcon);
 
-      if(customPagination){
+      if (customPagination) {
         paginationItems.forEach(function (item) {
           customPagination.appendChild(item.button);
         });
       }
-      if(customArrows){
+      if (customArrows) {
         customArrows.appendChild(prevArrow);
         customArrows.appendChild(nextArrow);
       }
     });
   }
 
+  // Mount the slides
   mountSlide(splide, "splide_custom_pagination", "custom_arrows_services");
   mountSlide(
     historySplide,
     "splide_custom_pagination_history",
     "custom_arrows_services_history"
   );
+
   splide.mount();
   historySplide.mount();
+  yearSplide.mount();
 
   new fullpage("#fullpage", {
     autoScrolling: true,
+
+    afterLoad: function (origin, destination, direction) {
+      const section = destination.index;
+
+      // if (section === 2 && !slideMounted) {
+      //   slideMounted = true;
+      //   historySplide.mount();
+      //   yearSplide.mount();
+      // }
+    },
   });
 
   // Meets hovering slider
   const meatImage = document.getElementById("meat-image");
-  const defaultImageSrc = "/assets/images/about-us/meet.png";
+  const defaultImageSrc = "/assets/images/about-us/meet.jpg";
   const defaultTextClass = "text-primary";
   const defaultRedColor = "#EE3239";
   const grayColor = "#7A7878";
@@ -202,6 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document
         .querySelectorAll(".indicator")
         .forEach((ind) => (ind.style.borderColor = grayColor));
+
       document
         .querySelectorAll(".line")
         .forEach((ln) => (ln.style.backgroundColor = grayColor));
