@@ -155,6 +155,41 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: false,
   });
 
+  const swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 250,
+      modifier: 1,
+      slideShadows: false,
+    },
+    navigation: {
+      prevEl: '.certificate-button-prev',
+      nextEl: '.certificate-button-next',
+    },
+    pagination: false,
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      }
+    },
+  });
+  
   // Function to update slide content based on the active index
   function updateSlideContent(index, id, slideName, yearElementId = null) {
     const descriptionElement = document.getElementById(id);
