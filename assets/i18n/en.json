@@ -9,7 +9,7 @@
   "banner_text_first": "Halal products",
   "banner_text_second": "for your table",
   "meat_products_title": "Meat products",
-  "diary_products_title": "Diary products",
+  "dairy_products_title": "Dairy products",
   "more_btn": "More",
   "services_title": "SERVICES",
   "plate_title": "place",
@@ -34,5 +34,12 @@
   "our_vision": "Our vısıon",
   "our_mission_text": "Operates as the manufacturer of high-quality and healthy meat & dairy products, and pioneers innovation and consumer awareness.",
   "our_vision_text": "Operates as an international food processing company, setting the standard for taste, quality, and innovation in the industry.",
-  "our_certificates": "OUR CERTIFICATES"
+  "our_certificates": "OUR CERTIFICATES",
+  "our_buisness_brands": "OUR BUISNESS DIRECTIONS",
+  "our_services": "OUR SERVICES",
+  "meat_processing": "Meat processing",
+  "dairy_production": "Dairy production",
+  "fridge_storage": "Fridge storage",
+  "labaratory_analysis": "Labratory analysis",
+  "packaging": "Packaging"
 }

@@ -9,7 +9,7 @@
   "banner_text_first": "halal məhsullar",
   "banner_text_second": "sizin süfrəniz üçün",
   "meat_products_title": "Ət məhsulları",
-  "diary_products_title": "Süd məhsulları",
+  "dairy_products_title": "Süd məhsulları",
   "more_btn": "Ətraflı",
   "services_title": "XİDMƏTLƏR",
   "plate_title": "yer",
@@ -34,5 +34,12 @@
   "our_vision": "Vizyonumuz",
   "our_mission_text": "Yüksək keyfiyyətli və sağlam ət və süd məhsulları istehsalçısı kimi fəaliyyət göstərir və innovasiyaların təşviqatçısı, istehlakçı məlumatlılığının artırılmasına öncülük edir.",
   "our_vision_text": "Beynəlxalq qida emalı şirkəti kimi fəaliyyət göstərir, sektorda dad, keyfiyyət və innovasiya standartlarını müəyyən edir.",
-  "our_certificates": "SERTİFİKATLARIMIZ"
+  "our_certificates": "SERTİFİKATLARIMIZ",
+  "our_buisness_brands": "BİZNES İSTİQAMƏTLƏRİ",
+  "our_services": "XİDMƏTLƏRİMİZ",
+  "meat_processing": "Ət emalı",
+  "dairy_production": "Süd istehsalı",
+  "fridge_storage": "Soyuducu anbarı",
+  "labaratory_analysis": "Laboratoriya analizi",
+  "packaging": "Paketləmə"
 }

@@ -1,0 +1,47 @@
+.buisness-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid transparent;
+}
+.buisness-item:hover h3{
+    color: var(--primary-red);
+}
+
+.both-shadow {
+  -webkit-box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+  -moz-box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+  box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+}
+
+.both-shadow:hover {
+  -webkit-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+  -moz-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+  box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83),
+    0px -8px 28px -7px rgba(237, 28, 36, 0.29);
+    border: 1px solid var(--primary-red);
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83);
+  -moz-box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83);
+  box-shadow: inset 0px 76px 22px 0px rgba(255, 255, 255, 0.83);
+}
+
+.inner-shadow:hover {
+  -webkit-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
+  -moz-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
+  box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
+  border: 1px solid var(--primary-red);
+}
+.meat-process {
+  background-image: url("/assets/images/buisness-directions/meat_processing.png");
+}
+
+.diary-production {
+  background-image: url("/assets/images/buisness-directions/diary_production.png");
+}

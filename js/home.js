@@ -1,7 +1,7 @@
 const slideContent = [
     {
         title: {
-            az: "Labaratoriya",
+            az: "Laboratoriya",
             en: "Laboratory",
         },
         description: {
