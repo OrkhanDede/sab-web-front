@@ -91,3 +91,6 @@
   opacity: 1;
   filter: brightness(500%) !important;
 }
+.ceo-container{
+  background: linear-gradient(180deg, rgba(240,240,240,1) 50%, rgba(238,50,57,1) 50%);
+}
