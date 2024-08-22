@@ -1,5 +1,50 @@
-button.active{
-    background-color: var(--primary-red);
-    color: white;
-    border-radius: 20px;
+button.active {
+  background-color: var(--primary-red);
+  color: white;
+  border-radius: 20px;
+}
+
+.custom-arrow {
+  position: relative !important;
+  background-color: transparent !important;
+  border: 2px solid #ccc !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.custom-arrow:hover {
+  background-color: var(--primary-red) !important;
+  border-color: var(--primary-red) !important;
+  color: #ffffff !important;
+}
+
+.custom-arrow img {
+  width: 50%;
+  opacity: 0.6;
+  filter: brightness(70%);
+  transition: filter 150ms;
+}
+
+.custom-arrow:hover img {
+  opacity: 1;
+  filter: brightness(500%) !important;
+}
+.category-slide{
+  width: 250px !important;
+  height: 110px !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  .products-splide .splide__arrows {
+    display: none !important;
+  }
 }
