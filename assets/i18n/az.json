@@ -3,7 +3,7 @@
   "about_us_title": "Haqqımızda",
   "business_brands_title": "Biznes və brendlər",
   "business_directions_title": "Biznes istiqamətləri",
-  "our_activities_title": "Gördüyümüz işlər",
+  "our_activities_title": "Məhsullarımız",
   "contact_us_title": "Bizimlə əlaqə",
   "career_title": "Karyera",
   "banner_text_first": "halal məhsullar",
@@ -42,5 +42,10 @@
   "fridge_storage": "Soyuducu anbarı",
   "labaratory_analysis": "Laboratoriya analizi",
   "packaging": "Paketləmə",
-  "view_products": "MƏHSULLARA BAX"
+  "view_products": "MƏHSULLARA BAX",
+  "retail": "PƏRAKƏNDƏ",
+  "horeca": "HORECA",
+  "hotels": "Otellər",
+  "restaurants": "Restoranlar",
+  "catering": "İaşə"
 }

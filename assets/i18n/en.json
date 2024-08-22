@@ -42,5 +42,10 @@
   "fridge_storage": "Fridge storage",
   "labaratory_analysis": "Labratory analysis",
   "packaging": "Packaging",
-  "view_products": "VIEW PRODUCTS"
+  "view_products": "VIEW PRODUCTS",
+  "retail": "RETAIL",
+  "horeca": "HORECA",
+  "hotels": "Hotels",
+  "restaurants": "Restaurants",
+  "catering": "Catering"
 }
