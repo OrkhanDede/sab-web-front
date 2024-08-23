@@ -60,6 +60,20 @@ const companies = [
     image: "/assets/images/meat-processing/kovser-banner.jpg",
   },
 ];
+
+const regionsDescription = [
+  {
+    code: "AZE1689",
+    retailPartners: 231,
+    horecaPartners: 82,
+  },
+  {
+    code: "AZE1728",
+    retailPartners: 92,
+    horecaPartners: 14,
+  },
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
 
@@ -163,21 +177,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function filterSlides(category) {
     splideSlides.forEach((slide) => {
       if (category === "all" || slide.dataset.category === category) {
-        slide.classList.remove("hidden")
-        slide.classList.add("block")
+        slide.classList.remove("hidden");
+        slide.classList.add("block");
       } else {
-        slide.classList.remove("block")
-        slide.classList.add("hidden")
+        slide.classList.remove("block");
+        slide.classList.add("hidden");
       }
     });
 
     swiperSlides.forEach((slide) => {
-      if (category === "all" || slide.dataset.category === category) { 
-        slide.classList.remove("hidden")
-        slide.classList.add("block")
+      if (category === "all" || slide.dataset.category === category) {
+        slide.classList.remove("hidden");
+        slide.classList.add("block");
       } else {
-        slide.classList.remove("block")
-        slide.classList.add("hidden")
+        slide.classList.remove("block");
+        slide.classList.add("hidden");
       }
     });
     splide.refresh();
@@ -197,4 +211,60 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   filterSlides("hotel");
+
+  const regionName = document.getElementById("regionName");
+  const retailDesc = document.getElementById("retailPartners");
+  const horecaDesc = document.getElementById("horecaPartners");
+
+  const mapContainer = document.getElementById("map");
+
+  const updateRegionInfo = (code, nameAz, nameEn) => {
+    const description = regionsDescription.find((r) => r.code === code);
+    const currentLang = localStorage.getItem("language") || "az";
+    const regionTitle = currentLang === "en" ? nameEn : nameAz;
+
+    const region = document.querySelector(`.sm_state_${code}`);
+    
+    region?.setAttribute("fill", "red");
+
+    regionName.innerText = regionTitle;
+    retailDesc.innerText = description?.retailPartners || "";
+    horecaDesc.innerText = description?.horecaPartners || "";
+  };
+
+  const resetRegionColor = (selector) => {
+    const regionElement = document.querySelector(selector);
+    regionElement?.setAttribute("fill", "#c0c0c0");
+  };
+
+  updateRegionInfo("AZE1689", "Abşeron", "Absheron");
+
+  mapContainer.addEventListener("mouseover", (e) => {
+    const codeClass = e.target.classList[1];
+    if (!codeClass) return;
+
+    const code = codeClass.slice(9, 16);
+
+    if (code.startsWith("AZE")) {
+      resetRegionColor(".sm_state_AZE1689");
+      resetRegionColor(".sm_state_AZE1728");
+
+      switch (code) {
+        case "AZE1689":
+          updateRegionInfo("AZE1689", "Abşeron", "Absheron");
+          break;
+        case "AZE1728":
+          updateRegionInfo("AZE1728", "Quba-Xaçmaz", "Quba-Khacmaz");
+          break;
+        default:
+          updateRegionInfo("AZE1689", "Abşeron", "Absheron");
+          break;
+      }
+    }
+  });
+
+  mapContainer.addEventListener("mouseleave", () => {
+    resetRegionColor(".sm_state_AZE1689");
+    updateRegionInfo("AZE1689", "Abşeron", "Absheron");
+  });
 });
