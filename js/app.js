@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileNavbar = document.getElementById("mobileNavbar");
 
     hamburgerIcon.addEventListener("click", () => {
-        mobileNavbar.classList.remove("hidden");
-        mobileNavbar.classList.add("flex");
+        mobileNavbar.classList.remove("translate-x-[100vw]");
+        mobileNavbar.classList.add("translate-x-0");
     })
 
     closeIcon.addEventListener("click", () => {
-        mobileNavbar.classList.remove("flex");
-        mobileNavbar.classList.add("hidden");
+        mobileNavbar.classList.add("translate-x-[100vw]");
+        mobileNavbar.classList.remove("translate-x-0");
     })
 })

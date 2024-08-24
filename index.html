@@ -89,12 +89,16 @@
         onclick="changeLanguageWithBtn()"
         type="button"
       ></button>
-      <div id="hamburgerIcon"
-        class="lg:hidden flex justify-center items-center h-[50px] bg-white w-[50px] rounded-full cursor-pointer"
+      <div
+        id="hamburgerIcon"
+        class="lg:hidden flex justify-center bg-white items-center h-[50px] bg-white w-[50px] rounded-full cursor-pointer"
       >
         <img src="/assets/icons/hamburger.svg" alt="menu" />
       </div>
-      <div id="mobileNavbar" class="mobile-navbar font-montserrat hidden fixed w-full h-screen py-[22px] px-[30px] right-0 top-0 z-[30] text-white">
+      <div
+        id="mobileNavbar"
+        class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[22px] px-[30px] right-0 top-0 z-[30] text-white"
+      >
         <div class="flex flex-col w-full">
           <div class="flex h-max w-full items-center justify-between">
             <button
@@ -103,42 +107,51 @@
               onclick="changeLanguageWithBtn()"
               type="button"
             ></button>
-            <div id="closeNavbar" class="flex bg-white w-[50px] h-[50px] cursor-pointer rounded-full justify-center items-center cursor-pointer">
-              <img src="/assets/icons/close.svg" class="w-5 h-5" alt="close icon">
+            <div
+              id="closeNavbar"
+              class="flex bg-white w-[50px] h-[50px] cursor-pointer rounded-full justify-center items-center cursor-pointer"
+            >
+              <img
+                src="/assets/icons/close.svg"
+                class="w-5 h-5"
+                alt="close icon"
+              />
             </div>
           </div>
-         <div class="flex flex-col w-full h-full justify-between">
-          <div class="flex font-[600] uppercase flex-col gap-10 pt-[75px] whitespace-nowrap text-[17px] font-[600]">
-            <a
-              href="/pages/career.html"
-              class="text-[25px]"
-              data-translate="career_title"
-            ></a>
-            <a
-              href="/pages/about-us.html"
-              class="text-[25px]"
-              data-translate="about_us_title"
-            ></a>
-            <a
-              href="/pages/buisness-brands.html"
-              class="text-[25px]"
-              data-translate="business_brands_title"
-            ></a>
-            <a
-              href="/pages/our-activites.html"
-              class="text-[25px]"
-              data-translate="our_activities_title"
-            ></a>
-            <a
-              href="/pages/contact-us.html"
-              class="text-[25px]"
-              data-translate="contact_us_title"
-            ></a>
+          <div class="flex flex-col w-full h-full justify-between">
+            <div
+              class="flex font-[600] uppercase flex-col gap-10 pt-[75px] whitespace-nowrap text-[17px] font-[600]"
+            >
+              <a
+                href="/pages/career.html"
+                class="text-[25px]"
+                data-translate="career_title"
+              ></a>
+              <a
+                href="/pages/about-us.html"
+                class="text-[25px]"
+                data-translate="about_us_title"
+              ></a>
+              <a
+                href="/pages/buisness-brands.html"
+                class="text-[25px]"
+                data-translate="business_brands_title"
+              ></a>
+              <a
+                href="/pages/our-activites.html"
+                class="text-[25px]"
+                data-translate="our_activities_title"
+              ></a>
+              <a
+                href="/pages/contact-us.html"
+                class="text-[25px]"
+                data-translate="contact_us_title"
+              ></a>
+            </div>
+            <div class="text-white opacity-50">
+              © <span data-currYear></span> SAB.AZ. All rights reserved!
+            </div>
           </div>
-          <div class="text-white opacity-50">
-            © <span data-currYear></span> SAB.AZ. All rights reserved!
-          </div>
-         </div>
         </div>
       </div>
     </div>
@@ -174,13 +187,13 @@
           <div class="swiper-button-prev select-none"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div>
+        <div class="lg:px-[70px] px-[35px]">
           <h1
-            class="absolute top-1/4 z-20 bg-[#ED1C24] py-6 uppercase left-1/2 max-w-[700px] leading-[1.1em] rounded-[30px] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold text-[60px] font-montserrat"
+            class="absolute mx-auto top-1/4 z-20 bg-[#ED1C24] py-6 uppercase left-1/2 lg:max-w-[700px] max-w-[400px] leading-[1.1em] rounded-[30px] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold lg:text-[60px] text-[36px] font-montserrat"
             data-translate="banner_text_first"
           ></h1>
           <h1
-            class="absolute top-1/4 z-20 md:p-10 left-1/2 max-w-[700px] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-48 text-white font-bold text-[60px] font-montserrat"
+            class="absolute mx-auto top-1/4 z-20 md:p-10 left-1/2 max-w-[700px] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-24 text-white font-bold lg:text-[60px] text-[36px] font-montserrat"
             data-translate="banner_text_second"
           ></h1>
         </div>

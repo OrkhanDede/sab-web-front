@@ -45,50 +45,102 @@
   <body class="w-screen overflow-x-hidden">
     <!-- Header -->
     <div
-      class="flex z-30 fixed w-full items-center top-[48px] px-[70px] justify-between"
+    class="flex z-30 fixed w-full items-center lg:top-[48px] top-[25px] lg:px-[70px] px-[30px] justify-between"
+  >
+    <a
+      href="/index.html"
+      class="md:w-[114px] md:h-[59px] w-[97px] h-[50px] transition-all logo_anchor"
+    >
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
+    <div
+      class="font-montserrat lg:flex hidden bg-[#F0F0F0] rounded-full border border-gray-300 items-center whitespace-nowrap text-[17px] font-[600]"
     >
       <a
-        href="/index.html"
-        class="w-[114px] h-[59px] transition-all logo_anchor"
-      >
-        <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
-      </a>
-      <div
-        class="font-montserrat bg-[#F0F0F0] rounded-full border border-gray-300 flex items-center whitespace-nowrap text-[17px] font-[600]"
-      >
-        <a
-          href="/pages/about-us.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="about_us_title"
-        ></a>
-        <a
-          href="/pages/buisness-brands.html"
-          class=" py-[18px] bg-white text-[#EE3239] border border-primary transition-colors rounded-full px-[35px]"
-          data-translate="business_brands_title"
-        ></a>
-        <a
-          href="/pages/our-activites.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="our_activities_title"
-        ></a>
-        <a
-          href="/pages/contact-us.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full px-[35px]"
-          data-translate="contact_us_title"
-        ></a>
-        <a
-          href="/pages/career.html"
-          class="py-[18px] px-[35px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
-          data-translate="career_title"
-        ></a>
-      </div>
-      <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
-        data-translate="language"
-        onclick="changeLanguageWithBtn()"
-        type="button"
-      ></button>
+        href="/pages/about-us.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="about_us_title"
+      ></a>
+      <a
+        href="/pages/buisness-brands.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="business_brands_title"
+      ></a>
+      <a
+        href="/pages/our-activites.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="our_activities_title"
+      ></a>
+      <a
+        href="/pages/contact-us.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="contact_us_title"
+      ></a>
+      <a
+        href="/pages/career.html"
+        class="py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
+        data-translate="career_title"
+      ></a>
     </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] text-[17px] font-[600] capitalize"
+      data-translate="language"
+      onclick="changeLanguageWithBtn()"
+      type="button"
+    ></button>
+    <div id="hamburgerIcon"
+      class="lg:hidden flex justify-center bg-[#F0F0F0] items-center h-[50px] w-[50px] rounded-full cursor-pointer"
+    >
+      <img src="/assets/icons/hamburger.svg" alt="menu" />
+    </div>
+    <div id="mobileNavbar" class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[22px] px-[30px] right-0 top-0 z-[30] text-white">
+      <div class="flex flex-col w-full">
+        <div class="flex h-max w-full items-center justify-between">
+          <button
+            class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[55px] w-[70px] text-[17px] font-[600] capitalize"
+            data-translate="language"
+            onclick="changeLanguageWithBtn()"
+            type="button"
+          ></button>
+          <div id="closeNavbar" class="flex bg-white w-[50px] h-[50px] cursor-pointer rounded-full justify-center items-center cursor-pointer">
+            <img src="/assets/icons/close.svg" class="w-5 h-5" alt="close icon">
+          </div>
+        </div>
+       <div class="flex flex-col w-full h-full justify-between">
+        <div class="flex font-[600] uppercase flex-col gap-10 pt-[75px] whitespace-nowrap text-[17px] font-[600]">
+          <a
+            href="/pages/career.html"
+            class="text-[25px]"
+            data-translate="career_title"
+          ></a>
+          <a
+            href="/pages/about-us.html"
+            class="text-[25px]"
+            data-translate="about_us_title"
+          ></a>
+          <a
+            href="/pages/buisness-brands.html"
+            class="text-[25px]"
+            data-translate="business_brands_title"
+          ></a>
+          <a
+            href="/pages/our-activites.html"
+            class="text-[25px]"
+            data-translate="our_activities_title"
+          ></a>
+          <a
+            href="/pages/contact-us.html"
+            class="text-[25px]"
+            data-translate="contact_us_title"
+          ></a>
+        </div>
+        <div class="text-white opacity-50">
+          © <span data-currYear></span> SAB.AZ. All rights reserved!
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
     <!-- End of header -->
       <section class="w-full bg-white font-montserrat">
         <div class="md:pt-[130px] pt-[100px]">
