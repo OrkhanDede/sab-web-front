@@ -9,7 +9,7 @@ var simplemaps_countrymap_mapdata={
     //State defaults
     state_description: "State description",
     state_color: "#C0C0C0",
-    state_hover_color: "#EE3239",
+    state_hover_color: "#C0C0C0",
     state_url: "",
     border_size: 1.5,
     all_states_inactive: "no",
