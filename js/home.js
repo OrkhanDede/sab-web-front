@@ -91,6 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
         easing: "ease",
         pagination: true,
         arrows: true,
+        breakpoints: {
+            991: {
+                padding: "1rem",
+            }
+        }
     });
 
     function updateSlideContent(index) {
@@ -191,20 +196,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (section === 4) {
                 const firstContent = document.querySelector(".distributing_first_section");
                 const secondContent = document.querySelector(".distributing_second_section");
-          
                 firstContent.classList.add("fade-out-distributing");
                 secondContent.classList.add("fade-in-distributing");
-              } else if (
+                } else if (
                 (section === 3 && direction === 'up') ||
                 (section === 2 && direction === 'down')
-              ) {
+                ) {
                 const firstContent = document.querySelector(".distributing_first_section");
                 const secondContent = document.querySelector(".distributing_second_section");
 
                 firstContent.classList.remove("fade-out-distributing");
                 secondContent.classList.remove("fade-in-distributing");
-              }
-          
+                  } 
         },
     });
 });

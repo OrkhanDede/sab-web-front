@@ -91,7 +91,7 @@
       ></button>
       <div
         id="hamburgerIcon"
-        class="lg:hidden flex justify-center bg-white items-center h-[50px] bg-white w-[50px] rounded-full cursor-pointer"
+        class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[50px] w-[50px] rounded-full cursor-pointer"
       >
         <img src="/assets/icons/hamburger.svg" alt="menu" />
       </div>
@@ -200,55 +200,116 @@
       </section>
       <!-- End of banner -->
       <!-- Business and Directions -->
-      <section class="block section bg-white relative business_direction_section h-screen lg:bg-primary">
-        <div class="business_direction_section_first_content absolute top-0 left-0 w-full lg:bg-primary h-screen">
+      <section
+        class="block overflow-hidden section bg-white relative business_direction_section h-screen lg:bg-primary"
+      >
+        <div
+          class="business_direction_section_first_content absolute top-0 left-0 w-full lg:bg-primary h-screen"
+        >
           <h1
             class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-10"
             data-translate="business_directions_title"
           ></h1>
         </div>
-        <div class="relative lg:flex hidden w-full fade-out h-screen business_direction_section_second_content">
+        <div
+          class="relative lg:flex hidden w-full fade-out h-screen business_direction_section_second_content"
+        >
           <div class="w-full business-directions-bg h-full">
             <img
               class="w-full h-full object-cover"
               src="/assets/images/buisness-directions/background.png"
-              alt="daily products"/>
+              alt="daily products"
+            />
           </div>
           <div class="absolute font-montserrat w-full flex bottom-10 px-10">
             <div class="w-1/2 flex items-center gap-8">
-              <h4 class="text-[50px] font-bold text-black" data-translate="meat_products_title"></h4>
-              <a href="/pages/business-brands.html" class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <h4
+                class="text-[50px] font-bold text-black"
+                data-translate="meat_products_title"
+              ></h4>
+              <a
+                href="/pages/business-brands.html"
+                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+              >
                 <span data-translate="more_btn"></span>
-                <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right"/>
+                <img
+                  class="w-4"
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow-right"
+                />
               </a>
             </div>
             <div class="w-1/2 flex items-center gap-8">
-              <h4 class="text-[50px] font-bold text-black" data-translate="dairy_products_title"></h4>
-              <a href="/pages/business-brands.html" class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <h4
+                class="text-[50px] font-bold text-black"
+                data-translate="dairy_products_title"
+              ></h4>
+              <a
+                href="/pages/business-brands.html"
+                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+              >
                 <span data-translate="more_btn"></span>
-                <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right"/>
+                <img
+                  class="w-4"
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow-right"
+                />
               </a>
             </div>
           </div>
         </div>
-        <div class="lg:hidden flex h-full flex-col">
-          <div class="relative h-full buisness-brands-mobile-bg">
-            <img class="h-full object-cover" src="/assets/images/buisness-directions/1.png" alt="meat">
+        <div class="lg:hidden w-full overflow-hidden font-montserrat">
+          <div class="relative w-full h-[50vh] buisness-brands-mobile-bg">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/buisness-directions/1.png"
+              alt="meat"
+            />
+            <div
+              class="absolute w-full inset-0 buisness-brands-mobile-overlay"
+            ></div>
             <div class="absolute top-5 left-5 flex flex-col gap-4">
-              <h4 class="text-[36px] font-bold text-black" data-translate="dairy_products_title"></h4>
-              <a href="/pages/business-brands.html" class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <h4
+                class="text-[36px] font-bold text-black"
+                data-translate="meat_products_title"
+              ></h4>
+              <a
+                href="/pages/business-brands.html"
+                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+              >
                 <span data-translate="more_btn"></span>
-                <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right"/>
+                <img
+                  class="w-4"
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow-right"
+                />
               </a>
             </div>
           </div>
-          <div class="relative h-full buisness-brands-mobile-bg">
-            <img class="h-full object-cover" src="/assets/images/buisness-directions/2.png" alt="dairy">
+          <div class="relative w-full h-[50vh] buisness-brands-mobile-bg">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/buisness-directions/2.png"
+              alt="dairy"
+            />
+            <div
+              class="absolute w-full inset-0 buisness-brands-mobile-overlay"
+            ></div>
             <div class="absolute top-5 left-5 flex flex-col gap-4">
-              <h4 class="text-[36px] font-bold text-black" data-translate="dairy_products_title"></h4>
-              <a href="/pages/business-brands.html" class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center">
+              <h4
+                class="text-[36px] font-bold text-black"
+                data-translate="dairy_products_title"
+              ></h4>
+              <a
+                href="/pages/business-brands.html"
+                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+              >
                 <span data-translate="more_btn"></span>
-                <img class="w-4" src="/assets/icons/arrow-right.svg" alt="arrow-right"/>
+                <img
+                  class="w-4"
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow-right"
+                />
               </a>
             </div>
           </div>
@@ -260,23 +321,26 @@
         class="h-screen section flex flex-col justify-start md:px-[70px] py-5 px-[30px] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[160px] md:pt-[130px] pt-[90px] h-full pb-5 flex gap-3"
+          class="lg:pt-[160px] md:pt-[130px] pt-[90px] h-full pb-5 flex lg:flex-row flex-col gap-3"
         >
-          <div class="flex w-1/2 flex-col justify-between">
-            <div class="flex gap-8">
+          <div class="flex lg:w-1/2 w-full flex-col justify-between">
+            <div class="flex lg:flex-row flex-col lg:gap-8 gap-5">
               <h4
                 class="text-primary text-[30px] font-bold"
                 data-translate="services_title"
               ></h4>
               <div class="flex flex-col gap-3">
-                <h3 id="slide-title" class="font-bold text-5xl"></h3>
+                <h3
+                  id="slide-title"
+                  class="font-bold h-[70px] lg:text-5xl text-4xl"
+                ></h3>
                 <p
                   id="slide-description"
-                  class="font-medium leading-6 text-[#494949] text-xl"
+                  class="font-medium leading-6 line-clamp-3 text-[#494949] text-xl"
                 ></p>
               </div>
             </div>
-            <div class="flex justify-between">
+            <div class="lg:flex hidden justify-between">
               <div id="splide_custom_pagination"></div>
               <div id="custom_arrows_services" class="flex gap-2"></div>
               <a
@@ -292,9 +356,9 @@
               </a>
             </div>
           </div>
-          <div class="w-1/2 h-full">
+          <div class="lg:w-1/2 w-full h-full">
             <section class="splide h-full" id="splide">
-              <div class="splide__track h-full">
+              <div class="splide__track lg:px-2 px-0 h-full">
                 <ul class="splide__list h-full">
                   <li
                     data-splide-interval="5000"
@@ -330,70 +394,81 @@
               </div>
             </section>
           </div>
+          <a
+            href="/pages/business-brands.html"
+            class="border mt-5 rounded-full w-28 more_btn services font-semibold h-20 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
+          >
+            <span data-translate="more_btn"></span>
+            <img
+              class="w-4"
+              src="/assets/icons/arrow-right-red.svg"
+              alt="arrow-right"
+            />
+          </a>
         </div>
       </section>
       <!-- First place -->
       <section
         class="h-screen section flex flex-col justify-start 2xl:px-[70px] xl:px-[50px] lg:px-[40px] px-[30px] font-montserrat bg-[#F0F0F0]"
       >
-        <div class="grid pt-[150px] xl:grid-cols-2 grid-cols-1 h-1/2 gap-10">
+        <div class="grid lg:pt-[150px] pt-[100px] lg:grid-cols-2 grid-cols-1 h-1/2 lg:gap-10 gap-5">
           <div
-            class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 md:py-12 py-6 h-full items-center rounded-[30px]"
+            class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 py-6 lg:h-full h-[160px] items-center rounded-[30px]"
           >
             <h2
-              class="2xl:text-[250px] xl:text-[220px] lg:text-[190px] md:text-[160px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary"
+              class="2xl:text-[250px] lg:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
             >
               1
             </h2>
             <div>
               <h6
-                class="text-4xl uppercase font-[700] text-primary"
+                class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
                 data-translate="plate_title"
               ></h6>
               <p
                 data-translate="plate_text"
-                class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"
+                class="text-[#858585] transition-colors first-place-text lg:text-3xl text-lg leading-[1.5em] pt-1 font-medium"
               ></p>
             </div>
             <img
-              class="object-cover first-place-item-img transition-transform"
+              class="object-cover first-place-item-img lg:h-max h-[150px] transition-transform"
               src="/assets/images/first_place/sausage.png"
               alt=""
             />
           </div>
           <div
-            class="bg-white flex gap-4 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 md:py-12 py-6 h-full items-center rounded-[30px]"
+            class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 py-6 lg:h-full h-[160px] items-center rounded-[30px]"
           >
             <h2
-              class="2xl:text-[250px] xl:text-[220px] lg:text-[190px] md:text-[160px] pl-14 inline-block h-[250px] text-[60px] font-[900] font-myanmar-bold text-primary"
+            class="2xl:text-[250px] lg:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
             >
               1
             </h2>
             <div>
               <h6
-                class="text-4xl uppercase font-[700] text-primary"
+                class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
                 data-translate="plate_title"
               ></h6>
               <p
                 data-translate="plate_text_2"
-                class="text-[#858585] transition-colors first-place-text text-3xl leading-[1.5em] pt-1 font-medium"
+                class="text-[#858585] transition-colors first-place-text lg:text-3xl text-lg leading-[1.5em] pt-1 font-medium"
               ></p>
             </div>
             <img
-              class="object-cover first-place-item-img transition-transform"
+              class="object-cover first-place-item-img lg:h-max h-[150px] transition-transform"
               src="/assets/images/first_place/halal.png"
               alt=""
             />
           </div>
         </div>
         <div
-          class="bg-white border border-gray-300 mt-[55px] font-montserrat flex xl:flex-row flex-col w-full rounded-[30px]"
+          class="bg-white border border-gray-300 lg:mt-[55px] mt-[25px] font-montserrat grid lg:grid-cols-4 grid-cols-2 w-full rounded-[30px]"
         >
           <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-l-[30px] items-center w-full 2xl:py-7 xl:px-5 lg:py-3 md:py-2 border-r border-gray-300"
+            class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[30px] w-full lg:py-7 py-2 border-r lg:border-b-0 border-b border-gray-300"
           >
             <img
-              class="2xl:w-[70px] xl:w-[50px] lg:w-[40px] md:w-[30px] w-[20px] icon"
+              class="2xl:w-[70px] w-[35px] icon"
               src="/assets/images/first_place/product_range.svg"
               alt="icon"
             />
@@ -408,10 +483,10 @@
             ></p>
           </div>
           <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full 2xl:py-7 xl:px-5 lg:py-3 md:py-2 border-r border-gray-300"
+            class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 lg:border-r lg:border-b-0 border-b border-l-0 border-gray-300"
           >
             <img
-              class="2xl:w-[70px] xl:w-[50px] lg:w-[40px] md:w-[30px] w-[20px] icon"
+              class="2xl:w-[70px] w-[35px] icon"
               src="/assets/images/first_place/market_share.svg"
               alt="icon"
             />
@@ -426,10 +501,10 @@
             ></p>
           </div>
           <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors items-center w-full 2xl:py-7 xl:px-5 lg:px-3 md:px-2 border-r border-gray-300"
+          class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 border-r border-gray-300"
           >
             <img
-              class="2xl:w-[70px] xl:w-[50px] lg:w-[40px] md:w-[30px] w-[20px] icon"
+              class="2xl:w-[70px] w-[35px] icon"
               src="/assets/images/first_place/parnetrs.svg"
               alt="icon"
             />
@@ -444,10 +519,10 @@
             ></p>
           </div>
           <div
-            class="px-7 xl:w-1/4 flex flex-col md:items-start first-place-subitem cursor-pointer transition-colors rounded-r-[30px] items-center w-full 2xl:py-7 xl:px-5 lg:px-3 md:px-2"
+          class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[30px] w-full lg:py-7 py-2 lg:border-r border-r-0 border-gray-300"
           >
             <img
-              class="2xl:w-[70px] xl:w-[50px] lg:w-[40px] md:w-[30px] w-[20px] icon"
+              class="2xl:w-[70px] w-[35px] icon"
               src="/assets/images/first_place/export_countries.svg"
               alt="icon"
             />
@@ -468,7 +543,7 @@
         class="section bg-white relative business_direction_section h-screen"
       >
         <div
-          class="distributing_first_section absolute top-0 left-0 w-full bg-primary h-screen"
+          class="distributing_first_section lg:block hidden absolute top-0 left-0 w-full bg-primary h-screen"
         >
           <h1
             data-translate="distributing_products_title"
@@ -486,6 +561,10 @@
           <div
             class="relative w-3/4 pt-[180px] h-screen distributing_second_section transition-all opacity-0"
           >
+            <h1
+              data-translate="distributing_products_title"
+              class="text-[30px] lg:hidden flex distributing_products_title font-montserrat font-bold text-primary text-center uppercase"
+            ></h1>
             <div
               style="z-index: 3 !important"
               class="absolute pt-[30px] w-1/2 z-3 left-[40%] -translate-x-[40%]"
