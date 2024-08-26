@@ -3,7 +3,9 @@ button.active {
   color: white;
   border-radius: 20px;
 }
-
+.info-panel-heading{
+  line-height: 1.3em !important;
+}
 .custom-arrow {
   position: relative !important;
   background-color: transparent !important;
