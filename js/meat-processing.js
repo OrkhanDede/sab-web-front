@@ -61,18 +61,18 @@ const companies = [
   },
 ];
 
-const regionsDescription = [
-  {
-    code: "AZE1689",
-    retailPartners: 231,
-    horecaPartners: 82,
-  },
-  {
-    code: "AZE1728",
-    retailPartners: 92,
-    horecaPartners: 14,
-  },
-];
+// const regionsDescription = [
+//   {
+//     code: "AZE1689",
+//     retailPartners: 231,
+//     horecaPartners: 82,
+//   },
+//   {
+//     code: "AZE1728",
+//     retailPartners: 92,
+//     horecaPartners: 14,
+//   },
+// ];
 
 document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
@@ -216,55 +216,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const retailDesc = document.getElementById("retailPartners");
   const horecaDesc = document.getElementById("horecaPartners");
 
-  const mapContainer = document.getElementById("map");
-
-  const updateRegionInfo = (code, nameAz, nameEn) => {
-    const description = regionsDescription.find((r) => r.code === code);
-    const currentLang = localStorage.getItem("language") || "az";
-    const regionTitle = currentLang === "en" ? nameEn : nameAz;
-
-    const region = document.querySelector(`.sm_state_${code}`);
-    
-    region?.setAttribute("fill", "red");
-
-    regionName.innerText = regionTitle;
-    retailDesc.innerText = description?.retailPartners || "";
-    horecaDesc.innerText = description?.horecaPartners || "";
-  };
-
-  const resetRegionColor = (selector) => {
-    const regionElement = document.querySelector(selector);
-    regionElement?.setAttribute("fill", "#c0c0c0");
-  };
-
-  updateRegionInfo("AZE1689", "Abşeron", "Absheron");
-
-  mapContainer.addEventListener("mouseover", (e) => {
-    const codeClass = e.target.classList[1];
-    if (!codeClass) return;
-
-    const code = codeClass.slice(9, 16);
-
-    if (code.startsWith("AZE")) {
-      resetRegionColor(".sm_state_AZE1689");
-      resetRegionColor(".sm_state_AZE1728");
-
-      switch (code) {
-        case "AZE1689":
-          updateRegionInfo("AZE1689", "Abşeron", "Absheron");
-          break;
-        case "AZE1728":
-          updateRegionInfo("AZE1728", "Quba-Xaçmaz", "Quba-Khacmaz");
-          break;
-        default:
-          updateRegionInfo("AZE1689", "Abşeron", "Absheron");
-          break;
+  const regions = [
+      {
+          title: "abseron",
+          regions: [57, 78, 5, 30],
+          regionName: {
+            az: "Abşeron",
+            en: "Absheron"
+          },
+          description: "Abseron",
+          retailPartners: 231,
+          horecaPartners: 82,
+      },
+      {
+          title: "quba",
+          regions: [19, 56, 41, 43, 28],
+          description: "Quba-Khacmaz",
+          regionName: {
+            az: "Quba-Xaçmaz",
+            en: "Quba-Khacmaz"
+          },
+          retailPartners: 92,
+          horecaPartners: 14,
       }
-    }
-  });
+  ]
+  
+  const currentLang = localStorage.getItem("language");
+  const newLang = currentLang === "en" ? "en" : "az";
 
-  mapContainer.addEventListener("mouseleave", () => {
-    resetRegionColor(".sm_state_AZE1689");
-    updateRegionInfo("AZE1689", "Abşeron", "Absheron");
-  });
+  function addHoverClass(region, type) {
+    resetFill();
+      const hoveredRegions = regions.find(r => r.title === region);
+      hoveredRegions.regions.forEach(h => {
+          const element = document.getElementById(`region_${h}`);
+          if(type === 'add'){
+              regionName.textContent = hoveredRegions.regionName[newLang];
+              retailDesc.textContent = hoveredRegions.retailPartners;
+              horecaDesc.textContent = hoveredRegions.horecaPartners;
+              element.classList.add("hovered");
+          }else{
+              // addHoverClass("abseron", 'add');
+              element.classList.remove("hovered");
+          }
+      })
+  }
+
+  addHoverClass('abseron', 'add');
+
+  function resetFill(){
+    regions.forEach(r => {
+      r.regions.map(x => {
+          const element = document.getElementById(`region_${x}`);
+          element.classList.remove("hovered");
+      })
+    })
+  }
+
+  regions.forEach(r => {
+      r.regions.map(x => {
+          const element = document.getElementById(`region_${x}`);
+          element.addEventListener("mouseover", () => addHoverClass(r.title, 'add'));
+          // element.addEventListener("mouseout", () => addHoverClass(r.title, 'remove'));
+      })
+  })
 });
