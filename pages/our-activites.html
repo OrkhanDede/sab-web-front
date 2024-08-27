@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/logos/favicon.png"
+    />
+    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+    <title>SAB</title>
+    <!-- Scripts -->
+    <script src="/js/translate.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/packages/tailwind.config.js"></script>
+    <!-- Links -->
+    <!-- Links CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Inside Links -->
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/app.css" />
+    <link rel="stylesheet" href="/styles/our-activites.css" />
+  </head>
+
+  <body class="w-screen overflow-x-hidden">
+    <!-- Header -->
+    <div
+    class="flex z-30 fixed w-full items-center lg:top-[48px] top-[25px] lg:px-[70px] px-[30px] justify-between"
+  >
+    <a
+      href="/index.html"
+      class="md:w-[114px] md:h-[59px] w-[97px] h-[50px] transition-all logo_anchor"
+    >
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
+    <div
+      class="font-montserrat lg:flex hidden bg-[#F0F0F0] rounded-full border border-gray-300 items-center whitespace-nowrap text-[17px] font-[600]"
+    >
+      <a
+        href="/pages/about-us.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="about_us_title"
+      ></a>
+      <a
+        href="/pages/buisness-brands.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="business_brands_title"
+      ></a>
+      <a
+        href="/pages/our-activites.html"
+        class="py-[18px] active-navbar hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="our_activities_title"
+      ></a>
+      <a
+        href="/pages/contact-us.html"
+        class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+        data-translate="contact_us_title"
+      ></a>
+      <a
+        href="/pages/career.html"
+        class="py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
+        data-translate="career_title"
+      ></a>
+    </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] text-[17px] font-[600] capitalize"
+      data-translate="language"
+      onclick="changeLanguageWithBtn()"
+      type="button"
+    ></button>
+    <div id="hamburgerIcon"
+      class="lg:hidden flex justify-center bg-[#F0F0F0] items-center h-[50px] w-[50px] rounded-full cursor-pointer"
+    >
+      <img src="/assets/icons/hamburger.svg" alt="menu" />
+    </div>
+    <div id="mobileNavbar" class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[22px] px-[30px] right-0 top-0 z-[30] text-white">
+      <div class="flex flex-col w-full">
+        <div class="flex h-max w-full items-center justify-between">
+          <button
+            class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[55px] w-[70px] text-[17px] font-[600] capitalize"
+            data-translate="language"
+            onclick="changeLanguageWithBtn()"
+            type="button"
+          ></button>
+          <div id="closeNavbar" class="flex bg-white w-[50px] h-[50px] cursor-pointer rounded-full justify-center items-center cursor-pointer">
+            <img src="/assets/icons/close.svg" class="w-5 h-5" alt="close icon">
+          </div>
+        </div>
+       <div class="flex flex-col w-full h-full justify-between">
+        <div class="flex font-[600] uppercase flex-col gap-10 pt-[75px] whitespace-nowrap text-[17px] font-[600]">
+          <a
+            href="/pages/career.html"
+            class="text-[25px]"
+            data-translate="career_title"
+          ></a>
+          <a
+            href="/pages/about-us.html"
+            class="text-[25px]"
+            data-translate="about_us_title"
+          ></a>
+          <a
+            href="/pages/buisness-brands.html"
+            class="text-[25px]"
+            data-translate="business_brands_title"
+          ></a>
+          <a
+            href="/pages/our-activites.html"
+            class="text-[25px]"
+            data-translate="our_activities_title"
+          ></a>
+          <a
+            href="/pages/contact-us.html"
+            class="text-[25px]"
+            data-translate="contact_us_title"
+          ></a>
+        </div>
+        <div class="text-white opacity-50">
+          © <span data-currYear></span> SAB.AZ. All rights reserved!
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+      <section class="bg-white lg:pt-[130px] pt-[100px] font-montserrat pb-10">
+        <div class="flex lg:flex-row gap-5 flex-col lg:px-[70px] px-[35px]">
+            <div id="custom-accordion" class="custom-accordion flex lg:flex-col flex-row gap-3 lg:w-[250px] w-full">
+                <div class="custom-accordion-item h-max bg-[#F0F0F0] text-[#808080] p-5 rounded-2xl dark:bg-[#F0F0F0] w-full">
+                    <h2 id="custom-accordion-heading-1">
+                        <button 
+                            type="button" 
+                            class="custom-accordion-button text-[#ED1C24] lg:text-start text-center w-full font-bold text-2xl" 
+                            data-custom-accordion-target="#custom-accordion-body-1" 
+                            aria-expanded="true" 
+                            data-translate="meat_title"
+                            aria-controls="custom-accordion-body-1">
+                        </button>
+                    </h2>
+                    <div id="custom-accordion-body-1" class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col gap-2" aria-labelledby="custom-accordion-heading-1">
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">SAB</p>
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">Mr Food</p>
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">Umid</p>
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">Kovser</p>
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">Kababliq</p>
+                    </div>
+                </div>
+                <div class="custom-accordion-item h-max bg-[#F0F0F0] text-[#808080] p-5 rounded-2xl dark:bg-[#F0F0F0] w-full">
+                    <h2 id="custom-accordion-heading-2">
+                        <button 
+                            type="button" 
+                            class="custom-accordion-button text-[#ED1C24] lg:text-start text-center w-full font-bold text-2xl" 
+                            data-custom-accordion-target="#custom-accordion-body-2" 
+                            aria-expanded="true" 
+                            aria-controls="custom-accordion-body-2"
+                            data-translate="dairy_title">
+                        </button>
+                    </h2>
+                    <div id="custom-accordion-body-2" class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col gap-2" aria-labelledby="custom-accordion-heading-2">
+                        <p class="cursor-pointer hover:text-[#ED1C24] transition-colors">SAB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/dovga.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Dovga
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/xama.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Xama
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/gence-dovgasi.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Dovga
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/xama-goy.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Xama
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/ayran-naneli.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Ayran
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/ayran-goy.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Ayran
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/dovga.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Dovga
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/eridilmis-kere-yagi.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Kere yagi
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/gence-dovgasi.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Dovga
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/xama-goy.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Xama
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/ayran-naneli.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Ayran
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+                <div class="relative product-item h-[280px] rounded-[20px]">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full object-cover rounded-[20px]" src="/assets/images/products/ayran-goy.png" alt="">
+                    </div>
+                    <div 
+                        class="absolute info rounded-b-[20px] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[50px]">
+                        <div>
+                            Ayran
+                        </div>
+                        <p class="text-xs description text-center font-medium text-[#6F6F6F]">
+                            Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <footer
+          class="flex justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-10"
+        >
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-4 items-center">
+              <a
+                href="https://www.facebook.com/sabazerbaijann/"
+                target="_blank"
+              >
+                <img
+                  class="w-10"
+                  src="/assets/social-medias/facebook.png"
+                  alt="facebook"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/sab.azerbaijan/"
+                target="_blank"
+              >
+                <img
+                  class="w-10"
+                  src="/assets/social-medias/instagram.png"
+                  alt="instagram"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/@sabazerbaijan"
+                target="_blank"
+              >
+                <img
+                  class="w-10"
+                  src="/assets/social-medias/youtube.png"
+                  alt="youtube"
+                />
+              </a>
+            </div>
+            <div class="flex gap-4 items-center">
+              <a class="font-semibold" href="tel:+994123494433"
+                >+994 (12) 349 44 33</a
+              >
+              <a class="font-semibold" href="mailto:muraciet@sab.az"
+                >muraciet@sab.az</a
+              >
+            </div>
+          </div>
+          <div class="text-gray-500">
+            © <span data-currYear></span> SAB.AZ. All rights reserved!
+          </div>
+        </footer>
+    </div>
+    <!-- End of Business and Directions -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/our-activites.js"></script>
+  </body>
+</html>

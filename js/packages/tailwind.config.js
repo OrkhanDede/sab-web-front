@@ -1,6 +1,7 @@
 tailwind.config = {
+  darkMode: 'media',
   theme: {
-    extend: {
+     extend: {
       colors: {
         primary: "#EE3239",
       },
