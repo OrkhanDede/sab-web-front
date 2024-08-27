@@ -32,3 +32,8 @@
     background: url(/assets/images/@core/mobile-navbar-bg.png), var(--primary-red);
     background-size: cover;
 }
+.active-navbar{
+    background-color: #FFFFFF;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+}
