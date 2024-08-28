@@ -2,6 +2,7 @@ const companies = [
   {
     id: 1,
     title: "SAB",
+    query: 'sab',
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -17,6 +18,7 @@ const companies = [
   {
     id: 2,
     title: "MR.FOOD",
+    query: 'mrfood',
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -32,6 +34,7 @@ const companies = [
   {
     id: 3,
     title: "ÜMİD",
+    query: 'umid',
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -47,6 +50,7 @@ const companies = [
   {
     id: 4,
     title: "KÖVSƏR",
+    query: 'kovser',
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -91,12 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let title = document.getElementById("title");
     let description = document.getElementById("description");
     let image = document.getElementById("image");
+    let navigateBtn = document.getElementById("view_product_btn");
     let company = companies.find((c) => c.id === id);
 
     if (company) {
       const currentLang = localStorage.getItem("language") || "az";
       const newLang = currentLang === "en" ? "en" : "az";
 
+      navigateBtn.href = `/pages/our-activites.html?category=meat&subcategory=` + company.query;
       title.textContent = company.title;
       description.innerHTML = company.description[newLang];
       image.src = company.image;

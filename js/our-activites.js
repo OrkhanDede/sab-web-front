@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = button.getAttribute('data-category');
             updateURLParams(category, null);
             filterProducts(category, null);
-            setActiveCategory(category);
+            setActiveCategory(category, null);
         });
     });
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const subcategory = item.getAttribute('data-subcategory');
             updateURLParams(category, subcategory);
             filterProducts(category, subcategory);
-            setActiveCategory(category);
+            setActiveCategory(category, subcategory);
         });
     });
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subcategory = urlParams.get('subcategory');
     if (category) {
         filterProducts(category, subcategory);
-        setActiveCategory(category);
+        setActiveCategory(category, subcategory);
     }
 });
 
@@ -83,12 +83,17 @@ function filterProducts(category, subcategory) {
     });
 }
 
-function setActiveCategory(category) {
-    document.querySelectorAll('.custom-accordion-button').forEach(el => {
-        el.style.color = '#808080'; 
+function setActiveCategory(category, subcategory) {
+    document.querySelectorAll('.custom-accordion-button, .custom-accordion-content p').forEach(el => {
+        el.style.color = '#808080';
     });
 
     document.querySelector(`[data-category="${category}"]`).style.color = '#ED1C24';
+    if(subcategory){
+        document.querySelectorAll(`[data-category="${category}"][data-subcategory="${subcategory}"]`).forEach(el => {
+            el.style.color = '#ED1C24';
+        });
+    }
 }
 
 window.addEventListener('resize', initializeAccordion);
