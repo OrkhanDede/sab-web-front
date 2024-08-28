@@ -143,9 +143,113 @@
   </div>
     <!-- End of header -->
     <section class="w-full bg-white font-montserrat">
-      <div class="md:pt-[130px] pt-[100px]">
+      <div class="lg:px-[70px] py-5 px-[35px]">
+        <div
+          class="lg:pt-[130px] pt-[100px] h-full pb-5 flex lg:flex-row flex-col gap-3"
+        >
+          <div class="flex lg:w-1/3 w-full overflow-hidden flex-col justify-between">
+            <div class="flex gap-8">
+              <div class="flex flex-col gap-3">
+                <h3
+                  data-translate="fridge_storage"
+                  innerHTML
+                  class="font-bold text-4xl"
+                ></h3>
+                <p
+                  id="slide-description"
+                  class="font-medium leading-7 pt-4 text-[#000001] text-xl"
+                ></p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-2/3 w-full h-full">
+            <section class="splide h-full" id="splide">
+              <div class="splide__track h-full">
+                <ul class="splide__list h-full">
+                  <li
+                    data-splide-interval="5000"
+                    class="splide__slide services max-w-[600px] max-h-[600px]"
+                  >
+                    <img
+                      class="h-full object-cover rounded-[30px]"
+                      src="/assets/images/fridge-storage/image 1.png"
+                      alt="slide image"
+                    />
+                  </li>
+                  <li
+                    data-splide-interval="5000"
+                    class="splide__slide services max-w-[600px] max-h-[600px]"
+                  >
+                    <img
+                      class="h-full object-cover rounded-[30px]"
+                      src="/assets/images/fridge-storage/image 2.png"
+                      alt="slide image"
+                    />
+                  </li>
+                  <li
+                    data-splide-interval="5000"
+                    class="splide__slide services max-w-[600px] max-h-[600px]"
+                  >
+                    <img
+                      class="h-full object-cover rounded-[30px]"
+                      src="/assets/images/fridge-storage/image 3.png"
+                      alt="slide image"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <div class="flex pt-7 justify-between">
+              <div id="custom_arrows_services" class="flex gap-2"></div>
+              <div id="splide_custom_pagination"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <footer
+    class="flex justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-10"
+  >
+    <div class="flex gap-5 items-center">
+      <div class="flex gap-4 items-center">
+        <a
+          href="https://www.facebook.com/sabazerbaijann/"
+          target="_blank"
+        >
+          <img
+            class="w-10"
+            src="/assets/social-medias/facebook.png"
+            alt="facebook"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/sab.azerbaijan/"
+          target="_blank"
+        >
+          <img
+            class="w-10"
+            src="/assets/social-medias/instagram.png"
+            alt="instagram"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/@sabazerbaijan"
+          target="_blank"
+        >
+          <img
+            class="w-10"
+            src="/assets/social-medias/youtube.png"
+            alt="youtube"
+          />
+        </a>
+      </div>
+      <div class="flex gap-4 items-center">
+        <a class="font-semibold" href="tel:+994123494433">+994 (12) 349 44 33</a>
+        <a class="font-semibold" href="mailto:muraciet@sab.az">muraciet@sab.az</a>
+      </div>
+    </div>
+    <div class="text-gray-500"> © <span data-currYear></span> SAB.AZ. All rights reserved! </div>
+  </footer>
     </div>
     <!-- End of Business and Directions -->
     <!-- Scripts -->
@@ -160,7 +264,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/js/app.js"></script>
-    <script src="/js/buisness-brands.js"></script>
+    <script src="/js/fridge-storage.js"></script>
     <script src="/js/packages/fullpage.js"></script>
     <script src="/js/packages/splide.js"></script>
   </body>
