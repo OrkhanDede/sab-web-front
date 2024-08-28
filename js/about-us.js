@@ -156,11 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   let swiperInstance;
   
-  // Function to update slide content based on the active index
   function updateSlideContent(index, id, slideName, yearElementId = null) {
     const descriptionElement = document.getElementById(id);
     const yearElement = document.getElementById(yearElementId);
-
+    
     const currentLang = localStorage.getItem("language");
     const newLang = currentLang === "en" ? "en" : "az";
 
@@ -170,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initial content update
   updateSlideContent(0, "slide-description", aboutCompanySlide);
   updateSlideContent(
     0,
@@ -179,7 +177,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "slide-description-year"
   );
 
-  // Handle movements and sync with yearSplide
+  splide.on("moved", function (newIndex) {
+    updateSlideContent(newIndex, "slide-description", aboutCompanySlide)
+  });
+
   historySplide.on("moved", function (newIndex) {
     updateSlideContent(
       newIndex,
@@ -188,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "slide-description-year"
     );
 
-    // Move yearSplide to match the historySplide movement and update the active year style
     yearSplide.go(newIndex);
     updateActiveYear(newIndex);
   });
@@ -203,7 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveYear(newIndex);
   });
 
-  // Function to update the active year style
   function updateActiveYear(activeIndex) {
     const yearItems = document.querySelectorAll(".year-splide .year-item");
 
@@ -218,26 +217,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add click event to year items to change slides
   function addYearItemClickEvents() {
     const yearItems = document.querySelectorAll(".year-splide .year-item");
 
     yearItems.forEach((item, index) => {
       item.addEventListener("click", function () {
-        // Move both sliders to the selected index
         historySplide.go(index);
         yearSplide.go(index);
 
-        // Update the active year styling
         updateActiveYear(index);
       });
     });
   }
 
-  // Call the function to add the click events
   addYearItemClickEvents();
 
-  // Custom pagination and arrows setup
   function mountSlide(slideName, customPaginationId, customArrowServiceId) {
     slideName.on("mounted", function () {
       var paginationItems = slideName.Components.Pagination.items;
@@ -273,7 +267,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Mount the slides
   mountSlide(splide, "splide_custom_pagination", "custom_arrows_services");
   mountSlide(
     historySplide,
@@ -335,7 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // Meets hovering slider
   const meatImage = document.getElementById("meat-image");
   const defaultImageSrc = "/assets/images/about-us/meet.jpg";
   const defaultTextClass = "text-primary";
