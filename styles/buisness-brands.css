@@ -45,3 +45,15 @@
 .diary-production {
   background-image: url("/assets/images/buisness-directions/diary_production.png");
 }
+
+.fridge-storage {
+  background-image: url("/assets/images/buisness-directions/fridge_storage.png");
+}
+
+.labaratory-analysis {
+  background-image: url("/assets/images/buisness-directions/labaratory_analysis.png");
+}
+
+.packaging {
+  background-image: url("/assets/images/buisness-directions/packaging.png");
+}

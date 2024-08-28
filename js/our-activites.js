@@ -27,6 +27,68 @@ function initializeAccordion() {
     });
 }
 
-initializeAccordion();
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('.custom-accordion-button');
+    const accordionItems = document.querySelectorAll('.custom-accordion-content p');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            updateURLParams(category, null);
+            filterProducts(category, null);
+            setActiveCategory(category);
+        });
+    });
+
+    accordionItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const category = item.getAttribute('data-category');
+            const subcategory = item.getAttribute('data-subcategory');
+            updateURLParams(category, subcategory);
+            filterProducts(category, subcategory);
+            setActiveCategory(category);
+        });
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    const subcategory = urlParams.get('subcategory');
+    if (category) {
+        filterProducts(category, subcategory);
+        setActiveCategory(category);
+    }
+});
+
+function updateURLParams(category, subcategory) {
+    const url = new URL(window.location);
+    url.searchParams.set('category', category);
+    if (subcategory) {
+        url.searchParams.set('subcategory', subcategory);
+    } else {
+        url.searchParams.delete('subcategory');
+    }
+    window.history.pushState({}, '', url);
+}
+
+function filterProducts(category, subcategory) {
+    const products = document.querySelectorAll('.product-item');
+    products.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        const productSubcategory = product.getAttribute('data-subcategory');
+        if (productCategory === category && (!subcategory || productSubcategory === subcategory)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+function setActiveCategory(category) {
+    document.querySelectorAll('.custom-accordion-button').forEach(el => {
+        el.style.color = '#808080'; 
+    });
+
+    document.querySelector(`[data-category="${category}"]`).style.color = '#ED1C24';
+}
 
 window.addEventListener('resize', initializeAccordion);
