@@ -139,54 +139,58 @@
       </div>
     </div>
     <!-- End of header -->
-    <div
-      class="contact-banner flex items-center lg:px-[70px] px-[35px] w-full font-montserrat h-screen"
+    <section
+      class="flex w-full h-screen font-montserrat gap-4 lg:flex-row flex-col items-center"
     >
-      <div class="flex w-max flex-col gap-5">
+      <div
+        class="lg:w-1/2 w-full flex justify-center pb-6 px-3 items-end map-container h-full"
+      >
         <a
-          href="/pages/suggestions-complains.html"
-          class="bg-white flex lg:gap-16 contact-item transition-all cursor-pointer w-max justify-between gap-5 items-center lg:p-5 p-3 rounded-[20px] font-[600]"
-        >
-          <div
-            data-translate="suggestions_or_complains"
-            class="lg:text-4xl text-xl tracking-wide title"
-          ></div>
-          <img
-            src="/assets/icons/arrow-right-red.svg"
-            class="lg:w-10 w-6 icon transition-transform brightness-0"
-            alt="arrow icon"
-          />
-        </a>
-        <a
-          href="/pages/business-inquiriess.html"
-          class="bg-white flex lg:gap-16 contact-item transition-all cursor-pointer w-max justify-between gap-5 items-center lg:p-5 p-3 rounded-[20px] font-[600]"
-        >
-          <div
-            data-translate="business_inquiries"
-            class="lg:text-4xl text-xl tracking-wide title"
-          ></div>
-          <img
-            src="/assets/icons/arrow-right-red.svg"
-            class="lg:w-10 w-6 icon transition-transform brightness-0"
-            alt="arrow icon"
-          />
-        </a>
-        <a
-          href="/pages/career.html"
-          class="bg-white flex lg:gap-16 contact-item transition-all cursor-pointer w-max justify-between gap-5 items-center lg:p-5 p-3 rounded-[20px] font-[600]"
-        >
-          <div
-            data-translate="career_opportunities"
-            class="lg:text-4xl text-xl tracking-wide title"
-          ></div>
-          <img
-            src="/assets/icons/arrow-right-red.svg"
-            class="lg:w-10 w-6 icon transition-transform brightness-0"
-            alt="arrow icon"
-          />
-        </a>
+          class="bg-white lg:py-3 py-2 lg:px-6 px-4 lg:text-lg text-sm text-[#7E7E7E] border border-gray-300 font-[600] rounded-full"
+          href="https://maps.app.goo.gl/KAM8B4T6h9kS541t8"
+          data-translate="location"
+        ></a>
       </div>
-    </div>
+      <div
+        class="lg:w-1/2 px-4 flex flex-col lg:items-center justify-center w-full h-full"
+      >
+        <form class="flex flex-col gap-4 max-w-[450px] w-full">
+          <h4
+            data-translate="suggestions_or_complain"
+            class="font-bold text-left pb-6 text-3xl"
+          ></h4>
+          <input
+            class="bg-[#F0F0F0] text-[#818181] input border border-[#CCC] rounded-3xl py-2.5 placeholder:text-sm px-5 border-0"
+            type="text"
+            placeholder="Name / Surname"
+          />
+          <input
+            class="bg-[#F0F0F0] text-[#818181] input border border-[#CCC] rounded-3xl py-2.5 placeholder:text-sm px-5 border-0"
+            type="text"
+            placeholder="Phone number"
+          />
+          <input
+            class="bg-[#F0F0F0] text-[#818181] input border border-[#CCC] rounded-3xl py-2.5 placeholder:text-sm px-5 border-0"
+            type="text"
+            placeholder="E-mail"
+          />
+          <textarea
+            class="bg-[#F0F0F0] text-[#818181] input border border-[#CCC] rounded-3xl py-2.5 placeholder:text-sm px-5 border-0"
+            placeholder="Write a message"
+          ></textarea>
+          <button
+            class="border whitespace-nowrap rounded-full transition-colors px-5 more_btn w-max font-[500] h-[40px] lg:text-[14px] text-sm bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center"
+          >
+            <span data-translate="send"></span>
+            <img
+              class="w-3 brightness-[500%]"
+              src="/assets/icons/splide-arrow-right.svg"
+              alt="arrow-right"
+            />
+          </button>
+        </form>
+      </div>
+    </section>
     <footer
       class="flex justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-10"
     >
@@ -227,53 +231,6 @@
         © <span data-currYear></span> SAB.AZ. All rights reserved!
       </div>
     </footer>
-    <div
-      id="vacationDialog"
-      style="display: none"
-      class="fixed font-montserrat top-0 w-full h-screen justify-center px-4 items-center left-0 backdrop-blur-md bg-black bg-opacity-50"
-    >
-      <div class="bg-white rounded-[30px] max-w-xl w-full">
-        <div class="px-7 py-4">
-          <div class="flex justify-end">
-            <div class="cursor-pointer" id="closeDialog">
-              <img src="/assets/icons/close-black.svg" alt="" />
-            </div>
-          </div>
-          <div class="flex justify-between lg:pt-3 flex-wrap gap-3">
-            <h2 id="title" class="text-3xl font-bold"></h2>
-            <button
-              id="uploadCV"
-              onclick="uploadCV()"
-              class="border rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold h-[40px] lg:text-[14px] text-sm transition-colors text-secondary hover:bg-primary hover:border-primary hover:text-white transition-colors border-secondary flex gap-2 justify-center items-center"
-            >
-              <span data-translate="upload_cv"></span>
-              <img
-                class="w-3"
-                src="/assets/icons/arrow-right.svg"
-                alt="arrow-right"
-              />
-            </button>
-            <button
-              id="thankYouBtn"
-              style="display: none"
-              class="border rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold h-[40px] lg:text-[14px] text-sm transition-colors bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center"
-            >
-              <span data-translate="thank_you"></span>
-            </button>
-          </div>
-          <div class="text-sm pt-1 font-[400]">
-            <span data-translate="deadline"></span>:
-            <span id="deadline">15.08.2024</span>
-          </div>
-        </div>
-        <div class="pb-4 rounded-b-[30px] bg-[#F0F0F0] h-[300px]">
-          <div
-            id="content"
-            class="w-full pl-5 pt-5 pb-5 h-full overflow-y-scroll"
-          ></div>
-        </div>
-      </div>
-    </div>
     <!-- End of Business and Directions -->
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>

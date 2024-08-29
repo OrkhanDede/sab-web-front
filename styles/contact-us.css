@@ -1,0 +1,42 @@
+.contact-banner {
+  background-image: url(/assets/images/contact/contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact-item:hover {
+  padding-right: 60px;
+}
+
+.contact-item:hover .title {
+  color: var(--secondary-red);
+}
+
+.contact-item:hover .icon {
+  transform: translateX(30px);
+  filter: brightness(100%);
+}
+.input:focus {
+  border-color: #ccc !important;
+}
+@media only screen and (max-width: 991px) {
+  .contact-item:hover {
+    padding-right: 30px;
+  }
+
+  .contact-item:hover .title {
+    color: var(--secondary-red);
+  }
+
+  .contact-item:hover .icon {
+    transform: translateX(15px);
+    filter: brightness(100%);
+  }
+}
+
+.map-container {
+  background: url("/assets/images/contact/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

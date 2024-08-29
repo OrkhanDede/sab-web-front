@@ -1,0 +1,8 @@
+.career-bg{
+    background-image: url(/assets/images/career/career-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.more_btn:hover > img {
+    filter: brightness(500%);
+}
