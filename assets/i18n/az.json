@@ -45,13 +45,14 @@
   "labaratory_analysis": "Laboratoriya analizi",
   "packaging": "Paketləmə",
   "view_products": "MƏHSULLARA BAX",
-  "retail": "PƏRAKƏNDƏ",
+  "retail": "PƏRAKƏNDƏ TƏRƏFDAŞLAR",
   "horeca": "HORECA",
   "hotels": "Otellər",
   "restaurants": "Restoranlar",
   "catering": "İaşə",
   "top_selling_products": "Çox satan məhsullarımız",
   "regional_statistics": "REGİONAL STATİSTİKA",
+  "distribution_partner": "Pərakəndə tərəfdaş",
   "retail_partners": "Pərakəndə tərəfdaşlar",
   "retail_partner": "PƏRAKƏNDƏ TƏRƏFDAŞ",
   "horeca_partners": "Horeca tərəfdaşlar",
@@ -70,5 +71,7 @@
   "business_inquiry": "Biznes sorğuları",
   "career_opportunities": "Karyera imkanları üçün",
   "send": "Göndər",
-  "location": "Azərbaycan, Xırdalan şəhəri, Akademik Həsən Əliyev küçəsi 38"
+  "location": "Azərbaycan, Xırdalan şəhəri, Akademik Həsən Əliyev küçəsi 38",
+  "sales_point_across": "Bölgə üzrə Satış Nöqtələri",
+  "meat_processing_description": "Fəxrlə bildiririk ki, yüksək keyfiyyətli ət məhsullarımızı bölgə üzrə 524 satış nöqtəsində təklif edirik. Hər bir məntəqə sizə ən təzə və ən yaxşı ətləri müstəsna xidmətlə təqdim etməyi təmin edir.."
 }

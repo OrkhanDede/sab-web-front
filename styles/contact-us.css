@@ -34,9 +34,29 @@
   }
 }
 
+@media only screen and (min-width: 991px) {
+  .map-container::before {
+    content: "";
+    width: 30px;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    pointer-events: none;
+  }
+}
+
 .map-container {
   background: url("/assets/images/contact/map.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 }

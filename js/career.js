@@ -278,13 +278,20 @@ function appendVacations(vacation) {
     "flex",
     "flex-col",
     "justify-between",
-    "min-h-[180px]"
+    "min-h-[220px]"
   );
 
   element.setAttribute("vacation-data", vacation);
 
   const title = document.createElement("h5");
-  title.classList.add("lg:text-2xl", "text-xl", "font-[700]", "pb-3");
+  title.classList.add(
+    "lg:text-[27px]",
+    "lg:leading-9",
+    "leading-7",
+    "text-[24px]",
+    "font-[700]",
+    "pb-3"
+  );
   title.textContent = vacation.title[lang];
   element.appendChild(title);
 
