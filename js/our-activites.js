@@ -1,99 +1,179 @@
 function initializeAccordion() {
-    const accordionItems = document.querySelectorAll("#custom-accordion .custom-accordion-item");
-    const screenWidth = window.innerWidth;
-    
-    accordionItems.forEach(item => {
-        const button = item.querySelector(".custom-accordion-button");
-        const content = item.querySelector(".custom-accordion-content");
-        
-        if (screenWidth > 991) {
-            button.setAttribute("aria-expanded", "true");
-            content.classList.remove("hidden");
-        } else {
-            button.setAttribute("aria-expanded", "false");
-            content.classList.add("hidden");
-        }
-        button.addEventListener("click", function () {
-            const isExpanded = button.getAttribute("aria-expanded") === "true";
-            
-            if (isExpanded) {
-                button.setAttribute("aria-expanded", "false");
-                content.classList.add("hidden");
-            } else {
-                button.setAttribute("aria-expanded", "true");
-                content.classList.remove("hidden");
-            }
-        });
+  const accordionItems = document.querySelectorAll(
+    "#custom-accordion .custom-accordion-item"
+  );
+  const screenWidth = window.innerWidth;
+
+  accordionItems.forEach((item) => {
+    const button = item.querySelector(".custom-accordion-button");
+    const content = item.querySelector(".custom-accordion-content");
+
+    if (screenWidth > 991) {
+      button.setAttribute("aria-expanded", "true");
+      content.classList.remove("hidden");
+    } else {
+      button.setAttribute("aria-expanded", "false");
+      content.classList.add("hidden");
+    }
+    button.addEventListener("click", function () {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      if (isExpanded) {
+        button.setAttribute("aria-expanded", "false");
+        content.classList.add("hidden");
+      } else {
+        button.setAttribute("aria-expanded", "true");
+        content.classList.remove("hidden");
+      }
     });
+  });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const accordionButtons = document.querySelectorAll('.custom-accordion-button');
-    const accordionItems = document.querySelectorAll('.custom-accordion-content p');
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionButtons = document.querySelectorAll(
+    ".custom-accordion-button"
+  );
+  const accordionItems = document.querySelectorAll(
+    ".custom-accordion-content p"
+  );
+  let selectedTag = null;
 
-    accordionButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-category');
-            updateURLParams(category, null);
-            filterProducts(category, null);
-            setActiveCategory(category, null);
-        });
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+      updateURLParams(category, null, null);
+      filterProducts(category, null, null);
+      setActiveCategory(category, null);
+      renderTags(category, null);
+      setActiveTag("all");
+      selectedTag = null;
     });
+  });
 
-    accordionItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const category = item.getAttribute('data-category');
-            const subcategory = item.getAttribute('data-subcategory');
-            updateURLParams(category, subcategory);
-            filterProducts(category, subcategory);
-            setActiveCategory(category, subcategory);
-        });
+  accordionItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const category = item.getAttribute("data-category");
+      const subcategory = item.getAttribute("data-subcategory");
+      updateURLParams(category, subcategory, null);
+      filterProducts(category, subcategory, null);
+      setActiveCategory(category, subcategory);
+      renderTags(category, subcategory);
+      setActiveTag("all");
+      selectedTag = null;
     });
+  });
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-    const subcategory = urlParams.get('subcategory');
-    if (category) {
-        filterProducts(category, subcategory);
-        setActiveCategory(category, subcategory);
+  const urlParams = new URLSearchParams(window.location.search);
+  let category = urlParams.get("category");
+  let subcategory = urlParams.get("subcategory");
+  let tag = urlParams.get("tag");
+  if (category) {
+    filterProducts(category, subcategory, tag || "all");
+    setActiveCategory(category, subcategory);
+    renderTags(category, subcategory);
+    setActiveTag(tag || "all");
+  }
+
+  function updateURLParams(category, subcategory, tag) {
+    const url = new URL(window.location);
+    url.searchParams.set("category", category);
+    if (subcategory) {
+      url.searchParams.set("subcategory", subcategory);
+    } else {
+      url.searchParams.delete("subcategory");
     }
+    if (tag && tag !== "all") {
+      url.searchParams.set("tag", tag);
+    } else {
+      url.searchParams.delete("tag");
+    }
+    window.history.pushState({}, "", url);
+  }
+
+  function filterProducts(category, subcategory, tag) {
+    const products = document.querySelectorAll(".product-item");
+    products.forEach((product) => {
+      const productCategory = product.getAttribute("data-category");
+      const productSubcategory = product.getAttribute("data-subcategory");
+      const productTags = product.getAttribute("data-tags")?.split(",") || [];
+      if (
+        productCategory === category &&
+        (!subcategory || productSubcategory === subcategory) &&
+        (!tag || tag === "all" || productTags.includes(tag))
+      ) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+
+  function setActiveCategory(category, subcategory) {
+    document
+      .querySelectorAll(".custom-accordion-button, .custom-accordion-content p")
+      .forEach((el) => {
+        el.style.color = "#808080";
+      });
+
+    document.querySelector(`[data-category="${category}"]`).style.color =
+      "#ED1C24";
+    if (subcategory) {
+      document
+        .querySelectorAll(
+          `[data-category="${category}"][data-subcategory="${subcategory}"]`
+        )
+        .forEach((el) => {
+          el.style.color = "#ED1C24";
+        });
+    }
+  }
+
+  function renderTags(category, subcategory) {
+    const tagContainer = document.getElementById("tags-container");
+    tagContainer.innerHTML = "";
+
+    if (category === "meat") {
+      const allTagElement = document.createElement("button");
+      allTagElement.textContent = "All";
+      allTagElement.classList.add("tag-item", "capitalize");
+      allTagElement.setAttribute("data-tag", "all");
+      allTagElement.addEventListener("click", () => {
+        updateURLParams(category, subcategory, null);
+        filterProducts(category, subcategory, null);
+        setActiveTag("all");
+      });
+      tagContainer.appendChild(allTagElement);
+    }
+
+    const tags = Array.from(
+      document.querySelectorAll(`.product-item[data-category="${category}"]`)
+    )
+      .map((product) => product.getAttribute("data-tags").split(","))
+      .flat()
+      .filter((value, index, self) => self.indexOf(value) === index);
+
+    tags.forEach((tag) => {
+      const tagElement = document.createElement("button");
+      tagElement.textContent = tag;
+      tagElement.classList.add("tag-item", "capitalize");
+      tagElement.setAttribute("data-tag", tag);
+      tagElement.addEventListener("click", () => {
+        updateURLParams(category, subcategory, tag);
+        filterProducts(category, subcategory, tag);
+        setActiveTag(tag);
+      });
+      tagContainer.appendChild(tagElement);
+    });
+  }
+
+  function setActiveTag(tag) {
+    document.querySelectorAll(".tag-item").forEach((tagItem) => {
+      tagItem.style.color =
+        tagItem.getAttribute("data-tag") === tag ? "#ED1C24" : "#6b7280";
+    });
+  }
+
+  renderTags("meat", null);
 });
 
-function updateURLParams(category, subcategory) {
-    const url = new URL(window.location);
-    url.searchParams.set('category', category);
-    if (subcategory) {
-        url.searchParams.set('subcategory', subcategory);
-    } else {
-        url.searchParams.delete('subcategory');
-    }
-    window.history.pushState({}, '', url);
-}
-
-function filterProducts(category, subcategory) {
-    const products = document.querySelectorAll('.product-item');
-    products.forEach(product => {
-        const productCategory = product.getAttribute('data-category');
-        const productSubcategory = product.getAttribute('data-subcategory');
-        if (productCategory === category && (!subcategory || productSubcategory === subcategory)) {
-            product.style.display = 'block';
-        } else {
-            product.style.display = 'none';
-        }
-    });
-}
-
-function setActiveCategory(category, subcategory) {
-    document.querySelectorAll('.custom-accordion-button, .custom-accordion-content p').forEach(el => {
-        el.style.color = '#808080';
-    });
-
-    document.querySelector(`[data-category="${category}"]`).style.color = '#ED1C24';
-    if(subcategory){
-        document.querySelectorAll(`[data-category="${category}"][data-subcategory="${subcategory}"]`).forEach(el => {
-            el.style.color = '#ED1C24';
-        });
-    }
-}
-
-window.addEventListener('resize', initializeAccordion);
+window.addEventListener("resize", initializeAccordion);
