@@ -201,13 +201,13 @@
       <!-- End of banner -->
       <!-- Business and Directions -->
       <section
-        class="block overflow-hidden section bg-white relative business_direction_section h-screen lg:bg-primary"
+        class="block overflow-hidden section bg-white font-montserrat relative business_direction_section h-screen lg:bg-primary"
       >
         <div
           class="business_direction_section_first_content absolute top-0 left-0 w-full lg:bg-primary h-screen"
         >
           <h1
-            class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-10"
+            class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-24"
             data-translate="business_directions_title"
           ></h1>
         </div>
@@ -321,10 +321,10 @@
         class="h-screen section flex flex-col justify-start md:px-[70px] py-5 px-[30px] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[160px] md:pt-[130px] pt-[75px] h-full pb-5 flex lg:flex-row flex-col gap-3"
+          class="lg:pt-[160px] overflow-hidden md:pt-[130px] pt-[75px] h-full pb-5 flex lg:flex-row flex-col gap-3"
         >
           <div class="flex lg:w-1/2 w-full flex-col justify-between">
-            <div class="flex lg:flex-row flex-col lg:gap-8 gap-5">
+            <div class="flex lg:flex-row flex-col lg:gap-14 gap-5">
               <h4
                 class="text-primary text-[30px] font-bold"
                 data-translate="services_title"
@@ -340,11 +340,12 @@
                 ></p>
               </div>
             </div>
-            <div class="lg:flex hidden justify-between">
+            <div class="lg:flex hidden items-center justify-between">
               <div id="splide_custom_pagination"></div>
               <div id="custom_arrows_services" class="flex gap-2"></div>
               <a
-                href="/pages/about-us.html"
+                id="services_more_btn"
+                href=""
                 class="border rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary hover:bg-primary hover:border-primary hover:text-white transition-colors border-primary flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
@@ -418,21 +419,21 @@
             class="grid lg:pt-[150px] pt-[100px] lg:grid-cols-2 grid-cols-1 h-1/2 lg:gap-10 gap-5"
           >
             <div
-              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 py-6 lg:h-full h-[160px] items-center rounded-[30px]"
+              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[160px] items-center rounded-[30px]"
             >
               <h2
-                class="2xl:text-[250px] lg:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
+                class="lg:text-[220px] md:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
               >
                 1
               </h2>
-              <div>
+              <div class="flex flex-col justify-start h-full">
                 <h6
                   class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text"
-                  class="text-[#858585] transition-colors first-place-text lg:text-3xl text-lg leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-2xl text-lg leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
@@ -442,21 +443,21 @@
               />
             </div>
             <div
-              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between lg:py-24 py-6 lg:h-full h-[160px] items-center rounded-[30px]"
+              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[160px] items-center rounded-[30px]"
             >
               <h2
-                class="2xl:text-[250px] lg:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
+                class="lg:text-[220px] md:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
               >
                 1
               </h2>
-              <div>
+              <div class="flex flex-col justify-start h-full">
                 <h6
                   class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text_2"
-                  class="text-[#858585] transition-colors first-place-text lg:text-3xl text-lg leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-2xl text-lg leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
@@ -473,7 +474,7 @@
               class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[30px] w-full lg:py-7 py-2 border-r lg:border-b-0 border-b border-gray-300"
             >
               <img
-                class="2xl:w-[70px] w-[35px] icon"
+                class="lg:w-[60px] w-[40px] icon"
                 src="/assets/images/first_place/product_range.svg"
                 alt="icon"
               />
@@ -491,7 +492,7 @@
               class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 lg:border-r lg:border-b-0 border-b border-l-0 border-gray-300"
             >
               <img
-                class="2xl:w-[70px] w-[35px] icon"
+                class="lg:w-[60px] w-[40px] icon"
                 src="/assets/images/first_place/market_share.svg"
                 alt="icon"
               />
@@ -509,7 +510,7 @@
               class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 border-r border-gray-300"
             >
               <img
-                class="2xl:w-[70px] w-[35px] icon"
+                class="lg:w-[60px] w-[40px] icon"
                 src="/assets/images/first_place/parnetrs.svg"
                 alt="icon"
               />
@@ -527,7 +528,7 @@
               class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[30px] w-full lg:py-7 py-2 lg:border-r border-r-0 border-gray-300"
             >
               <img
-                class="2xl:w-[70px] w-[35px] icon"
+                class="lg:w-[60px] w-[40px] icon"
                 src="/assets/images/first_place/export_countries.svg"
                 alt="icon"
               />
@@ -546,7 +547,7 @@
       </section>
       <!-- Distributing -->
       <section
-        class="section bg-white relative business_direction_section h-screen"
+        class="section bg-white font-montserrat relative business_direction_section h-screen"
       >
         <div class="lg:block hidden">
           <div
@@ -554,7 +555,7 @@
           >
             <h1
               data-translate="distributing_products_title"
-              class="text-[70px] distributing_products_title font-bold text-white text-center uppercase"
+              class="text-[70px] w-3/4 mx-auto translate-y-24 distributing_products_title font-bold text-white text-center uppercase"
             ></h1>
             <div class="pt-[100px] z-1 w-full flex justify-center">
               <img
@@ -612,14 +613,14 @@
           <section class="md:px-10 h-max px-5 font-montserrat">
             <div class="pt-[110px]">
               <h2
-                class="text-primary uppercase lg:text-[45px] lg:text-[40px] text-[25px] lg:w-2/3 w-full font-bold"
+                class="text-primary uppercase lg:text-[45px] lg:text-[40px] text-[25px] 2xl:w-2/3 w-full font-bold"
                 data-translate="trusted_partner_title"
               ></h2>
               <div
                 class="pt-5 partners_container flex flex-row-reverse items-center relative gap-4"
               >
                 <section
-                  class="splide-home-partners w-full cursor-pointer relative lg:translate-x-1/3 lg:hover:-translate-x-[150px]"
+                  class="splide-home-partners retail w-full cursor-pointer relative lg:translate-x-1/3 translate-x-[55%] hover:translate-x-0"
                   id="splide-home-partners"
                 >
                   <div class="splide__track">
@@ -627,7 +628,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -636,7 +637,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -645,7 +646,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -654,7 +655,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -663,7 +664,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -672,7 +673,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -684,7 +685,7 @@
                   </div>
                 </section>
                 <h4
-                  class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold"
+                  class="text-[40px] w-[200px] text-[#929292] absolute left-0 partner_section_title font-bold"
                 >
                   Retail
                 </h4>
@@ -693,7 +694,7 @@
                 class="pt-5 partners_container flex flex-row-reverse items-center relative gap-4"
               >
                 <section
-                  class="splide-home-partners w-full cursor-pointer relative lg:translate-x-1/3 lg:hover:-translate-x-[150px]"
+                  class="splide-home-partners horeca w-full cursor-pointer relative lg:translate-x-1/3 translate-x-[55%] hover:translate-x-0"
                   id="splide-home-partners"
                 >
                   <div class="splide__track">
@@ -701,7 +702,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -710,7 +711,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -719,7 +720,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -728,7 +729,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -737,7 +738,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -746,7 +747,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -758,7 +759,7 @@
                   </div>
                 </section>
                 <h4
-                  class="text-[40px] w-[200px] text-[#929292] partner_section_title font-bold"
+                  class="text-[40px] w-[200px] text-[#929292] absolute left-0 partner_section_title font-bold"
                 >
                   Horeca
                 </h4>
@@ -767,7 +768,7 @@
                 class="pt-5 partners_container flex flex-row-reverse items-center relative gap-4"
               >
                 <section
-                  class="splide-home-partners w-full cursor-pointer relative lg:translate-x-1/3"
+                  class="splide-home-partners b2g w-full cursor-pointer relative lg:translate-x-1/3 translate-x-[55%] lg:hover:translate-x-1/3 hover:translate-x-0"
                   id="splide-home-partners"
                 >
                   <div class="splide__track">
@@ -775,7 +776,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -784,7 +785,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[160px] h-[100px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -795,7 +796,9 @@
                     </ul>
                   </div>
                 </section>
-                <h4 class="text-[40px] w-[200px] text-[#929292] font-bold">
+                <h4
+                  class="text-[40px] w-[200px] text-[#929292] partner_section_title absolute left-0 font-bold"
+                >
                   B2G
                 </h4>
               </div>

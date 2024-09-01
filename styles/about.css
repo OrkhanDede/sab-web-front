@@ -69,7 +69,8 @@
   justify-content: center;
   cursor: pointer;
   border-radius: 50%;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -91,6 +92,10 @@
   opacity: 1;
   filter: brightness(500%) !important;
 }
-.ceo-container{
-  background: linear-gradient(180deg, rgba(240,240,240,1) 50%, rgba(238,50,57,1) 50%);
+.ceo-container {
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240, 1) 60%,
+    rgba(238, 50, 57, 1) 40%
+  );
 }

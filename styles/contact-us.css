@@ -37,7 +37,7 @@
 @media only screen and (min-width: 991px) {
   .map-container::before {
     content: "";
-    width: 30px;
+    width: 60px;
     position: absolute;
     top: 0;
     height: 100vh;
@@ -59,4 +59,9 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+}
+
+.active-btn {
+  background-color: #ffebeb !important;
+  color: #ed1c24 !important;
 }

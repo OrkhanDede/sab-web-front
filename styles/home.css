@@ -42,7 +42,7 @@
 }
 
 .more_btn.business-brands:hover > img {
-  filter: brightness(100%);
+  filter: brightness(500%);
 }
 
 .more_btn.services > img {
@@ -82,30 +82,6 @@
   transform: scale(1) translateY(0);
   transition: transform 1.5s ease-in;
 }
-@media only screen and (min-width: 991px) {
-  .first-place-item .first-place-item-img {
-    transform: translateX(20px);
-    transition-duration: 500ms;
-  }
-  .first-place-item:hover .first-place-item-img {
-    transform: translateX(-10px) scale(1.1);
-  }
-  .first-place-item:hover .first-place-text {
-    color: #000000;
-  }
-  .first-place-subitem:hover {
-    background-color: var(--primary-red);
-  }
-  .first-place-subitem:hover > * {
-    color: #fff;
-  }
-  .first-place-subitem > .icon {
-    filter: brightness(100%);
-  }
-  .first-place-subitem:hover > .icon {
-    filter: brightness(1000%);
-  }
-}
 
 .slide-up-animation {
   animation: fadeIn 1s forwards;
@@ -130,10 +106,13 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.partner_section_title {
+.splide-home-partners.retail ~ .partner_section_title,
+.splide-home-partners.horeca ~ .partner_section_title {
   transition: opacity 0.48s ease-in;
 }
-.splide-home-partners:hover ~ .partner_section_title {
+
+.splide-home-partners.retail:hover ~ .partner_section_title,
+.splide-home-partners.horeca:hover ~ .partner_section_title {
   opacity: 0;
 }
 
@@ -175,4 +154,39 @@
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
+}
+
+@media only screen and (min-width: 991px) {
+  .first-place-item .first-place-item-img {
+    transform: translateX(20px);
+    transition-duration: 500ms;
+  }
+  .first-place-item:hover .first-place-item-img {
+    transform: translateX(-10px) scale(1.1);
+  }
+  .first-place-item:hover .first-place-text {
+    color: #000000;
+  }
+  .first-place-subitem:hover {
+    background-color: var(--primary-red);
+  }
+  .first-place-subitem:hover > * {
+    color: #fff;
+  }
+  .first-place-subitem > .icon {
+    filter: brightness(100%);
+  }
+  .first-place-subitem:hover > .icon {
+    filter: brightness(1000%);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .splide-home-partners.b2g ~ .partner_section_title {
+    transition: opacity 0.48s ease-in;
+  }
+
+  .splide-home-partners:hover ~ .partner_section_title {
+    opacity: 0;
+  }
 }

@@ -3,7 +3,7 @@ button.active {
   color: white;
   border-radius: 20px;
 }
-.info-panel-heading{
+.info-panel-heading {
   line-height: 1.3em !important;
 }
 .custom-arrow {
@@ -40,17 +40,17 @@ button.active {
   opacity: 1;
   filter: brightness(500%) !important;
 }
-.category-slide{
-  width: 250px !important;
-  height: 110px !important;
+.category-slide {
+  width: 240px !important;
+  height: 90px !important;
 }
-.map-page{
+.map-page {
   display: flex;
   justify-content: center;
   width: 100%;
-  .map{
-      max-width: 50rem;
-      width: 100%;
+  .map {
+    max-width: 50rem;
+    width: 100%;
   }
 }
 

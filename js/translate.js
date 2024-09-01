@@ -55,12 +55,14 @@ function changeLanguageWithBtn() {
   changeLanguage(newLang);
 }
 
-function getCurrentYear(){
-  const element = document.querySelector('[data-currYear]');
-  if(element){
-    const date = new Date();
-    const year = date.getFullYear();
-    element.textContent = year;    
+function getCurrentYear() {
+  const elements = document.querySelectorAll("[data-currYear]");
+  if (elements.length) {
+    elements.forEach((element) => {
+      const date = new Date();
+      const year = date.getFullYear();
+      element.innerHTML = year;
+    });
   }
 }
 

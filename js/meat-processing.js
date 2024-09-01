@@ -2,7 +2,7 @@ const companies = [
   {
     id: 1,
     title: "SAB",
-    query: 'sab',
+    query: "sab",
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -18,7 +18,7 @@ const companies = [
   {
     id: 2,
     title: "MR.FOOD",
-    query: 'mrfood',
+    query: "mrfood",
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -34,7 +34,7 @@ const companies = [
   {
     id: 3,
     title: "ÜMİD",
-    query: 'umid',
+    query: "umid",
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -50,7 +50,7 @@ const companies = [
   {
     id: 4,
     title: "KÖVSƏR",
-    query: 'kovser',
+    query: "kovser",
     description: {
       az: `
       Yerli şirkət olan “Zəhmət-Ruzi” Məhdud Məsuliyyətli Cəmiyyəti 1998-ci ildən fəaliyyət göstərir. Hazırda “Zəhmət-Ruzi” MMC 3 hektardan artıq ərazidə yerləşir.
@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentLang = localStorage.getItem("language") || "az";
       const newLang = currentLang === "en" ? "en" : "az";
 
-      navigateBtn.href = `/pages/our-activites.html?category=meat&subcategory=` + company.query;
+      navigateBtn.href =
+        `/pages/our-activites.html?category=meat&subcategory=` + company.query;
       title.textContent = company.title;
       description.innerHTML = company.description[newLang];
       image.src = company.image;
@@ -126,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: true,
     interval: 2000,
     speed: 1000,
-    gap: "1rem",
     rewind: false,
     pauseOnHover: false,
     pagination: false,
@@ -149,6 +149,8 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   }).mount();
+
+  console.log(splide);
 
   const productSwiper = new Swiper(".products-swiper", {
     loop: true,
@@ -223,66 +225,68 @@ document.addEventListener("DOMContentLoaded", () => {
   const horecaDesc = document.getElementById("horecaPartners");
 
   const regions = [
-      {
-          title: "abseron",
-          regions: [57, 78, 5, 30],
-          regionName: {
-            az: "Abşeron",
-            en: "Absheron"
-          },
-          description: "Abseron",
-          retailPartners: 231,
-          horecaPartners: 82,
+    {
+      title: "abseron",
+      regions: [57, 78, 5, 30],
+      regionName: {
+        az: "Abşeron",
+        en: "Absheron",
       },
-      {
-          title: "quba",
-          regions: [19, 56, 41, 43, 28],
-          description: "Quba-Khacmaz",
-          regionName: {
-            az: "Quba-Xaçmaz",
-            en: "Quba-Khacmaz"
-          },
-          retailPartners: 92,
-          horecaPartners: 14,
-      }
-  ]
-  
+      description: "Abseron",
+      retailPartners: 231,
+      horecaPartners: 82,
+    },
+    {
+      title: "quba",
+      regions: [19, 56, 41, 43, 28],
+      description: "Quba-Khacmaz",
+      regionName: {
+        az: "Quba-Xaçmaz",
+        en: "Quba-Khacmaz",
+      },
+      retailPartners: 92,
+      horecaPartners: 14,
+    },
+  ];
+
   const currentLang = localStorage.getItem("language");
   const newLang = currentLang === "en" ? "en" : "az";
 
   function addHoverClass(region, type) {
     resetFill();
-      const hoveredRegions = regions.find(r => r.title === region);
-      hoveredRegions.regions.forEach(h => {
-          const element = document.getElementById(`region_${h}`);
-          if(type === 'add'){
-              regionName.textContent = hoveredRegions.regionName[newLang];
-              retailDesc.textContent = hoveredRegions.retailPartners;
-              horecaDesc.textContent = hoveredRegions.horecaPartners;
-              element.classList.add("hovered");
-          }else{
-              // addHoverClass("abseron", 'add');
-              element.classList.remove("hovered");
-          }
-      })
+    const hoveredRegions = regions.find((r) => r.title === region);
+    hoveredRegions.regions.forEach((h) => {
+      const element = document.getElementById(`region_${h}`);
+      if (type === "add") {
+        regionName.textContent = hoveredRegions.regionName[newLang];
+        retailDesc.textContent = hoveredRegions.retailPartners;
+        horecaDesc.textContent = hoveredRegions.horecaPartners;
+        element.classList.add("hovered");
+      } else {
+        // addHoverClass("abseron", 'add');
+        element.classList.remove("hovered");
+      }
+    });
   }
 
-  addHoverClass('abseron', 'add');
+  addHoverClass("abseron", "add");
 
-  function resetFill(){
-    regions.forEach(r => {
-      r.regions.map(x => {
-          const element = document.getElementById(`region_${x}`);
-          element.classList.remove("hovered");
-      })
-    })
+  function resetFill() {
+    regions.forEach((r) => {
+      r.regions.map((x) => {
+        const element = document.getElementById(`region_${x}`);
+        element.classList.remove("hovered");
+      });
+    });
   }
 
-  regions.forEach(r => {
-      r.regions.map(x => {
-          const element = document.getElementById(`region_${x}`);
-          element.addEventListener("mouseover", () => addHoverClass(r.title, 'add'));
-          // element.addEventListener("mouseout", () => addHoverClass(r.title, 'remove'));
-      })
-  })
+  regions.forEach((r) => {
+    r.regions.map((x) => {
+      const element = document.getElementById(`region_${x}`);
+      element.addEventListener("mouseover", () =>
+        addHoverClass(r.title, "add")
+      );
+      // element.addEventListener("mouseout", () => addHoverClass(r.title, 'remove'));
+    });
+  });
 });

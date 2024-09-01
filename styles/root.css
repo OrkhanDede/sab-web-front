@@ -80,3 +80,7 @@ textarea:focus {
 .fp-watermark {
   display: none !important;
 }
+
+.splide__arrow {
+  transform: translateY(0) !important;
+}

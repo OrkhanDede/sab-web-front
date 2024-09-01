@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveCategory(category, subcategory);
     renderTags(category, subcategory);
     setActiveTag(tag || "all");
+  } else {
+    let initCategory = "meat";
+    let initSubcategory = null;
+    filterProducts(initCategory, initSubcategory, tag || "all");
+    setActiveCategory(initCategory, initSubcategory);
+    renderTags(initCategory, initSubcategory);
+    setActiveTag("all");
   }
 
   function updateURLParams(category, subcategory, tag) {
@@ -109,11 +116,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setActiveCategory(category, subcategory) {
-    document
-      .querySelectorAll(".custom-accordion-button, .custom-accordion-content p")
-      .forEach((el) => {
-        el.style.color = "#808080";
-      });
+    document.querySelectorAll(".custom-accordion-button").forEach((el) => {
+      el.style.color = "black";
+    });
+
+    document.querySelectorAll(".custom-accordion-content p").forEach((el) => {
+      el.style.color = "#808080";
+    });
 
     document.querySelector(`[data-category="${category}"]`).style.color =
       "#ED1C24";
@@ -129,13 +138,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderTags(category, subcategory) {
+    console.log(category, subcategory);
+
     const tagContainer = document.getElementById("tags-container");
     tagContainer.innerHTML = "";
 
     if (category === "meat") {
       const allTagElement = document.createElement("button");
       allTagElement.textContent = "All";
-      allTagElement.classList.add("tag-item", "capitalize");
+      allTagElement.classList.add("tag-item", "capitalize", "py-3", "px-6");
       allTagElement.setAttribute("data-tag", "all");
       allTagElement.addEventListener("click", () => {
         updateURLParams(category, subcategory, null);
@@ -150,20 +161,24 @@ document.addEventListener("DOMContentLoaded", () => {
     )
       .map((product) => product.getAttribute("data-tags").split(","))
       .flat()
-      .filter((value, index, self) => self.indexOf(value) === index);
+      .filter(
+        (value, index, self) => self.indexOf(value) === index && value !== ""
+      );
 
-    tags.forEach((tag) => {
-      const tagElement = document.createElement("button");
-      tagElement.textContent = tag;
-      tagElement.classList.add("tag-item", "capitalize");
-      tagElement.setAttribute("data-tag", tag);
-      tagElement.addEventListener("click", () => {
-        updateURLParams(category, subcategory, tag);
-        filterProducts(category, subcategory, tag);
-        setActiveTag(tag);
+    if (tags.length) {
+      tags.forEach((tag) => {
+        const tagElement = document.createElement("button");
+        tagElement.textContent = tag;
+        tagElement.classList.add("tag-item", "capitalize", "py-3", "px-6");
+        tagElement.setAttribute("data-tag", tag);
+        tagElement.addEventListener("click", () => {
+          updateURLParams(category, subcategory, tag);
+          filterProducts(category, subcategory, tag);
+          setActiveTag(tag);
+        });
+        tagContainer.appendChild(tagElement);
       });
-      tagContainer.appendChild(tagElement);
-    });
+    }
   }
 
   function setActiveTag(tag) {
@@ -173,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  renderTags("meat", null);
+  // renderTags("meat", null);
 });
 
 window.addEventListener("resize", initializeAccordion);
