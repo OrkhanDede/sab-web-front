@@ -22,6 +22,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 [multiple]:focus,
 [type="date"]:focus,
 [type="datetime-local"]:focus,
