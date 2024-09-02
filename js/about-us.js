@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pauseOnHover: false,
     pauseOnFocus: false,
     resetProgress: false,
-    padding: "5rem",
+    padding: { right: "5rem", left: "0" },
     easing: "ease",
     pagination: true,
     arrows: true,
@@ -155,11 +155,11 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: false,
   });
   let swiperInstance;
-  
+
   function updateSlideContent(index, id, slideName, yearElementId = null) {
     const descriptionElement = document.getElementById(id);
     const yearElement = document.getElementById(yearElementId);
-    
+
     const currentLang = localStorage.getItem("language");
     const newLang = currentLang === "en" ? "en" : "az";
 
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   splide.on("moved", function (newIndex) {
-    updateSlideContent(newIndex, "slide-description", aboutCompanySlide)
+    updateSlideContent(newIndex, "slide-description", aboutCompanySlide);
   });
 
   historySplide.on("moved", function (newIndex) {
@@ -208,11 +208,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     yearItems.forEach((item, index) => {
       if (index === activeIndex) {
-        item.classList.add("text-primary", "border-primary");
-        item.classList.remove("text-gray-300", "border-gray-300");
+        item.classList.add("text-secondary", "border-primary");
+        item.classList.remove("text-[#8C8C8C]", "border-[#BCBCBC]");
       } else {
-        item.classList.remove("text-primary", "border-primary");
-        item.classList.add("text-gray-300", "border-gray-300");
+        item.classList.remove("text-secondary", "border-primary");
+        item.classList.add("text-[#8C8C8C]", "border-[#BCBCBC]");
       }
     });
   }
@@ -289,9 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
       //   historySplide.mount();
       //   yearSplide.mount();
       // }
-      if(section === 4 && !swiperInstance){
-        swiperInstance = new Swiper('.swiper-container', {
-          effect: 'coverflow',
+      if (section === 4 && !swiperInstance) {
+        swiperInstance = new Swiper(".swiper-container", {
+          effect: "coverflow",
           grabCursor: true,
           centeredSlides: true,
           slidesPerView: 3,
@@ -308,8 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
             slideShadows: false,
           },
           navigation: {
-            prevEl: '.certificate-button-prev',
-            nextEl: '.certificate-button-next',
+            prevEl: ".certificate-button-prev",
+            nextEl: ".certificate-button-next",
           },
           pagination: false,
           breakpoints: {
@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             991: {
               slidesPerView: 3,
-            }
+            },
           },
         });
       }
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const meatImage = document.getElementById("meat-image");
   const defaultImageSrc = "/assets/images/about-us/meet.jpg";
-  const defaultTextClass = "text-primary";
+  const defaultTextClass = "text-secondary";
   const defaultRedColor = "#EE3239";
   const grayColor = "#7A7878";
   const meetTitles = document.querySelectorAll(".meet-titles");

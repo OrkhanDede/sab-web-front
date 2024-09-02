@@ -2,15 +2,15 @@
   clip-path: circle(60%);
 }
 
-.meet-titles.text-primary ~ .line {
+.meet-titles.text-secondary ~ .line {
   background-color: var(--primary-red) !important;
 }
-.meet-titles.text-primary ~ .border {
+.meet-titles.text-secondary ~ .border {
   border-color: var(--primary-red) !important;
 }
-.meet-titles.text-primary ~ .border::after {
-  width: 6px;
-  height: 6px;
+.meet-titles.text-secondary ~ .border::after {
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   content: "";
   display: block;

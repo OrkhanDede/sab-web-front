@@ -80,6 +80,17 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.splide__arrow.history {
+  position: relative !important;
+  background-color: transparent !important;
+  border: 2px solid #ccc !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .splide__arrow:hover {
   background-color: var(--primary-red) !important;
   border-color: var(--primary-red) !important;
