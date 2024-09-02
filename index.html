@@ -328,7 +328,7 @@
         class="h-screen section flex flex-col justify-start md:px-[7rem] py-5 px-[3rem] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[16rem] overflow-hidden md:pt-[13rem] pt-[7.5rem] h-full pb-5 flex lg:flex-row flex-col gap-[3rem]"
+          class="lg:pt-[16rem] overflow-hidden md:pt-[13rem] pt-[7.5rem] h-full pb-5 flex lg:flex-row flex-col gap-[5rem]"
         >
           <div class="flex lg:w-1/2 w-full flex-col justify-between">
             <div class="flex lg:flex-row flex-col lg:gap-[11rem] gap-[3rem]">
@@ -343,7 +343,7 @@
                 ></h3>
                 <p
                   id="slide-description"
-                  class="font-medium line-clamp-3 text-[#494949] pt-5 text-[2rem]"
+                  class="font-medium lg:line-clamp-none line-clamp-3 text-[#494949] pt-5 text-[2rem]"
                 ></p>
               </div>
             </div>
@@ -433,14 +433,14 @@
               >
                 1
               </h2>
-              <div class="flex flex-col justify-center h-full">
+              <div class="flex flex-col justify-start pt-5 h-full">
                 <h6
                   class="lg:text-[3rem] text-[2rem] uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text"
-                  class="text-[#858585] transition-colors first-place-text lg:text-[2.2rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-[2.6rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
@@ -457,14 +457,14 @@
               >
                 1
               </h2>
-              <div class="flex flex-col justify-center h-full">
+              <div class="flex flex-col justify-start pt-5 h-full">
                 <h6
                   class="lg:text-[3rem] text-[2rem] uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text_2"
-                  class="text-[#858585] transition-colors first-place-text lg:text-[2.2rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-[2.6rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
@@ -560,21 +560,23 @@
           <div
             class="distributing_first_section lg:block hidden absolute top-0 left-0 w-full bg-primary h-screen"
           >
-            <h1
-              data-translate="distributing_products_title"
-              class="text-[7rem] w-3/4 mx-auto distributing_products_title font-bold text-white text-center uppercase"
-            ></h1>
-            <div class="z-1 w-full flex justify-center">
-              <img
-                class="w-3/4 z-1 first-world-img"
-                src="/assets/images/distributing/first.png"
-                alt="img"
-              />
+            <div class="relative">
+              <h1
+                data-translate="distributing_products_title"
+                class="text-[7rem] pt-[9rem] w-3/4 distributing_products_title absolute left-1/2 -translate-x-1/2 font-bold text-white text-center uppercase"
+              ></h1>
+              <div class="z-1 pt-[17rem] w-full flex justify-center">
+                <img
+                  class="w-3/4 z-1 first-world-img"
+                  src="/assets/images/distributing/first.png"
+                  alt="img"
+                />
+              </div>
             </div>
           </div>
           <div class="flex justify-center w-full">
             <div
-              class="relative w-3/4 pt-[18rem] h-screen distributing_second_section transition-all opacity-0"
+              class="relative w-3/4 pt-[14rem] h-screen distributing_second_section transition-all opacity-0"
             >
               <h1
                 data-translate="distributing_products_title"
@@ -620,8 +622,12 @@
           <section class="lg:px-[7rem] h-max px-[3.5rem] font-montserrat">
             <div class="pt-[12rem]">
               <h2
-                class="text-secondary uppercase lg:text-[4.5rem] text-[3.5rem] lg:w-2/3 w-full font-bold"
-                data-translate="trusted_partner_title"
+                class="text-secondary uppercase lg:text-[4.5rem] text-[3.5rem] w-full font-bold"
+                data-translate="trusted_partner_title_first"
+              ></h2>
+              <h2
+                class="text-secondary uppercase lg:text-[4.5rem] text-[3.5rem] w-full font-bold"
+                data-translate="trusted_partner_title_second"
               ></h2>
               <div
                 class="pt-5 partners_container flex flex-row-reverse items-center relative gap-4"
