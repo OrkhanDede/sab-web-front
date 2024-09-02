@@ -12,6 +12,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 [multiple]:focus,
 [type="date"]:focus,
 [type="datetime-local"]:focus,

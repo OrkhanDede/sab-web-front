@@ -23,6 +23,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
+      integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/packages/fullpage.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
       rel="stylesheet"
@@ -46,45 +53,45 @@
   <body class="w-screen overflow-x-hidden">
     <!-- Header -->
     <div
-      class="flex z-30 fixed w-full items-center lg:top-[48px] top-[25px] lg:px-[70px] px-[30px] justify-between"
+      class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3rem] justify-between"
     >
       <a
         href="/index.html"
-        class="md:w-[114px] md:h-[59px] w-[97px] h-[50px] transition-all logo_anchor"
+        class="md:w-[11.4rem] md:h-[5.9rem] w-[9.7rem] h-[5rem] transition-all logo_anchor"
       >
         <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
       </a>
       <div
-        class="font-montserrat lg:flex hidden bg-[#F0F0F0] rounded-full border border-gray-300 items-center whitespace-nowrap text-[17px] font-[600]"
+        class="font-montserrat h-[6rem] lg:flex hidden bg-[#F0F0F0] rounded-full border text-[1.7rem] border-gray-300 items-center whitespace-nowrap font-[600]"
       >
         <a
           href="/pages/about-us.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full 2xl:px-[3.5rem] xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
           data-translate="about_us_title"
         ></a>
         <a
           href="/pages/buisness-brands.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full 2xl:px-[3.5rem] xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
           data-translate="business_brands_title"
         ></a>
         <a
           href="/pages/our-activites.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full 2xl:px-[3.5rem] xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
           data-translate="our_activities_title"
         ></a>
         <a
           href="/pages/career.html"
-          class="py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full"
+          class="2xl:px-[3.5rem] xl:px-[3rem] lg:px-[2.5rem] px-[2rem] hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full"
           data-translate="career_title"
         ></a>
         <a
           href="/pages/contact-us.html"
-          class="py-[18px] hover:bg-white hover:text-[#EE3239] transition-colors rounded-full 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px]"
+          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full 2xl:px-[3.5rem] xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
           data-translate="contact_us_title"
         ></a>
       </div>
       <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden py-[18px] 2xl:px-[35px] xl:px-[30px] lg:px-[25px] px-[20px] text-[17px] font-[600] capitalize"
+        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
         data-translate="language"
         onclick="changeLanguageWithBtn()"
         type="button"
@@ -187,13 +194,13 @@
           <div class="swiper-button-prev banner-arrow-btn select-none"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="lg:px-[70px] px-[35px]">
+        <div class="lg:px-[7rem] px-[3.5rem]">
           <h1
-            class="absolute mx-auto top-1/4 z-20 bg-secondary py-6 uppercase left-1/2 lg:max-w-[700px] max-w-[400px] leading-[1.1em] rounded-[30px] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold lg:text-[60px] text-[36px] font-montserrat"
+            class="absolute mx-auto top-1/4 z-20 bg-secondary py-6 uppercase left-1/2 lg:max-w-[70rem] max-w-[40rem] leading-[1.1em] rounded-[3rem] w-full text-center -translate-x-1/2 -translate-t-1/2 text-white font-bold lg:text-[6rem] text-[3.6rem] font-montserrat"
             data-translate="banner_text_first"
           ></h1>
           <h1
-            class="absolute mx-auto top-1/4 z-20 md:p-10 left-1/2 max-w-[700px] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-24 text-white font-bold lg:text-[60px] text-[36px] font-montserrat"
+            class="absolute mx-auto top-1/4 z-20 md:pt-20 pt-[2rem] left-1/2 max-w-[70rem] leading-[1.1em] w-full text-center -translate-x-1/2 -translate-t-1/2 md:mt-20 mt-24 text-white font-bold lg:text-[6rem] text-[3.6rem] font-montserrat"
             data-translate="banner_text_second"
           ></h1>
         </div>
@@ -207,7 +214,7 @@
           class="business_direction_section_first_content absolute top-0 left-0 w-full lg:bg-primary h-screen"
         >
           <h1
-            class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-24"
+            class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-[9.5rem]"
             data-translate="business_directions_title"
           ></h1>
         </div>
@@ -229,11 +236,11 @@
               ></h4>
               <a
                 href="/pages/meat-processing.html"
-                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
-                  class="w-4"
+                  class="w-5"
                   src="/assets/icons/arrow-right.svg"
                   alt="arrow-right"
                 />
@@ -246,11 +253,11 @@
               ></h4>
               <a
                 href="/pages/dairy-production.html"
-                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
-                  class="w-4"
+                  class="w-5"
                   src="/assets/icons/arrow-right.svg"
                   alt="arrow-right"
                 />
@@ -274,12 +281,12 @@
                 data-translate="meat_products_title"
               ></h4>
               <a
-                href="/pages/business-brands.html"
-                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+                href="/pages/meat-processing.html"
+                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
-                  class="w-4"
+                  class="w-5"
                   src="/assets/icons/arrow-right.svg"
                   alt="arrow-right"
                 />
@@ -301,12 +308,12 @@
                 data-translate="dairy_products_title"
               ></h4>
               <a
-                href="/pages/business-brands.html"
-                class="border rounded-full w-28 more_btn business-brands font-semibold h-12 transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+                href="/pages/dairy-production.html"
+                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
-                  class="w-4"
+                  class="w-5"
                   src="/assets/icons/arrow-right.svg"
                   alt="arrow-right"
                 />
@@ -318,25 +325,25 @@
       <!-- For services -->
       <section
         data-aos="fade-up"
-        class="h-screen section flex flex-col justify-start md:px-[70px] py-5 px-[30px] font-montserrat bg-white"
+        class="h-screen section flex flex-col justify-start md:px-[7rem] py-5 px-[3rem] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[160px] overflow-hidden md:pt-[130px] pt-[75px] h-full pb-5 flex lg:flex-row flex-col gap-3"
+          class="lg:pt-[16rem] overflow-hidden md:pt-[13rem] pt-[7.5rem] h-full pb-5 flex lg:flex-row flex-col gap-[3rem]"
         >
           <div class="flex lg:w-1/2 w-full flex-col justify-between">
-            <div class="flex lg:flex-row flex-col lg:gap-14 gap-5">
+            <div class="flex lg:flex-row flex-col lg:gap-[11rem] gap-[3rem]">
               <h4
-                class="text-primary text-[30px] font-bold"
+                class="text-primary text-[3rem] w-[24rem] font-bold"
                 data-translate="services_title"
               ></h4>
               <div class="flex flex-col gap-3">
                 <h3
                   id="slide-title"
-                  class="font-bold min-h-[80px] lg:text-5xl text-4xl"
+                  class="font-bold lg:min-h-[0] leading-[1.3em] min-h-[6rem] text-[4rem] text-4xl"
                 ></h3>
                 <p
                   id="slide-description"
-                  class="font-medium leading-6 line-clamp-3 text-[#494949] text-xl"
+                  class="font-medium line-clamp-3 text-[#494949] pt-5 text-[2rem]"
                 ></p>
               </div>
             </div>
@@ -346,11 +353,11 @@
               <a
                 id="services_more_btn"
                 href=""
-                class="border rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary hover:bg-primary hover:border-primary hover:text-white transition-colors border-primary flex gap-2 justify-center items-center"
+                class="border rounded-full w-44 more_btn services font-semibold h-[4.7rem] text-[1.7rem] transition-colors text-primary hover:bg-primary hover:border-primary hover:text-white transition-colors border-primary flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
-                  class="w-4"
+                  class="w-6"
                   src="/assets/icons/arrow-right-red.svg"
                   alt="arrow-right"
                 />
@@ -396,7 +403,7 @@
             </section>
           </div>
           <a
-            href="/pages/business-brands.html"
+            href=""
             class="border mt-5 rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
           >
             <span data-translate="more_btn"></span>
@@ -410,58 +417,58 @@
       </section>
       <!-- First place -->
       <section
-        class="h-screen section flex flex-col justify-start 2xl:px-[70px] xl:px-[50px] lg:px-[40px] px-[30px] font-montserrat bg-[#F0F0F0]"
+        class="h-screen section flex flex-col justify-start lg:px-[7rem] px-[3rem] font-montserrat bg-[#F0F0F0]"
       >
         <div
-          class="flex flex-col w-full h-full lg:justify-start py-3 justify-between"
+          class="flex flex-col w-full h-full justify-start py-3 lg:gap-0 gap-[3rem]"
         >
           <div
-            class="grid lg:pt-[150px] pt-[100px] lg:grid-cols-2 grid-cols-1 h-1/2 lg:gap-10 gap-5"
+            class="grid lg:pt-[15rem] pt-[10rem] lg:grid-cols-2 grid-cols-1 h-1/2 lg:gap-10 gap-5"
           >
             <div
-              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[160px] items-center rounded-[30px]"
+              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[16rem] items-center rounded-[2rem]"
             >
               <h2
-                class="lg:text-[220px] md:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
+                class="lg:text-[22rem] md:text-[19rem] text-[12rem] lg:pl-14 pl-6 inline-block lg:h-[25rem] h-[13rem] font-[900] font-myanmar-bold text-primary"
               >
                 1
               </h2>
-              <div class="flex flex-col justify-start h-full">
+              <div class="flex flex-col justify-center h-full">
                 <h6
-                  class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
+                  class="lg:text-[3rem] text-[2rem] uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text"
-                  class="text-[#858585] transition-colors first-place-text lg:text-2xl text-lg leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-[2.2rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
-                class="object-cover first-place-item-img lg:h-max h-[150px] transition-transform"
+                class="object-cover first-place-item-img h-full transition-transform"
                 src="/assets/images/first_place/sausage.png"
                 alt=""
               />
             </div>
             <div
-              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[160px] items-center rounded-[30px]"
+              class="bg-white flex lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[16rem] items-center rounded-[2rem]"
             >
               <h2
-                class="lg:text-[220px] md:text-[190px] text-[120px] lg:pl-14 pl-6 inline-block lg:h-[250px] h-[130px] font-[900] font-myanmar-bold text-primary"
+                class="lg:text-[22rem] md:text-[19rem] text-[12rem] lg:pl-14 pl-6 inline-block lg:h-[25rem] h-[13rem] font-[900] font-myanmar-bold text-primary"
               >
                 1
               </h2>
-              <div class="flex flex-col justify-start h-full">
+              <div class="flex flex-col justify-center h-full">
                 <h6
-                  class="lg:text-4xl text-3xl uppercase font-[700] text-primary"
+                  class="lg:text-[3rem] text-[2rem] uppercase font-[700] text-primary"
                   data-translate="plate_title"
                 ></h6>
                 <p
                   data-translate="plate_text_2"
-                  class="text-[#858585] transition-colors first-place-text lg:text-2xl text-lg leading-[1.5em] pt-1 font-medium"
+                  class="text-[#858585] transition-colors first-place-text lg:text-[2.2rem] text-[1.4rem] leading-[1.5em] pt-1 font-medium"
                 ></p>
               </div>
               <img
-                class="object-cover first-place-item-img lg:h-max h-[150px] transition-transform"
+                class="object-cover first-place-item-img h-full transition-transform"
                 src="/assets/images/first_place/halal.png"
                 alt=""
               />
@@ -471,7 +478,7 @@
             class="bg-white border border-gray-300 lg:mt-[55px] mt-[35px] font-montserrat grid lg:grid-cols-4 grid-cols-2 w-full rounded-[30px]"
           >
             <div
-              class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[30px] w-full lg:py-7 py-2 border-r lg:border-b-0 border-b border-gray-300"
+              class="w-full lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[30px] lg:py-16 py-3 border-r lg:border-b-0 border-b border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"
@@ -484,12 +491,12 @@
                 100+
               </h3>
               <p
-                class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg text-md font-bold text-black"
+                class="lg:text-[2.5rem] text-lg font-bold text-black"
                 data-translate="product_range"
               ></p>
             </div>
             <div
-              class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 lg:border-r lg:border-b-0 border-b border-l-0 border-gray-300"
+              class="w-full lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:py-16 py-3 lg:border-r lg:border-b-0 border-b border-l-0 border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"
@@ -502,12 +509,12 @@
                 15%
               </h3>
               <p
-                class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg text-md font-bold text-black"
+                class="lg:text-[2.5rem] text-lg font-bold text-black"
                 data-translate="market_share"
               ></p>
             </div>
             <div
-              class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors w-full lg:py-7 py-2 border-r border-gray-300"
+              class="w-full lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:py-16 py-3 border-r border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"
@@ -520,12 +527,12 @@
                 200+
               </h3>
               <p
-                class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg text-md font-bold text-black"
+                class="lg:text-[2.5rem] text-lg font-bold text-black"
                 data-translate="partners"
               ></p>
             </div>
             <div
-              class="lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[30px] w-full lg:py-7 py-2 lg:border-r border-r-0 border-gray-300"
+              class="w-full lg:px-7 px-3 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[30px] lg:py-16 py-3 lg:border-r border-r-0 border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"
@@ -538,7 +545,7 @@
                 3
               </h3>
               <p
-                class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg text-md font-bold text-black"
+                class="lg:text-[2.5rem] text-lg font-bold text-black"
                 data-translate="export_countries"
               ></p>
             </div>
@@ -555,9 +562,9 @@
           >
             <h1
               data-translate="distributing_products_title"
-              class="text-[70px] w-3/4 mx-auto translate-y-24 distributing_products_title font-bold text-white text-center uppercase"
+              class="text-[7rem] w-3/4 mx-auto translate-y-[8.5rem] distributing_products_title font-bold text-white text-center uppercase"
             ></h1>
-            <div class="pt-[100px] z-1 w-full flex justify-center">
+            <div class="z-1 w-full flex justify-center">
               <img
                 class="w-3/4 z-1 first-world-img"
                 src="/assets/images/distributing/first.png"
@@ -567,15 +574,15 @@
           </div>
           <div class="flex justify-center w-full">
             <div
-              class="relative w-3/4 pt-[180px] h-screen distributing_second_section transition-all opacity-0"
+              class="relative w-3/4 pt-[18rem] h-screen distributing_second_section transition-all opacity-0"
             >
               <h1
                 data-translate="distributing_products_title"
-                class="text-[30px] lg:hidden flex distributing_products_title font-montserrat font-bold text-primary text-center uppercase"
+                class="text-[3rem] lg:hidden flex distributing_products_title font-montserrat font-bold text-primary text-center uppercase"
               ></h1>
               <div
                 style="z-index: 3 !important"
-                class="absolute pt-[30px] w-1/2 z-3 left-[40%] -translate-x-[40%]"
+                class="absolute pt-[3rem] w-1/2 z-3 left-[40%] -translate-x-[40%]"
               >
                 <img
                   class="z-3 w-full h-full"
@@ -584,7 +591,7 @@
                 />
               </div>
               <img
-                class="z-2 pt-[30px] world-map w-full"
+                class="z-2 pt-[3rem] world-map w-full"
                 src="/assets/images/distributing/world_red.png"
                 alt=""
               />
@@ -596,7 +603,7 @@
         >
           <h1
             data-translate="distributing_products_title"
-            class="text-[30px] lg:hidden flex distributing_products_title font-montserrat font-bold text-primary text-center uppercase"
+            class="text-[3rem] lg:hidden flex distributing_products_title font-montserrat font-bold text-primary text-center uppercase"
           ></h1>
           <img
             class="w-full"
@@ -611,9 +618,9 @@
           class="flex flex-col w-full partners-container partner_section justify-between h-full"
         >
           <section class="md:px-10 h-max px-5 font-montserrat">
-            <div class="pt-[110px]">
+            <div class="pt-[11rem]">
               <h2
-                class="text-primary uppercase lg:text-[45px] lg:text-[40px] text-[25px] 2xl:w-2/3 w-full font-bold"
+                class="text-primary uppercase lg:text-[4.5rem] text-[3.5rem] 2xl:w-2/3 w-full font-bold"
                 data-translate="trusted_partner_title"
               ></h2>
               <div
@@ -628,7 +635,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -637,7 +644,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -646,7 +653,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -655,7 +662,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -664,7 +671,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -673,7 +680,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -685,7 +692,7 @@
                   </div>
                 </section>
                 <h4
-                  class="text-[40px] w-[200px] text-[#929292] absolute left-0 partner_section_title font-bold"
+                  class="text-[4rem] w-[20rem] text-[#929292] absolute left-0 partner_section_title font-bold"
                 >
                   Retail
                 </h4>
@@ -702,7 +709,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -711,7 +718,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -720,7 +727,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -729,7 +736,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -738,7 +745,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -747,7 +754,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -759,7 +766,7 @@
                   </div>
                 </section>
                 <h4
-                  class="text-[40px] w-[200px] text-[#929292] absolute left-0 partner_section_title font-bold"
+                  class="text-[4rem] w-[20rem] text-[#929292] absolute left-0 partner_section_title font-bold"
                 >
                   Horeca
                 </h4>
@@ -776,7 +783,7 @@
                       class="splide__list flex gap-5 partners_list overflow-x-scroll"
                     >
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -785,7 +792,7 @@
                         />
                       </li>
                       <li
-                        class="splide__slide w-[170px] h-[110px] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
+                        class="splide__slide w-[17rem] h-[11rem] flex justify-center items-center bg-white px-5 py-3 rounded-[25px]"
                       >
                         <img
                           class="w-full h-full object-contain"
@@ -797,7 +804,7 @@
                   </div>
                 </section>
                 <h4
-                  class="text-[40px] w-[200px] text-[#929292] partner_section_title absolute left-0 font-bold"
+                  class="text-[4rem] w-[20rem] text-[#929292] partner_section_title absolute left-0 font-bold"
                 >
                   B2G
                 </h4>
@@ -862,15 +869,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/js/packages/swiper.config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
-      integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="/js/app.js"></script>
     <script src="/js/home.js"></script>
-    <script src="/js/packages/fullpage.js"></script>
     <script src="/js/packages/splide.js"></script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   </body>

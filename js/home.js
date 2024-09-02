@@ -84,18 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
   let splideInitialized = false;
   var splide = new Splide(".splide", {
     type: "loop",
-    gap: "2rem",
+    gap: "3rem",
     autoplay: true,
     pauseOnHover: false,
     pauseOnFocus: false,
     resetProgress: false,
-    padding: "5rem",
+    padding: { right: "8rem", left: "0" },
     easing: "ease",
     pagination: true,
     arrows: true,
     breakpoints: {
       991: {
-        padding: "1rem",
+        padding: { right: "1rem", left: "0" },
       },
     },
   });
