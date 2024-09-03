@@ -150,8 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   }).mount();
 
-  console.log(splide);
-
   const productSwiper = new Swiper(".products-swiper", {
     loop: true,
     rewind: true,

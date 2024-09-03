@@ -47,7 +47,7 @@
   "packaging": "Packaging",
   "view_products": "VIEW PRODUCTS",
   "retail": "RETAIL PARTNERS",
-  "horeca": "HORECA",
+  "horeca": "HORECA PARTNERS",
   "hotels": "Hotels",
   "restaurants": "Restaurants",
   "catering": "Catering",
@@ -75,5 +75,23 @@
   "location": "Azerbaijan, Khirdalan city, Academic Hasan Aliyev street 38",
   "sales_point_across": "Sales Points Across the Region",
   "meat_processing_description": "We proudly offer our high-quality meat products through 524 sales points across the region. Each location ensures that you receive the freshest and finest meats, delivered with exceptional service.",
-  "ceo_title": "CEO of 'Zahmat-Ruzi' LLC"
+  "ceo_title": "CEO of 'Zahmat-Ruzi' LLC",
+  "labaratoryAnalysisAccordion": [
+    {
+      "title": "Analysis of sausage products",
+      "description": "<ol><li class=\"font-[400]\">1. Determination of organoleptic indicators (smell, taste, color, consistency);</li><li class=\"font-[400]\">2. Determination of moisture;</li><li class=\"font-[400]\">3. Determination of nitrite;</li><li class=\"font-[400]\">4. Determination of sodium chloride;</li><li class=\"font-[400]\">5. Determination of starch;</li><li class=\"font-[400]\">6. Determination of microbiological indicators:</li><li class=\"font-[400]\">7. Determination of mesophilic-aerobic and facultative anaerobic microorganisms (CFU 1 g);</li><li class=\"font-[400]\">8. Determination of coliform bacteria (coliforms);</li><li class=\"font-[400]\">9. Determination of pathogenic microorganisms, including salmonella;</li><li class=\"font-[400]\">10. Determination of sulfite-reducing Clostridia;</li><li class=\"font-[400]\">11. Determination of staphylococci;</li></ol>"
+    },
+    {
+      "title": "Analysis of raw materials used: (Dried milk, starch, wheat flour).",
+      "description": "<p class=\"font-[400]\">1. Dried milk, starch, wheat flour.</p><p class=\"font-[400]\">2. Organoleptic indicators (smell, taste, color, consistency);</p><p class=\"font-[400]\">3. Acidity;</p><p class=\"font-[400]\">4. Solubility;</p><p class=\"font-[400]\">5. Determination of moisture and dry matter content;</p>"
+    },
+    {
+      "title": "Analysis of dairy products",
+      "description": "<p class=\"font-[400]\">1. Determination of organoleptic indicators (smell, taste, color, consistency);</p><p class=\"font-[400]\">2. Determination of acidity;</p><p class=\"font-[400]\">3. Determination of density;</p><p class=\"font-[400]\">4. Determination of fat content;</p><p class=\"font-[400]\">5. Determination of moisture and dry matter content;</p><p class=\"font-[400]\">6. Determination of sodium chloride;</p><p class=\"font-[400]\">7. Determination of sugar;</p><p class=\"font-[400]\">8. Determination of microbiological indicators;</p><p class=\"font-[400]\">9. Determination of coliform bacteria (coliforms);</p><p class=\"font-[400]\">10. Determination of pathogenic microorganisms, including salmonella;</p><p class=\"font-[400]\">11. Determination of staphylococci;</p>"
+    },
+    {
+      "title": "Drinking water analysis",
+      "description": "<p class=\"font-[400]\">1. Organoleptic indicators (smell, taste, color);</p><p class=\"font-[400]\">2. Determination of pH;</p><p class=\"font-[400]\">3. Determination of hardness;</p><p class=\"font-[400]\">4. Determination of chlorides;</p><p class=\"font-[400]\">5. Determination of alkalinity;</p><p class=\"font-[400]\">6. Determination of calcium;</p><p class=\"font-[400]\">7. Determination of magnesium;</p><p class=\"font-[400]\">8. Determination of bicarbonates;</p><p class=\"font-[400]\">9. Determination of ammonium salts;</p><p class=\"font-[400]\">10. Determination of nitrite; </p><p class=\"font-[400]\">11. Determination of iron; </p><p class=\"font-[400]\">12. Determination of microbiological indicators: </p><p class=\"font-[400]\">13. Total microbial count at 37°C; </p><p class=\"font-[400]\">14. Determination of total coliform bacteria; </p>"
+    }
+  ]
 }

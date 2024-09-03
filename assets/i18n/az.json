@@ -47,7 +47,7 @@
   "packaging": "Paketləmə",
   "view_products": "MƏHSULLARA BAX",
   "retail": "PƏRAKƏNDƏ TƏRƏFDAŞLAR",
-  "horeca": "HORECA",
+  "horeca": "HORECA TƏRƏFDAŞLAR",
   "hotels": "Otellər",
   "restaurants": "Restoranlar",
   "catering": "İaşə",
@@ -75,5 +75,23 @@
   "location": "Azərbaycan, Xırdalan şəhəri, Akademik Həsən Əliyev küçəsi 38",
   "sales_point_across": "Bölgə üzrə Satış Nöqtələri",
   "meat_processing_description": "Fəxrlə bildiririk ki, yüksək keyfiyyətli ət məhsullarımızı bölgə üzrə 524 satış nöqtəsində təklif edirik. Hər bir məntəqə sizə ən təzə və ən yaxşı ətləri müstəsna xidmətlə təqdim etməyi təmin edir..",
-  "ceo_title": "CEO of 'Zahmat-Ruzi' LLC"
+  "ceo_title": "CEO of 'Zahmat-Ruzi' LLC",
+  "labaratoryAnalysisAccordion": [
+    {
+      "title": "Kolbasa məmulatları analizi",
+      "description": "<ol><li class=\"font-[400]\">1. Orqanoleptik göstəricilərin təyini (iyi, dadı, rəngi, konsistensiyası);</li><li class=\"font-[400]\">2. Nəmliyin təyini;</li><li class=\"font-[400]\">3. Nitritin təyini;</li><li class=\"font-[400]\">4. Natrium-xloridin təyini;</li><li class=\"font-[400]\">5. Nişastanın təyini;</li><li class=\"font-[400]\">6. Mikrobioloji göstəricilərinin təyini:</li><li class=\"font-[400]\">7. Mezofil-aerob və fakultativ anaerob mikroorqanizmlərin (KOE 1 qr) təyini;</li><li class=\"font-[400]\">8. BÇQB-in (koli-forma) təyini;</li><li class=\"font-[400]\">9. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</li><li class=\"font-[400]\">10. Sulfitreduksiyaedici Klostridilərin təyini;</li><li class=\"font-[400]\">11. Stafilokokkların təyini;</li></ol>"
+    },
+    {
+      "title": "İstifadə olunan xammal analizi: (Quru süd, nişasta, buğda unu).",
+      "description": "<p class=\"font-[400]\">1. Quru süd, nişasta, buğda unu.</p><p class=\"font-[400]\">2. Orqanoleptik göstəricilər ( iyi, dadı, rəngi, konsistensiyası);</p><p class=\"font-[400]\">3. Turşuluq;</p><p class=\"font-[400]\">4. Həll olma qabiliyyəti;</p><p class=\"font-[400]\">5. Nəmliyin və quru maddənin kütlə payının təyini;</p>"
+    },
+    {
+      "title": "Süd məmulatları analizi",
+      "description": "<p class=\"font-[400]\">1. Orqanoleptik göstəricilərin təyini (iyi, dadı, rəngi, konsistensiyası);</p><p class=\"font-[400]\">2. Turşuluğun təyini;</p><p class=\"font-[400]\">3. Sıxlığın təyini;</p><p class=\"font-[400]\">4. Yağlılığın təyini;</p><p class=\"font-[400]\">5. Nəmliyin və quru maddənin kütlə payının təyini;</p><p class=\"font-[400]\">6. Natrium-xloridin təyini;</p><p class=\"font-[400]\">7. Şəkərin təyini;</p><p class=\"font-[400]\">8. Mikrobioloji göstəricilərinin təyini:</p><p class=\"font-[400]\">9. BÇQB-in (koli-forma) təyini;</p><p class=\"font-[400]\">10. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</p><p class=\"font-[400]\">11. Stafilokokkların təyini;</p>"
+    },
+    {
+      "title": "İçməli su analizi",
+      "description": "<p class=\"font-[400]\">1. Orqanoleptik göstəricilər (iyi, dadı, rəngi);</p><p class=\"font-[400]\">2. PH təyini;</p><p class=\"font-[400]\">3. Codluğun təyini;</p><p class=\"font-[400]\">4. Xloridlərin təyini;</p><p class=\"font-[400]\">5. Qələviliyin təyini;</p><p class=\"font-[400]\">6. Kalsiumun təyini;</p><p class=\"font-[400]\">7. Maqneziumun təyini;</p><p class=\"font-[400]\">8. Hidrokarbonatların təyini;</p><p class=\"font-[400]\">9. Ammonium duzlarının təyini;</p><p class=\"font-[400]\">10. Nitritin təyini; </p><p class=\"font-[400]\">11. Dəmirin təyini; </p><p class=\"font-[400]\">12. Mikrobioloji göstəricilərinin təyini: </p><p class=\"font-[400]\">13. Ümumi mikrob sayı 37 0C; </p><p class=\"font-[400]\">14. Ümumi bağırsaq çöpü qrup bakteriyaların təyini; </p>"
+    }
+  ]
 }
