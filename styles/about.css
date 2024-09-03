@@ -75,6 +75,11 @@
   transition-duration: 150ms;
 }
 
+.certificate .custom-arrow {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
 .custom-arrow:hover {
   background-color: var(--primary-red) !important;
   border-color: var(--primary-red) !important;
@@ -98,4 +103,15 @@
     rgba(240, 240, 240, 1) 60%,
     rgba(238, 50, 57, 1) 40%
   );
+}
+
+.about .splide__arrow {
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+}
+
+@media only screen and (min-width: 1910px) and (max-width: 1930px) and (min-height: 900px) and (max-height: 920px) {
+  .meet-slider {
+    height: 142vh !important;
+  }
 }
