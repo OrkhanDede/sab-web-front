@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "border",
       "border-[#CCC]",
       "rounded-3xl",
-      "py-2.5",
-      "placeholder:text-sm",
+      "py-5",
+      "placeholder:text-[1.3rem]",
       "px-5",
       "border-0"
     );

@@ -146,7 +146,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (category === "meat") {
       const allTagElement = document.createElement("button");
       allTagElement.textContent = "All";
-      allTagElement.classList.add("tag-item", "capitalize", "py-3", "px-6");
+      allTagElement.classList.add(
+        "tag-item",
+        "capitalize",
+        "py-5",
+        "px-10",
+        "text-[1.4rem]"
+      );
       allTagElement.setAttribute("data-tag", "all");
       allTagElement.addEventListener("click", () => {
         updateURLParams(category, subcategory, null);
@@ -169,7 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
       tags.forEach((tag) => {
         const tagElement = document.createElement("button");
         tagElement.textContent = tag;
-        tagElement.classList.add("tag-item", "capitalize", "py-3", "px-6");
+        tagElement.classList.add(
+          "tag-item",
+          "capitalize",
+          "py-5",
+          "px-10",
+          "text-[1.4rem]"
+        );
         tagElement.setAttribute("data-tag", tag);
         tagElement.addEventListener("click", () => {
           updateURLParams(category, subcategory, tag);

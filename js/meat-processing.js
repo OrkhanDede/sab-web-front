@@ -112,14 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setCompany(activeCompany);
 
-  new fullpage("#fullpage", {
-    autoScrolling: true,
-
-    // afterLoad: function (origin, destination, direction) {
-    //   const section = destination.index;
-
-    // },
-  });
   var splide = new Splide(".splide", {
     gap: "2rem",
     type: "slide",

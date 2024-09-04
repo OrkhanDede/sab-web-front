@@ -1,0 +1,33 @@
+.banner {
+  background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    url(/assets/images/buisness-directions/packaging-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.accordion-btn {
+  background-color: #ffffff !important;
+  color: black !important;
+}
+.accordion-btn:hover {
+  background-color: #fff4f4 !important;
+}
+.accordion-btn:hover span {
+  color: var(--secondary-red) !important;
+}
+.accordion-btn svg {
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.accordion-btn[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+  stroke: var(--secondary-red);
+}
+
+.accordion-btn[aria-expanded="true"] .title {
+  color: var(--secondary-red);
+}

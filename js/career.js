@@ -273,25 +273,18 @@ function appendVacations(vacation) {
   element.classList.add(
     "bg-white",
     "rounded-3xl",
-    "px-7",
-    "py-5",
+    "px-10",
+    "py-7",
     "flex",
     "flex-col",
     "justify-between",
-    "min-h-[220px]"
+    "min-h-[22rem]"
   );
 
   element.setAttribute("vacation-data", vacation);
 
   const title = document.createElement("h5");
-  title.classList.add(
-    "lg:text-[27px]",
-    "lg:leading-9",
-    "leading-7",
-    "text-[24px]",
-    "font-[700]",
-    "pb-3"
-  );
+  title.classList.add("text-[2.7rem]", "leading-[1.3em]", "font-[700]", "pb-3");
   title.textContent = vacation.title[lang];
   element.appendChild(title);
 
@@ -304,10 +297,8 @@ function appendVacations(vacation) {
     "w-max",
     "business-brands",
     "font-semibold",
-    "lg:h-[45px]",
-    "h-10",
-    "lg:text-[16px]",
-    "text-sm",
+    "h-[4rem]",
+    "text-[1.3rem]",
     "transition-colors",
     "text-secondary",
     "hover:bg-primary",

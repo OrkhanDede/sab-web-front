@@ -159,7 +159,7 @@ function createAccordion(accordionData, containerId) {
     button.setAttribute("aria-controls", `accordion-collapse-body-${index}`);
 
     const title = document.createElement("span");
-    title.className = "font-[600] px-10 text-[2.4rem]";
+    title.className = "font-[600] px-10 text-[2.8rem]";
     title.setAttribute("data-translate", `aboutCompanySlide.title.${index}`);
     title.textContent = item.title[language];
 
@@ -168,7 +168,7 @@ function createAccordion(accordionData, containerId) {
     svg.className = "w-5 h-5 rotate-180 shrink-0";
     svg.setAttribute("aria-hidden", "true");
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svg.setAttribute("fill", "none");
+    svg.setAttribute("fill", "black");
     svg.setAttribute("viewBox", "0 0 10 6");
 
     const path = document.createElement("path");
