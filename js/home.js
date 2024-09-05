@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Services slide
   let splideInitialized = false;
+
   var splide = new Splide(".splide", {
     type: "loop",
     gap: "3rem",
@@ -101,6 +102,66 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  var horecaSplide = new Splide(".horeca-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  var retailSplide = new Splide(".retail-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  var b2gSplide = new Splide(".b2g-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  const splideInstances = {
+    horecaSplide,
+    retailSplide,
+    b2gSplide,
+  };
 
   function updateSlideContent(index) {
     const titleElement = document.getElementById("slide-title");
@@ -235,5 +296,18 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.add("fade-out-distributing");
       }
     },
+  });
+
+  const partnersBtns = document.querySelectorAll(".partner_arrows");
+
+  partnersBtns.forEach((partnerBtn) => {
+    const type =
+      partnerBtn.attributes.getNamedItem("type")?.value === "prev" ? -1 : 1;
+    const partnerName =
+      partnerBtn.attributes.getNamedItem("partner_name")?.value;
+
+    partnerBtn.addEventListener("click", (e) => {
+      splideInstances[partnerName].go(type);
+    });
   });
 });

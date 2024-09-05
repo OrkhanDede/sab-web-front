@@ -102,20 +102,6 @@
 .partners_list::-webkit-scrollbar {
   width: 0;
 }
-.splide-home-partners {
-  transition: transform 0.5s ease-in-out;
-}
-
-.splide-home-partners.retail ~ .partner_section_title,
-.splide-home-partners.horeca ~ .partner_section_title {
-  transition: opacity 0.48s ease-in;
-}
-
-.splide-home-partners.retail:hover ~ .partner_section_title,
-.splide-home-partners.horeca:hover ~ .partner_section_title {
-  opacity: 0;
-}
-
 .buisness-brands-mobile-overlay {
   -webkit-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
   -moz-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
@@ -151,11 +137,32 @@
   }
 }
 
+.partner_arrows {
+  position: relative !important;
+  background-color: transparent !important;
+  border: 2px solid var(--primary-red) !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.partner_arrows:hover {
+  background-color: var(--primary-red) !important;
+  border-color: var(--primary-red) !important;
+  color: #ffffff !important;
+}
+.partner_arrows:hover img {
+  filter: brightness(500%) !important;
+}
+.partners .splide__pagination {
+  display: none !important;
+}
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
 }
-
 @media only screen and (min-width: 991px) {
   .first-place-item .first-place-item-img {
     transform: translateX(20px);
