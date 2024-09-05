@@ -106,3 +106,7 @@ textarea:focus {
 .splide__arrow {
   transform: translateY(0) !important;
 }
+
+section {
+  min-height: -webkit-fill-available !important;
+}
