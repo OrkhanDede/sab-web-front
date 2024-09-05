@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "input",
       "border",
       "border-[#CCC]",
-      "rounded-3xl",
+      "rounded-[2rem]",
       "py-5",
-      "placeholder:text-[1.3rem]",
+      "placeholder:text-[1.2rem]",
       "px-5",
       "border-0"
     );

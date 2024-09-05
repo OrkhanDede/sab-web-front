@@ -150,7 +150,7 @@ function createAccordion(accordionData, containerId) {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     button.className =
-      "flex items-center accordion-btn justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
+      "flex items-center accordion-btn justify-between w-full py-5 px-10 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
     button.setAttribute(
       "data-accordion-target",
       `#accordion-collapse-body-${index}`
@@ -159,28 +159,15 @@ function createAccordion(accordionData, containerId) {
     button.setAttribute("aria-controls", `accordion-collapse-body-${index}`);
 
     const title = document.createElement("span");
-    title.className = "font-[600] px-10 text-[2.8rem]";
+    title.className = "font-[600] text-[2.8rem]";
     title.setAttribute("data-translate", `aboutCompanySlide.title.${index}`);
     title.textContent = item.title[language];
 
-    const svg = document.createElement("svg");
-    svg.setAttribute("data-accordion-icon", "");
-    svg.className = "w-5 h-5 rotate-180 shrink-0";
-    svg.setAttribute("aria-hidden", "true");
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svg.setAttribute("fill", "black");
-    svg.setAttribute("viewBox", "0 0 10 6");
-
-    const path = document.createElement("path");
-    path.setAttribute("stroke", "currentColor");
-    path.setAttribute("stroke-linecap", "round");
-    path.setAttribute("stroke-linejoin", "round");
-    path.setAttribute("stroke-width", "2");
-    path.setAttribute("d", "M9 5 5 1 1 5");
-    svg.appendChild(path);
-
+    const img = document.createElement("img");
+    img.src = "/assets/icons/accordion-icon.svg";
+    img.className = "transition-transform w-8 duration-[400ms]";
     button.appendChild(title);
-    button.appendChild(svg);
+    button.appendChild(img);
     heading.appendChild(button);
 
     const body = document.createElement("div");
@@ -207,8 +194,12 @@ function createAccordion(accordionData, containerId) {
       button.setAttribute("aria-expanded", !isOpen);
       body.classList.toggle("hidden");
       title.classList.toggle("text-red-500", !isOpen);
-      svg.classList.toggle("rotate-180", !isOpen);
-      svg.classList.toggle("text-red-500", !isOpen);
+      img.classList.toggle("rotate-180", !isOpen);
+      if (!isOpen) {
+        img.src = "/assets/icons/accordion-icon-red.svg";
+      } else {
+        img.src = "/assets/icons/accordion-icon.svg";
+      }
     });
   });
 }
