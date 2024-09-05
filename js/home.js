@@ -302,12 +302,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   partnersBtns.forEach((partnerBtn) => {
     const type =
-      partnerBtn.attributes.getNamedItem("type")?.value === "prev" ? -1 : 1;
+      partnerBtn.attributes.getNamedItem("type")?.value === "prev"
+        ? false
+        : true;
     const partnerName =
       partnerBtn.attributes.getNamedItem("partner_name")?.value;
 
     partnerBtn.addEventListener("click", (e) => {
-      splideInstances[partnerName].go(type);
+      if (type) {
+        splideInstances[partnerName].go(">");
+      } else {
+        splideInstances[partnerName].go("<");
+      }
     });
   });
 });
