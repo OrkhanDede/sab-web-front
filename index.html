@@ -127,7 +127,7 @@
           </div>
           <div class="flex flex-col w-full h-full justify-between">
             <div
-              class="flex font-[600] uppercase flex-col gap-[3rem] pt-[10rem] whitespace-nowrap text-[1.7rem] font-[600]"
+              class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]"
             >
               <a
                 href="/pages/career.html"
@@ -229,18 +229,18 @@
       <!-- End of banner -->
       <!-- Business and Directions -->
       <section
-        class="block overflow-hidden section bg-white font-montserrat relative business_direction_section h-screen lg:bg-primary"
+        class="overflow-hidden lg:flex hidden section bg-white font-montserrat relative business_direction_section h-screen lg:bg-primary"
       >
         <div
           class="business_direction_section_first_content absolute top-0 left-0 w-full lg:bg-primary h-screen"
         >
           <h1
-            class="text-[70px] lg:flex justify-center hidden font-bold text-white text-center uppercase font-montserrat pt-[9.5rem]"
+            class="text-[70px] flex justify-center font-bold text-white text-center uppercase font-montserrat pt-[9.5rem]"
             data-translate="business_directions_title"
           ></h1>
         </div>
         <div
-          class="relative lg:flex hidden w-full fade-out h-screen business_direction_section_second_content"
+          class="relative w-full fade-out h-screen business_direction_section_second_content"
         >
           <div class="w-full business-directions-bg h-full">
             <img
@@ -286,8 +286,12 @@
             </div>
           </div>
         </div>
-        <div class="lg:hidden w-full overflow-hidden font-montserrat">
-          <div class="relative w-full h-[50vh] buisness-brands-mobile-bg">
+      </section>
+      <section
+        class="lg:hidden section block h-screen w-full overflow-hidden font-montserrat"
+      >
+        <div class="h-full">
+          <div class="relative w-full h-full buisness-brands-mobile-bg">
             <img
               class="h-full w-full object-cover"
               src="/assets/images/buisness-directions/1.png"
@@ -296,14 +300,16 @@
             <div
               class="absolute w-full inset-0 buisness-brands-mobile-overlay"
             ></div>
-            <div class="absolute top-5 left-5 flex flex-col gap-4">
+            <div
+              class="absolute w-full bottom-10 right-0 mx-auto px-5 left-1 flex flex-col gap-4"
+            >
               <h4
-                class="text-[36px] font-bold text-black"
+                class="text-[5rem] font-bold text-black"
                 data-translate="meat_products_title"
               ></h4>
               <a
                 href="/pages/meat-processing.html"
-                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+                class="border rounded-full w-full text-[2.4rem] more_btn business-brands font-semibold h-[6rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
               >
                 <span data-translate="more_btn"></span>
                 <img
@@ -314,32 +320,38 @@
               </a>
             </div>
           </div>
-          <div class="relative w-full h-[50vh] buisness-brands-mobile-bg">
-            <img
-              class="h-full w-full object-cover"
-              src="/assets/images/buisness-directions/2.png"
-              alt="dairy"
-            />
-            <div
-              class="absolute w-full inset-0 buisness-brands-mobile-overlay"
-            ></div>
-            <div class="absolute top-5 left-5 flex flex-col gap-4">
-              <h4
-                class="text-[36px] font-bold text-black"
-                data-translate="dairy_products_title"
-              ></h4>
-              <a
-                href="/pages/dairy-production.html"
-                class="border rounded-full w-44 text-2xl more_btn business-brands font-semibold h-[4.5rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
-              >
-                <span data-translate="more_btn"></span>
-                <img
-                  class="w-5"
-                  src="/assets/icons/arrow-right.svg"
-                  alt="arrow-right"
-                />
-              </a>
-            </div>
+        </div>
+      </section>
+      <section
+        class="lg:hidden section block h-screen w-full overflow-hidden font-montserrat"
+      >
+        <div class="relative w-full h-full buisness-brands-mobile-bg">
+          <img
+            class="h-full w-full object-cover"
+            src="/assets/images/buisness-directions/2.png"
+            alt="dairy"
+          />
+          <div
+            class="absolute w-full inset-0 buisness-brands-mobile-overlay"
+          ></div>
+          <div
+            class="absolute w-full bottom-10 right-0 mx-auto px-5 left-1 flex flex-col gap-4"
+          >
+            <h4
+              class="text-[5rem] font-bold text-black"
+              data-translate="dairy_products_title"
+            ></h4>
+            <a
+              href="/pages/dairy-production.html"
+              class="border rounded-full w-full text-[2.4rem] more_btn business-brands font-semibold h-[6rem] transition-colors text-black hover:bg-primary hover:border-primary hover:text-white transition-colors border-black flex gap-2 justify-center items-center"
+            >
+              <span data-translate="more_btn"></span>
+              <img
+                class="w-5"
+                src="/assets/icons/arrow-right.svg"
+                alt="arrow-right"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -425,11 +437,11 @@
           </div>
           <a
             href=""
-            class="border mt-5 rounded-full w-28 more_btn services font-semibold h-12 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
+            class="border mt-5 rounded-full w-44 more_btn services text-[2rem] font-semibold h-24 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
           >
             <span data-translate="more_btn"></span>
             <img
-              class="w-4"
+              class="w-8"
               src="/assets/icons/arrow-right-red.svg"
               alt="arrow-right"
             />

@@ -36,6 +36,8 @@ const slideContent = [
 
 document.addEventListener("DOMContentLoaded", () => {
   // Banner slide
+  const isMobile = document.body.clientWidth <= 991 ? 1 : 0;
+
   var swiper = new Swiper(".swiper-container", {
     effect: "fade",
     pagination: {
@@ -151,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Full page events
   new fullpage("#fullpage", {
     autoScrolling: true,
-
     afterLoad: function (origin, destination, direction) {
       const section = destination.index;
 
@@ -186,9 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // Services text aos animation
       if (
-        (section === 2 && direction == "down") ||
+        (section === 2 + +isMobile && direction == "down") ||
         // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 2 && direction == "up")
+        (section === 2 + +isMobile && direction == "up")
       ) {
         const animatedText = document.querySelectorAll("[data-aos]");
         animatedText.forEach((element) => {
@@ -202,12 +203,12 @@ document.addEventListener("DOMContentLoaded", () => {
           element.classList.remove("fade-in-up");
         });
       }
-      if (section === 2 && !splideInitialized) {
+      if (section === 2 + +isMobile && !splideInitialized) {
         splideInitialized = true;
         splide.mount();
       }
       // Distributing
-      if (section === 4) {
+      if (section === 4 + +isMobile) {
         const firstContent = document.querySelector(
           ".distributing_first_section"
         );
@@ -218,8 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.remove("fade-out-distributing");
         secondContent.classList.add("fade-in-distributing");
       } else if (
-        (section === 3 && direction === "up") ||
-        (section === 2 && direction === "down")
+        (section === 3 + +isMobile && direction === "up") ||
+        (section === 2 + +isMobile && direction === "down")
       ) {
         const firstContent = document.querySelector(
           ".distributing_first_section"

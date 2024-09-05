@@ -117,9 +117,9 @@
 }
 
 .buisness-brands-mobile-overlay {
-  -webkit-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
-  -moz-box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
-  box-shadow: inset 0px 110px 22px 0px rgba(255, 255, 255, 0.83);
+  -webkit-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
+  -moz-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
+  box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
 }
 
 @keyframes fadeOut {
