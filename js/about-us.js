@@ -153,6 +153,17 @@ document.addEventListener("DOMContentLoaded", () => {
     gap: "2rem",
     arrows: false,
     pagination: false,
+    breakpoints: {
+      991: {
+        perPage: 4,
+      },
+      768: {
+        perPage: 3,
+      },
+      400: {
+        perPage: 2,
+      },
+    },
   });
   let swiperInstance;
 
