@@ -107,6 +107,6 @@ textarea:focus {
   transform: translateY(0) !important;
 }
 
-section {
-  min-height: -webkit-fill-available !important;
+.h-screen {
+  height: 100dvh !important;
 }
