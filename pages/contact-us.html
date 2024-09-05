@@ -80,59 +80,76 @@
       </div>
       <div
         id="mobileNavbar"
-        class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[22px] px-[30px] right-0 top-0 z-[30] text-white"
+        class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[2.2rem] px-[3rem] right-0 top-0 z-[30] text-white"
       >
         <div class="flex flex-col w-full">
           <div class="flex h-max w-full items-center justify-between">
             <button
-              class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[55px] w-[70px] text-[17px] font-[600] capitalize"
+              class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
               data-translate="language"
               onclick="changeLanguageWithBtn()"
               type="button"
             ></button>
             <div
               id="closeNavbar"
-              class="flex bg-white w-[50px] h-[50px] cursor-pointer rounded-full justify-center items-center cursor-pointer"
+              class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer"
             >
               <img
                 src="/assets/icons/close.svg"
-                class="w-5 h-5"
+                class="w-8 h-8"
                 alt="close icon"
               />
             </div>
           </div>
           <div class="flex flex-col w-full h-full justify-between">
             <div
-              class="flex font-[600] uppercase flex-col gap-10 pt-[75px] whitespace-nowrap text-[17px] font-[600]"
+              class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]"
             >
               <a
-                href="/pages/career.html"
-                class="text-[2.5rem]"
-                data-translate="career_title"
-              ></a>
-              <a
                 href="/pages/about-us.html"
-                class="text-[2.5rem]"
+                class="text-[3.5rem]"
                 data-translate="about_us_title"
               ></a>
               <a
                 href="/pages/buisness-brands.html"
-                class="text-[2.5rem]"
+                class="text-[3.5rem]"
                 data-translate="business_brands_title"
               ></a>
               <a
                 href="/pages/our-activites.html"
-                class="text-[2.5rem]"
+                class="text-[3.5rem]"
                 data-translate="our_activities_title"
               ></a>
               <a
+                href="/pages/career.html"
+                class="text-[3.5rem]"
+                data-translate="career_title"
+              ></a>
+              <a
                 href="/pages/contact-us.html"
-                class="text-[2.5rem]"
+                class="text-[3.5rem]"
                 data-translate="contact_us_title"
               ></a>
             </div>
-            <div class="text-white opacity-50">
-              © <span data-currYear></span> SAB.AZ. All rights reserved!
+            <div class="flex flex-col gap-10">
+              <div class="flex gap-10 items-center">
+                <img src="/assets/icons/facebook-mobile.svg" alt="facebook" />
+                <img src="/assets/icons/instagram_mobile.svg" alt="instagram" />
+                <img src="/assets/icons/youtube_mobile.svg" alt="youtube" />
+              </div>
+              <div class="flex flex-col gap-10">
+                <a class="text-[2rem] font-semibold" href="tel:+994123494433"
+                  >+994 (12) 349 44 33</a
+                >
+                <a
+                  class="text-[2rem] font-semibold"
+                  href="mailto:muraciet@sab.az"
+                  >muraciet@sab.az</a
+                >
+              </div>
+              <div class="text-white text-[2rem] opacity-50">
+                © <span data-currYear></span> SAB.AZ. All rights reserved!
+              </div>
             </div>
           </div>
         </div>
