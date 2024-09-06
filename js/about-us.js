@@ -332,13 +332,13 @@ document.addEventListener("DOMContentLoaded", () => {
           pagination: false,
           breakpoints: {
             100: {
-              slidesPerView: 1,
+              slidesPerView: 2,
             },
             768: {
               slidesPerView: 2,
             },
             991: {
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
           },
         });
