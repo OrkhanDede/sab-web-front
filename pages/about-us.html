@@ -374,7 +374,7 @@
       >
         <div class="flex flex-col justify-between h-full pb-5">
           <div
-            class="lg:pt-[14rem] pt-[11rem] h-[80%] pb-5 flex lg:flex-row flex-col gap-24"
+            class="lg:pt-[14rem] pt-[11rem] h-[80%] pb-5 flex lg:flex-row flex-col lg:gap-24 gap-8"
           >
             <div class="flex lg:w-1/2 w-full flex-col justify-between">
               <div class="flex gap-8">
@@ -409,7 +409,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_1.png"
                         alt="slide image"
                       />
@@ -419,7 +419,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_2.png"
                         alt="slide image"
                       />
@@ -429,7 +429,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_3.png"
                         alt="slide image"
                       />
@@ -439,7 +439,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_4.jpg"
                         alt="slide image"
                       />
@@ -449,7 +449,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_5.png"
                         alt="slide image"
                       />
@@ -459,7 +459,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_6.png"
                         alt="slide image"
                       />
@@ -469,7 +469,7 @@
                       class="splide__slide h-full w-full"
                     >
                       <img
-                        class="h-full w-full object-cover rounded-[30px]"
+                        class="h-full w-full object-cover lg:rounded-[3rem]"
                         src="/assets/images/about-us/history_7.png"
                         alt="slide image"
                       />
@@ -523,7 +523,7 @@
         </div>
       </section>
       <section
-        class="h-screen overflow-hidden relative section flex flex-col justify-start font-montserrat ceo-container md:px-[7rem] py-5 px-[3rem]"
+        class="h-screen overflow-hidden relative section lg:flex hidden flex-col justify-start font-montserrat ceo-container md:px-[7rem] py-5 px-[3rem]"
       >
         <div
           class="pb-[4rem] flex h-full overflow-hidden lg:flex-row flex-col-reverse lg:gap-[4rem] gap-4 pt-[11rem]"
@@ -587,6 +587,68 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="lg:hidden relative h-screen section pt-[10rem] font-montserrat flex bg-[#F0F0F0] px-[3rem]"
+      >
+        <div>
+          <h6
+            class="text-[#A0A0A3] font-bold text-[2.4rem]"
+            data-translate="message_from_ceo"
+          ></h6>
+          <h4
+            data-translate="ceo_name"
+            class="text-primary pt-1 text-[4rem] font-bold"
+          ></h4>
+          <p
+            class="text-[2.4rem] text-black font-bold"
+            data-translate="ceo_title"
+          ></p>
+          <img
+            class="w-[15rem] absolute right-[1rem] bottom-[2rem]"
+            src="/assets/images/about-us/ceo_bg.png"
+            alt=""
+          />
+          <img
+            class="w-full mt-10 h-[30rem] object-cover rounded-[2.2rem]"
+            src="/assets/images/about-us/elnur-badalov.png"
+            alt="elnur badalov"
+          />
+          <p
+            class="pt-5 font-[400] text-[1.8rem]"
+            data-translate="ceo_message"
+          ></p>
+        </div>
+      </section>
+      <section
+        class="lg:hidden relative h-screen section pt-[10rem] font-montserrat flex bg-primary px-[3rem]"
+      >
+        <div class="w-full flex flex-col gap-[6rem]">
+          <div class="flex lg:flex-row flex-col lg:gap-7 gap-5">
+            <div class="w-full">
+              <h3
+                data-translate="our_mission"
+                class="text-[5rem] whitespace-nowrap uppercase text-white font-bold"
+              ></h3>
+            </div>
+            <p
+              class="text-[2.5rem] text-white font-[400]"
+              data-translate="our_mission_text"
+            ></p>
+          </div>
+          <div class="flex lg:flex-row flex-col lg:gap-7 gap-5">
+            <div class="w-full">
+              <h3
+                data-translate="our_vision"
+                class="text-[5rem] whitespace-nowrap uppercase text-white font-bold"
+              ></h3>
+            </div>
+            <p
+              class="text-white text-[2.5rem] font-[400]"
+              data-translate="our_vision_text"
+            ></p>
           </div>
         </div>
       </section>
@@ -728,13 +790,15 @@
         </div>
       </section>
       <section class="h-screen section w-full bg-white font-montserrat">
-        <div class="pt-[13rem] flex flex-col justify-between h-full">
+        <div
+          class="pt-[13rem] lg:pb-0 pb-[5rem] flex flex-col justify-between h-full"
+        >
           <h3
             data-translate="our_certificates"
             class="text-[4rem] text-primary text-center font-bold"
           ></h3>
           <div
-            class="swiper-container px-10 overflow-hidden pt-4 pb-[7rem] relative h-[80%]"
+            class="swiper-container lg:px-10 overflow-hidden pt-4 pb-[7rem] relative h-[80%]"
           >
             <div class="swiper-wrapper pb-10">
               <div class="swiper-slide">

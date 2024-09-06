@@ -126,6 +126,8 @@ const historySlide = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = document.body.clientWidth <= 991 ? 1 : 0;
+
   slideMounted = false;
   var splide = new Splide(".splide", {
     type: "loop",
@@ -305,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //   historySplide.mount();
       //   yearSplide.mount();
       // }
-      if (section === 4 && !swiperInstance) {
+      if (section === 4 + +isMobile && !swiperInstance) {
         swiperInstance = new Swiper(".swiper-container", {
           effect: "coverflow",
           grabCursor: true,
