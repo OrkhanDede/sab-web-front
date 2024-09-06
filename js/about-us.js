@@ -334,11 +334,8 @@ document.addEventListener("DOMContentLoaded", () => {
             100: {
               slidesPerView: 2,
             },
-            768: {
-              slidesPerView: 2,
-            },
             991: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
           },
         });
