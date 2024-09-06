@@ -220,10 +220,14 @@ document.addEventListener("DOMContentLoaded", () => {
       // Business and direcctions
       if (section === 1) {
         const firstContent = document.querySelector(
-          ".business_direction_section_first_content"
+          `.business_direction_section_first_content${
+            isMobile ? "_mobile" : ""
+          }`
         );
         const secondContent = document.querySelector(
-          ".business_direction_section_second_content"
+          `.business_direction_section_second_content${
+            isMobile ? "_mobile" : ""
+          }`
         );
         firstContent.classList.add("fade-out");
         secondContent.classList.remove("fade-in");
@@ -236,10 +240,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // || (section === 2 && direction == 'down')
       ) {
         const firstContent = document.querySelector(
-          ".business_direction_section_first_content"
+          `.business_direction_section_first_content${
+            isMobile ? "_mobile" : ""
+          }`
         );
         const secondContent = document.querySelector(
-          ".business_direction_section_second_content"
+          `.business_direction_section_second_content${
+            isMobile ? "_mobile" : ""
+          }`
         );
         firstContent.classList.remove("fade-out");
         firstContent.classList.add("fade-in");
@@ -271,10 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Distributing
       if (section === 4 + +isMobile) {
         const firstContent = document.querySelector(
-          ".distributing_first_section"
+          `.distributing_first_section${isMobile ? "_mobile" : ""}`
         );
         const secondContent = document.querySelector(
-          ".distributing_second_section"
+          `.distributing_second_section${isMobile ? "_mobile" : ""}`
         );
         firstContent.classList.add("fade-out-distributing");
         secondContent.classList.remove("fade-out-distributing");
@@ -284,10 +292,10 @@ document.addEventListener("DOMContentLoaded", () => {
         (section === 2 + +isMobile && direction === "down")
       ) {
         const firstContent = document.querySelector(
-          ".distributing_first_section"
+          `.distributing_first_section${isMobile ? "_mobile" : ""}`
         );
         const secondContent = document.querySelector(
-          ".distributing_second_section"
+          `.distributing_second_section${isMobile ? "_mobile" : ""}`
         );
 
         firstContent.classList.remove("fade-out-distributing");
