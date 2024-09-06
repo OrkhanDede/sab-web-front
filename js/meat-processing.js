@@ -80,19 +80,28 @@ const companies = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
+  const isMobile = document.body.clientWidth <= 991 ? true : false;
 
   const companyElements = document.querySelectorAll("[data-company]");
   companyElements.forEach((com) => {
     com.addEventListener("click", () => {
       const companyId = parseInt(com.getAttribute("data-company"));
-      companyElements.forEach((c) => c.classList.remove("bg-[#F0F0F0]"));
+      companyElements.forEach((c) => {
+        c.classList.remove("bg-[#F0F0F0]");
+        if (isMobile) {
+          c.classList.remove("border-primary");
+        }
+      });
       com.classList.add("bg-[#F0F0F0]");
+      if (isMobile) {
+        com.classList.add("border-primary");
+      }
       setCompany(companyId);
     });
   });
 
   function setCompany(id) {
-    let title = document.getElementById("title");
+    let title = document.getElementById(`title${isMobile ? "_mobile" : ""}`);
     let description = document.getElementById("description");
     let image = document.getElementById("image");
     let navigateBtn = document.getElementById("view_product_btn");
