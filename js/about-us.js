@@ -138,6 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
     easing: "ease",
     pagination: true,
     arrows: true,
+    breakpoints: {
+      991: {
+        padding: { right: "15rem", left: "0" },
+      },
+    },
   });
 
   var historySplide = new Splide(".history-splide", {
@@ -340,11 +345,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const meatImage = document.getElementById("meat-image");
+  const mobileMeatSectionBanner = document.getElementById(
+    "mobileMeatSectionBanner"
+  );
   const defaultImageSrc = "/assets/images/about-us/meet.jpg";
   const defaultTextClass = "text-secondary";
   const defaultRedColor = "#EE3239";
   const grayColor = "#7A7878";
-  const meetTitles = document.querySelectorAll(".meet-titles");
+  const meetTitles = document.querySelectorAll(".meat-titles");
+  const mobileTitles = document.querySelectorAll(".mobile_meat_title");
+
+  mobileTitles.forEach((title) => {
+    title.addEventListener("touchstart", function () {
+      mobileTitles.forEach((titles) => {
+        titles.classList.remove("active-mobile-meat-type");
+      });
+
+      const newSrc = this.getAttribute("data-img-src");
+
+      mobileMeatSectionBanner.src = newSrc;
+
+      meetTitles.forEach((title) => {
+        title.classList.remove("active-mobile-line");
+        title.style.color = grayColor;
+      });
+
+      title.classList.add("active-mobile-meat-type");
+      const selectedTitle = this.querySelector(".meat-titles");
+      selectedTitle.classList.add("active-mobile-line");
+      selectedTitle.style.color = defaultRedColor;
+
+      document
+        .querySelectorAll(".line")
+        .forEach((ln) => (ln.style.backgroundColor = grayColor));
+
+      const line = this.querySelector(".line");
+      if (line) {
+        line.style.backgroundColor = defaultRedColor;
+      }
+    });
+  });
 
   document.querySelectorAll(".meet-option").forEach((option) => {
     option.addEventListener("mouseenter", function () {
@@ -352,11 +392,13 @@ document.addEventListener("DOMContentLoaded", () => {
       meatImage.src = newSrc;
 
       meetTitles.forEach((title) => {
-        title.classList.remove(defaultTextClass);
-        title.style.color = grayColor;
+        if (title) {
+          title.classList.remove(defaultTextClass);
+          title.style.color = grayColor;
+        }
       });
 
-      const title = this.querySelector(".meet-titles");
+      const title = this.querySelector(".meat-titles");
       title.classList.add(defaultTextClass);
       title.style.color = defaultRedColor;
 
