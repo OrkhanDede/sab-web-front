@@ -150,7 +150,7 @@ function createAccordion(accordionData, containerId) {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     button.className =
-      "flex items-center accordion-btn justify-between w-full py-5 px-10 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
+      "flex items-center accordion-btn justify-between w-full py-5 lg:px-[7rem] px-[3.5rem] font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
     button.setAttribute(
       "data-accordion-target",
       `#accordion-collapse-body-${index}`
@@ -159,7 +159,7 @@ function createAccordion(accordionData, containerId) {
     button.setAttribute("aria-controls", `accordion-collapse-body-${index}`);
 
     const title = document.createElement("span");
-    title.className = "font-[600] text-[2.8rem]";
+    title.className = "font-[600] text-start lg:text-[2.8rem] text-[2.4rem]";
     title.setAttribute("data-translate", `aboutCompanySlide.title.${index}`);
     title.textContent = item.title[language];
 
@@ -176,7 +176,7 @@ function createAccordion(accordionData, containerId) {
     body.setAttribute("aria-labelledby", `accordion-collapse-heading-${index}`);
 
     const contentDiv = document.createElement("div");
-    contentDiv.className = "p-[4rem] text-[1.6rem]";
+    contentDiv.className = "lg:px-[7rem] px-[3.5rem] py-[2rem] text-[1.6rem]";
 
     const description = document.createElement("p");
     description.className = "text-gray-800";
