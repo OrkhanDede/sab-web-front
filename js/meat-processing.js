@@ -82,6 +82,66 @@ document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
   const isMobile = document.body.clientWidth <= 991 ? true : false;
 
+  var restaurantSplide = new Splide(".horeca-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  var hotelSplide = new Splide(".retail-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  var cateringSplide = new Splide(".b2g-splide", {
+    perPage: 4,
+    breakpoints: {
+      991: {
+        perPage: 3,
+      },
+      768: {
+        perPage: 2,
+      },
+      100: {
+        perPage: 1,
+      },
+    },
+    pagination: true,
+    arrows: false,
+    gap: "1rem",
+  }).mount();
+
+  const splideInstances = {
+    restaurantSplide,
+    hotelSplide,
+    cateringSplide,
+  };
+
   const companyElements = document.querySelectorAll("[data-company]");
   companyElements.forEach((com) => {
     com.addEventListener("click", () => {
@@ -120,104 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setCompany(activeCompany);
-
-  var splide = new Splide(".splide", {
-    gap: "2rem",
-    type: "slide",
-    perPage: 6,
-    autoplay: true,
-    interval: 2000,
-    speed: 1000,
-    rewind: false,
-    pauseOnHover: false,
-    pagination: false,
-    arrows: false,
-    breakpoints: {
-      100: {
-        perPage: 1,
-      },
-      768: {
-        perPage: 2,
-      },
-      991: {
-        perPage: 3,
-      },
-      1024: {
-        perPage: 4,
-      },
-      1440: {
-        perPage: 5,
-      },
-    },
-  }).mount();
-
-  const productSwiper = new Swiper(".products-swiper", {
-    loop: true,
-    rewind: true,
-    spaceBetween: 16,
-    slidesPerView: 4,
-    pagination: false,
-    navigation: {
-      prevEl: ".button-prev",
-      nextEl: ".button-next",
-    },
-    breakpoints: {
-      100: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  const categoryButtons = document.querySelectorAll(".categoryButton");
-  const splideSlides = document.querySelectorAll(".splide__slide");
-  const swiperSlides = document.querySelectorAll(".swiper-slide");
-
-  function filterSlides(category) {
-    splideSlides.forEach((slide) => {
-      if (category === "all" || slide.dataset.category === category) {
-        slide.classList.remove("hidden");
-        slide.classList.add("block");
-      } else {
-        slide.classList.remove("block");
-        slide.classList.add("hidden");
-      }
-    });
-
-    swiperSlides.forEach((slide) => {
-      if (category === "all" || slide.dataset.category === category) {
-        slide.classList.remove("hidden");
-        slide.classList.add("block");
-      } else {
-        slide.classList.remove("block");
-        slide.classList.add("hidden");
-      }
-    });
-    splide.refresh();
-    productSwiper.update();
-  }
-
-  categoryButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      categoryButtons.forEach((btn) => btn.classList.remove("active"));
-
-      this.classList.add("active");
-
-      const selectedCategory = this.getAttribute("data-category");
-
-      filterSlides(selectedCategory);
-    });
-  });
-
-  filterSlides("hotel");
 
   const regionName = document.getElementById("regionName");
   const retailDesc = document.getElementById("retailPartners");
@@ -286,6 +248,25 @@ document.addEventListener("DOMContentLoaded", () => {
         addHoverClass(r.title, "add")
       );
       // element.addEventListener("mouseout", () => addHoverClass(r.title, 'remove'));
+    });
+  });
+
+  const partnersBtns = document.querySelectorAll(".partner_arrows");
+
+  partnersBtns.forEach((partnerBtn) => {
+    const type =
+      partnerBtn.attributes.getNamedItem("type")?.value === "prev"
+        ? false
+        : true;
+    const partnerName =
+      partnerBtn.attributes.getNamedItem("partner_name")?.value;
+
+    partnerBtn.addEventListener("click", (e) => {
+      if (type) {
+        splideInstances[partnerName].go(">");
+      } else {
+        splideInstances[partnerName].go("<");
+      }
     });
   });
 });
