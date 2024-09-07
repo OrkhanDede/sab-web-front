@@ -1,3 +1,15 @@
+@media only screen and (min-width: 991px) {
+  .banner {
+    background: url("/assets/images/dairy-products/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-title {
+    line-height: 1.3em !important;
+  }
+}
 @media only screen and (max-width: 991px) {
   .banner {
     background: linear-gradient(
@@ -10,24 +22,16 @@
     background-size: cover;
     background-position: center;
   }
-}
-@media only screen and (min-width: 991px) {
-  .banner {
-    background: url("/assets/images/dairy-products/banner.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+  .banner-title {
+    line-height: 1.2em !important;
   }
 }
-
 .retail-partner {
   background-image: url(/assets/images/dairy-products/retail_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f0f0f0;
-}
-.banner-title {
-  line-height: 1.3em !important;
 }
 .fp-overflow {
   width: 100% !important;
