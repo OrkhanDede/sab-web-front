@@ -82,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
   const isMobile = document.body.clientWidth <= 991 ? true : false;
 
+  new fullpage("#fullpage", {});
+
   var restaurantSplide = new Splide(".horeca-splide", {
     perPage: 4,
     breakpoints: {

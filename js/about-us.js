@@ -388,7 +388,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".meet-option").forEach((option) => {
     option.addEventListener("mouseenter", function () {
       const newSrc = this.getAttribute("data-img-src");
+      const meatType = this.getAttribute("data-meat-type");
       meatImage.src = newSrc;
+      meatImage.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image ${meatType}`;
 
       meetTitles.forEach((title) => {
         if (title) {
@@ -410,6 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     option.addEventListener("mouseleave", function () {
       meatImage.src = defaultImageSrc;
+      meatImage.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image meat`;
 
       meetTitles.forEach((title) => {
         title.classList.remove(defaultTextClass);
@@ -433,6 +436,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector(".meet_section_info")
     .addEventListener("mouseleave", function () {
       meatImage.src = defaultImageSrc;
+      meatImage.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image meat`;
+
       meetTitles.forEach((title) => {
         title.classList.remove(defaultTextClass);
         title.style.color = grayColor;

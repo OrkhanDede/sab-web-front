@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".custom-accordion-button").forEach((el) => {
       el.style.color = "black";
     });
+    document.querySelectorAll(".custom-accordion-item").forEach((el) => {
+      el.style.border = "1px solid #F0F0F0";
+    });
 
     document.querySelectorAll(".custom-accordion-content p").forEach((el) => {
       el.style.color = "#808080";
@@ -126,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(`[data-category="${category}"]`).style.color =
       "#ED1C24";
+    const accordion = document.querySelector(`.${category}-accordion`);
+    accordion.style.border = "1.4px solid #ee3239";
     if (subcategory) {
       document
         .querySelectorAll(
@@ -138,8 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderTags(category, subcategory) {
-    console.log(category, subcategory);
-
     const tagContainer = document.getElementById("tags-container");
     tagContainer.innerHTML = "";
 

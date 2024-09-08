@@ -39,23 +39,21 @@ const aboutCompanySlide = [
   },
   {
     title: {
-      az: "İstifadə olunan xammal analizi: (Quru süd, nişasta, buğda unu).",
-      en: "Analysis of raw materials used: (Dried milk, starch, wheat flour).",
+      az: "İstifadə olunan xammal analizi",
+      en: "Analysis of raw materials used",
     },
     description: {
       az: `
-          <p class="font-[500] title">1. Quru süd, nişasta, buğda unu.</p>
-          <p class="font-[500] title">2. Orqanoleptik göstəricilər ( iyi, dadı, rəngi,   konsistensiyası);</p>
-          <p class="font-[500] title">3. Turşuluq;</p>
-          <p class="font-[500] title">4. Həll olma qabiliyyəti;</p>
-          <p class="font-[500] title">5. Nəmliyin və quru maddənin kütlə payının təyini;</p>
+          <p class="font-[500] title">1. Orqanoleptik göstəricilər ( iyi, dadı, rəngi,   konsistensiyası);</p>
+          <p class="font-[500] title">2. Turşuluq;</p>
+          <p class="font-[500] title">3. Həll olma qabiliyyəti;</p>
+          <p class="font-[500] title">4. Nəmliyin və quru maddənin kütlə payının təyini;</p>
           `,
       en: `
-          <p class="font-[500] title">1. Dried milk, starch, wheat flour.</p>
-          <p class="font-[500] title">2. Organoleptic indicators (smell, taste, color, consistency);</p>
-          <p class="font-[500] title">3. Acidity;</p>
-          <p class="font-[500] title">4. Solubility;</p>
-          <p class="font-[500] title">5. Determination of moisture and dry matter content;</p>
+          <p class="font-[500] title">1. Organoleptic indicators (smell, taste, color, consistency);</p>
+          <p class="font-[500] title">2. Acidity;</p>
+          <p class="font-[500] title">3. Solubility;</p>
+          <p class="font-[500] title">4. Determination of moisture and dry matter content;</p>
       `,
     },
   },

@@ -43,8 +43,20 @@ async function translatePage(targetLanguage) {
 
   elements.forEach((element) => {
     const translationKey = element.getAttribute("data-translate");
+
     if (translations[translationKey]) {
-      element.textContent = translations[translationKey];
+      let translatedText = translations[translationKey];
+
+      if (
+        element.tagName === "H1" ||
+        element.tagName === "P" ||
+        element.tagName === "DIV"
+      ) {
+        translatedText = translatedText.replace(/\n/g, "<br>");
+        element.innerHTML = translatedText;
+      } else {
+        element.textContent = translatedText;
+      }
     }
   });
 }

@@ -231,6 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeDialog.forEach((closeItem) => {
     closeItem.addEventListener("click", () => {
       vacationDialog.style.display = "none";
+      document.body.style.overflowY = "auto";
       resetUploadBtn();
     });
   });
@@ -278,13 +279,14 @@ function appendVacations(vacation) {
     "flex",
     "flex-col",
     "justify-between",
-    "min-h-[22rem]"
+    "h-full",
+    "aspect-video"
   );
 
   element.setAttribute("vacation-data", vacation);
 
   const title = document.createElement("h5");
-  title.classList.add("text-[2.7rem]", "leading-[1.3em]", "font-[700]", "pb-3");
+  title.classList.add("text-[3rem]", "leading-[1.3em]", "font-[600]", "pb-3");
   title.textContent = vacation.title[lang];
   element.appendChild(title);
 

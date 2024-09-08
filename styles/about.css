@@ -110,6 +110,14 @@
   height: 4.5rem !important;
 }
 
+/* .meat-section-image.meat {
+} */
+.meat-section-image.turkey {
+  padding-left: 50rem;
+}
+/* .meat-section-image.chicken {
+} */
+
 @media only screen and (max-width: 991px) {
   .meet-slider img {
     clip-path: circle(53%);
