@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const accordionItems = document.querySelectorAll(
     ".custom-accordion-content p"
   );
+  const mobileCategoryButtons = document.querySelectorAll("#tabId");
+  const mobileSubcategoryItems = document.querySelectorAll(
+    "#mobileMeatSubCategory .subcategory-image"
+  );
+  const mobileMeatSubcategories = document.getElementById(
+    "mobileMeatSubCategory"
+  );
+  const mobileDairySubcategories = document.getElementById(
+    "mobileDairySubCategory"
+  );
+
   let selectedTag = null;
 
   accordionButtons.forEach((button) => {
@@ -47,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
       renderTags(category, null);
       setActiveTag("all");
       selectedTag = null;
+
+      toggleMobileSubcategories(category);
     });
   });
 
@@ -63,6 +76,62 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  mobileCategoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+
+      setActiveMobileCategory(button);
+
+      updateURLParams(category, null, null);
+      filterProducts(category, null, null);
+      setActiveCategory(category, null);
+      renderTags(category, null);
+      setActiveTag("all");
+
+      toggleMobileSubcategories(category);
+    });
+  });
+
+  mobileSubcategoryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const category = item.getAttribute("data-category");
+      const subcategory = item.getAttribute("data-subcategory");
+
+      updateURLParams(category, subcategory, null);
+      filterProducts(category, subcategory, null);
+      setActiveCategory(category, subcategory);
+      renderTags(category, subcategory);
+
+      setActiveMobileSubcategory(item);
+    });
+  });
+
+  function toggleMobileSubcategories(category) {
+    if (category === "meat") {
+      mobileMeatSubcategories.style.display = "flex";
+      if (mobileDairySubcategories)
+        mobileDairySubcategories.style.display = "none";
+    } else if (category === "dairy") {
+      mobileMeatSubcategories.style.display = "none";
+      if (mobileDairySubcategories)
+        mobileDairySubcategories.style.display = "flex";
+    }
+  }
+  function setActiveMobileCategory(activeButton) {
+    mobileCategoryButtons.forEach((button) => {
+      button.style.backgroundColor = "";
+      button.style.color = "";
+    });
+    activeButton.style.backgroundColor = "#FFEBEB";
+    activeButton.style.color = "black";
+  }
+
+  function setActiveMobileSubcategory(activeSubcategory) {
+    mobileSubcategoryItems.forEach((item) => {
+      item.style.border = "1px solid #F0F0F0";
+    });
+    activeSubcategory.style.border = "2px solid #ED1C24";
+  }
   const urlParams = new URLSearchParams(window.location.search);
   let category = urlParams.get("category");
   let subcategory = urlParams.get("subcategory");
@@ -71,13 +140,22 @@ document.addEventListener("DOMContentLoaded", () => {
     filterProducts(category, subcategory, tag || "all");
     setActiveCategory(category, subcategory);
     renderTags(category, subcategory);
+    const activeMobileButton = document.querySelector(
+      `#tabId[data-category="${category}"]`
+    );
+
+    if (activeMobileButton) {
+      setActiveMobileCategory(activeMobileButton);
+    }
     setActiveTag(tag || "all");
+    toggleMobileSubcategories(category);
   } else {
     let initCategory = "meat";
     let initSubcategory = null;
     filterProducts(initCategory, initSubcategory, tag || "all");
     setActiveCategory(initCategory, initSubcategory);
     renderTags(initCategory, initSubcategory);
+    toggleMobileSubcategories(initCategory);
     setActiveTag("all");
   }
 
