@@ -373,9 +373,11 @@
         class="h-screen section flex flex-col justify-start md:px-[7rem] py-5 px-[3rem] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[16rem] overflow-hidden pt-[10rem] h-full pb-5 flex lg:flex-row flex-col lg:justify-start justify-between lg:gap-[5rem]"
+          class="lg:pt-[16rem] overflow-hidden pt-[10rem] h-full pb-5 flex lg:flex-row flex-col lg:gap-[5rem] gap-[2rem]"
         >
-          <div class="flex lg:w-1/2 w-full flex-col justify-between">
+          <div
+            class="flex lg:w-1/2 lg:overflow-auto overflow-hidden w-full flex-col justify-between"
+          >
             <div class="flex lg:flex-row flex-col lg:gap-[11rem] gap-[3rem]">
               <h4
                 class="text-primary text-[3rem] w-[24rem] font-bold"
@@ -384,7 +386,7 @@
               <div class="flex flex-col gap-3">
                 <h3
                   id="slide-title"
-                  class="font-bold lg:min-h-[0] leading-[1.3em] min-h-[6rem] text-[4rem]"
+                  class="font-bold lg:min-h-[0] leading-[1.3em] min-h-[4rem] lg:text-[4rem] text-[3.5rem]"
                 ></h3>
                 <p
                   id="slide-description"
@@ -410,15 +412,15 @@
             </div>
           </div>
           <div class="lg:w-1/2 w-full">
-            <section class="splide" id="splide">
-              <div class="splide__track lg:px-2 px-0">
+            <section class="splide h-full" id="splide">
+              <div class="splide__track h-full lg:px-2 px-0">
                 <ul class="splide__list">
                   <li
                     data-splide-interval="5000"
                     class="services splide__slide"
                   >
                     <img
-                      class="object-cover rounded-[30px]"
+                      class="w-full h-full object-cover rounded-[3rem]"
                       src="/assets/images/services/labaratory.png"
                       alt="Laboratory"
                     />
@@ -428,7 +430,7 @@
                     class="services splide__slide h-full"
                   >
                     <img
-                      class="object-cover rounded-[30px]"
+                      class="w-full h-full object-cover rounded-[3rem]"
                       src="/assets/images/services/fridge-storage.png"
                       alt="Fridge Storage"
                     />
@@ -438,7 +440,7 @@
                     class="services splide__slide h-full"
                   >
                     <img
-                      class="object-cover rounded-[30px]"
+                      class="w-full h-full object-cover rounded-[3rem]"
                       src="/assets/images/services/packaging.png"
                       alt="Packaging"
                     />
@@ -449,7 +451,7 @@
           </div>
           <a
             href=""
-            class="border mt-5 rounded-full w-44 more_btn services text-[2rem] font-semibold h-24 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
+            class="border mt-5 rounded-full lg:w-44 w-[13rem] more_btn services text-[2rem] font-semibold h-24 transition-colors text-primary border-primary lg:hidden flex gap-2 justify-center items-center"
           >
             <span data-translate="more_btn"></span>
             <img
@@ -520,10 +522,10 @@
             </div>
           </div>
           <div
-            class="bg-white border border-gray-300 lg:mt-[55px] mt-[35px] font-montserrat grid lg:grid-cols-4 grid-cols-2 w-full rounded-[30px]"
+            class="bg-white border border-gray-300 lg:mt-[55px] mt-[35px] font-montserrat grid lg:grid-cols-4 grid-cols-2 w-full rounded-[3rem]"
           >
             <div
-              class="w-full px-7 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[30px] lg:py-16 py-3 border-r lg:border-b-0 border-b border-gray-300"
+              class="w-full px-7 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-l-[3rem] lg:py-16 py-3 border-r lg:border-b-0 border-b border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"
@@ -577,7 +579,7 @@
               ></p>
             </div>
             <div
-              class="w-full px-7 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[30px] lg:py-16 py-3 lg:border-r border-r-0 border-gray-300"
+              class="w-full px-7 flex flex-col justify-between items-start first-place-subitem cursor-pointer transition-colors lg:rounded-r-[3rem] lg:py-16 py-3 lg:border-r border-r-0 border-gray-300"
             >
               <img
                 class="lg:w-[60px] w-[40px] icon"

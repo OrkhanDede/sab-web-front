@@ -159,7 +159,7 @@
       <div class="flex lg:flex-row gap-5 flex-col lg:px-[7rem] px-[3.5rem]">
         <div
           id="custom-accordion"
-          class="custom-accordion flex lg:flex-col flex-row gap-3 lg:w-[30rem] w-full"
+          class="custom-accordion lg:flex hidden lg:flex-col flex-row gap-3 lg:w-[30rem] w-full"
         >
           <div
             class="custom-accordion-item h-max bg-[#F0F0F0] text-[#808080] py-5 rounded-[2rem] dark:bg-[#F0F0F0] w-full"
@@ -246,8 +246,24 @@
         <div class="w-full">
           <div
             id="tags-container"
-            class="flex gap-6 text-[#6b7280] mt-2 bg-[#F0F0F0] font-semibold justify-between w-full rounded-[3rem] capitalize flex-wrap mb-4"
+            class="lg:flex hidden gap-6 text-[#6b7280] mt-2 bg-[#F0F0F0] font-semibold justify-between w-full rounded-[3rem] capitalize flex-wrap mb-4"
           ></div>
+          <div
+            class="lg:hidden flex items-center pb-3 max-w-[45rem] w-full h-[6rem]"
+          >
+            <button
+              id="tabId"
+              data-tab="1"
+              data-translate="meat_title"
+              class="font-semibold border h-full text-gray-400 text-center text-[1.3rem] border-gray-300 rounded-l-[2.5rem] px-4 w-full"
+            ></button>
+            <button
+              id="tabId"
+              data-tab="2"
+              data-translate="dairy_title"
+              class="font-semibold border-l-0 text-gray-400 h-full text-center text-[1.3rem] border border-gray-300 rounded-r-[2.5rem] px-4 w-full"
+            ></button>
+          </div>
           <div
             class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4"
           >

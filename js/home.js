@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arrows: true,
     breakpoints: {
       991: {
-        padding: { right: "1rem", left: "0" },
+        padding: { right: "10rem", left: "0" },
       },
     },
   });
