@@ -14,6 +14,8 @@
     <script src="/js/translate.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/js/packages/tailwind.config.js"></script>
+    <script src="/js/about-us.js"></script>
+
     <!-- Links -->
     <!-- Links CDN -->
     <link
@@ -180,7 +182,7 @@
         class="h-screen section flex flex-col justify-start md:px-[7rem] py-5 px-[3rem] font-montserrat bg-white"
       >
         <div
-          class="lg:pt-[16rem] pt-[10rem] h-full pb-5 flex lg:flex-row flex-col gap-[0.5rem]"
+          class="lg:pt-[16rem] pt-[10rem] h-full pb-5 flex lg:flex-row flex-col lg:gap-[4rem] gap-[0.5rem]"
         >
           <div
             class="flex lg:w-1/3 overflow-y-hidden w-full lg:h-full h-1/2 flex-col justify-between"
@@ -324,16 +326,16 @@
                 class="text-secondary w-full text-[3.6rem] leading-[1.2em] uppercase font-bold"
               ></h3>
             </div>
-            <div class="w-full h-[40vh] relative overflow-hidden">
+            <div
+              class="overflow-hidden relative border-2 border-[#989898] mobileMeatSection z-[3]"
+            >
               <div
-                class="absolute object-cover bg-[#F0F0F0] z-[3] w-[130vw] h-[50vh] left-[-15vw] top-[-15vh] rounded-full"
+                class="object-cover relative bg-[#F0F0F0] h-full overflow-hidden z-[3]"
               >
-                <div
-                  class="w-full h-full p-[3.5rem] border-2 border-[#989898] rounded-full"
-                >
+                <div class="mobileMeatSectionContainer h-full">
                   <img
                     id="mobileMeatSectionBanner"
-                    class="w-full h-full object-cover rounded-full"
+                    class="w-full h-full object-cover"
                     src="/assets/images/about-us/meet.jpg"
                     alt="meat"
                   />
@@ -555,7 +557,7 @@
                 data-translate="ceo_title"
               ></p>
               <p
-                class="pt-5 font-[400] max-w-[80%] text-[1.7rem]"
+                class="pt-5 font-[500] max-w-[80%] text-[1.7rem]"
                 data-translate="ceo_message"
               ></p>
               <img
@@ -622,7 +624,7 @@
             alt="elnur badalov"
           />
           <p
-            class="pt-5 font-[400] text-[1.8rem]"
+            class="pt-10 font-[500] text-[1.8rem]"
             data-translate="ceo_message"
           ></p>
         </div>
@@ -639,7 +641,7 @@
               ></h3>
             </div>
             <p
-              class="text-[2.5rem] text-white font-[400]"
+              class="text-[3rem] text-white font-[500]"
               data-translate="our_mission_text"
             ></p>
           </div>
@@ -651,7 +653,7 @@
               ></h3>
             </div>
             <p
-              class="text-white text-[2.5rem] font-[400]"
+              class="text-white text-[3rem] font-[500]"
               data-translate="our_vision_text"
             ></p>
           </div>
@@ -940,7 +942,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/js/app.js"></script>
-    <script src="/js/about-us.js"></script>
     <script src="/js/packages/fullpage.js"></script>
     <script src="/js/packages/splide.js"></script>
   </body>

@@ -119,9 +119,6 @@
 } */
 
 @media only screen and (max-width: 991px) {
-  .meet-slider img {
-    clip-path: circle(53%);
-  }
   .mobile_meat_title::before {
     content: "";
     display: block;
@@ -131,6 +128,19 @@
     width: 0.2rem;
     height: 30rem;
     background-color: #989898;
+  }
+  .mobileMeatSection {
+    position: relative;
+    width: 130vw;
+    left: -15vw;
+    height: 40vh;
+    border-radius: 0 0 40vh 40vh;
+    border-top-color: transparent !important;
+  }
+
+  #mobileMeatSectionBanner {
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 0 0 40vh 40vh;
   }
   .active-mobile-meat-type::before {
     background-color: var(--primary-red);
