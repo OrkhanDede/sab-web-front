@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const mobileCategoryButtons = document.querySelectorAll("#tabId");
   const mobileSubcategoryItems = document.querySelectorAll(
-    "#mobileMeatSubCategory .subcategory-image"
+    ".mobileSubCategories .subcategory-image"
   );
   const mobileMeatSubcategories = document.getElementById(
     "mobileMeatSubCategory"
@@ -106,32 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  function toggleMobileSubcategories(category) {
-    if (category === "meat") {
-      mobileMeatSubcategories.style.display = "flex";
-      if (mobileDairySubcategories)
-        mobileDairySubcategories.style.display = "none";
-    } else if (category === "dairy") {
-      mobileMeatSubcategories.style.display = "none";
-      if (mobileDairySubcategories)
-        mobileDairySubcategories.style.display = "flex";
-    }
-  }
-  function setActiveMobileCategory(activeButton) {
-    mobileCategoryButtons.forEach((button) => {
-      button.style.backgroundColor = "";
-      button.style.color = "";
-    });
-    activeButton.style.backgroundColor = "#FFEBEB";
-    activeButton.style.color = "black";
-  }
-
-  function setActiveMobileSubcategory(activeSubcategory) {
-    mobileSubcategoryItems.forEach((item) => {
-      item.style.border = "1px solid #F0F0F0";
-    });
-    activeSubcategory.style.border = "2px solid #ED1C24";
-  }
   const urlParams = new URLSearchParams(window.location.search);
   let category = urlParams.get("category");
   let subcategory = urlParams.get("subcategory");
@@ -143,10 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const activeMobileButton = document.querySelector(
       `#tabId[data-category="${category}"]`
     );
+    const activeMobileSubButton = document.querySelector(
+      `.subcategory-image[data-category="${category}"][data-subcategory="${subcategory}"]`
+    );
 
     if (activeMobileButton) {
       setActiveMobileCategory(activeMobileButton);
     }
+    setActiveMobileSubcategory(activeMobileSubButton);
     setActiveTag(tag || "all");
     toggleMobileSubcategories(category);
   } else {
@@ -155,6 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
     filterProducts(initCategory, initSubcategory, tag || "all");
     setActiveCategory(initCategory, initSubcategory);
     renderTags(initCategory, initSubcategory);
+    const activeMobileButton = document.querySelector(
+      `#tabId[data-category="${initCategory}"]`
+    );
+
+    if (activeMobileButton) {
+      setActiveMobileCategory(activeMobileButton);
+    }
     toggleMobileSubcategories(initCategory);
     setActiveTag("all");
   }
@@ -279,6 +264,35 @@ document.addEventListener("DOMContentLoaded", () => {
       tagItem.style.color =
         tagItem.getAttribute("data-tag") === tag ? "#ED1C24" : "#6b7280";
     });
+  }
+
+  function toggleMobileSubcategories(category) {
+    if (category === "meat") {
+      mobileMeatSubcategories.style.display = "flex";
+      if (mobileDairySubcategories)
+        mobileDairySubcategories.style.display = "none";
+    } else if (category === "dairy") {
+      mobileMeatSubcategories.style.display = "none";
+      if (mobileDairySubcategories)
+        mobileDairySubcategories.style.display = "flex";
+    }
+  }
+  function setActiveMobileCategory(activeButton) {
+    mobileCategoryButtons.forEach((button) => {
+      button.style.backgroundColor = "";
+      button.style.color = "";
+    });
+    activeButton.style.backgroundColor = "#FFEBEB";
+    activeButton.style.color = "#ed1c24";
+  }
+
+  function setActiveMobileSubcategory(activeSubcategory) {
+    mobileSubcategoryItems.forEach((item) => {
+      item.style.border = "1px solid #F0F0F0";
+    });
+    if (activeSubcategory) {
+      activeSubcategory.style.border = "1px solid #ed1c24";
+    }
   }
 
   // renderTags("meat", null);
