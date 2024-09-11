@@ -42,7 +42,7 @@
 
 .swiper-container {
   width: 80%;
-  height: 300px;
+  height: 30rem;
   margin: 0 auto;
 }
 
@@ -147,6 +147,10 @@
   .certificate .custom-arrow {
     width: 6rem !important;
     height: 6rem !important;
+  }
+
+  .swiper-container {
+    width: 100% !important;
   }
 }
 
