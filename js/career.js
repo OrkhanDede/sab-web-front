@@ -273,14 +273,18 @@ function appendVacations(vacation) {
   const element = document.createElement("div");
   element.classList.add(
     "bg-white",
-    "rounded-3xl",
+    "lg:rounded-3xl",
+    "rounded-[3rem]",
     "px-10",
-    "py-7",
+    "lg:py-7",
+    "py-[3rem]",
     "flex",
     "flex-col",
+    "lg:gap-0",
+    "gap-[2rem]",
     "justify-between",
     "h-full",
-    "aspect-video"
+    "lg:aspect-video"
   );
 
   element.setAttribute("vacation-data", vacation);
@@ -294,13 +298,16 @@ function appendVacations(vacation) {
   button.classList.add(
     "border",
     "rounded-full",
-    "px-5",
+    "lg:px-5",
+    "px-8",
     "more_btn",
     "w-max",
     "business-brands",
     "font-semibold",
-    "h-[4rem]",
-    "text-[1.3rem]",
+    "lg:h-[4rem]",
+    "h-[5rem]",
+    "lg:text-[1.3rem]",
+    "text-[2rem]",
     "transition-colors",
     "text-secondary",
     "hover:bg-primary",

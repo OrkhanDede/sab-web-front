@@ -7,32 +7,32 @@ const aboutCompanySlide = [
     description: {
       az: `
           <ol>
-          <li class="font-[500] title">1. Orqanoleptik göstəricilərin təyini (iyi, dadı, rəngi, konsistensiyası);</li>
-          <li class="font-[500] title">2. Nəmliyin təyini;</li>
-          <li class="font-[500] title">3. Nitritin təyini;</li>
-          <li class="font-[500] title">4. Natrium-xloridin təyini;</li>
-          <li class="font-[500] title">5. Nişastanın təyini;</li>
-          <li class="font-[500] title">6. Mikrobioloji göstəricilərinin təyini:</li>
-          <li class="font-[500] title">7. Mezofil-aerob və fakultativ anaerob mikroorqanizmlərin (KOE 1 qr) təyini;</li>
-          <li class="font-[500] title">8. BÇQB-in (koli-forma) təyini;</li>
-          <li class="font-[500] title">9. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</li>
-          <li class="font-[500] title">10. Sulfitreduksiyaedici Klostridilərin təyini;</li>
-          <li class="font-[500] title">11. Stafilokokkların təyini;</li>
+          <li class="font-[500] title py-2">1. Orqanoleptik göstəricilərin təyini (iyi, dadı, rəngi, konsistensiyası);</li>
+          <li class="font-[500] title py-2">2. Nəmliyin təyini;</li>
+          <li class="font-[500] title py-2">3. Nitritin təyini;</li>
+          <li class="font-[500] title py-2">4. Natrium-xloridin təyini;</li>
+          <li class="font-[500] title py-2">5. Nişastanın təyini;</li>
+          <li class="font-[500] title py-2">6. Mikrobioloji göstəricilərinin təyini:</li>
+          <li class="font-[500] title py-2">7. Mezofil-aerob və fakultativ anaerob mikroorqanizmlərin (KOE 1 qr) təyini;</li>
+          <li class="font-[500] title py-2">8. BÇQB-in (koli-forma) təyini;</li>
+          <li class="font-[500] title py-2">9. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</li>
+          <li class="font-[500] title py-2">10. Sulfitreduksiyaedici Klostridilərin təyini;</li>
+          <li class="font-[500] title py-2">11. Stafilokokkların təyini;</li>
           </ol>
           `,
       en: `
           <ol>
-          <li class="font-[500] title">1. Determination of organoleptic indicators (smell, taste, color, consistency);</li>
-          <li class="font-[500] title">2. Determination of moisture;</li>
-          <li class="font-[500] title">3. Determination of nitrite;</li>
-          <li class="font-[500] title">4. Determination of sodium chloride;</li>
-          <li class="font-[500] title">5. Determination of starch;</li>
-          <li class="font-[500] title">6. Determination of microbiological indicators:</li>
-          <li class="font-[500] title">7. Determination of mesophilic-aerobic and facultative anaerobic microorganisms (CFU 1 g);</li>
-          <li class="font-[500] title">8. Determination of coliform bacteria (coliforms);</li>
-          <li class="font-[500] title">9. Determination of pathogenic microorganisms, including salmonella;</li>
-          <li class="font-[500] title">10. Determination of sulfite-reducing Clostridia;</li>
-          <li class="font-[500] title">11. Determination of staphylococci;</li>
+          <li class="font-[500] title py-2">1. Determination of organoleptic indicators (smell, taste, color, consistency);</li>
+          <li class="font-[500] title py-2">2. Determination of moisture;</li>
+          <li class="font-[500] title py-2">3. Determination of nitrite;</li>
+          <li class="font-[500] title py-2">4. Determination of sodium chloride;</li>
+          <li class="font-[500] title py-2">5. Determination of starch;</li>
+          <li class="font-[500] title py-2">6. Determination of microbiological indicators:</li>
+          <li class="font-[500] title py-2">7. Determination of mesophilic-aerobic and facultative anaerobic microorganisms (CFU 1 g);</li>
+          <li class="font-[500] title py-2">8. Determination of coliform bacteria (coliforms);</li>
+          <li class="font-[500] title py-2">9. Determination of pathogenic microorganisms, including salmonella;</li>
+          <li class="font-[500] title py-2">10. Determination of sulfite-reducing Clostridia;</li>
+          <li class="font-[500] title py-2">11. Determination of staphylococci;</li>
           </ol>
       `,
     },
@@ -44,16 +44,16 @@ const aboutCompanySlide = [
     },
     description: {
       az: `
-          <p class="font-[500] title">1. Orqanoleptik göstəricilər ( iyi, dadı, rəngi,   konsistensiyası);</p>
-          <p class="font-[500] title">2. Turşuluq;</p>
-          <p class="font-[500] title">3. Həll olma qabiliyyəti;</p>
-          <p class="font-[500] title">4. Nəmliyin və quru maddənin kütlə payının təyini;</p>
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilər ( iyi, dadı, rəngi,   konsistensiyası);</p>
+          <p class="font-[500] title py-2">2. Turşuluq;</p>
+          <p class="font-[500] title py-2">3. Həll olma qabiliyyəti;</p>
+          <p class="font-[500] title py-2">4. Nəmliyin və quru maddənin kütlə payının təyini;</p>
           `,
       en: `
-          <p class="font-[500] title">1. Organoleptic indicators (smell, taste, color, consistency);</p>
-          <p class="font-[500] title">2. Acidity;</p>
-          <p class="font-[500] title">3. Solubility;</p>
-          <p class="font-[500] title">4. Determination of moisture and dry matter content;</p>
+          <p class="font-[500] title py-2">1. Organoleptic indicators (smell, taste, color, consistency);</p>
+          <p class="font-[500] title py-2">2. Acidity;</p>
+          <p class="font-[500] title py-2">3. Solubility;</p>
+          <p class="font-[500] title py-2">4. Determination of moisture and dry matter content;</p>
       `,
     },
   },
@@ -64,30 +64,30 @@ const aboutCompanySlide = [
     },
     description: {
       az: `
-          <p class="font-[500] title">1. Orqanoleptik göstəricilərin təyini (iyi, dadı,   rəngi, konsistensiyası);</p>
-          <p class="font-[500] title">2. Turşuluğun təyini;</p>
-          <p class="font-[500] title">3. Sıxlığın təyini;</p>
-          <p class="font-[500] title">4. Yağlılığın təyini;</p>
-          <p class="font-[500] title">5. Nəmliyin və quru maddənin kütlə payının təyini;</p>
-          <p class="font-[500] title">6. Natrium-xloridin təyini;</p>
-          <p class="font-[500] title">7. Şəkərin təyini;</p>
-          <p class="font-[500] title">8. Mikrobioloji göstəricilərinin təyini:</p>
-          <p class="font-[500] title">9. BÇQB-in (koli-forma) təyini;</p>
-          <p class="font-[500] title">10. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</p>
-          <p class="font-[500] title">11. Stafilokokkların təyini;</p>
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilərin təyini (iyi, dadı,   rəngi, konsistensiyası);</p>
+          <p class="font-[500] title py-2">2. Turşuluğun təyini;</p>
+          <p class="font-[500] title py-2">3. Sıxlığın təyini;</p>
+          <p class="font-[500] title py-2">4. Yağlılığın təyini;</p>
+          <p class="font-[500] title py-2">5. Nəmliyin və quru maddənin kütlə payının təyini;</p>
+          <p class="font-[500] title py-2">6. Natrium-xloridin təyini;</p>
+          <p class="font-[500] title py-2">7. Şəkərin təyini;</p>
+          <p class="font-[500] title py-2">8. Mikrobioloji göstəricilərinin təyini:</p>
+          <p class="font-[500] title py-2">9. BÇQB-in (koli-forma) təyini;</p>
+          <p class="font-[500] title py-2">10. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</p>
+          <p class="font-[500] title py-2">11. Stafilokokkların təyini;</p>
           `,
       en: `
-          <p class="font-[500] title">1. Determination of organoleptic indicators (smell, taste, color, consistency);</p>
-          <p class="font-[500] title">2. Determination of acidity;</p>
-          <p class="font-[500] title">3. Determination of density;</p>
-          <p class="font-[500] title">4. Determination of fat content;</p>
-          <p class="font-[500] title">5. Determination of moisture and dry matter content;</p>
-          <p class="font-[500] title">6. Determination of sodium chloride;</p>
-          <p class="font-[500] title">7. Determination of sugar;</p>
-          <p class="font-[500] title">8. Determination of microbiological indicators:</p>
-          <p class="font-[500] title">9. Determination of coliform bacteria (coliforms);</p>
-          <p class="font-[500] title">10. Determination of pathogenic microorganisms, including salmonella;</p>
-          <p class="font-[500] title">11. Determination of staphylococci;</p>
+          <p class="font-[500] title py-2">1. Determination of organoleptic indicators (smell, taste, color, consistency);</p>
+          <p class="font-[500] title py-2">2. Determination of acidity;</p>
+          <p class="font-[500] title py-2">3. Determination of density;</p>
+          <p class="font-[500] title py-2">4. Determination of fat content;</p>
+          <p class="font-[500] title py-2">5. Determination of moisture and dry matter content;</p>
+          <p class="font-[500] title py-2">6. Determination of sodium chloride;</p>
+          <p class="font-[500] title py-2">7. Determination of sugar;</p>
+          <p class="font-[500] title py-2">8. Determination of microbiological indicators:</p>
+          <p class="font-[500] title py-2">9. Determination of coliform bacteria (coliforms);</p>
+          <p class="font-[500] title py-2">10. Determination of pathogenic microorganisms, including salmonella;</p>
+          <p class="font-[500] title py-2">11. Determination of staphylococci;</p>
       `,
     },
   },
@@ -98,36 +98,36 @@ const aboutCompanySlide = [
     },
     description: {
       az: `
-          <p class="font-[500] title">1. Orqanoleptik göstəricilər (iyi, dadı, rəngi);</p>
-          <p class="font-[500] title">2. PH təyini;</p>
-          <p class="font-[500] title">3. Codluğun təyini;</p>
-          <p class="font-[500] title">4. Xloridlərin təyini;</p>
-          <p class="font-[500] title">5. Qələviliyin təyini;</p>
-          <p class="font-[500] title">6. Kalsiumun təyini;</p>
-          <p class="font-[500] title">7. Maqneziumun təyini;</p>
-          <p class="font-[500] title">8. Hidrokarbonatların təyini;</p>
-          <p class="font-[500] title">9. Ammonium duzlarının təyini;</p>
-          <p class="font-[500] title">10. Nitritin təyini; </p>
-          <p class="font-[500] title">11. Dəmirin təyini; </p>
-          <p class="font-[500] title">12. Mikrobioloji göstəricilərinin təyini: </p>
-          <p class="font-[500] title">13. Ümumi mikrob sayı 37 0C; </p>
-          <p class="font-[500] title">14. Ümumi bağırsaq çöpü qrup bakteriyaların təyini; </p>
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilər (iyi, dadı, rəngi);</p>
+          <p class="font-[500] title py-2">2. PH təyini;</p>
+          <p class="font-[500] title py-2">3. Codluğun təyini;</p>
+          <p class="font-[500] title py-2">4. Xloridlərin təyini;</p>
+          <p class="font-[500] title py-2">5. Qələviliyin təyini;</p>
+          <p class="font-[500] title py-2">6. Kalsiumun təyini;</p>
+          <p class="font-[500] title py-2">7. Maqneziumun təyini;</p>
+          <p class="font-[500] title py-2">8. Hidrokarbonatların təyini;</p>
+          <p class="font-[500] title py-2">9. Ammonium duzlarının təyini;</p>
+          <p class="font-[500] title py-2">10. Nitritin təyini; </p>
+          <p class="font-[500] title py-2">11. Dəmirin təyini; </p>
+          <p class="font-[500] title py-2">12. Mikrobioloji göstəricilərinin təyini: </p>
+          <p class="font-[500] title py-2">13. Ümumi mikrob sayı 37 0C; </p>
+          <p class="font-[500] title py-2">14. Ümumi bağırsaq çöpü qrup bakteriyaların təyini; </p>
           `,
       en: `
-          <p class="font-[500] title">1. Organoleptic indicators (smell, taste, color);</p>
-          <p class="font-[500] title">2. Determination of pH;</p>
-          <p class="font-[500] title">3. Determination of hardness;</p>
-          <p class="font-[500] title">4. Determination of chlorides;</p>
-          <p class="font-[500] title">5. Determination of alkalinity;</p>
-          <p class="font-[500] title">6. Determination of calcium;</p>
-          <p class="font-[500] title">7. Determination of magnesium;</p>
-          <p class="font-[500] title">8. Determination of bicarbonates;</p>
-          <p class="font-[500] title">9. Determination of ammonium salts;</p>
-          <p class="font-[500] title">10. Determination of nitrite; </p>
-          <p class="font-[500] title">11. Determination of iron; </p>
-          <p class="font-[500] title">12. Determination of microbiological indicators: </p>
-          <p class="font-[500] title">13. Total microbial count at 37°C; </p>
-          <p class="font-[500] title">14. Determination of total coliform bacteria; </p>
+          <p class="font-[500] title py-2">1. Organoleptic indicators (smell, taste, color);</p>
+          <p class="font-[500] title py-2">2. Determination of pH;</p>
+          <p class="font-[500] title py-2">3. Determination of hardness;</p>
+          <p class="font-[500] title py-2">4. Determination of chlorides;</p>
+          <p class="font-[500] title py-2">5. Determination of alkalinity;</p>
+          <p class="font-[500] title py-2">6. Determination of calcium;</p>
+          <p class="font-[500] title py-2">7. Determination of magnesium;</p>
+          <p class="font-[500] title py-2">8. Determination of bicarbonates;</p>
+          <p class="font-[500] title py-2">9. Determination of ammonium salts;</p>
+          <p class="font-[500] title py-2">10. Determination of nitrite; </p>
+          <p class="font-[500] title py-2">11. Determination of iron; </p>
+          <p class="font-[500] title py-2">12. Determination of microbiological indicators: </p>
+          <p class="font-[500] title py-2">13. Total microbial count at 37°C; </p>
+          <p class="font-[500] title py-2">14. Determination of total coliform bacteria; </p>
       `,
     },
   },

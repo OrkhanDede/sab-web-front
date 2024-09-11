@@ -1,104 +1,134 @@
 const aboutCompanySlide = [
   {
+    title: {
+      az: "Kolbasa məmulatları analizi",
+      en: "Analysis of sausage products",
+    },
     description: {
       az: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 ton </b> </br>
-            <p> Ümumi saxlama həcmi </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² və 1,600 m² </b>
-            <p> 2 ayrı saxlama sahəsi </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC-dən + 4ºC-yə qədər </b> </br>
-            <p> Temperaturun nəzarəti </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24 saatlıq </b> </br>
-            <p> Kamera mühafizəsi və operator nəzarəti </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-            İstək əsasında hər hansı bir kamera işləmə dövrü ilə bağlı hesabat təqdim edə bilər, yükləmə və boşaltma ilə bağlı məlumatlar daxil olmaqla. 
-            </br>
-            Həmçinin, biz ərazimizdə yükləmə və boşaltma avadanlığı ilə təmin edirik.
-            </p> </br>
-            `,
+          <ol>
+          <li class="font-[500] title py-2">1. Orqanoleptik göstəricilərin təyini (iyi, dadı, rəngi, konsistensiyası);</li>
+          <li class="font-[500] title py-2">2. Nəmliyin təyini;</li>
+          <li class="font-[500] title py-2">3. Nitritin təyini;</li>
+          <li class="font-[500] title py-2">4. Natrium-xloridin təyini;</li>
+          <li class="font-[500] title py-2">5. Nişastanın təyini;</li>
+          <li class="font-[500] title py-2">6. Mikrobioloji göstəricilərinin təyini:</li>
+          <li class="font-[500] title py-2">7. Mezofil-aerob və fakultativ anaerob mikroorqanizmlərin (KOE 1 qr) təyini;</li>
+          <li class="font-[500] title py-2">8. BÇQB-in (koli-forma) təyini;</li>
+          <li class="font-[500] title py-2">9. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</li>
+          <li class="font-[500] title py-2">10. Sulfitreduksiyaedici Klostridilərin təyini;</li>
+          <li class="font-[500] title py-2">11. Stafilokokkların təyini;</li>
+          </ol>
+          `,
       en: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 tons </b> </br>
-            <p> Total storage capacity </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² & 1,600 m² </b>
-            <p> 2 separate storage areas </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC to + 4ºC </b> </br>
-            <p> Temperature control </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24-hour </b> </br>
-            <p> Camera protection and operator control </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-                At the request, any camera has the opportunity to submit a report of the operating period, including information on the loading and unloading of the goods. 
-                </br>
-                We also provide equipment for loading and unloading goods in our area.
-            </p> </br>    
-        `,
+          <ol>
+          <li class="font-[500] title py-2">1. Determination of organoleptic indicators (smell, taste, color, consistency);</li>
+          <li class="font-[500] title py-2">2. Determination of moisture;</li>
+          <li class="font-[500] title py-2">3. Determination of nitrite;</li>
+          <li class="font-[500] title py-2">4. Determination of sodium chloride;</li>
+          <li class="font-[500] title py-2">5. Determination of starch;</li>
+          <li class="font-[500] title py-2">6. Determination of microbiological indicators:</li>
+          <li class="font-[500] title py-2">7. Determination of mesophilic-aerobic and facultative anaerobic microorganisms (CFU 1 g);</li>
+          <li class="font-[500] title py-2">8. Determination of coliform bacteria (coliforms);</li>
+          <li class="font-[500] title py-2">9. Determination of pathogenic microorganisms, including salmonella;</li>
+          <li class="font-[500] title py-2">10. Determination of sulfite-reducing Clostridia;</li>
+          <li class="font-[500] title py-2">11. Determination of staphylococci;</li>
+          </ol>
+      `,
     },
   },
   {
+    title: {
+      az: "İstifadə olunan xammal analizi",
+      en: "Analysis of raw materials used",
+    },
     description: {
       az: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 ton </b> </br>
-            <p> Ümumi saxlama həcmi </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² və 1,600 m² </b>
-            <p> 2 ayrı saxlama sahəsi </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC-dən + 4ºC-yə qədər </b> </br>
-            <p> Temperaturun nəzarəti </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24 saatlıq </b> </br>
-            <p> Kamera mühafizəsi və operator nəzarəti </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-            İstək əsasında hər hansı bir kamera işləmə dövrü ilə bağlı hesabat təqdim edə bilər, yükləmə və boşaltma ilə bağlı məlumatlar daxil olmaqla. 
-            </br>
-            Həmçinin, biz ərazimizdə yükləmə və boşaltma avadanlığı ilə təmin edirik.
-            </p> </br>
-            `,
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilər ( iyi, dadı, rəngi,   konsistensiyası);</p>
+          <p class="font-[500] title py-2">2. Turşuluq;</p>
+          <p class="font-[500] title py-2">3. Həll olma qabiliyyəti;</p>
+          <p class="font-[500] title py-2">4. Nəmliyin və quru maddənin kütlə payının təyini;</p>
+          `,
       en: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 tons </b> </br>
-            <p> Total storage capacity </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² & 1,600 m² </b>
-            <p> 2 separate storage areas </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC to + 4ºC </b> </br>
-            <p> Temperature control </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24-hour </b> </br>
-            <p> Camera protection and operator control </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-                At the request, any camera has the opportunity to submit a report of the operating period, including information on the loading and unloading of the goods. 
-                </br>
-                We also provide equipment for loading and unloading goods in our area.
-            </p> </br>    
-        `,
+          <p class="font-[500] title py-2">1. Organoleptic indicators (smell, taste, color, consistency);</p>
+          <p class="font-[500] title py-2">2. Acidity;</p>
+          <p class="font-[500] title py-2">3. Solubility;</p>
+          <p class="font-[500] title py-2">4. Determination of moisture and dry matter content;</p>
+      `,
     },
   },
   {
+    title: {
+      az: "Süd məmulatları analizi",
+      en: "Analysis of dairy products",
+    },
     description: {
       az: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 ton </b> </br>
-            <p> Ümumi saxlama həcmi </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² və 1,600 m² </b>
-            <p> 2 ayrı saxlama sahəsi </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC-dən + 4ºC-yə qədər </b> </br>
-            <p> Temperaturun nəzarəti </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24 saatlıq </b> </br>
-            <p> Kamera mühafizəsi və operator nəzarəti </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-            İstək əsasında hər hansı bir kamera işləmə dövrü ilə bağlı hesabat təqdim edə bilər, yükləmə və boşaltma ilə bağlı məlumatlar daxil olmaqla. 
-            </br>
-            Həmçinin, biz ərazimizdə yükləmə və boşaltma avadanlığı ilə təmin edirik.
-            </p> </br>
-            `,
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilərin təyini (iyi, dadı,   rəngi, konsistensiyası);</p>
+          <p class="font-[500] title py-2">2. Turşuluğun təyini;</p>
+          <p class="font-[500] title py-2">3. Sıxlığın təyini;</p>
+          <p class="font-[500] title py-2">4. Yağlılığın təyini;</p>
+          <p class="font-[500] title py-2">5. Nəmliyin və quru maddənin kütlə payının təyini;</p>
+          <p class="font-[500] title py-2">6. Natrium-xloridin təyini;</p>
+          <p class="font-[500] title py-2">7. Şəkərin təyini;</p>
+          <p class="font-[500] title py-2">8. Mikrobioloji göstəricilərinin təyini:</p>
+          <p class="font-[500] title py-2">9. BÇQB-in (koli-forma) təyini;</p>
+          <p class="font-[500] title py-2">10. Patogen mikroorqanizmlərin, o cümlədən salmonellaların təyini;</p>
+          <p class="font-[500] title py-2">11. Stafilokokkların təyini;</p>
+          `,
       en: `
-            <b style="font-size: 30px; color: #ED1C24"> 10,000 tons </b> </br>
-            <p> Total storage capacity </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 4,000 m² & 1,600 m² </b>
-            <p> 2 separate storage areas </p> </br>
-            <b style="font-size: 30px; color: #ED1C24"> -27ºC to + 4ºC </b> </br>
-            <p> Temperature control </p> </br> 
-            <b style="font-size: 30px; color: #ED1C24"> 24-hour </b> </br>
-            <p> Camera protection and operator control </p> </br>
-            <p style="font-size: 15px; font-weight: 400; line-height: 1.3em;">
-                At the request, any camera has the opportunity to submit a report of the operating period, including information on the loading and unloading of the goods. 
-                </br>
-                We also provide equipment for loading and unloading goods in our area.
-            </p> </br>    
-        `,
+          <p class="font-[500] title py-2">1. Determination of organoleptic indicators (smell, taste, color, consistency);</p>
+          <p class="font-[500] title py-2">2. Determination of acidity;</p>
+          <p class="font-[500] title py-2">3. Determination of density;</p>
+          <p class="font-[500] title py-2">4. Determination of fat content;</p>
+          <p class="font-[500] title py-2">5. Determination of moisture and dry matter content;</p>
+          <p class="font-[500] title py-2">6. Determination of sodium chloride;</p>
+          <p class="font-[500] title py-2">7. Determination of sugar;</p>
+          <p class="font-[500] title py-2">8. Determination of microbiological indicators:</p>
+          <p class="font-[500] title py-2">9. Determination of coliform bacteria (coliforms);</p>
+          <p class="font-[500] title py-2">10. Determination of pathogenic microorganisms, including salmonella;</p>
+          <p class="font-[500] title py-2">11. Determination of staphylococci;</p>
+      `,
+    },
+  },
+  {
+    title: {
+      az: "İçməli su analizi",
+      en: "Drinking water analysis",
+    },
+    description: {
+      az: `
+          <p class="font-[500] title py-2">1. Orqanoleptik göstəricilər (iyi, dadı, rəngi);</p>
+          <p class="font-[500] title py-2">2. PH təyini;</p>
+          <p class="font-[500] title py-2">3. Codluğun təyini;</p>
+          <p class="font-[500] title py-2">4. Xloridlərin təyini;</p>
+          <p class="font-[500] title py-2">5. Qələviliyin təyini;</p>
+          <p class="font-[500] title py-2">6. Kalsiumun təyini;</p>
+          <p class="font-[500] title py-2">7. Maqneziumun təyini;</p>
+          <p class="font-[500] title py-2">8. Hidrokarbonatların təyini;</p>
+          <p class="font-[500] title py-2">9. Ammonium duzlarının təyini;</p>
+          <p class="font-[500] title py-2">10. Nitritin təyini; </p>
+          <p class="font-[500] title py-2">11. Dəmirin təyini; </p>
+          <p class="font-[500] title py-2">12. Mikrobioloji göstəricilərinin təyini: </p>
+          <p class="font-[500] title py-2">13. Ümumi mikrob sayı 37 0C; </p>
+          <p class="font-[500] title py-2">14. Ümumi bağırsaq çöpü qrup bakteriyaların təyini; </p>
+          `,
+      en: `
+          <p class="font-[500] title py-2">1. Organoleptic indicators (smell, taste, color);</p>
+          <p class="font-[500] title py-2">2. Determination of pH;</p>
+          <p class="font-[500] title py-2">3. Determination of hardness;</p>
+          <p class="font-[500] title py-2">4. Determination of chlorides;</p>
+          <p class="font-[500] title py-2">5. Determination of alkalinity;</p>
+          <p class="font-[500] title py-2">6. Determination of calcium;</p>
+          <p class="font-[500] title py-2">7. Determination of magnesium;</p>
+          <p class="font-[500] title py-2">8. Determination of bicarbonates;</p>
+          <p class="font-[500] title py-2">9. Determination of ammonium salts;</p>
+          <p class="font-[500] title py-2">10. Determination of nitrite; </p>
+          <p class="font-[500] title py-2">11. Determination of iron; </p>
+          <p class="font-[500] title py-2">12. Determination of microbiological indicators: </p>
+          <p class="font-[500] title py-2">13. Total microbial count at 37°C; </p>
+          <p class="font-[500] title py-2">14. Determination of total coliform bacteria; </p>
+      `,
     },
   },
 ];
@@ -118,7 +148,7 @@ function createAccordion(accordionData, containerId) {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     button.className =
-      "flex items-center accordion-btn justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
+      "flex items-center accordion-btn justify-between w-full py-5 lg:px-[7rem] px-[3.5rem] font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl gap-3";
     button.setAttribute(
       "data-accordion-target",
       `#accordion-collapse-body-${index}`
@@ -127,28 +157,15 @@ function createAccordion(accordionData, containerId) {
     button.setAttribute("aria-controls", `accordion-collapse-body-${index}`);
 
     const title = document.createElement("span");
-    title.className = "font-[600] px-10 text-[2.8rem]";
+    title.className = "font-[600] text-start lg:text-[2.8rem] text-[2.4rem]";
     title.setAttribute("data-translate", `aboutCompanySlide.title.${index}`);
     title.textContent = item.title[language];
 
-    const svg = document.createElement("svg");
-    svg.setAttribute("data-accordion-icon", "");
-    svg.className = "w-5 h-5 rotate-180 shrink-0";
-    svg.setAttribute("aria-hidden", "true");
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svg.setAttribute("fill", "black");
-    svg.setAttribute("viewBox", "0 0 10 6");
-
-    const path = document.createElement("path");
-    path.setAttribute("stroke", "currentColor");
-    path.setAttribute("stroke-linecap", "round");
-    path.setAttribute("stroke-linejoin", "round");
-    path.setAttribute("stroke-width", "2");
-    path.setAttribute("d", "M9 5 5 1 1 5");
-    svg.appendChild(path);
-
+    const img = document.createElement("img");
+    img.src = "/assets/icons/accordion-icon.svg";
+    img.className = "transition-transform w-8 duration-[400ms]";
     button.appendChild(title);
-    button.appendChild(svg);
+    button.appendChild(img);
     heading.appendChild(button);
 
     const body = document.createElement("div");
@@ -157,7 +174,7 @@ function createAccordion(accordionData, containerId) {
     body.setAttribute("aria-labelledby", `accordion-collapse-heading-${index}`);
 
     const contentDiv = document.createElement("div");
-    contentDiv.className = "p-[4rem] text-[1.6rem]";
+    contentDiv.className = "lg:px-[7rem] px-[3.5rem] py-[2rem] text-[1.6rem]";
 
     const description = document.createElement("p");
     description.className = "text-gray-800";
@@ -175,8 +192,12 @@ function createAccordion(accordionData, containerId) {
       button.setAttribute("aria-expanded", !isOpen);
       body.classList.toggle("hidden");
       title.classList.toggle("text-red-500", !isOpen);
-      svg.classList.toggle("rotate-180", !isOpen);
-      svg.classList.toggle("text-red-500", !isOpen);
+      img.classList.toggle("rotate-180", !isOpen);
+      if (!isOpen) {
+        img.src = "/assets/icons/accordion-icon-red.svg";
+      } else {
+        img.src = "/assets/icons/accordion-icon.svg";
+      }
     });
   });
 }

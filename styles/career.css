@@ -7,3 +7,12 @@
 .more_btn:hover > img {
   filter: brightness(500%);
 }
+
+@media only screen and (max-width: 991px) {
+  .career-bg {
+    background-image: url(/assets/images/career/career-mobie-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

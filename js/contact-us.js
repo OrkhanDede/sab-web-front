@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       tab: [1, 2],
       name: "name",
-      placeHolder: "Ad / Soyad",
+      placeHolder: "Name / Surname",
       type: "text",
     },
     {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       tab: [1, 2],
       name: "message",
-      placeHolder: "Message",
+      placeHolder: "Write a message",
       type: "textarea",
     },
   ];
@@ -65,21 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const element = document.createElement(
       type === "textarea" ? "textarea" : "input"
     );
-    if (type !== "textarea") {
-      element.type = type;
-    }
     element.classList.add(
       "bg-[#F0F0F0]",
       "text-[#818181]",
       "input",
       "border",
       "border-[#CCC]",
-      "rounded-[2rem]",
-      "py-5",
-      "placeholder:text-[1.2rem]",
-      "px-5",
+      "lg:rounded-[2rem]",
+      "rounded-[3rem]",
+      "lg:py-5",
+      "py-7",
+      "lg:placeholder:text-[1.2rem]",
+      "placeholder:text-[1.5rem]",
+      "lg:px-5",
+      "px-7",
       "border-0"
     );
+    if (type !== "textarea") {
+      element.type = type;
+    } else {
+      element.classList.add("h-[10rem]");
+    }
     element.name = name;
     element.placeholder = placeHolder;
     return element;

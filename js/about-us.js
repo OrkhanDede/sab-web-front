@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newSrc = this.getAttribute("data-img-src");
 
       mobileMeatSectionBanner.src = newSrc;
-
+      mobileMeatSectionBanner.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image ${title}`;
       meetTitles.forEach((title) => {
         title.classList.remove("active-mobile-line");
         title.style.color = grayColor;
