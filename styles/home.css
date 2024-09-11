@@ -102,7 +102,16 @@
 .partners_list::-webkit-scrollbar {
   width: 0;
 }
+.buisness-brands-meat {
+  background-image: url(/assets/images/buisness-directions/1.png);
+}
+.buisness-brands-dairy {
+  background-image: url(/assets/images/buisness-directions/2.png);
+}
 .buisness-brands-mobile-overlay {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
   -moz-box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
   box-shadow: inset 2px -141px 35px 0px rgba(255, 255, 255, 0.83);
