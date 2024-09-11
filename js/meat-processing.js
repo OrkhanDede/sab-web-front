@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         perPage: 3,
       },
       768: {
-        perPage: 2,
+        perPage: 2.5,
       },
       100: {
         perPage: 1,
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         perPage: 3,
       },
       768: {
-        perPage: 2,
+        perPage: 2.5,
       },
       100: {
         perPage: 1,
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         perPage: 3,
       },
       768: {
-        perPage: 2,
+        perPage: 2.5,
       },
       100: {
         perPage: 1,
