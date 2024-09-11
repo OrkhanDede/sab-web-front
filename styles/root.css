@@ -4,6 +4,13 @@
   --swiper-theme-color: #fff !important;
   --swiper-pagination-color: var(--primary-red);
   --swiper-pagination-bullet-inactive-color: #ffff;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 1.65rem;
+  --swiper-pagination-bullet-vertical-gap: 6px;
 }
 
 * {
@@ -105,4 +112,10 @@ textarea:focus {
 
 .splide__arrow {
   transform: translateY(0) !important;
+}
+.swiper-pagination-bullet {
+  padding: 0.5rem;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
 }
