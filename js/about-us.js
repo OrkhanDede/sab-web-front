@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arrows: true,
     breakpoints: {
       991: {
-        padding: { right: "15rem", left: "0" },
+        padding: { right: "10rem", left: "0" },
       },
     },
   });
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         perPage: 4,
       },
       768: {
-        perPage: 3,
+        perPage: 2.5,
       },
       400: {
         perPage: 2,

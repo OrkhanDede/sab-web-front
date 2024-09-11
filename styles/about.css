@@ -131,14 +131,14 @@
     position: relative;
     width: 130vw;
     left: -15vw;
-    height: 40vh;
-    border-radius: 0 0 40vh 40vh;
+    height: 45vh;
+    border-radius: 0 0 45vh 45vh;
     border-top-color: transparent !important;
   }
 
   #mobileMeatSectionBanner {
-    padding: 0 3rem 3rem 3rem;
-    border-radius: 0 0 40vh 40vh;
+    padding: 0 4rem 4rem 4rem;
+    border-radius: 0 0 45vh 45vh;
   }
   .active-mobile-meat-type::before {
     background-color: var(--primary-red);
