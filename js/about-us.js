@@ -359,7 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileTitles.forEach((titles) => {
         titles.classList.remove("active-mobile-meat-type");
       });
-
       const newSrc = this.getAttribute("data-img-src");
 
       mobileMeatSectionBanner.src = newSrc;
@@ -403,10 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title.classList.add(defaultTextClass);
       title.style.color = defaultRedColor;
 
-      const indicator = this.querySelector(".indicator");
       const line = this.querySelector(".line");
-
-      indicator.style.borderColor = defaultRedColor;
       line.style.backgroundColor = defaultRedColor;
     });
 
