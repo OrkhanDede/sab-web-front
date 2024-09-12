@@ -4,6 +4,9 @@ tailwind.config = {
       height: {
         screen: "100dvh",
       },
+      lineClamp: {
+        8: "8",
+      },
       colors: {
         primary: "#EE3239",
         secondary: "#ED1C24",

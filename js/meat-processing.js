@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   var hotelSplide = new Splide(".retail-splide", {
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   var cateringSplide = new Splide(".b2g-splide", {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   const splideInstances = {
