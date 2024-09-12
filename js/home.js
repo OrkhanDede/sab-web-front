@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   var retailSplide = new Splide(".retail-splide", {
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   var b2gSplide = new Splide(".b2g-splide", {
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: true,
     arrows: false,
-    gap: "1rem",
+    gap: "2rem",
   }).mount();
 
   const splideInstances = {
