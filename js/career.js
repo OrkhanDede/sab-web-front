@@ -325,7 +325,7 @@ function appendVacations(vacation) {
   button.appendChild(span);
 
   const img = document.createElement("img");
-  img.classList.add("w-4");
+  img.classList.add("w-6");
   img.setAttribute("src", "/assets/icons/arrow-right.svg");
   img.setAttribute("alt", "arrow-right");
   button.appendChild(img);
