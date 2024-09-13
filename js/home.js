@@ -166,14 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateSlideContent(index) {
     const titleElement = document.getElementById("slide-title");
     const descriptionElement = document.getElementById("slide-description");
-    const moreBtn = document.getElementById("services_more_btn");
+    const moreBtn = document.querySelectorAll(".services_more_btn");
 
     const currentLang = localStorage.getItem("language");
     const newLang = currentLang === "en" ? "en" : "az";
 
     titleElement.textContent = slideContent[index].title[newLang];
     descriptionElement.textContent = slideContent[index].description[newLang];
-    moreBtn.href = slideContent[index].route;
+    moreBtn.forEach((btn) => {
+      if (btn) {
+        btn.href = slideContent[index].route;
+      }
+    });
   }
 
   updateSlideContent(0);
