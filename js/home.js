@@ -218,8 +218,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // Full page events
   new fullpage("#fullpage", {
     autoScrolling: true,
+    navigation: true,
+    anchors: [
+      "banner",
+      "business_directions",
+      "business_directions_meat",
+      "business_directions_dairy",
+      "services",
+      "statistics",
+      "distributing",
+      "partners",
+    ],
+
     afterLoad: function (origin, destination, direction) {
       const section = destination.index;
+      window.history.replaceState(null, null, `#${destination.anchor}`);
 
       // Business and direcctions
       if (section === 1) {
@@ -262,7 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         (section === 2 + +isMobile && direction == "down") ||
         // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 2 + +isMobile && direction == "up")
+        (section === 2 + +isMobile && direction == "up") ||
+        (section === 2 + +isMobile && direction == "none")
       ) {
         const animatedText = document.querySelectorAll("[data-aos]");
         animatedText.forEach((element) => {

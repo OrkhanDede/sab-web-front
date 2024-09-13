@@ -298,9 +298,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new fullpage("#fullpage", {
     autoScrolling: true,
-
+    navigation: true,
+    anchors: [
+      "about",
+      "meats",
+      "history",
+      "ceo_message",
+      "ceo_message_mobile",
+      "mission_vision",
+      "statistics",
+      "certificates",
+    ],
     afterLoad: function (origin, destination, direction) {
       const section = destination.index;
+      window.history.replaceState(null, null, `#${destination.anchor}`);
 
       // if (section === 2 && !slideMounted) {
       //   slideMounted = true;

@@ -115,7 +115,10 @@ textarea:focus {
 .fp-watermark {
   display: none !important;
 }
-
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: var(--primary-red) !important;
+}
 .splide__arrow {
   transform: translateY(0) !important;
 }

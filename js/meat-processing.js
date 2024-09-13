@@ -82,7 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const activeCompany = 1;
   const isMobile = document.body.clientWidth <= 991 ? true : false;
 
-  new fullpage("#fullpage", {});
+  new fullpage("#fullpage", {
+    navigation: true,
+    anchors: ["brands", "statistics", "partners", "map", "export_countries"],
+    afterLoad: function (origin, destination, direction) {
+      window.history.replaceState(null, null, `#${destination.anchor}`);
+    },
+  });
 
   var restaurantSplide = new Splide(".horeca-splide", {
     perPage: 4,
