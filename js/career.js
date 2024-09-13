@@ -283,8 +283,8 @@ function appendVacations(vacation) {
     "lg:gap-0",
     "gap-[2rem]",
     "justify-between",
-    "min-h-[25rem]",
-    "h-full"
+    "h-full",
+    "lg:aspect-video"
   );
 
   element.setAttribute("vacation-data", vacation);
