@@ -30,9 +30,9 @@ function initializeAccordion() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const accordionButtons = document.querySelectorAll(
-    ".custom-accordion-button"
-  );
+  // const accordionButtons = document.querySelectorAll(
+  //   ".custom-accordion-button"
+  // );
   const accordionItems = document.querySelectorAll(
     ".custom-accordion-content p"
   );
@@ -49,19 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selectedTag = null;
 
-  accordionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const category = button.getAttribute("data-category");
-      updateURLParams(category, null, null);
-      filterProducts(category, null, null);
-      setActiveCategory(category, null);
-      renderTags(category, null);
-      setActiveTag("all");
-      selectedTag = null;
+  // accordionButtons.forEach((button) => {
+  //   button.addEventListener("click", () => {
+  //     const category = button.getAttribute("data-category");
+  //     updateURLParams(category, null, null);
+  //     filterProducts(category, null, null);
+  //     setActiveCategory(category, null);
+  //     renderTags(category, null);
+  //     setActiveTag("all");
+  //     selectedTag = null;
 
-      toggleMobileSubcategories(category);
-    });
-  });
+  //     toggleMobileSubcategories(category);
+  //   });
+  // });
 
   accordionItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -79,13 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
   mobileCategoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const category = button.getAttribute("data-category");
+      const subcategory = "sab";
 
       setActiveMobileCategory(button);
+      setActiveMobileSubcategory(category, subcategory);
 
-      updateURLParams(category, null, null);
-      filterProducts(category, null, null);
-      setActiveCategory(category, null);
-      renderTags(category, null);
+      updateURLParams(category, subcategory, null);
+      filterProducts(category, subcategory, null);
+      setActiveCategory(category, subcategory);
+      renderTags(category, subcategory);
       setActiveTag("all");
 
       toggleMobileSubcategories(category);
@@ -102,47 +104,28 @@ document.addEventListener("DOMContentLoaded", () => {
       setActiveCategory(category, subcategory);
       renderTags(category, subcategory);
 
-      setActiveMobileSubcategory(item);
+      setActiveMobileSubcategory(category, subcategory);
     });
   });
 
   const urlParams = new URLSearchParams(window.location.search);
-  let category = urlParams.get("category");
-  let subcategory = urlParams.get("subcategory");
+  let category = urlParams.get("category") || "meat";
+  let subcategory = urlParams.get("subcategory") || "sab";
   let tag = urlParams.get("tag");
-  if (category) {
-    filterProducts(category, subcategory, tag || "all");
-    setActiveCategory(category, subcategory);
-    renderTags(category, subcategory);
-    const activeMobileButton = document.querySelector(
-      `#tabId[data-category="${category}"]`
-    );
-    const activeMobileSubButton = document.querySelector(
-      `.subcategory-image[data-category="${category}"][data-subcategory="${subcategory}"]`
-    );
+  // if (category) {
+  filterProducts(category, subcategory, tag || "all");
+  setActiveCategory(category, subcategory);
+  renderTags(category, subcategory);
+  const activeMobileButton = document.querySelector(
+    `#tabId[data-category="${category}"]`
+  );
 
-    if (activeMobileButton) {
-      setActiveMobileCategory(activeMobileButton);
-    }
-    setActiveMobileSubcategory(activeMobileSubButton);
-    setActiveTag(tag || "all");
-    toggleMobileSubcategories(category);
-  } else {
-    let initCategory = "meat";
-    let initSubcategory = null;
-    filterProducts(initCategory, initSubcategory, tag || "all");
-    setActiveCategory(initCategory, initSubcategory);
-    renderTags(initCategory, initSubcategory);
-    const activeMobileButton = document.querySelector(
-      `#tabId[data-category="${initCategory}"]`
-    );
-
-    if (activeMobileButton) {
-      setActiveMobileCategory(activeMobileButton);
-    }
-    toggleMobileSubcategories(initCategory);
-    setActiveTag("all");
+  if (activeMobileButton) {
+    setActiveMobileCategory(activeMobileButton);
   }
+  setActiveMobileSubcategory(category, subcategory);
+  setActiveTag(tag || "all");
+  toggleMobileSubcategories(category);
 
   function updateURLParams(category, subcategory, tag) {
     const url = new URL(window.location);
@@ -190,14 +173,14 @@ document.addEventListener("DOMContentLoaded", () => {
       el.style.color = "#808080";
     });
 
-    document.querySelector(`[data-category="${category}"]`).style.color =
-      "#ED1C24";
+    // document.querySelector(`[data-category="${category}"]`).style.color =
+    //   "#ED1C24";
     const accordion = document.querySelector(`.${category}-accordion`);
     accordion.style.border = "1.4px solid #ee3239";
     if (subcategory) {
       document
         .querySelectorAll(
-          `[data-category="${category}"][data-subcategory="${subcategory}"]`
+          `.subcategory[data-category="${category}"][data-subcategory="${subcategory}"]`
         )
         .forEach((el) => {
           el.style.color = "#ED1C24";
@@ -277,6 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileDairySubcategories.style.display = "flex";
     }
   }
+
   function setActiveMobileCategory(activeButton) {
     mobileCategoryButtons.forEach((button) => {
       button.style.backgroundColor = "";
@@ -286,16 +270,17 @@ document.addEventListener("DOMContentLoaded", () => {
     activeButton.style.color = "#ed1c24";
   }
 
-  function setActiveMobileSubcategory(activeSubcategory) {
+  function setActiveMobileSubcategory(activeCategory, activeSubCategory) {
+    const activeMobileSubButton = document.querySelector(
+      `.subcategory-image[data-category="${activeCategory}"][data-subcategory="${activeSubCategory}"]`
+    );
     mobileSubcategoryItems.forEach((item) => {
       item.style.border = "1px solid #F0F0F0";
     });
-    if (activeSubcategory) {
-      activeSubcategory.style.border = "1px solid #ed1c24";
+    if (activeMobileSubButton) {
+      activeMobileSubButton.style.border = "1px solid #ed1c24";
     }
   }
-
-  // renderTags("meat", null);
 });
 
 window.addEventListener("resize", initializeAccordion);
