@@ -391,10 +391,6 @@ document.addEventListener("DOMContentLoaded", () => {
         second.classList.remove("fade-top-to-bottom");
         bottom.classList.remove("fade-in-up");
       }
-      if (section === 2 + +isMobile && !splideInitialized) {
-        splideInitialized = true;
-        splide.mount();
-      }
     },
   });
 
