@@ -172,7 +172,47 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-  let swiperInstance;
+
+  var certificateSlider = new Swiper(".swiper-container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 100,
+      depth: 200,
+      modifier: 1,
+      slideShadows: false,
+    },
+    navigation: {
+      prevEl: ".certificate-button-prev",
+      nextEl: ".certificate-button-next",
+    },
+    pagination: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        coverflowEffect: {
+          stretch: 0,
+          depth: 150,
+        },
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1900: {
+        slidesPerView: 4,
+      },
+    },
+  });
 
   function updateSlideContent(index, id, slideName, yearElementId = null) {
     const descriptionElement = document.getElementById(id);
@@ -318,39 +358,9 @@ document.addEventListener("DOMContentLoaded", () => {
       //   historySplide.mount();
       //   yearSplide.mount();
       // }
-      if (section === 4 + +isMobile && !swiperInstance) {
-        swiperInstance = new Swiper(".swiper-container", {
-          effect: "coverflow",
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: 3,
-          loop: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-          coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 250,
-            modifier: 1,
-            slideShadows: false,
-          },
-          navigation: {
-            prevEl: ".certificate-button-prev",
-            nextEl: ".certificate-button-next",
-          },
-          pagination: false,
-          breakpoints: {
-            100: {
-              slidesPerView: 2,
-            },
-            991: {
-              slidesPerView: 3,
-            },
-          },
-        });
-      }
+      // if (section === 4 + +isMobile && !swiperInstance) {
+      //   swiperInstance =
+      // }
     },
   });
 
