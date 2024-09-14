@@ -278,17 +278,52 @@ document.addEventListener("DOMContentLoaded", () => {
         (section === 2 + +isMobile && direction == "up") ||
         (section === 2 + +isMobile && direction == "none")
       ) {
-        const animatedText = document.querySelectorAll("[data-aos]");
+        const animatedText = document.querySelectorAll(
+          ".services-section[data-aos]"
+        );
         animatedText.forEach((element) => {
           element.style.opacity = 1;
           element.classList.add("fade-in-up");
         });
       } else {
-        const animatedText = document.querySelectorAll("[data-aos]");
+        const animatedText = document.querySelectorAll(
+          ".services-section[data-aos]"
+        );
         animatedText.forEach((element) => {
           element.style.opacity = 0;
           element.classList.remove("fade-in-up");
         });
+      }
+      // First place aos animation
+      if (
+        (section === 3 + +isMobile && direction == "down") ||
+        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+        (section === 3 + +isMobile && direction == "up") ||
+        (section === 3 + +isMobile && direction == "none")
+      ) {
+        const first = document.getElementById("statistics_first");
+        const second = document.getElementById("statistics_second");
+        const bottom = document.getElementById("statistics_bottom");
+
+        first.style.opacity = 1;
+        second.style.opacity = 1;
+        bottom.style.opacity = 1;
+
+        first.classList.add("fade-top-to-bottom");
+        second.classList.add("fade-top-to-bottom");
+        bottom.classList.add("fade-in-up");
+      } else {
+        const first = document.getElementById("statistics_first");
+        const second = document.getElementById("statistics_second");
+        const bottom = document.getElementById("statistics_bottom");
+
+        first.style.opacity = 0;
+        second.style.opacity = 0;
+        bottom.style.opacity = 0;
+
+        first.classList.remove("fade-top-to-bottom");
+        second.classList.remove("fade-top-to-bottom");
+        bottom.classList.remove("fade-in-up");
       }
       if (section === 2 + +isMobile && !splideInitialized) {
         splideInitialized = true;
@@ -320,6 +355,42 @@ document.addEventListener("DOMContentLoaded", () => {
         firstContent.classList.add("fade-in-distributing");
         secondContent.classList.remove("fade-in-distributing");
         secondContent.classList.add("fade-out-distributing");
+      }
+      // Partners
+      if (
+        (section === 5 + +isMobile && direction == "down") ||
+        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+        (section === 5 + +isMobile && direction == "up") ||
+        (section === 5 + +isMobile && direction == "none")
+      ) {
+        const titles = document.querySelectorAll(".partners-title");
+        const slides = document.querySelectorAll(".partners-slides");
+        console.log(slides);
+        console.log(titles);
+        titles.forEach((title) => {
+          title.style.opacity = 1;
+          title.classList.add("fade-right-to-left");
+        });
+        slides.forEach((slide) => {
+          slide.style.opacity = 1;
+          slide.classList.add("fade-left-to-right");
+        });
+      } else {
+        const titles = document.querySelectorAll(".partners-title");
+        const slides = document.querySelectorAll(".partners-slides");
+
+        titles.forEach((title) => {
+          title.style.opacity = 0;
+          title.classList.remove("fade-right-to-left");
+        });
+        slides.forEach((slide) => {
+          slide.style.opacity = 0;
+          slide.classList.remove("fade-left-to-right");
+        });
+      }
+      if (section === 2 + +isMobile && !splideInitialized) {
+        splideInitialized = true;
+        splide.mount();
       }
     },
   });

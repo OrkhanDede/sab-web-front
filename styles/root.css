@@ -119,6 +119,9 @@ textarea:focus {
 .fp-slidesNav ul li a span {
   background: var(--primary-red) !important;
 }
+#fp-nav.fp-right {
+  right: 1rem !important;
+}
 .splide__arrow {
   transform: translateY(0) !important;
 }

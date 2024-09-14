@@ -370,7 +370,7 @@
       <section
         data-anchor="services"
         data-aos="fade-up"
-        class="h-screen section flex flex-col justify-start md:px-[7rem] py-5 px-[3.3rem] font-montserrat bg-white"
+        class="h-screen services-section section flex flex-col justify-start md:px-[7rem] py-5 px-[3.3rem] font-montserrat bg-white"
       >
         <div
           class="lg:pt-[16rem] overflow-hidden pt-[11.25rem] h-full pb-5 flex lg:flex-row flex-col lg:gap-[5rem] gap-[2rem]"
@@ -464,7 +464,7 @@
       <!-- First place -->
       <section
         data-anchor="statistics"
-        class="h-screen section flex flex-col justify-start lg:px-[7rem] px-[3.3rem] font-montserrat bg-[#F0F0F0]"
+        class="h-screen statistics-section section flex flex-col justify-start lg:px-[7rem] px-[3.3rem] font-montserrat bg-[#F0F0F0]"
       >
         <div
           class="flex flex-col w-full h-full lg:justify-start justify-center py-3 lg:gap-0 gap-5"
@@ -473,6 +473,7 @@
             class="grid lg:pt-[11rem] pt-[10rem] lg:grid-cols-2 grid-cols-1 h-1/2 lg:gap-10 gap-5"
           >
             <div
+              id="statistics_first"
               class="bg-white flex h-full lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[16rem] items-center rounded-[2rem]"
             >
               <div class="flex gap-1">
@@ -499,6 +500,7 @@
               />
             </div>
             <div
+              id="statistics_second"
               class="bg-white flex h-full lg:gap-4 gap-1 cursor-pointer overflow-hidden hover:shadow-lg duration-700 hover:shadow-red-400/40 first-place-item border border-gray-300 justify-between py-6 lg:h-full h-[16rem] items-center rounded-[2rem]"
             >
               <div class="flex gap-1">
@@ -526,6 +528,7 @@
             </div>
           </div>
           <div
+            id="statistics_bottom"
             class="bg-white border border-gray-300 lg:mt-[5.5rem] font-montserrat grid lg:grid-cols-4 grid-cols-2 w-full rounded-[3rem]"
           >
             <div
@@ -691,7 +694,7 @@
           <section class="lg:px-[7rem] h-full px-[3.5rem] font-montserrat">
             <div class="lg:pt-[12rem] pt-[10rem]">
               <h2
-                class="text-secondary uppercase lg:text-[4.5rem] text-[3.8rem] w-full font-bold"
+                class="text-secondary partners-title uppercase lg:text-[4.5rem] text-[3.8rem] w-full font-bold"
                 data-translate="trusted_partner_title_first"
               ></h2>
               <!-- <h2
@@ -703,9 +706,11 @@
               >
                 <h4
                   data-translate="retail"
-                  class="lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
+                  class="partners-title lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
                 ></h4>
-                <div class="flex items-center w-full gap-10 w-2/3">
+                <div
+                  class="flex items-center partners-slides w-full gap-10 w-2/3"
+                >
                   <button
                     partner_name="retailSplide"
                     type="prev"
@@ -797,9 +802,11 @@
               >
                 <h4
                   data-translate="horeca"
-                  class="lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
+                  class="partners-title lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
                 ></h4>
-                <div class="flex items-center w-full gap-10 w-2/3">
+                <div
+                  class="flex items-center w-full partners-slides gap-10 w-2/3"
+                >
                   <button
                     partner_name="horecaSplide"
                     type="prev"
@@ -890,11 +897,13 @@
                 class="lg:pt-[4rem] pt-[3rem] partners_container flex lg:flex-row flex-col lg:items-center relative lg:gap-[2rem] gap-[1.3rem]"
               >
                 <h4
-                  class="lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
+                  class="partners-title lg:text-[4rem] text-[3rem] w-1/3 text-[#222222] relative partner_section_title font-[600]"
                 >
                   B2G
                 </h4>
-                <div class="flex items-center w-full gap-10 w-2/3">
+                <div
+                  class="flex items-center partners-slides w-full gap-10 w-2/3"
+                >
                   <button
                     class="partner_arrows lg:flex hidden invisible w-[5%] border border-primary rounded-full items-center justify-center"
                   >

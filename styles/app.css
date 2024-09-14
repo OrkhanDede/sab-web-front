@@ -37,3 +37,80 @@
   color: var(--primary-red);
   border: 1px solid var(--primary-red);
 }
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+.fade-top-to-bottom {
+  opacity: 0;
+  animation: fadeTopToBottom 1s ease forwards;
+}
+.fade-left-to-right {
+  opacity: 0;
+  animation: fedeLeftToRight 1s ease forwards;
+}
+.fade-right-to-left {
+  opacity: 0;
+  animation: fedeRightToLeft 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeTopToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fedeLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fedeRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
