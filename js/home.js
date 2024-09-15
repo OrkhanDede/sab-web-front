@@ -109,11 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,
@@ -127,11 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,
@@ -145,11 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,
@@ -271,64 +262,6 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.remove("fade-in");
         secondContent.classList.add("fade-out");
       }
-      // Services text aos animation
-      if (
-        (section === 2 + +isMobile && direction == "down") ||
-        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 2 + +isMobile && direction == "up") ||
-        (section === 2 + +isMobile && direction == "none")
-      ) {
-        const animatedText = document.querySelectorAll(
-          ".services-section[data-aos]"
-        );
-        animatedText.forEach((element) => {
-          element.style.opacity = 1;
-          element.classList.add("fade-in-up");
-        });
-      } else {
-        const animatedText = document.querySelectorAll(
-          ".services-section[data-aos]"
-        );
-        animatedText.forEach((element) => {
-          element.style.opacity = 0;
-          element.classList.remove("fade-in-up");
-        });
-      }
-      // First place aos animation
-      if (
-        (section === 3 + +isMobile && direction == "down") ||
-        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 3 + +isMobile && direction == "up") ||
-        (section === 3 + +isMobile && direction == "none")
-      ) {
-        const first = document.getElementById("statistics_first");
-        const second = document.getElementById("statistics_second");
-        const bottom = document.getElementById("statistics_bottom");
-
-        first.style.opacity = 1;
-        second.style.opacity = 1;
-        bottom.style.opacity = 1;
-
-        first.classList.add("fade-top-to-bottom");
-        second.classList.add("fade-top-to-bottom");
-        bottom.classList.add("fade-in-up");
-      } else {
-        const first = document.getElementById("statistics_first");
-        const second = document.getElementById("statistics_second");
-        const bottom = document.getElementById("statistics_bottom");
-
-        first.style.opacity = 0;
-        second.style.opacity = 0;
-        bottom.style.opacity = 0;
-
-        first.classList.remove("fade-top-to-bottom");
-        second.classList.remove("fade-top-to-bottom");
-        bottom.classList.remove("fade-in-up");
-      }
-      if (section === 2 + +isMobile && !splideInitialized) {
-        splideInitialized = true;
-        splide.mount();
-      }
       // Distributing
       if (section === 4 + +isMobile) {
         const firstContent = document.querySelector(
@@ -356,40 +289,74 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.remove("fade-in-distributing");
         secondContent.classList.add("fade-out-distributing");
       }
-      // Partners
-      // if (
-      //   (section === 5 + +isMobile && direction == "down") ||
-      //   // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-      //   (section === 5 + +isMobile && direction == "up") ||
-      //   (section === 5 + +isMobile && direction == "none")
-      // ) {
-      //   const titles = document.querySelectorAll(".partners-title");
-      //   const slides = document.querySelectorAll(".partners-slides");
-      //   titles.forEach((title) => {
-      //     title.style.opacity = 1;
-      //     title.classList.add("fade-right-to-left");
-      //   });
-      //   slides.forEach((slide) => {
-      //     slide.style.opacity = 1;
-      //     slide.classList.add("fade-left-to-right");
-      //   });
-      // } else {
-      //   const titles = document.querySelectorAll(".partners-title");
-      //   const slides = document.querySelectorAll(".partners-slides");
-
-      //   titles.forEach((title) => {
-      //     title.style.opacity = 0;
-      //     title.classList.remove("fade-right-to-left");
-      //   });
-      //   slides.forEach((slide) => {
-      //     slide.style.opacity = 0;
-      //     slide.classList.remove("fade-left-to-right");
-      //   });
-      // }
     },
     onLeave: function (origin, destination, direction) {
       const section = destination.index;
 
+      // Services text aos animation
+      if (
+        (section === 2 + +isMobile && direction == "down") ||
+        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+        (section === 2 + +isMobile && direction == "up") ||
+        (section === 2 + +isMobile && direction == "none")
+      ) {
+        const animatedText = document.querySelectorAll(
+          ".services-section[data-aos]"
+        );
+        setTimeout(() => {
+          animatedText.forEach((element) => {
+            element.style.opacity = 1;
+            element.classList.add("fade-in-up");
+          });
+        }, 300);
+      } else {
+        const animatedText = document.querySelectorAll(
+          ".services-section[data-aos]"
+        );
+        animatedText.forEach((element) => {
+          element.style.opacity = 0;
+          element.classList.remove("fade-in-up");
+        });
+      }
+
+      if (section === 2 + +isMobile && !splideInitialized) {
+        splideInitialized = true;
+        splide.mount();
+      }
+      // First place aos animation
+      if (
+        (section === 3 + +isMobile && direction == "down") ||
+        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+        (section === 3 + +isMobile && direction == "up") ||
+        (section === 3 + +isMobile && direction == "none")
+      ) {
+        const first = document.getElementById("statistics_first");
+        const second = document.getElementById("statistics_second");
+        const bottom = document.getElementById("statistics_bottom");
+
+        setTimeout(() => {
+          first.style.opacity = 1;
+          second.style.opacity = 1;
+          bottom.style.opacity = 1;
+
+          first.classList.add("fade-top-to-bottom");
+          second.classList.add("fade-top-to-bottom");
+          bottom.classList.add("fade-in-up");
+        }, 200);
+      } else {
+        const first = document.getElementById("statistics_first");
+        const second = document.getElementById("statistics_second");
+        const bottom = document.getElementById("statistics_bottom");
+
+        first.style.opacity = 0;
+        second.style.opacity = 0;
+        bottom.style.opacity = 0;
+
+        first.classList.remove("fade-top-to-bottom");
+        second.classList.remove("fade-top-to-bottom");
+        bottom.classList.remove("fade-in-up");
+      }
+      // Partners
       if (section === 5 + +isMobile && direction == "down") {
         const titles = document.querySelectorAll(".partners-title");
         const slides = document.querySelectorAll(".partners-slides");

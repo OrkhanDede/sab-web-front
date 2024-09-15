@@ -96,11 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,
@@ -114,11 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,
@@ -132,11 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
       991: {
         perPage: 3,
       },
-      768: {
+      400: {
         perPage: 2,
-      },
-      100: {
-        perPage: 1,
       },
     },
     pagination: true,

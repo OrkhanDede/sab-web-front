@@ -39,19 +39,19 @@
 }
 .fade-in-up {
   opacity: 0;
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1.5s ease forwards;
 }
 .fade-top-to-bottom {
   opacity: 0;
-  animation: fadeTopToBottom 1s ease forwards;
+  animation: fadeTopToBottom 1.5s ease forwards;
 }
 .fade-left-to-right {
   opacity: 0;
-  animation: fedeLeftToRight 1s ease forwards;
+  animation: fedeLeftToRight 1.5s ease forwards;
 }
 .fade-right-to-left {
   opacity: 0;
-  animation: fedeRightToLeft 1s ease forwards;
+  animation: fedeRightToLeft 1.5s ease forwards;
 }
 
 @keyframes fadeOut {
