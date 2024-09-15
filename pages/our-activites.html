@@ -1,841 +1,508 @@
 <!DOCTYPE html>
 <html lang="az">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/assets/logos/favicon.png"
-    />
-    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
-    <title>SAB</title>
-    <!-- Scripts -->
-    <script src="/js/translate.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/packages/tailwind.config.js"></script>
-    <!-- Links -->
-    <!-- Links CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <!-- Inside Links -->
-    <link rel="stylesheet" href="/styles/root.css" />
-    <link rel="stylesheet" href="/styles/app.css" />
-    <link rel="stylesheet" href="/styles/our-activites.css" />
-  </head>
 
-  <body class="w-screen overflow-x-hidden">
-    <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="/assets/logos/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+  <title>SAB</title>
+  <!-- Scripts -->
+  <script src="/js/translate.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/packages/tailwind.config.js"></script>
+  <!-- Links -->
+  <!-- Links CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Inside Links -->
+  <link rel="stylesheet" href="/styles/root.css" />
+  <link rel="stylesheet" href="/styles/app.css" />
+  <link rel="stylesheet" href="/styles/our-activites.css" />
+</head>
+
+<body class="w-screen overflow-x-hidden">
+  <!-- Header -->
+  <div class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3rem] justify-between">
+    <a href="/index.html" class="lg:w-[11.4rem] lg:h-[5.9rem] w-[12rem] h-[6.2rem] transition-all logo_anchor">
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
     <div
-      class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3rem] justify-between"
-    >
-      <a
-        href="/index.html"
-        class="lg:w-[11.4rem] lg:h-[5.9rem] w-[12rem] h-[6.2rem] transition-all logo_anchor"
-      >
-        <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
-      </a>
-      <div
-        class="font-montserrat h-[6rem] lg:flex hidden bg-[#F0F0F0] rounded-full border text-[1.7rem] border-gray-300 items-center whitespace-nowrap font-[600]"
-      >
-        <a
-          href="/pages/about-us.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="about_us_title"
-        ></a>
-        <a
-          href="/pages/buisness-brands.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="business_brands_title"
-        ></a>
-        <a
-          href="/pages/our-activites.html"
-          class="hover:bg-white active-navbar hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="our_activities_title"
-        ></a>
-        <a
-          href="/pages/career.html"
-          class="xl:px-[3rem] lg:px-[2.5rem] px-[2rem] hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full"
-          data-translate="career_title"
-        ></a>
-        <a
-          href="/pages/contact-us.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="contact_us_title"
-        ></a>
-      </div>
-      <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
-        data-translate="language"
-        onclick="changeLanguageWithBtn()"
-        type="button"
-      ></button>
-      <div
-        id="hamburgerIcon"
-        class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[6rem] w-[6rem] rounded-full cursor-pointer"
-      >
-        <img src="/assets/icons/hamburger.svg" alt="menu" />
-      </div>
-      <div
-        id="mobileNavbar"
-        class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[2.2rem] px-[3rem] right-0 top-0 z-[30] text-white"
-      >
-        <div class="flex flex-col w-full">
-          <div class="flex h-max w-full items-center justify-between">
-            <button
-              class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
-              data-translate="language"
-              onclick="changeLanguageWithBtn()"
-              type="button"
-            ></button>
-            <div
-              id="closeNavbar"
-              class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer"
-            >
-              <img
-                src="/assets/icons/close.svg"
-                class="w-8 h-8 object-cover"
-                alt="close icon"
-              />
-            </div>
+      class="font-montserrat h-[6rem] lg:flex hidden bg-[#F0F0F0] rounded-full border text-[1.7rem] border-gray-300 items-center whitespace-nowrap font-[600]">
+      <a href="/pages/about-us.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="about_us_title"></a>
+      <a href="/pages/buisness-brands.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="business_brands_title"></a>
+      <a href="/pages/our-activites.html"
+        class="hover:bg-white active-navbar hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="our_activities_title"></a>
+      <a href="/pages/career.html"
+        class="xl:px-[3rem] lg:px-[2.5rem] px-[2rem] hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full"
+        data-translate="career_title"></a>
+      <a href="/pages/contact-us.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="contact_us_title"></a>
+    </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
+      data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+    <div id="hamburgerIcon"
+      class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[6rem] w-[6rem] rounded-full cursor-pointer">
+      <img src="/assets/icons/hamburger.svg" alt="menu" />
+    </div>
+    <div id="mobileNavbar"
+      class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[2.2rem] px-[3rem] right-0 top-0 z-[30] text-white">
+      <div class="flex flex-col w-full">
+        <div class="flex h-max w-full items-center justify-between">
+          <button
+            class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
+            data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+          <div id="closeNavbar"
+            class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer">
+            <img src="/assets/icons/close.svg" class="w-8 h-8 object-cover" alt="close icon" />
           </div>
-          <div class="flex flex-col w-full h-full justify-between">
-            <div
-              class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]"
-            >
-              <a
-                href="/pages/about-us.html"
-                class="text-[3.5rem]"
-                data-translate="about_us_title"
-              ></a>
-              <a
-                href="/pages/buisness-brands.html"
-                class="text-[3.5rem]"
-                data-translate="business_brands_title"
-              ></a>
-              <a
-                href="/pages/our-activites.html"
-                class="text-[3.5rem]"
-                data-translate="our_activities_title"
-              ></a>
-              <a
-                href="/pages/career.html"
-                class="text-[3.5rem]"
-                data-translate="career_title"
-              ></a>
-              <a
-                href="/pages/contact-us.html"
-                class="text-[3.5rem]"
-                data-translate="contact_us_title"
-              ></a>
+        </div>
+        <div class="flex flex-col w-full h-full justify-between">
+          <div
+            class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]">
+            <a href="/pages/about-us.html" class="text-[3.5rem]" data-translate="about_us_title"></a>
+            <a href="/pages/buisness-brands.html" class="text-[3.5rem]" data-translate="business_brands_title"></a>
+            <a href="/pages/our-activites.html" class="text-[3.5rem]" data-translate="our_activities_title"></a>
+            <a href="/pages/career.html" class="text-[3.5rem]" data-translate="career_title"></a>
+            <a href="/pages/contact-us.html" class="text-[3.5rem]" data-translate="contact_us_title"></a>
+          </div>
+          <div class="flex flex-col gap-10">
+            <div class="flex gap-10 items-center">
+              <a href="https://www.facebook.com/sabazerbaijann/">
+                <img src="/assets/icons/facebook-mobile.svg" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/sab.azerbaijan/">
+                <img src="/assets/icons/instagram_mobile.svg" alt="instagram" />
+              </a>
+              <a href="https://www.youtube.com/@sabazerbaijan">
+                <img src="/assets/icons/youtube_mobile.svg" alt="youtube" />
+              </a>
             </div>
             <div class="flex flex-col gap-10">
-              <div class="flex gap-10 items-center">
-                <a href="https://www.facebook.com/sabazerbaijann/">
-                  <img src="/assets/icons/facebook-mobile.svg" alt="facebook" />
-                </a>
-                <a href="https://www.instagram.com/sab.azerbaijan/">
-                  <img
-                    src="/assets/icons/instagram_mobile.svg"
-                    alt="instagram"
-                  />
-                </a>
-                <a href="https://www.youtube.com/@sabazerbaijan">
-                  <img src="/assets/icons/youtube_mobile.svg" alt="youtube" />
-                </a>
-              </div>
-              <div class="flex flex-col gap-10">
-                <a class="text-[2rem] font-semibold" href="tel:+994123494433"
-                  >+994 (12) 349 44 33</a
-                >
-                <a
-                  class="text-[2rem] font-semibold"
-                  href="mailto:muraciet@sab.az"
-                  >muraciet@sab.az</a
-                >
-              </div>
-              <div class="text-white text-[2rem] opacity-50">
-                © <span data-currYear></span> SAB.AZ. All rights reserved!
-              </div>
+              <a class="text-[2rem] font-semibold" href="tel:+994123494433">+994 (12) 349 44 33</a>
+              <a class="text-[2rem] font-semibold" href="mailto:muraciet@sab.az">muraciet@sab.az</a>
+            </div>
+            <div class="text-white text-[2rem] opacity-50">
+              © <span data-currYear></span> SAB.AZ. All rights reserved!
             </div>
           </div>
         </div>
       </div>
     </div>
-    <section
-      class="bg-white min-h-screen h-full lg:pt-[13rem] pt-[10rem] font-montserrat pb-10"
-    >
-      <div class="flex lg:flex-row gap-5 flex-col lg:px-[7rem] px-[3.5rem]">
+  </div>
+  <section class="bg-white min-h-screen h-full lg:pt-[13rem] pt-[10rem] font-montserrat pb-10">
+    <div class="flex lg:flex-row gap-5 flex-col lg:px-[7rem] px-[3.5rem]">
+      <div id="custom-accordion" class="custom-accordion lg:flex hidden lg:flex-col flex-row gap-3 lg:w-[30rem] w-full">
+        <div class="custom-accordion-item meat-accordion h-max bg-[#F0F0F0] text-[#808080] py-8 rounded-[2rem] w-full">
+          <h2 id="custom-accordion-heading-1">
+            <div
+              class="custom-accordion-button lg:text-start text-black px-[2rem] categoryTitle text-center w-full font-bold text-[2.4rem]"
+              data-custom-accordion-target="#custom-accordion-body-1" aria-expanded="true"
+              aria-controls="custom-accordion-body-1" data-translate="meat_title">
+              Meat
+            </div>
+          </h2>
+          <div id="custom-accordion-body-1"
+            class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col"
+            aria-labelledby="custom-accordion-heading-1">
+            <p class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
+              data-category="meat" data-subcategory="sab">
+              SAB
+            </p>
+            <p class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
+              data-category="meat" data-subcategory="mrfood">
+              Mr Food
+            </p>
+            <p class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
+              data-category="meat" data-subcategory="umid">
+              Umid
+            </p>
+            <p class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
+              data-category="meat" data-subcategory="kovser">
+              Kovser
+            </p>
+          </div>
+        </div>
         <div
-          id="custom-accordion"
-          class="custom-accordion lg:flex hidden lg:flex-col flex-row gap-3 lg:w-[30rem] w-full"
-        >
-          <div
-            class="custom-accordion-item meat-accordion h-max bg-[#F0F0F0] text-[#808080] py-8 rounded-[2rem] w-full"
-          >
-            <h2 id="custom-accordion-heading-1">
-              <div
-                class="custom-accordion-button lg:text-start text-black px-[2rem] categoryTitle text-center w-full font-bold text-[2.4rem]"
-                data-custom-accordion-target="#custom-accordion-body-1"
-                aria-expanded="true"
-                aria-controls="custom-accordion-body-1"
-                data-translate="meat_title"
-              >
-                Meat
-              </div>
-            </h2>
+          class="custom-accordion-item dairy-accordion h-max bg-[#F0F0F0] py-8 text-[#808080] rounded-[2rem] dark:bg-[#F0F0F0] w-full">
+          <h2 id="custom-accordion-heading-2">
             <div
-              id="custom-accordion-body-1"
-              class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col"
-              aria-labelledby="custom-accordion-heading-1"
-            >
-              <p
-                class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
-                data-category="meat"
-                data-subcategory="sab"
-              >
-                SAB
+              class="custom-accordion-button text-black px-[2rem] lg:text-start categoryTitle text-center w-full font-bold text-[2.4rem]"
+              data-custom-accordion-target="#custom-accordion-body-2" aria-expanded="true"
+              aria-controls="custom-accordion-body-2" data-translate="dairy_title">
+              Dairy
+            </div>
+          </h2>
+          <div id="custom-accordion-body-2"
+            class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col gap-2"
+            aria-labelledby="custom-accordion-heading-2">
+            <p class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] px-[2rem] py-2 hover:bg-white transition-colors text-[#808080]"
+              data-category="dairy" data-subcategory="sab">
+              SAB
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div id="tags-container"
+          class="lg:flex hidden gap-6 text-[#6b7280] mt-2 bg-[#F0F0F0] font-semibold justify-between w-full rounded-[3rem] capitalize flex-wrap mb-4">
+        </div>
+        <div class="lg:hidden flex items-center pb-3 max-w-[45rem] w-full h-[6.5rem]">
+          <button id="tabId" data-tab="1" data-category="meat" data-translate="meat_title"
+            class="font-semibold border h-full text-black text-center text-[1.8rem] border-gray-300 rounded-l-[2.5rem] px-4 w-full"></button>
+          <button id="tabId" data-tab="2" data-category="dairy" data-translate="dairy_title"
+            class="font-semibold border-l-0 text-black h-full text-center text-[1.8rem] border border-gray-300 rounded-r-[2.5rem] px-4 w-full"></button>
+        </div>
+        <div class="lg:hidden block">
+          <div id="mobileMeatSubCategory" class="mobileSubCategories lg:hidden">
+            <div id="custom-accordion-body-1"
+              class="custom-accordion-content lg:text-start text-center pt-3 pb-4 font-semibold flex w-full justify-between items-center"
+              aria-labelledby="custom-accordion-heading-1">
+              <p class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
+                data-category="meat" data-subcategory="sab">
+                <img class="w-full h-full object-contain" src="/assets/images/meat-processing/sab.png" alt="" />
               </p>
-              <p
-                class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
-                data-category="meat"
-                data-subcategory="mrfood"
-              >
-                Mr Food
+              <p class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
+                data-category="meat" data-subcategory="mrfood">
+                <img class="w-full h-full object-contain" src="/assets/images/meat-processing/mr-food.png" alt="" />
               </p>
-              <p
-                class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
-                data-category="meat"
-                data-subcategory="umid"
-              >
-                Umid
+              <p class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-2 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
+                data-category="meat" data-subcategory="umid">
+                <img class="w-full h-full object-contain" src="/assets/images/meat-processing/umid.png" alt="" />
               </p>
-              <p
-                class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] hover:bg-white px-[2rem] py-2 transition-colors text-[#808080]"
-                data-category="meat"
-                data-subcategory="kovser"
-              >
-                Kovser
+              <p class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
+                data-category="meat" data-subcategory="kovser">
+                <img class="w-full h-full object-contain" src="/assets/images/meat-processing/kovser.png" alt="" />
               </p>
             </div>
           </div>
-          <div
-            class="custom-accordion-item dairy-accordion h-max bg-[#F0F0F0] py-8 text-[#808080] rounded-[2rem] dark:bg-[#F0F0F0] w-full"
-          >
-            <h2 id="custom-accordion-heading-2">
-              <div
-                class="custom-accordion-button text-black px-[2rem] lg:text-start categoryTitle text-center w-full font-bold text-[2.4rem]"
-                data-custom-accordion-target="#custom-accordion-body-2"
-                aria-expanded="true"
-                aria-controls="custom-accordion-body-2"
-                data-translate="dairy_title"
-              >
-                Dairy
-              </div>
-            </h2>
-            <div
-              id="custom-accordion-body-2"
-              class="custom-accordion-content lg:text-start text-center pt-3 font-semibold flex flex-col gap-2"
-              aria-labelledby="custom-accordion-heading-2"
-            >
-              <p
-                class="subcategory cursor-pointer hover:text-secondary text-[1.6rem] px-[2rem] py-2 hover:bg-white transition-colors text-[#808080]"
-                data-category="dairy"
-                data-subcategory="sab"
-              >
-                SAB
+          <div id="mobileDairySubCategory" class="lg:hidden mobileSubCategories" style="display: none">
+            <div id="custom-accordion-body-2"
+              class="custom-accordion-content lg:text-start text-center pt-3 pb-4 font-semibold flex w-full justify-between items-center"
+              aria-labelledby="custom-accordion-heading-2">
+              <p class="cursor-pointer border border-[#F0F0F0] bg-[#F0F0F0] subcategory-image px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
+                data-category="dairy" data-subcategory="sab">
+                <img class="w-full h-full object-contain" src="/assets/images/meat-processing/sab.png" alt="" />
               </p>
             </div>
           </div>
         </div>
-        <div class="w-full">
-          <div
-            id="tags-container"
-            class="lg:flex hidden gap-6 text-[#6b7280] mt-2 bg-[#F0F0F0] font-semibold justify-between w-full rounded-[3rem] capitalize flex-wrap mb-4"
-          ></div>
-          <div
-            class="lg:hidden flex items-center pb-3 max-w-[45rem] w-full h-[6.5rem]"
-          >
-            <button
-              id="tabId"
-              data-tab="1"
-              data-category="meat"
-              data-translate="meat_title"
-              class="font-semibold border h-full text-black text-center text-[1.8rem] border-gray-300 rounded-l-[2.5rem] px-4 w-full"
-            ></button>
-            <button
-              id="tabId"
-              data-tab="2"
-              data-category="dairy"
-              data-translate="dairy_title"
-              class="font-semibold border-l-0 text-black h-full text-center text-[1.8rem] border border-gray-300 rounded-r-[2.5rem] px-4 w-full"
-            ></button>
-          </div>
-          <div class="lg:hidden block">
-            <div
-              id="mobileMeatSubCategory"
-              class="mobileSubCategories lg:hidden"
-            >
-              <div
-                id="custom-accordion-body-1"
-                class="custom-accordion-content lg:text-start text-center pt-3 pb-4 font-semibold flex w-full justify-between items-center"
-                aria-labelledby="custom-accordion-heading-1"
-              >
-                <p
-                  class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
-                  data-category="meat"
-                  data-subcategory="sab"
-                >
-                  <img
-                    class="w-full h-full object-contain"
-                    src="/assets/images/meat-processing/sab.png"
-                    alt=""
-                  />
-                </p>
-                <p
-                  class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
-                  data-category="meat"
-                  data-subcategory="mrfood"
-                >
-                  <img
-                    class="w-full h-full object-contain"
-                    src="/assets/images/meat-processing/mr-food.png"
-                    alt=""
-                  />
-                </p>
-                <p
-                  class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-2 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
-                  data-category="meat"
-                  data-subcategory="umid"
-                >
-                  <img
-                    class="w-full h-full object-contain"
-                    src="/assets/images/meat-processing/umid.png"
-                    alt=""
-                  />
-                </p>
-                <p
-                  class="cursor-pointer subcategory-image border border-[#F0F0F0] bg-[#F0F0F0] px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
-                  data-category="meat"
-                  data-subcategory="kovser"
-                >
-                  <img
-                    class="w-full h-full object-contain"
-                    src="/assets/images/meat-processing/kovser.png"
-                    alt=""
-                  />
-                </p>
-              </div>
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/dovga.png"
+                alt="Dovga" />
             </div>
             <div
-              id="mobileDairySubCategory"
-              class="lg:hidden mobileSubCategories"
-              style="display: none"
-            >
-              <div
-                id="custom-accordion-body-2"
-                class="custom-accordion-content lg:text-start text-center pt-3 pb-4 font-semibold flex w-full justify-between items-center"
-                aria-labelledby="custom-accordion-heading-2"
-              >
-                <p
-                  class="cursor-pointer border border-[#F0F0F0] bg-[#F0F0F0] subcategory-image px-6 py-4 w-[9.4rem] h-[5.2rem] flex items-center justify-center rounded-[3rem]"
-                  data-category="dairy"
-                  data-subcategory="sab"
-                >
-                  <img
-                    class="w-full h-full object-contain"
-                    src="/assets/images/meat-processing/sab.png"
-                    alt=""
-                  />
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Dovga</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
             </div>
           </div>
-          <div
-            class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4"
-          >
-            <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/dovga.png"
-                  alt="Dovga"
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Dovga</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/xama.png" alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/xama.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Xama</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Xama</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/gence-dovgasi.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/gence-dovgasi.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Dovga</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Dovga</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/xama-goy.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/xama-goy.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Xama</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Xama</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/ayran-naneli.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/ayran-naneli.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Ayran</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Ayran</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/ayran-goy.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/ayran-goy.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Ayran</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Ayran</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/dovga.png" alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/dovga.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Dovga</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Dovga</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]"
+                src="/assets/images/products/eridilmis-kere-yagi.png" alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/eridilmis-kere-yagi.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Kere yagi</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Kere yagi</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/gence-dovgasi.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/gence-dovgasi.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Dovga</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Dovga</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/xama-goy.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/xama-goy.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Xama</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Xama</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/ayran-naneli.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/ayran-naneli.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Ayran</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Ayran</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="kovser"
+            data-tags="coocked sossages,frankfurters">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/doktorskaya.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="kovser"
-              data-tags="coocked sossages,frankfurters"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/doktorskaya.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Kovser doktorskaya</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Kovser doktorskaya</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="sab"
+            data-tags="coocked sossages,frankfurters">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/vetcinnaya.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="mrfood"
-              data-tags="coocked sossages,frankfurters"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/vetcinnaya.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Vetcinnaya</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Vetcinnaya</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="mrfood"
+            data-tags="coocked sossages,frankfurters">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/vetcinnaya.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="umid"
-              data-tags="semismoked sossages, smoked sossages"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/doyme-sosiska.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Doyme</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Vetcinnaya</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="sab"
+            data-tags="semismoked sossages, smoked sossages">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/doyme-sosiska.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="sab"
-              data-tags="semismoked sossages, smoked sossages"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/toyuq-sab.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Toyuq</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Doyme</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="umid"
+            data-tags="semismoked sossages, smoked sossages">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/doyme-sosiska.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="mrfood"
-              data-tags="coocked sossages,frankfurters"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/doyme-sucuk.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Doyme</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Doyme</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="sab"
+            data-tags="semismoked sossages, smoked sossages">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/toyuq-sab.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="meat"
-              data-subcategory="mrfood"
-              data-tags="frankfurters"
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/salami.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Salami</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  ət, toyuq, quru süd, duz, ədviyyatlar, bibər
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Toyuq</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="mrfood"
+            data-tags="coocked sossages,frankfurters">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/doyme-sucuk.png"
+                alt="" />
             </div>
             <div
-              class="relative product-item h-[28rem] rounded-[2rem]"
-              data-category="dairy"
-              data-subcategory="sab"
-              data-tags=""
-            >
-              <div class="w-full h-full">
-                <img
-                  class="w-full h-full object-cover rounded-[2rem]"
-                  src="/assets/images/products/ayran-goy.png"
-                  alt=""
-                />
-              </div>
-              <div
-                class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]"
-              >
-                <div class="text-black text-[1.6rem]">Ayran</div>
-                <p
-                  class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]"
-                >
-                  Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
-                </p>
-              </div>
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Doyme</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="meat" data-subcategory="mrfood"
+            data-tags="frankfurters">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/salami.png" alt="" />
+            </div>
+            <div
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Salami</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                ət, toyuq, quru süd, duz, ədviyyatlar, bibər
+              </p>
+            </div>
+          </div>
+          <div class="relative product-item h-[28rem] rounded-[2rem]" data-category="dairy" data-subcategory="sab"
+            data-tags="">
+            <div class="w-full h-full">
+              <img class="w-full h-full object-cover rounded-[2rem]" src="/assets/images/products/ayran-goy.png"
+                alt="" />
+            </div>
+            <div
+              class="absolute info rounded-b-[2rem] bottom-0 left-0 w-full bg-[#F0F0F0] font-semibold flex flex-col p-2 gap-1 justify-center transition-transform items-center h-[5rem]">
+              <div class="text-black text-[1.6rem]">Ayran</div>
+              <p class="lg:text-[1.2rem] text-[1.4rem] description text-center font-medium text-[#6F6F6F]">
+                Təbii Süd yağsız, Quru Süd, Kalsi-Xlor (CaCl2), Maya
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <footer
-      class="lg:flex hidden justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-[7rem]"
-    >
-      <div class="flex gap-32 items-center">
-        <div class="flex gap-10 items-center">
-          <a href="https://www.facebook.com/sabazerbaijann/" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/facebook.png"
-              alt="facebook"
-            />
-          </a>
-          <a href="https://www.instagram.com/sab.azerbaijan/" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/instagram.png"
-              alt="instagram"
-            />
-          </a>
-          <a href="https://www.youtube.com/@sabazerbaijan" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/youtube.png"
-              alt="youtube"
-            />
-          </a>
-        </div>
-        <div class="flex gap-14 items-center">
-          <a class="font-[500] text-[1.5rem]" href="tel:+994123494433"
-            >+994 (12) 349 44 33</a
-          >
-          <a class="font-[500] text-[1.5rem]" href="mailto:muraciet@sab.az"
-            >muraciet@sab.az</a
-          >
-        </div>
+    </div>
+  </section>
+  <footer
+    class="lg:flex hidden justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-[7rem]">
+    <div class="flex gap-32 items-center">
+      <div class="flex gap-10 items-center">
+        <a href="https://www.facebook.com/sabazerbaijann/" target="_blank">
+          <img class="w-12" src="/assets/social-medias/facebook.png" alt="facebook" />
+        </a>
+        <a href="https://www.instagram.com/sab.azerbaijan/" target="_blank">
+          <img class="w-12" src="/assets/social-medias/instagram.png" alt="instagram" />
+        </a>
+        <a href="https://www.youtube.com/@sabazerbaijan" target="_blank">
+          <img class="w-12" src="/assets/social-medias/youtube.png" alt="youtube" />
+        </a>
       </div>
-      <div class="text-gray-400 text-[1.4rem]">
-        © <span data-currYear></span> SAB.AZ. All rights reserved!
+      <div class="flex gap-14 items-center">
+        <a class="font-[500] text-[1.5rem]" href="tel:+994123494433">+994 (12) 349 44 33</a>
+        <a class="font-[500] text-[1.5rem]" href="mailto:muraciet@sab.az">muraciet@sab.az</a>
       </div>
-    </footer>
-    <!-- End of Business and Directions -->
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/our-activites.js"></script>
-  </body>
+    </div>
+    <div class="text-gray-400 text-[1.4rem]">
+      © <span data-currYear></span> SAB.AZ. All rights reserved!
+    </div>
+  </footer>
+  <!-- End of Business and Directions -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/our-activites.js"></script>
+</body>
+
 </html>
