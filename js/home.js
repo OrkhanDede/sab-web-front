@@ -357,16 +357,42 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.add("fade-out-distributing");
       }
       // Partners
-      if (
-        (section === 5 + +isMobile && direction == "down") ||
-        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 5 + +isMobile && direction == "up") ||
-        (section === 5 + +isMobile && direction == "none")
-      ) {
+      // if (
+      //   (section === 5 + +isMobile && direction == "down") ||
+      //   // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
+      //   (section === 5 + +isMobile && direction == "up") ||
+      //   (section === 5 + +isMobile && direction == "none")
+      // ) {
+      //   const titles = document.querySelectorAll(".partners-title");
+      //   const slides = document.querySelectorAll(".partners-slides");
+      //   titles.forEach((title) => {
+      //     title.style.opacity = 1;
+      //     title.classList.add("fade-right-to-left");
+      //   });
+      //   slides.forEach((slide) => {
+      //     slide.style.opacity = 1;
+      //     slide.classList.add("fade-left-to-right");
+      //   });
+      // } else {
+      //   const titles = document.querySelectorAll(".partners-title");
+      //   const slides = document.querySelectorAll(".partners-slides");
+
+      //   titles.forEach((title) => {
+      //     title.style.opacity = 0;
+      //     title.classList.remove("fade-right-to-left");
+      //   });
+      //   slides.forEach((slide) => {
+      //     slide.style.opacity = 0;
+      //     slide.classList.remove("fade-left-to-right");
+      //   });
+      // }
+    },
+    onLeave: function (origin, destination, direction) {
+      const section = destination.index;
+
+      if (section === 5 + +isMobile && direction == "down") {
         const titles = document.querySelectorAll(".partners-title");
         const slides = document.querySelectorAll(".partners-slides");
-        console.log(slides);
-        console.log(titles);
         titles.forEach((title) => {
           title.style.opacity = 1;
           title.classList.add("fade-right-to-left");
@@ -380,17 +406,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const slides = document.querySelectorAll(".partners-slides");
 
         titles.forEach((title) => {
-          title.style.opacity = 0;
           title.classList.remove("fade-right-to-left");
+          title.style.opacity = 0;
         });
         slides.forEach((slide) => {
-          slide.style.opacity = 0;
           slide.classList.remove("fade-left-to-right");
+          slide.style.opacity = 0;
         });
-      }
-      if (section === 2 + +isMobile && !splideInitialized) {
-        splideInitialized = true;
-        splide.mount();
       }
     },
   });

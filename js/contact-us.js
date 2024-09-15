@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "border-[#CCC]",
       "lg:rounded-[2rem]",
       "rounded-[3rem]",
-      "lg:py-5",
-      "py-7",
+      "lg:py-7",
+      "py-5",
       "lg:placeholder:text-[1.2rem]",
       "placeholder:text-[1.5rem]",
       "lg:px-5",
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (type !== "textarea") {
       element.type = type;
     } else {
-      element.classList.add("h-[10rem]");
+      element.classList.add("lg:h-[10rem]");
     }
     element.name = name;
     element.placeholder = placeHolder;

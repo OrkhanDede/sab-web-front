@@ -196,10 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: false,
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         coverflowEffect: {
           stretch: 0,
-          depth: 150,
+          depth: 450,
         },
       },
       768: {
@@ -361,36 +361,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // if (section === 4 + +isMobile && !swiperInstance) {
       //   swiperInstance =
       // }
-      if (
-        (section === 4 + +isMobile && direction == "down") ||
-        // asagidan yuxari cixanda animasiya istiyirsese kommenti ac
-        (section === 4 + +isMobile && direction == "up") ||
-        (section === 4 + +isMobile && direction == "none")
-      ) {
-        const first = document.getElementById("statistics_first");
-        const second = document.getElementById("statistics_second");
-        const bottom = document.getElementById("statistics_bottom");
-
-        first.style.opacity = 1;
-        second.style.opacity = 1;
-        bottom.style.opacity = 1;
-
-        first.classList.add("fade-top-to-bottom");
-        second.classList.add("fade-top-to-bottom");
-        bottom.classList.add("fade-in-up");
-      } else {
-        const first = document.getElementById("statistics_first");
-        const second = document.getElementById("statistics_second");
-        const bottom = document.getElementById("statistics_bottom");
-
-        first.style.opacity = 0;
-        second.style.opacity = 0;
-        bottom.style.opacity = 0;
-
-        first.classList.remove("fade-top-to-bottom");
-        second.classList.remove("fade-top-to-bottom");
-        bottom.classList.remove("fade-in-up");
-      }
     },
   });
 
