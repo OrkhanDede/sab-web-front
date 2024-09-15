@@ -67,7 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     element.classList.add(
       "bg-[#F0F0F0]",
-      "text-[#818181]",
+      "text-[#000]",
+      "lg:text-[1.4rem]",
+      "text-[1.64rem]",
       "input",
       "border",
       "border-[#CCC]",

@@ -238,37 +238,50 @@
         class="absolute closeDialog top-0 w-full z-[10] h-screen left-0 backdrop-blur-md bg-black bg-opacity-50"
       ></div>
       <div class="bg-white z-[20] rounded-[3rem] lg:max-w-[40vw] w-full">
-        <div class="px-[4rem] py-[1.5rem]">
-          <div class="flex justify-end">
-            <div class="cursor-pointer closeDialog">
-              <img class="w-10" src="/assets/icons/close-black.svg" alt="" />
+        <div
+          class="lg:px-[4rem] px-[3rem] lg:pt-[1.5rem] pb-[1.5rem] pt-[3.5rem] pb-[2rem]"
+        >
+          <div
+            class="flex justify-between gap-[1rem] lg:flex-col flex-row-reverse"
+          >
+            <div
+              class="cursor-pointer w-full flex justify-end items-start closeDialog"
+            >
+              <img
+                class="lg:w-10 w-16"
+                src="/assets/icons/close-black.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex md:items-center md:flex-row flex-col justify-between gap-3"
+            >
+              <h2
+                id="title"
+                class="lg:text-[2.4rem] leading-[3.6rem] text-[3rem] font-bold"
+              ></h2>
+              <button
+                id="uploadCV"
+                onclick="uploadCV()"
+                class="border whitespace-nowrap rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold lg:h-[4rem] h-[5rem] lg:text-[1.4rem] text-[1.63rem] transition-colors text-secondary hover:bg-primary hover:border-primary hover:text-white transition-colors border-secondary flex gap-2 justify-center items-center"
+              >
+                <span data-translate="upload_cv"></span>
+                <img
+                  class="w-5"
+                  src="/assets/icons/arrow-right.svg"
+                  alt="arrow-right"
+                />
+              </button>
+              <button
+                id="thankYouBtn"
+                style="display: none"
+                class="border rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold h-[4rem] text-[1.4rem] transition-colors bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center"
+              >
+                <span data-translate="thank_you"></span>
+              </button>
             </div>
           </div>
-          <div
-            class="flex md:items-center md:flex-row flex-col justify-between gap-3"
-          >
-            <h2 id="title" class="text-[2.4rem] font-bold"></h2>
-            <button
-              id="uploadCV"
-              onclick="uploadCV()"
-              class="border whitespace-nowrap rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold h-[4rem] text-[1.4rem] transition-colors text-secondary hover:bg-primary hover:border-primary hover:text-white transition-colors border-secondary flex gap-2 justify-center items-center"
-            >
-              <span data-translate="upload_cv"></span>
-              <img
-                class="w-5"
-                src="/assets/icons/arrow-right.svg"
-                alt="arrow-right"
-              />
-            </button>
-            <button
-              id="thankYouBtn"
-              style="display: none"
-              class="border rounded-full transition-colors px-5 more_btn w-max business-brands font-semibold h-[4rem] text-[1.4rem] transition-colors bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center"
-            >
-              <span data-translate="thank_you"></span>
-            </button>
-          </div>
-          <div class="text-[1.4rem] pt-1 font-[400]">
+          <div class="flex lg:text-[1.4rem] text-[1.63rem] pt-1 font-[400]">
             <span data-translate="deadline"></span>:
             <span id="deadline"></span>
           </div>
@@ -276,7 +289,7 @@
         <div class="pb-4 rounded-b-[3rem] bg-[#F0F0F0] lg:h-[30rem] h-[40vh]">
           <div
             id="content"
-            class="w-full text-[1.4rem] px-[4rem] py-8 h-full overflow-y-scroll"
+            class="w-full lg:text-[1.4rem] text-[1.63rem] px-[4rem] py-8 h-full overflow-y-scroll"
           ></div>
         </div>
       </div>
