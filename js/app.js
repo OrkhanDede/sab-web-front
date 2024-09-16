@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavbar = document.getElementById("mobileNavbar");
   const preloader = document.getElementById("preloader");
 
-  preloader.style.display = "none";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 2000);
   hamburgerIcon.addEventListener("click", () => {
     mobileNavbar.classList.remove("translate-x-[100vw]");
     mobileNavbar.classList.add("translate-x-0");
