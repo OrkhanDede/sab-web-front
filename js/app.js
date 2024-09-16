@@ -4,9 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavbar = document.getElementById("mobileNavbar");
   const preloader = document.getElementById("preloader");
 
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 2000);
+  if (!sessionStorage.getItem("preloader")) {
+    preloader.style.display = "flex";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 1000);
+  }
+
+  sessionStorage.setItem("preloader", true);
   hamburgerIcon.addEventListener("click", () => {
     mobileNavbar.classList.remove("translate-x-[100vw]");
     mobileNavbar.classList.add("translate-x-0");
