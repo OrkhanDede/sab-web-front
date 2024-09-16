@@ -6,48 +6,26 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="/assets/logos/favicon.png"
+      href="assets/logos/favicon.png"
     />
-    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/logos/favicon.png" />
     <title>SAB</title>
     <!-- Scripts -->
-    <script src="/js/translate.js"></script>
+    <script src="js/translate.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/packages/tailwind.config.js"></script>
+    <script src="js/packages/tailwind.config.js"></script>
     <!-- Links -->
     <!-- Links CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.css"
-      integrity="sha512-CWyM/Ni2h1mWRsWWmOswyfpQFadUhIaq89gkx6pfykOtbEhMvXutCrvbNR7fWQAh4QNss2pVndPw6InDfKhdXw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.min.js"
-      integrity="sha512-0cGwK45zLVrjT58aVytud9na+iSkLgGN0toVxDCC8KMaT+liq3WY7EQPUW4CRcmr3M1WY69J8mXAZtyOU/+9bw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/js/packages/fullpage.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styles/packages/fullpage.css" />
+    <script src="js/packages/fullpage.min.js"></script>
+    <link href="styles/packages/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/packages/swiper-bundle.min.css" />
+    <link href="styles/packages/splide.min.css" rel="stylesheet" />
     <!-- Inside Links -->
-    <link rel="stylesheet" href="/styles/root.css" />
-    <link rel="stylesheet" href="/styles/app.css" />
-    <link rel="stylesheet" href="/styles/home.css" />
-    <link rel="stylesheet" href="/styles/packages/swiper.css" />
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/packages/swiper.css" />
   </head>
 
   <body class="w-screen overflow-x-hidden">
@@ -56,7 +34,7 @@
       class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3.3rem] justify-between"
     >
       <a
-        href="/index.html"
+        href="index.html"
         class="lg:w-[11.4rem] lg:h-[5.9rem] w-[12rem] h-[6.2rem] transition-all logo_anchor"
       >
         <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
@@ -190,18 +168,18 @@
     </div>
     <!-- End of header -->
     <!-- Preloader -->
-  <div
-    id="preloader"
-    class="fixed top-0 left-0 w-full flex justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
-  >
-    <img
-      class="preloader-animation w-[10rem]"
-      src="/assets/logos/logo.svg"
-      alt=""
-    />
-  </div>
+    <div
+      id="preloader"
+      class="fixed top-0 left-0 w-full flex justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
+    >
+      <img
+        class="preloader-animation w-[10rem]"
+        src="/assets/logos/logo.svg"
+        alt=""
+      />
+    </div>
     <div id="fullpage">
-    <!-- Banner -->
+      <!-- Banner -->
       <section
         data-anchor="banner"
         class="w-full section h-screen overflow-x-hidden"
@@ -215,13 +193,14 @@
                 alt=""
               />
             </div>
-            <div class="swiper-slide w-full h-screen">
+            <!-- <div class="swiper-slide w-full h-screen">
               <img
                 class="w-full h-full object-cover"
                 src="/assets/images/banner/2.png"
                 alt=""
               />
             </div>
+            -->
             <div class="swiper-slide w-full h-screen">
               <img
                 class="w-full h-full object-cover"
@@ -1017,13 +996,12 @@
     </div>
     <!-- End of Business and Directions -->
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/js/packages/swiper.config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/packages/flowbite.min.js"></script>
+    <script src="js/packages/swiper-bundle.min.js"></script>
+    <script src="js/packages/swiper.config.js"></script>
+    <script src="js/packages/splide.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/packages/splide.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   </body>
 </html>

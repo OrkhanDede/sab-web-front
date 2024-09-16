@@ -290,7 +290,7 @@ function appendVacations(vacation) {
   element.setAttribute("vacation-data", vacation);
 
   const title = document.createElement("h5");
-  title.classList.add("text-[3rem]", "leading-[1.3em]", "font-[600]", "pb-3");
+  title.classList.add("text-[3rem]", "leading-[1.3em]", "font-[500]", "pb-3");
   title.textContent = vacation.title[lang];
   element.appendChild(title);
 

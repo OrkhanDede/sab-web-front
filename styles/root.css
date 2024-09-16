@@ -66,10 +66,8 @@ textarea:focus {
   --tw-ring-offset-width: 0px !important;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #ccc !important;
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   border-color: #ccc !important;
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
     var(--tw-shadow);
@@ -105,6 +103,7 @@ textarea:focus {
 .font-myanmar-bold {
   font-family: "Myanmar Text Bold";
 }
+
 .fp-overflow {
   overflow-y: hidden !important;
   overflow-x: hidden !important;
@@ -115,19 +114,39 @@ textarea:focus {
 .fp-watermark {
   display: none !important;
 }
+
+
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: var(--primary-red) !important;
 }
+
 #fp-nav.fp-right {
   right: 1.5rem !important;
 }
+
+#fp-nav ul li a span {
+  background: red;
+  width: 5px !important;
+  height: 5px !important;
+  margin-left: -5px !important
+}
+
+#fp-nav ul li a.active span {
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: -7.5px !important
+}
+
 .splide__arrow {
   transform: translateY(0) !important;
 }
+
 .swiper-pagination-bullet {
   padding: 0.5rem;
 }
+
 .swiper-pagination-bullet-active {
   border: 2px solid #fff;
 }
