@@ -120,7 +120,7 @@ textarea:focus {
   background: var(--primary-red) !important;
 }
 #fp-nav.fp-right {
-  right: 1rem !important;
+  right: 1.5rem !important;
 }
 .splide__arrow {
   transform: translateY(0) !important;
