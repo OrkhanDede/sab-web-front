@@ -65,18 +65,27 @@
   animation: fedeRightToLeft 1.5s ease forwards;
 }
 
+.preloader-fade-out-init {
+  pointer-events: none;
+  animation: preloaderFadeOut 5s forwards;
+}
+
 .preloader-fade-out {
   pointer-events: none;
-  animation: preloaderFadeOut 3s forwards;
+  animation: preloaderFadeOut 1.5s forwards;
 }
 
 .grow-animation {
-  animation: grow 2.5s ease-in-out infinite;
+  animation: grow 1.5s forwards;
+}
+
+.grow-animation-init {
+  animation: grow 5s forwards;
 }
 
 @keyframes grow {
   from {
-    width: 0px;
+    width: 0;
     opacity: 1;
   }
   to {

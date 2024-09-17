@@ -44,10 +44,20 @@
     <link rel="stylesheet" href="/styles/packages/swiper.css" />
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        window.onload = function () {
-          const preloader = document.getElementById("preloader");
-          preloader.classList.add("preloader-fade-out");
-        };
+        const preloader = document.getElementById("preloader");
+        const logo = document.querySelector("#preloader img");
+
+        if (!sessionStorage.getItem("preload")) {
+          sessionStorage.setItem("preload", "true");
+
+          preloader.classList.add("preloader-fade-out-init");
+          logo.classList.add("grow-animation-init");
+        } else {
+          window.onload = function () {
+            preloader.classList.add("preloader-fade-out");
+            logo.classList.add("grow-animation");
+          };
+        }
       });
     </script>
   </head>
@@ -58,7 +68,7 @@
       id="preloader"
       class="flex fixed top-0 left-0 w-full justify-center items-center h-[100vh] backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
     >
-      <img class="grow-animation" src="/assets/logos/logo.svg" alt="" />
+      <img class="w-0" src="/assets/logos/logo.svg" alt="" />
     </div>
     <!-- Header -->
     <div
