@@ -35,9 +35,9 @@
 
           // Optionally, remove the element from the DOM after the transition
           preloader.addEventListener('transitionend', function () {
-            preloader.style.display = 'none'; // Or use preloader.remove() to remove it completely
+            preloader.classList.add("hidden")
           });
-        }, 2000);
+        }, 3000);
       };
     });
 
@@ -47,8 +47,8 @@
 <body class="w-screen overflow-x-hidden">
   <!-- Preloader -->
   <div id="preloader"
-    class="flex fixed top-0 left-0 w-full  justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]">
-    <img class="grow" src="/assets/logos/logo.svg" alt="" />
+    class="flex fixed top-0 left-0 w-full justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]">
+    <img class="grow w-60 h-60" src="/assets/logos/logo.svg" alt="" />
   </div>
   <!-- Header -->
   <div

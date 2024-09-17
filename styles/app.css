@@ -72,7 +72,7 @@
 }
 
 #preloader img {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
