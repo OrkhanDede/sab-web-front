@@ -67,17 +67,21 @@
 
 .preloader-fade-out {
   pointer-events: none;
-  animation: preloaderFadeOut 1.5s forwards;
+  animation: preloaderFadeOut 2.5s forwards;
+}
+
+.grow-animation {
+  animation: grow 1.5s ease-in-out infinite;
 }
 
 @keyframes grow {
   from {
     width: 0px;
-    height: 0px;
+    opacity: 1;
   }
   to {
     width: 10rem;
-    height: 10rem;
+    opacity: 0;
   }
 }
 
