@@ -32,11 +32,6 @@
           const preloader = document.getElementById("preloader");
           // Add a fade-out class
           preloader.classList.add('fade-out');
-
-          // Optionally, remove the element from the DOM after the transition
-          preloader.addEventListener('transitionend', function () {
-            preloader.classList.add("hidden")
-          });
         }, 2000);
       };
     });
