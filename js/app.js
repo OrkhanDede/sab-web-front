@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
   // sessionStorage.setItem("preloader", true);
-  // hamburgerIcon.addEventListener("click", () => {
-  //   mobileNavbar.classList.remove("translate-x-[100vw]");
-  //   mobileNavbar.classList.add("translate-x-0");
-  // });
+  hamburgerIcon.addEventListener("click", () => {
+    mobileNavbar.classList.remove("translate-x-[100vw]");
+    mobileNavbar.classList.add("translate-x-0");
+  });
 
   closeIcon.addEventListener("click", () => {
     mobileNavbar.classList.add("translate-x-[100vw]");
