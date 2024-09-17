@@ -9,46 +9,57 @@
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
 }
+
 .logo_anchor {
   background: url("/assets/logos/logo.svg") no-repeat center;
   background-size: cover;
 }
+
 .banner-arrow-btn {
   display: none;
 }
+
 @media only screen and (min-width: 991px) {
   #mobileNavbar {
     display: none;
   }
+
   .banner-arrow-btn {
     display: block;
   }
+
   .logo_anchor:hover {
     background: url("/assets/logos/logo-white.svg") no-repeat center;
     background-size: cover;
   }
 }
+
 .mobile-navbar {
   background: url(/assets/images/@core/partner_bg.png), var(--secondary-red);
   background-size: cover;
 }
+
 .active-navbar {
   background-color: #ffffff;
   color: var(--primary-red);
   border: 1px solid var(--primary-red);
 }
+
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 1.5s ease forwards;
 }
+
 .fade-top-to-bottom {
   opacity: 0;
   animation: fadeTopToBottom 1.5s ease forwards;
 }
+
 .fade-left-to-right {
   opacity: 0;
   animation: fedeLeftToRight 1.5s ease forwards;
 }
+
 .fade-right-to-left {
   opacity: 0;
   animation: fedeRightToLeft 1.5s ease forwards;
@@ -60,17 +71,42 @@
   display: inline-block;
 }
 
+#preloader img {
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+/* Grow */
+.grow {
+  animation-name: grow;
+}
+
+@keyframes grow {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1.15);
     /* filter: grayscale(1); */
     opacity: 0.8;
   }
+
   50% {
     transform: scale(0.85);
     /* filter: grayscale(0.5); */
     opacity: 0.9;
   }
+
   100% {
     transform: scale(1);
     /* filter: grayscale(0); */
@@ -82,6 +118,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -91,6 +128,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -101,6 +139,7 @@
     opacity: 0;
     transform: translateY(180px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -111,15 +150,18 @@
   from {
     transform: translateY(-180px);
   }
+
   to {
     transform: translateY(0);
   }
 }
+
 @keyframes fedeLeftToRight {
   from {
     opacity: 0;
     transform: translateX(180px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -131,6 +173,7 @@
     opacity: 0;
     transform: translateX(-180px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
