@@ -26,14 +26,11 @@
     <link rel="stylesheet" href="styles/app.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/packages/swiper.css" />
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         window.onload = function () {
-          setTimeout(() => {
-            const preloader = document.getElementById("preloader");
-            preloader.classList.add("preloader-fade-out");
-          }, 1500);
+          const preloader = document.getElementById("preloader");
+          preloader.classList.add("preloader-fade-out");
         };
       });
     </script>
@@ -43,9 +40,9 @@
     <!-- Preloader -->
     <div
       id="preloader"
-      class="flex fixed top-0 left-0 w-full justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
+      class="flex fixed top-0 left-0 w-full justify-center items-center h-screen backdrop-blur-md bg-white z-[9999]"
     >
-      <img class="grow" src="/assets/logos/logo.svg" alt="" />
+      <img class="w-[10rem]" src="/assets/logos/logo.svg" alt="" />
     </div>
     <!-- Header -->
     <div
