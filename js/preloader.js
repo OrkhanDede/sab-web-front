@@ -4,16 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const isFirstTime = !sessionStorage.getItem("preloaderShown");
 
+  if (isFirstTime) {
+    preloaderLogo.classList.add("preloader-logo-animation", "w-0");
+  } else {
+    preloaderLogo.classList.add("w-[15rem]");
+  }
+
   window.onload = function () {
     if (isFirstTime) {
-      preloaderLogo.classList.add("preloader-logo-animation", "w-0");
       setTimeout(() => {
         preloader.classList.add("preloader-fade-out");
-      }, 2000);
+      }, 1000);
       sessionStorage.setItem("preloaderShown", true);
     } else {
       preloader.classList.add("preloader-fade-out");
-      preloaderLogo.classList.add("w-[15rem]");
     }
   };
 });
