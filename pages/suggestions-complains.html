@@ -24,33 +24,16 @@
     <link rel="stylesheet" href="/styles/root.css" />
     <link rel="stylesheet" href="/styles/app.css" />
     <link rel="stylesheet" href="/styles/contact-us.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const preloader = document.getElementById("preloader");
-        const logo = document.querySelector("#preloader img");
-
-        if (!sessionStorage.getItem("preload")) {
-          sessionStorage.setItem("preload", "true");
-
-          preloader.classList.add("preloader-fade-out-init");
-          logo.classList.add("grow-animation-init");
-        } else {
-          window.onload = function () {
-            preloader.classList.add("preloader-fade-out");
-            logo.classList.add("grow-animation");
-          };
-        }
-      });
-    </script>
+    <script src="/js/preloader.js"></script>
   </head>
 
   <body class="w-screen overflow-x-hidden">
     <!-- Preloader -->
     <div
       id="preloader"
-      class="flex fixed top-0 left-0 w-full justify-center items-center h-[100vh] backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
+      class="flex fixed top-0 left-0 w-full justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
     >
-      <img class="opacity-0" src="/assets/logos/logo.svg" alt="" />
+      <img class="preloader-logo" src="/assets/logos/logo.svg" alt="" />
     </div>
     <!-- Header -->
     <div
