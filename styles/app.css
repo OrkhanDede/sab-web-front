@@ -83,12 +83,15 @@
   to {
     width: 15rem;
     height: 15rem;
+    visibility: hidden;
+    /*yox idi*/
   }
 }
 
 .preloader-fade-out {
   pointer-events: none;
-  animation: preloaderFadeOut 0.7s ease-out forwards;
+  /* animation: preloaderFadeOut 0.7s ease-out forwards; */
+  animation: preloaderFadeOut 1.1s ease-out forwards;
 }
 
 @keyframes preloaderFadeOut {
