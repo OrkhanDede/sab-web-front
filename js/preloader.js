@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isFirstTime) {
       setTimeout(() => {
         preloader.classList.add("preloader-fade-out");
-      }, 1000);
+      }, 2000);
       sessionStorage.setItem("preloaderShown", true);
     } else {
       preloader.classList.add("preloader-fade-out");

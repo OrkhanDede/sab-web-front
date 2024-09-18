@@ -66,7 +66,7 @@
 }
 
 .preloader-logo-animation {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-name: grow;
@@ -88,7 +88,7 @@
 
 .preloader-fade-out {
   pointer-events: none;
-  animation: preloaderFadeOut 0.4s ease-out forwards;
+  animation: preloaderFadeOut 0.7s ease-out forwards;
 }
 
 @keyframes preloaderFadeOut {
