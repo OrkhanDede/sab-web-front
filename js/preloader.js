@@ -1,26 +1,19 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const preloader = document.getElementById("preloader");
-
-//   const isFirstTime = !sessionStorage.getItem("preloaderShown");
-
-//   if (isFirstTime) {
-//     setTimeout(() => {
-//       preloader.classList.add("preloader-fade-out");
-//       sessionStorage.setItem("preloaderShown", "true");
-//     }, 3000);
-//   } else {
-//     window.onload = function () {
-//       preloader.classList.add("preloader-fade-out");
-//     };
-//   }
-// });
-
-
 document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.getElementById("preloader");
+  const preloaderLogo = document.querySelector("#preloader .preloader-logo");
+
+  const isFirstTime = !sessionStorage.getItem("preloaderShown");
+
   window.onload = function () {
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-      preloader.classList.add('preloader-fade-out');
-    }, 1000);
+    if (isFirstTime) {
+      preloaderLogo.classList.add("preloader-logo-animation", "w-0");
+      setTimeout(() => {
+        preloader.classList.add("preloader-fade-out");
+      }, 2000);
+      sessionStorage.setItem("preloaderShown", true);
+    } else {
+      preloader.classList.add("preloader-fade-out");
+      preloaderLogo.classList.add("w-[15rem]");
+    }
   };
 });

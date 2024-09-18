@@ -65,7 +65,7 @@
   animation: fedeRightToLeft 1.5s ease forwards;
 }
 
-.preloader-logo {
+.preloader-logo-animation {
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
@@ -73,7 +73,6 @@
 }
 
 /* Grow */
-
 
 @keyframes grow {
   from {
@@ -86,7 +85,6 @@
     height: 15rem;
   }
 }
-
 
 .preloader-fade-out {
   pointer-events: none;
@@ -122,8 +120,6 @@
     opacity: 0;
   }
 }
-
-
    */
 
 @keyframes fadeOut {
