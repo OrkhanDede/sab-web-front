@@ -4,12 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavbar = document.getElementById("mobileNavbar");
   const preloader = document.getElementById("preloader");
 
-  // if (!sessionStorage.getItem("preloader")) {
-  //   preloader.style.display = "flex";
-  //   setTimeout(() => {
-  //     preloader.style.display = "none";
-  //   }, 1000);
-  // }
+
 
   // sessionStorage.setItem("preloader", true);
   hamburgerIcon.addEventListener("click", () => {

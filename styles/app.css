@@ -65,24 +65,46 @@
   animation: fedeRightToLeft 1.5s ease forwards;
 }
 
-/* .preloader-fade-out-init {
-  pointer-events: none;
-  animation: preloaderFadeOut 5s forwards;
-} */
-
-/* .grow-animation {
-  animation: grow 5s forwards;
+.preloader-logo {
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-name: grow;
 }
 
-.grow-animation-init {
-  animation: grow 5s forwards;
-} */
+/* Grow */
+
+
+@keyframes grow {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
 
 .preloader-fade-out {
   pointer-events: none;
-  animation: preloaderFadeOut 3s ease-out forwards;
+  animation: preloaderFadeOut 1s ease-out forwards;
 }
 
+@keyframes preloaderFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* 
 .preloader-logo {
   width: 0;
   opacity: 1;
@@ -101,17 +123,8 @@
   }
 }
 
-@keyframes preloaderFadeOut {
-  0% {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    opacity: 0;
-    background-color: transparent;
-    visibility: hidden;
-  }
-}
+
+   */
 
 @keyframes fadeOut {
   from {
