@@ -36,7 +36,6 @@ const slideContent = [
 
 document.addEventListener("DOMContentLoaded", () => {
   // Banner slide
-  alert(window.innerWidth + " x " + window.innerHeight);
   const isMobile = document.body.clientWidth <= 991 ? 1 : 0;
 
   var swiper = new Swiper(".swiper-container", {
