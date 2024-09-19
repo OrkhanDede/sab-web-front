@@ -1,7 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
+  const preloaderLogo = document.querySelector("#preloader .preloader-logo");
   window.onload = function () {
-    preloader.classList.add("preloader-fade-out");
+
+    setTimeout(() => {
+      preloader.classList.add('preloader-fade-out');
+      if (preloaderLogo) {
+        //preloaderLogo.classList.add("preloader-logo-animation");
+      }
+    }, 2000);
+    // preloader.classList.add("preloader-fade-out");
+    // if (preloaderLogo) {
+    //   preloaderLogo.classList.add("preloader-logo-animation");
+    // }
   };
 });
 

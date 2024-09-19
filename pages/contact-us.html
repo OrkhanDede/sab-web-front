@@ -1,271 +1,153 @@
 <!DOCTYPE html>
 <html lang="az">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/assets/logos/favicon.png"
-    />
-    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
-    <title>SAB</title>
-    <!-- Scripts -->
-    <script src="/js/translate.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/packages/tailwind.config.js"></script>
-    <!-- Links -->
-    <!-- Links CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <!-- Inside Links -->
-    <link rel="stylesheet" href="/styles/root.css" />
-    <link rel="stylesheet" href="/styles/app.css" />
-    <link rel="stylesheet" href="/styles/contact-us.css" />
-    <script src="/js/preloader.js"></script>
-  </head>
 
-  <body class="w-screen overflow-x-hidden">
-    <!-- Preloader -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="/assets/logos/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+  <title>SAB</title>
+  <!-- Scripts -->
+  <script src="/js/translate.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/packages/tailwind.config.js"></script>
+  <!-- Links -->
+  <!-- Links CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Inside Links -->
+  <link rel="stylesheet" href="/styles/root.css" />
+  <link rel="stylesheet" href="/styles/app.css" />
+  <link rel="stylesheet" href="/styles/contact-us.css" />
+</head>
+
+<body class="w-screen overflow-x-hidden">
+  <!-- Header -->
+  <div class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3rem] justify-between">
+    <a href="/index.html" class="md:w-[11.4rem] md:h-[5.9rem] w-[12rem] h-[6.2rem] transition-all logo_anchor">
+      <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
+    </a>
     <div
-      id="preloader"
-      class="flex fixed top-0 left-0 w-full justify-center items-center h-screen backdrop-blur-md bg-black bg-opacity-50 z-[9999]"
-    >
-      <img class="preloader-logo w-0" src="/assets/logos/logo.svg" alt="" />
+      class="font-montserrat h-[6rem] lg:flex hidden bg-[#F0F0F0] rounded-full border text-[1.7rem] border-gray-300 items-center whitespace-nowrap font-[600]">
+      <a href="/pages/about-us.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="about_us_title"></a>
+      <a href="/pages/buisness-brands.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="business_brands_title"></a>
+      <a href="/pages/our-activites.html"
+        class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="our_activities_title"></a>
+      <a href="/pages/career.html"
+        class="xl:px-[3rem] lg:px-[2.5rem] px-[2rem] hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full"
+        data-translate="career_title"></a>
+      <a href="/pages/contact-us.html"
+        class="hover:bg-white active-navbar hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
+        data-translate="contact_us_title"></a>
     </div>
-    <!-- Header -->
-    <div
-      class="flex z-30 fixed w-full items-center lg:top-[4.8rem] top-[2.5rem] lg:px-[7rem] px-[3rem] justify-between"
-    >
-      <a
-        href="/index.html"
-        class="md:w-[11.4rem] md:h-[5.9rem] w-[12rem] h-[6.2rem] transition-all logo_anchor"
-      >
-        <!-- <img src="/assets/logos/logo.svg" class="w-full" alt="logo" /> -->
-      </a>
-      <div
-        class="font-montserrat h-[6rem] lg:flex hidden bg-[#F0F0F0] rounded-full border text-[1.7rem] border-gray-300 items-center whitespace-nowrap font-[600]"
-      >
-        <a
-          href="/pages/about-us.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="about_us_title"
-        ></a>
-        <a
-          href="/pages/buisness-brands.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="business_brands_title"
-        ></a>
-        <a
-          href="/pages/our-activites.html"
-          class="hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="our_activities_title"
-        ></a>
-        <a
-          href="/pages/career.html"
-          class="xl:px-[3rem] lg:px-[2.5rem] px-[2rem] hover:bg-white hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full"
-          data-translate="career_title"
-        ></a>
-        <a
-          href="/pages/contact-us.html"
-          class="hover:bg-white active-navbar hover:text-[#EE3239] h-full flex items-center transition-colors rounded-full xl:px-[3rem] lg:px-[2.5rem] px-[2rem]"
-          data-translate="contact_us_title"
-        ></a>
-      </div>
-      <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
-        data-translate="language"
-        onclick="changeLanguageWithBtn()"
-        type="button"
-      ></button>
-      <div
-        id="hamburgerIcon"
-        class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[6rem] w-[6rem] rounded-full cursor-pointer"
-      >
-        <img src="/assets/icons/hamburger.svg" alt="menu" />
-      </div>
-      <div
-        id="mobileNavbar"
-        class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[2.2rem] px-[3rem] right-0 top-0 z-[30] text-white"
-      >
-        <div class="flex flex-col w-full">
-          <div class="flex h-max w-full items-center justify-between">
-            <button
-              class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
-              data-translate="language"
-              onclick="changeLanguageWithBtn()"
-              type="button"
-            ></button>
-            <div
-              id="closeNavbar"
-              class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer"
-            >
-              <img
-                src="/assets/icons/close.svg"
-                class="w-8 h-8 object-cover"
-                alt="close icon"
-              />
-            </div>
+    <button
+      class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
+      data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+    <div id="hamburgerIcon"
+      class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[6rem] w-[6rem] rounded-full cursor-pointer">
+      <img src="/assets/icons/hamburger.svg" alt="menu" />
+    </div>
+    <div id="mobileNavbar"
+      class="mobile-navbar transition-transform font-montserrat flex translate-x-[100vw] duration-500 fixed w-full h-screen py-[2.2rem] px-[3rem] right-0 top-0 z-[30] text-white">
+      <div class="flex flex-col w-full">
+        <div class="flex h-max w-full items-center justify-between">
+          <button
+            class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
+            data-translate="language" onclick="changeLanguageWithBtn()" type="button"></button>
+          <div id="closeNavbar"
+            class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer">
+            <img src="/assets/icons/close.svg" class="w-8 h-8 object-cover" alt="close icon" />
           </div>
-          <div class="flex flex-col w-full h-full justify-between">
-            <div
-              class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]"
-            >
-              <a
-                href="/pages/about-us.html"
-                class="text-[3.5rem]"
-                data-translate="about_us_title"
-              ></a>
-              <a
-                href="/pages/buisness-brands.html"
-                class="text-[3.5rem]"
-                data-translate="business_brands_title"
-              ></a>
-              <a
-                href="/pages/our-activites.html"
-                class="text-[3.5rem]"
-                data-translate="our_activities_title"
-              ></a>
-              <a
-                href="/pages/career.html"
-                class="text-[3.5rem]"
-                data-translate="career_title"
-              ></a>
-              <a
-                href="/pages/contact-us.html"
-                class="text-[3.5rem]"
-                data-translate="contact_us_title"
-              ></a>
+        </div>
+        <div class="flex flex-col w-full h-full justify-between">
+          <div
+            class="flex font-[600] uppercase flex-col gap-[3rem] pt-[8rem] whitespace-nowrap text-[1.7rem] font-[600]">
+            <a href="/pages/about-us.html" class="text-[3.5rem]" data-translate="about_us_title"></a>
+            <a href="/pages/buisness-brands.html" class="text-[3.5rem]" data-translate="business_brands_title"></a>
+            <a href="/pages/our-activites.html" class="text-[3.5rem]" data-translate="our_activities_title"></a>
+            <a href="/pages/career.html" class="text-[3.5rem]" data-translate="career_title"></a>
+            <a href="/pages/contact-us.html" class="text-[3.5rem]" data-translate="contact_us_title"></a>
+          </div>
+          <div class="flex flex-col gap-10">
+            <div class="flex gap-10 items-center">
+              <a href="https://www.facebook.com/sabazerbaijann/">
+                <img src="/assets/icons/facebook-mobile.svg" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/sab.azerbaijan/">
+                <img src="/assets/icons/instagram_mobile.svg" alt="instagram" />
+              </a>
+              <a href="https://www.youtube.com/@sabazerbaijan">
+                <img src="/assets/icons/youtube_mobile.svg" alt="youtube" />
+              </a>
             </div>
             <div class="flex flex-col gap-10">
-              <div class="flex gap-10 items-center">
-                <a href="https://www.facebook.com/sabazerbaijann/">
-                  <img src="/assets/icons/facebook-mobile.svg" alt="facebook" />
-                </a>
-                <a href="https://www.instagram.com/sab.azerbaijan/">
-                  <img
-                    src="/assets/icons/instagram_mobile.svg"
-                    alt="instagram"
-                  />
-                </a>
-                <a href="https://www.youtube.com/@sabazerbaijan">
-                  <img src="/assets/icons/youtube_mobile.svg" alt="youtube" />
-                </a>
-              </div>
-              <div class="flex flex-col gap-10">
-                <a class="text-[2rem] font-semibold" href="tel:+994123494433"
-                  >+994 (12) 349 44 33</a
-                >
-                <a
-                  class="text-[2rem] font-semibold"
-                  href="mailto:muraciet@sab.az"
-                  >muraciet@sab.az</a
-                >
-              </div>
-              <div class="text-white text-[2rem] opacity-50">
-                © <span data-currYear></span> SAB.AZ. All rights reserved!
-              </div>
+              <a class="text-[2rem] font-semibold" href="tel:+994123494433">+994 (12) 349 44 33</a>
+              <a class="text-[2rem] font-semibold" href="mailto:muraciet@sab.az">muraciet@sab.az</a>
+            </div>
+            <div class="text-white text-[2rem] opacity-50">
+              © <span data-currYear></span> SAB.AZ. All rights reserved!
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End of header -->
-    <section
-      class="flex w-full h-screen font-montserrat lg:gap-4 gap-3 lg:flex-row flex-col-reverse items-center"
-    >
-      <div
-        class="lg:w-1/2 w-full flex justify-start pb-8 lg:pl-[5rem] pl-[3rem] items-end map-container h-full"
-      >
-        <a
-          class="bg-white lg:py-3 py-2 lg:px-6 px-4 text-[1.3rem] text-[#7E7E7E] border border-gray-300 font-[600] rounded-full"
-          href="https://maps.app.goo.gl/KAM8B4T6h9kS541t8"
-          data-translate="location"
-        ></a>
+  </div>
+  <!-- End of header -->
+  <section class="flex w-full h-screen font-montserrat lg:gap-4 gap-3 lg:flex-row flex-col-reverse items-center">
+    <div class="lg:w-1/2 w-full flex justify-start pb-8 lg:pl-[5rem] pl-[3rem] items-end map-container h-full">
+      <a class="bg-white lg:py-3 py-2 lg:px-6 px-4 text-[1.3rem] text-[#7E7E7E] border border-gray-300 font-[600] rounded-full"
+        href="https://maps.app.goo.gl/KAM8B4T6h9kS541t8" data-translate="location"></a>
+    </div>
+    <div
+      class="lg:w-1/2 lg:px-4 flex flex-col lg:items-center justify-start lg:pt-[20rem] pt-[11rem] px-[3rem] w-full h-full lg:min-h-none min-h-1/2">
+      <div class="flex items-center pb-3 max-w-[45rem] w-full lg:h-[6rem] h-[8rem]">
+        <button id="tabId" data-tab="1" data-translate="suggestions_or_complain"
+          class="font-semibold active-btn border h-full text-[#A4A4A4] text-center lg:text-[1.3rem] text-[1.6rem] border-gray-300 rounded-l-[2.5rem] px-4 w-full"></button>
+        <button id="tabId" data-tab="2" data-translate="business_inquiry"
+          class="font-semibold border-l-0 text-[#A4A4A4] h-full text-center lg:text-[1.3rem] text-[1.6rem] border border-gray-300 rounded-r-[2.5rem] px-4 w-full"></button>
       </div>
-      <div
-        class="lg:w-1/2 lg:px-4 flex flex-col lg:items-center justify-start lg:pt-[20rem] pt-[11rem] px-[3rem] w-full h-full lg:min-h-none min-h-1/2"
-      >
-        <div
-          class="flex items-center pb-3 max-w-[45rem] w-full lg:h-[6rem] h-[8rem]"
-        >
-          <button
-            id="tabId"
-            data-tab="1"
-            data-translate="suggestions_or_complain"
-            class="font-semibold active-btn border h-full text-[#A4A4A4] text-center lg:text-[1.3rem] text-[1.6rem] border-gray-300 rounded-l-[2.5rem] px-4 w-full"
-          ></button>
-          <button
-            id="tabId"
-            data-tab="2"
-            data-translate="business_inquiry"
-            class="font-semibold border-l-0 text-[#A4A4A4] h-full text-center lg:text-[1.3rem] text-[1.6rem] border border-gray-300 rounded-r-[2.5rem] px-4 w-full"
-          ></button>
-        </div>
-        <form class="flex flex-col gap-4 max-w-[45rem] w-full lg:h-max h-full">
-          <div class="flex flex-col gap-4 w-full" id="formGroup"></div>
-          <button
-            class="border whitespace-nowrap rounded-full transition-colors px-10 more_btn lg:w-max font-[500] lg:h-[4rem] h-[4rem] lg:text-[1.4rem] text-sm bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center"
-          >
-            <span
-              class="lg:text-[1.3rem] text-[1.7rem]"
-              data-translate="send"
-            ></span>
-            <img
-              class="lg:w-5 w-7 brightness-[500%]"
-              src="/assets/icons/splide-arrow-right.svg"
-              alt="arrow-right"
-            />
-          </button>
-        </form>
+      <form class="flex flex-col gap-4 max-w-[45rem] w-full lg:h-max h-full">
+        <div class="flex flex-col gap-4 w-full" id="formGroup"></div>
+        <button
+          class="border whitespace-nowrap rounded-full transition-colors px-10 more_btn lg:w-max font-[500] lg:h-[4rem] h-[4rem] lg:text-[1.4rem] text-sm bg-primary border-primary text-white transition-colors border-secondary flex gap-2 justify-center items-center">
+          <span class="lg:text-[1.3rem] text-[1.7rem]" data-translate="send"></span>
+          <img class="lg:w-5 w-7 brightness-[500%]" src="/assets/icons/splide-arrow-right.svg" alt="arrow-right" />
+        </button>
+      </form>
+    </div>
+  </section>
+  <footer
+    class="lg:flex hidden justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-[7rem]">
+    <div class="flex gap-32 items-center">
+      <div class="flex gap-10 items-center">
+        <a href="https://www.facebook.com/sabazerbaijann/" target="_blank">
+          <img class="w-12" src="/assets/social-medias/facebook.png" alt="facebook" />
+        </a>
+        <a href="https://www.instagram.com/sab.azerbaijan/" target="_blank">
+          <img class="w-12" src="/assets/social-medias/instagram.png" alt="instagram" />
+        </a>
+        <a href="https://www.youtube.com/@sabazerbaijan" target="_blank">
+          <img class="w-12" src="/assets/social-medias/youtube.png" alt="youtube" />
+        </a>
       </div>
-    </section>
-    <footer
-      class="lg:flex hidden justify-between font-montserrat border-t border-gray-300 bg-white items-center py-8 px-[7rem]"
-    >
-      <div class="flex gap-32 items-center">
-        <div class="flex gap-10 items-center">
-          <a href="https://www.facebook.com/sabazerbaijann/" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/facebook.png"
-              alt="facebook"
-            />
-          </a>
-          <a href="https://www.instagram.com/sab.azerbaijan/" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/instagram.png"
-              alt="instagram"
-            />
-          </a>
-          <a href="https://www.youtube.com/@sabazerbaijan" target="_blank">
-            <img
-              class="w-12"
-              src="/assets/social-medias/youtube.png"
-              alt="youtube"
-            />
-          </a>
-        </div>
-        <div class="flex gap-14 items-center">
-          <a class="font-[500] text-[1.5rem]" href="tel:+994123494433"
-            >+994 (12) 349 44 33</a
-          >
-          <a class="font-[500] text-[1.5rem]" href="mailto:muraciet@sab.az"
-            >muraciet@sab.az</a
-          >
-        </div>
+      <div class="flex gap-14 items-center">
+        <a class="font-[500] text-[1.5rem]" href="tel:+994123494433">+994 (12) 349 44 33</a>
+        <a class="font-[500] text-[1.5rem]" href="mailto:muraciet@sab.az">muraciet@sab.az</a>
       </div>
-      <div class="text-gray-400 text-[1.4rem]">
-        © <span data-currYear></span> SAB.AZ. All rights reserved!
-      </div>
-    </footer>
-    <!-- End of Business and Directions -->
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/contact-us.js"></script>
-  </body>
+    </div>
+    <div class="text-gray-400 text-[1.4rem]">
+      © <span data-currYear></span> SAB.AZ. All rights reserved!
+    </div>
+  </footer>
+  <!-- End of Business and Directions -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/contact-us.js"></script>
+</body>
+
 </html>
