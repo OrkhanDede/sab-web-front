@@ -228,11 +228,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Business and direcctions
       if (section === 1) {
         const firstContent = document.querySelector(
-          `.business_direction_section_first_content${isMobile ? "_mobile" : ""
+          `.business_direction_section_first_content${
+            isMobile ? "_mobile" : ""
           }`
         );
         const secondContent = document.querySelector(
-          `.business_direction_section_second_content${isMobile ? "_mobile" : ""
+          `.business_direction_section_second_content${
+            isMobile ? "_mobile" : ""
           }`
         );
         firstContent.classList.add("fade-out");
@@ -246,11 +248,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // || (section === 2 && direction == 'down')
       ) {
         const firstContent = document.querySelector(
-          `.business_direction_section_first_content${isMobile ? "_mobile" : ""
+          `.business_direction_section_first_content${
+            isMobile ? "_mobile" : ""
           }`
         );
         const secondContent = document.querySelector(
-          `.business_direction_section_second_content${isMobile ? "_mobile" : ""
+          `.business_direction_section_second_content${
+            isMobile ? "_mobile" : ""
           }`
         );
         firstContent.classList.remove("fade-out");
