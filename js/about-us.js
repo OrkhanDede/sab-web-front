@@ -472,3 +472,24 @@ document.addEventListener("DOMContentLoaded", () => {
         .forEach((ln) => (ln.style.backgroundColor = grayColor));
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.onload = function () {
+    const elements = document.querySelectorAll('.ingredient');
+    const svgImage = document.getElementById('ingredient-img');
+    elements.forEach(element => {
+      const imgSrc = element.getAttribute("data-img-src");
+      element.addEventListener('mouseenter', () => {
+        element.classList.add("selected-ingredient");
+        svgImage.setAttribute('href', imgSrc);
+
+      });
+
+      element.addEventListener('mouseleave', () => {
+        element.classList.remove("selected-ingredient");
+
+      });
+    });
+  };
+});

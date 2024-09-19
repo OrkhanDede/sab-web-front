@@ -149,38 +149,53 @@
       </div>
     </section>
     <!-- Meat section -->
-    <section data-anchor="meats" class="h-screen flex overflow-hidden section font-montserrat bg-[#F0F0F0]">
+    <section data-anchor="meats"
+      class="buisness__selector h-screen flex overflow-hidden section font-montserrat bg-[#F0F0F0]">
       <div class="w-full h-full">
         <div class="lg:flex hidden h-full overflow-hidden">
           <div class="w-[58%] h-full relative">
-            <div
-              class="h-[137vh] w-[108vw] absolute bg-[#F0F0F0] z-[3] left-[-50vw] top-[-17vh] p-32 rounded-full border border-[#7A7878] meet-slider">
-              <img id="meat-image" style="object-position: left; object-fit: cover"
-                class="w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image meat"
-                src="/assets/images/about-us/meet.jpg" alt="meet" />
-            </div>
+            <svg width="1200" height="1080" viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0_2637_958" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1200"
+                height="1080">
+                <rect width="1200" height="1080" fill="#F0F0F0" />
+              </mask>
+              <g mask="url(#mask0_2637_958)">
+                <ellipse cx="330.5" cy="541" rx="650.5" ry="651" fill="url(#pattern0_2637_958)" />
+                <circle cx="330.5" cy="540.5" r="767.5" stroke="#989898" stroke-width="2" />
+              </g>
+              <defs>
+                <pattern id="pattern0_2637_958" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#ingredient-img" transform="translate(-0.250485) scale(0.000366448)" />
+                </pattern>
+                <image id="ingredient-img" width="4096" height="2731" href="/assets/images/about-us/meet.jpg" />
+
+              </defs>
+            </svg>
+
           </div>
+
           <div class="w-[42%] h-full pt-[16rem] relative meet_section_info flex flex-col justify-center">
             <h3 data-translate="made_with_halal_ingredients"
               class="text-secondary w-4/5 pl-[7.5rem] h-[20rem] 2xl:text-[4rem] xl:text-[3.5rem] lg:text-[3rem] md:text-[2.5rem] text-[2rem] leading-[1.2em] uppercase font-bold">
             </h3>
             <div class="flex flex-col">
               <div
-                class="flex flex-row-reverse pb-20 justify-end w-max cursor-pointer items-center -translate-x-[0.7rem] meet-option"
+                class="flex flex-row-reverse pb-20 justify-end w-max cursor-pointer items-center -translate-x-[0.7rem] meet-option ingredient selected-ingredient"
                 data-img-src="/assets/images/about-us/meet.jpg" data-meat-type="meat">
-                <h5 class="lg:text-[3.5rem] pl-3 text-[2rem] capitalize font-[600] meat-titles meet text-secondary"
+                <h5 class="lg:text-[3.5rem] pl-3 text-[2rem] capitalize font-[600] meat-titles meet text-[#7A7878]"
                   data-translate="beef_title"></h5>
                 <div class="bg-[#7A7878] w-[6.4rem] h-[0.1rem] line"></div>
               </div>
               <div
-                class="flex flex-row-reverse py-20 justify-end w-max cursor-pointer items-center -translate-x-[2.5rem] meet-option"
+                class="flex flex-row-reverse py-20 justify-end w-max cursor-pointer items-center -translate-x-[2.5rem] meet-option ingredient"
                 data-img-src="/assets/images/about-us/turkey.png" data-meat-type="turkey">
                 <h5 class="lg:text-[3.5rem] pl-3 text-[2rem] capitalize font-[600] meat-titles turkey text-[#7A7878]"
                   data-translate="turkey_title"></h5>
                 <div class="bg-[#7A7878] w-[7.5rem] h-[0.1rem] line"></div>
               </div>
               <div
-                class="flex flex-row-reverse py-20 justify-end w-max cursor-pointer items-center 3xl:-translate-x-[8rem] -translate-x-[9.4rem] meet-option"
+                class="flex flex-row-reverse py-20 justify-end w-max cursor-pointer items-center 3xl:-translate-x-[8rem] -translate-x-[9.4rem] meet-option ingredient"
                 data-img-src="/assets/images/about-us/chicken.jpg" data-meat-type="chicken">
                 <h5 class="lg:text-[3.5rem] pl-3 text-[2rem] capitalize font-[600] meat-titles chicken text-[#7A7878]"
                   data-translate="chicken_title"></h5>
@@ -189,6 +204,9 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="lg:hidden relative pt-[11rem] flex flex-col gap-[3rem]">
           <div class="px-[3rem] w-full">
             <h3 data-translate="made_with_halal_ingredients"
