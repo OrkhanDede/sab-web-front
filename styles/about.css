@@ -12,6 +12,15 @@
   border-color: var(--primary-red) !important;
 }
 
+.meat-title.text-secondary~.border::after {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  background-color: var(--primary-red) !important;
+}
+
 .meet_section_info .meet-option_icon {
   border-color: #7A7878 !important;
   background-color: #f0f0f0;

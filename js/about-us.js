@@ -356,6 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+
   const meatImage = document.getElementById("meat-image");
   const mobileMeatSectionBanner = document.getElementById(
     "mobileMeatSectionBanner"
@@ -365,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultTextClass = "text-secondary";
   const defaultRedColor = "#EE3239";
   const grayColor = "#7A7878";
-  const meetTitles = document.querySelectorAll(".meat-titles");
+  const meetTitles = document.querySelectorAll(".meat-title");
   const mobileTitles = document.querySelectorAll(".mobile_meat_title");
 
   mobileTitles.forEach((title) => {
@@ -385,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       title.classList.add("active-mobile-meat-type");
-      const selectedTitle = this.querySelector(".meat-titles");
+      const selectedTitle = this.querySelector(".meat-title");
       selectedTitle.classList.add("active-mobile-line");
       selectedTitle.style.color = defaultRedColor;
 
