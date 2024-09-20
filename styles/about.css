@@ -2,41 +2,57 @@
   clip-path: circle(60%);
 }
 
-.meat-titles.text-secondary ~ .line {
+
+
+.meat-title.text-secondary~.line {
   background-color: var(--primary-red) !important;
 }
-.meat-titles.text-secondary ~ .border {
+
+.meat-title.text-secondary~.border {
   border-color: var(--primary-red) !important;
 }
-.meat-titles.text-secondary ~ .border::after {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  background-color: var(--primary-red) !important;
+
+.meet-option_icon {
+  border-color: #7A7878 !important;
+}
+
+.meet_section_info .active {}
+
+.meet_section_info.active .meet-option>.meat-title {
+  color: red !important;
+  ;
+}
+
+.meet-option>.meat-title {
+  color: #7A7878;
 }
 
 .first-place-item .first-place-item-img {
   transform: translateX(20px);
   transition-duration: 500ms;
 }
+
 .first-place-item:hover .first-place-item-img {
   transform: translateX(-10px) scale(1.1);
 }
+
 .first-place-item:hover .first-place-text {
   color: #000000;
 }
+
 .first-place-subitem:hover {
   background-color: var(--primary-red);
 }
-.first-place-subitem:hover > * {
+
+.first-place-subitem:hover>* {
   color: #fff;
 }
-.first-place-subitem > .icon {
+
+.first-place-subitem>.icon {
   filter: brightness(100%);
 }
-.first-place-subitem:hover > .icon {
+
+.first-place-subitem:hover>.icon {
   filter: brightness(1000%);
 }
 
@@ -97,12 +113,11 @@
   opacity: 1;
   filter: brightness(500%) !important;
 }
+
 .ceo-container {
-  background: linear-gradient(
-    180deg,
-    rgba(240, 240, 240, 1) 60%,
-    rgba(238, 50, 57, 1) 40%
-  );
+  background: linear-gradient(180deg,
+      rgba(240, 240, 240, 1) 60%,
+      rgba(238, 50, 57, 1) 40%);
 }
 
 .about .splide__arrow {
@@ -113,6 +128,7 @@
 .meat-section-image.turkey {
   padding-left: 50rem;
 }
+
 /* .meat-section-image.chicken {
 } */
 
@@ -127,6 +143,7 @@
     height: 30rem;
     background-color: #989898;
   }
+
   .mobileMeatSection {
     position: relative;
     width: 130vw;
@@ -140,6 +157,7 @@
     padding: 0 4rem 4rem 4rem;
     border-radius: 0 0 45vh 45vh;
   }
+
   .active-mobile-meat-type::before {
     background-color: var(--primary-red);
   }
@@ -153,6 +171,7 @@
     width: 100% !important;
   }
 }
+
 @media only screen and (min-width: 1910px) and (max-width: 1930px) and (min-height: 900px) and (max-height: 920px) {
   .meet-slider {
     height: 142vh !important;
