@@ -360,11 +360,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMeatSectionBanner = document.getElementById(
     "mobileMeatSectionBanner"
   );
+
   const defaultImageSrc = "/assets/images/about-us/meet.jpg";
   const defaultTextClass = "text-secondary";
   const defaultRedColor = "#EE3239";
   const grayColor = "#7A7878";
-  const meetTitles = document.querySelectorAll(".meat-title");
+  const meetTitles = document.querySelectorAll(".meat-titles");
   const mobileTitles = document.querySelectorAll(".mobile_meat_title");
 
   mobileTitles.forEach((title) => {
@@ -384,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       title.classList.add("active-mobile-meat-type");
-      const selectedTitle = this.querySelector(".");
+      const selectedTitle = this.querySelector(".meat-titles");
       selectedTitle.classList.add("active-mobile-line");
       selectedTitle.style.color = defaultRedColor;
 
@@ -403,39 +404,10 @@ document.addEventListener("DOMContentLoaded", () => {
     option.addEventListener("mouseenter", function () {
       const newSrc = this.getAttribute("data-img-src");
       meatImage.src = newSrc;
-      //meatImage.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image ${meatType}`;
-
-      meetTitles.forEach((title) => {
-        if (title) {
-          title.classList.remove(defaultTextClass);
-          title.style.color = grayColor;
-        }
+      document.querySelectorAll(".meet-option").forEach((other) => {
+        other.classList.remove('active');
       });
-
-      const title = this.querySelector(".meat-title");
-      title.classList.add(defaultTextClass);
-      title.style.color = defaultRedColor;
-    });
-
-    option.addEventListener("mouseleave", function () {
-      meatImage.src = defaultImageSrc;
-      meatImage.className = `w-full lg:pl-[21rem] px-10 rounded-full h-full meat-section-image meat`;
-
-      meetTitles.forEach((title) => {
-        title.classList.remove(defaultTextClass);
-        title.style.color = grayColor;
-      });
-
-      document.querySelector(".meet").classList.add(defaultTextClass);
-      document.querySelector(".meet").style.color = defaultRedColor;
-
-      document
-        .querySelectorAll(".indicator")
-        .forEach((ind) => (ind.style.borderColor = grayColor));
-
-      document
-        .querySelectorAll(".line")
-        .forEach((ln) => (ln.style.backgroundColor = grayColor));
+      this.classList.add('active');
     });
   });
 

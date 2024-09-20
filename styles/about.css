@@ -12,20 +12,34 @@
   border-color: var(--primary-red) !important;
 }
 
-.meet-option_icon {
+.meet_section_info .meet-option_icon {
   border-color: #7A7878 !important;
+  background-color: #f0f0f0;
 }
 
-.meet_section_info .active {}
 
-.meet_section_info.active .meet-option>.meat-title {
-  color: red !important;
-  ;
+.meet_section_info .active>.meet-option_icon {
+  border-color: var(--primary-red) !important;
+  background-color: var(--primary-red);
 }
 
-.meet-option>.meat-title {
+.meet_section_info .meat-title {
   color: #7A7878;
 }
+
+
+
+.meet-option.active .meat-title {
+  color: var(--primary-red)
+    /* Red color when parent div has active class */
+}
+
+
+.meet_section_info .active>.meet-option_icon svg path {
+  fill: white;
+}
+
+
 
 .first-place-item .first-place-item-img {
   transform: translateX(20px);
