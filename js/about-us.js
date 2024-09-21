@@ -401,6 +401,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  mobileTitles[0].classList.add("active-mobile-meat-type")
+
   document.querySelectorAll(".meet-option").forEach((option) => {
     option.addEventListener("mouseenter", function () {
       const newSrc = this.getAttribute("data-img-src");
