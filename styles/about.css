@@ -36,19 +36,14 @@
   color: #7A7878;
 }
 
-
-
 .meet-option.active .meat-title {
-  color: var(--primary-red)
-    /* Red color when parent div has active class */
+  color: var(--primary-red);
 }
 
 
 .meet_section_info .active>.meet-option_icon svg path {
   fill: white;
 }
-
-
 
 .first-place-item .first-place-item-img {
   transform: translateX(20px);
@@ -156,17 +151,7 @@
 } */
 
 @media only screen and (max-width: 991px) {
-  .mobile_meat_title::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    width: 0.2rem;
-    height: 30rem;
-    background-color: #989898;
-  }
-
+  
   .mobileMeatSection {
     position: relative;
     width: 130vw;
@@ -176,13 +161,21 @@
     border-top-color: transparent !important;
   }
 
+  .active-mobile-meat-type div svg path{
+    fill: white;
+  }
+
+  .active-mobile-meat-type h4{
+    color: var(--secondary-red) !important;
+  }
+
+  .active-mobile-meat-type div svg rect{
+    fill: var(--secondary-red);
+  }
+
   #mobileMeatSectionBanner {
     padding: 0 4rem 4rem 4rem;
     border-radius: 0 0 45vh 45vh;
-  }
-
-  .active-mobile-meat-type::before {
-    background-color: var(--primary-red);
   }
 
   .certificate .custom-arrow {
