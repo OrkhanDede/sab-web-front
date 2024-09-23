@@ -84,7 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new fullpage("#fullpage", {
     navigation: true,
-    anchors: ["brands", "statistics", "partners", "map", "export_countries"],
+    anchors: [
+      "brands", 
+      "statistics", 
+      "partners", 
+      "map", 
+      // "export_countries"
+    ],
     afterLoad: function (origin, destination, direction) {
       window.history.replaceState(null, null, `#${destination.anchor}`);
     },

@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "business_directions_dairy",
       "services",
       "statistics",
-      "distributing",
+      // "distributing",
       "partners",
     ],
 
@@ -263,32 +263,32 @@ document.addEventListener("DOMContentLoaded", () => {
         secondContent.classList.add("fade-out");
       }
       // Distributing
-      if (section === 4 + +isMobile) {
-        const firstContent = document.querySelector(
-          `.distributing_first_section${isMobile ? "_mobile" : ""}`
-        );
-        const secondContent = document.querySelector(
-          `.distributing_second_section${isMobile ? "_mobile" : ""}`
-        );
-        firstContent.classList.add("fade-out-distributing");
-        secondContent.classList.remove("fade-out-distributing");
-        secondContent.classList.add("fade-in-distributing");
-      } else if (
-        (section === 3 + +isMobile && direction === "up") ||
-        (section === 2 + +isMobile && direction === "down")
-      ) {
-        const firstContent = document.querySelector(
-          `.distributing_first_section${isMobile ? "_mobile" : ""}`
-        );
-        const secondContent = document.querySelector(
-          `.distributing_second_section${isMobile ? "_mobile" : ""}`
-        );
+      // if (section === 4 + +isMobile) {
+      //   const firstContent = document.querySelector(
+      //     `.distributing_first_section${isMobile ? "_mobile" : ""}`
+      //   );
+      //   const secondContent = document.querySelector(
+      //     `.distributing_second_section${isMobile ? "_mobile" : ""}`
+      //   );
+      //   firstContent.classList.add("fade-out-distributing");
+      //   secondContent.classList.remove("fade-out-distributing");
+      //   secondContent.classList.add("fade-in-distributing");
+      // } else if (
+      //   (section === 3 + +isMobile && direction === "up") ||
+      //   (section === 2 + +isMobile && direction === "down")
+      // ) {
+      //   const firstContent = document.querySelector(
+      //     `.distributing_first_section${isMobile ? "_mobile" : ""}`
+      //   );
+      //   const secondContent = document.querySelector(
+      //     `.distributing_second_section${isMobile ? "_mobile" : ""}`
+      //   );
 
-        firstContent.classList.remove("fade-out-distributing");
-        firstContent.classList.add("fade-in-distributing");
-        secondContent.classList.remove("fade-in-distributing");
-        secondContent.classList.add("fade-out-distributing");
-      }
+      //   firstContent.classList.remove("fade-out-distributing");
+      //   firstContent.classList.add("fade-in-distributing");
+      //   secondContent.classList.remove("fade-in-distributing");
+      //   secondContent.classList.add("fade-out-distributing");
+      // }
     },
     onLeave: function (origin, destination, direction) {
       const section = destination.index;
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bottom.classList.remove("fade-in-up");
       }
       // Partners
-      if (section === 5 + +isMobile && direction == "down") {
+      if (section === 4 + +isMobile && direction == "down") {
         const titles = document.querySelectorAll(".partners-title");
         const slides = document.querySelectorAll(".partners-slides");
         titles.forEach((title) => {
