@@ -10,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
       preloaderBg.classList.add("bottom-0");
       preloader.style.display = "none"
     }, 1000);
+    
   };
 });
