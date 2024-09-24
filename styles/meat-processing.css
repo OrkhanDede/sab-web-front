@@ -48,6 +48,7 @@ button.active {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: calc(100% - 7rem);
   .map {
     max-width: 50rem;
     width: 100%;
