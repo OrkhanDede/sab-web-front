@@ -9,6 +9,9 @@
   .banner-title {
     line-height: 1.3em !important;
   }
+  .main-section{
+    height: calc(100% - 7rem);
+  }
 }
 @media only screen and (max-width: 991px) {
   .banner {
