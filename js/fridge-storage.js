@@ -107,10 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
   var splide = new Splide(".splide", {
     type: "loop",
     gap: "2rem",
-    // autoplay: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    resetProgress: false,
     padding: { left: 0, right: "5rem", top: 0, bottom: 0 },
     easing: "ease",
     pagination: true,
@@ -130,6 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   splide.on("moved", function (newIndex) {
     updateSlideContent(newIndex, "slide-description", aboutCompanySlide);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      splide.go('<');
+    } else if (event.key === "ArrowRight") {
+      splide.go('>');
+    }
   });
 
   function mountSlide(slideName, customPaginationId, customArrowServiceId) {

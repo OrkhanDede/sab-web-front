@@ -132,10 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   var splide = new Splide(".splide", {
     type: "loop",
     gap: "2rem",
-    autoplay: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    resetProgress: false,
     padding: { right: "5rem", left: "0" },
     easing: "ease",
     pagination: true,
@@ -178,10 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: true,
     centeredSlides: true,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
     coverflowEffect: {
       rotate: 0,
       stretch: 100,
@@ -352,7 +344,25 @@ document.addEventListener("DOMContentLoaded", () => {
     afterLoad: function (origin, destination, direction) {
       const section = destination.index;
       window.history.replaceState(null, null, `#${destination.anchor}`);
-
+      if(section === 0){
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowLeft") {
+            splide.go('<');
+          } else if (event.key === "ArrowRight") {
+            splide.go('>');
+          }
+        });
+      }
+      if(section === 5 + (+isMobile)){
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowLeft") {
+            certificateSlider.slidePrev();
+          } else if (event.key === "ArrowRight") {
+            certificateSlider.slideNext();
+          }
+        });
+      }
+      
     },
   });
 

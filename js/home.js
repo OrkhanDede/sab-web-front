@@ -37,7 +37,7 @@ const slideContent = [
 document.addEventListener("DOMContentLoaded", () => {
   // Banner slide
   const isMobile = document.body.clientWidth <= 991 ? 1 : 0;
-
+  
   var swiper = new Swiper(".swiper-container", {
     effect: "fade",
     pagination: {
@@ -88,10 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   var splide = new Splide(".splide", {
     type: "loop",
     gap: "3rem",
-    autoplay: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    resetProgress: false,
     padding: { right: "8rem", left: "0" },
     easing: "ease",
     pagination: true,
@@ -175,6 +171,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   splide.on("moved", function (newIndex) {
     updateSlideContent(newIndex);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      splide.go('<');
+    } else if (event.key === "ArrowRight") {
+      splide.go('>');
+    }
   });
 
   splide.on("mounted", function () {
