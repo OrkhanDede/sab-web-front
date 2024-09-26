@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,11 +86,23 @@
         ></a>
       </div>
       <button
-        class="font-montserrat border border-gray-300 hover:text-primary transition-colors bg-[#F0F0F0] rounded-full lg:flex hidden h-[6rem] px-[2.5rem] flex items-center text-[1.7rem] font-[600] capitalize"
+        class="font-montserrat bg-[#F0F0F0] lg:flex hidden rounded-full border border-gray-300 flex py-[18px] px-[35px] text-[17px] font-[600] capitalize"
         data-translate="language"
-        onclick="changeLanguageWithBtn()"
+        id="dropdownDefaultButton"
+        data-dropdown-toggle="dropdown"
         type="button"
       ></button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="z-10 hidden bg-[#F0F0F0] divide-y divide-gray-100 border border-gray-300 rounded-[1.4rem] shadow w-32"
+      >
+        <ul
+          id="data-language-list"  
+          class="py-3 text-sm flex flex-col items-center language-list text-gray-700"
+          aria-labelledby="dropdownDefaultButton"
+        ></ul>
+      </div>
       <div
         id="hamburgerIcon"
         class="lg:hidden flex justify-center bg-[#F0F0F0] border border-gray-300 items-center h-[6rem] w-[6rem] rounded-full cursor-pointer"
@@ -106,9 +118,20 @@
             <button
               class="font-montserrat border text-black border-gray-300 bg-[#F0F0F0] rounded-full flex justify-center items-center h-[7rem] w-[8rem] text-[2.2rem] font-[600] capitalize"
               data-translate="language"
-              onclick="changeLanguageWithBtn()"
+              id="dropdownDefaultButtonMobile"
+              data-dropdown-toggle="mobileDropdown"
               type="button"
             ></button>
+            <div
+              id="mobileDropdown"
+              class="z-10 hidden bg-[#F0F0F0] divide-y divide-gray-100 border border-gray-300 rounded-[1.4rem] shadow w-32"
+            >
+              <ul
+                id="data-language-list-mobile"
+                class="py-3 text-sm flex flex-col gap-3 items-center language-list text-gray-700"
+                aria-labelledby="dropdownDefaultButtonMobile"
+              ></ul>
+            </div>
             <div
               id="closeNavbar"
               class="flex bg-white w-[6rem] h-[6rem] cursor-pointer rounded-full justify-center items-center cursor-pointer"
