@@ -2,7 +2,7 @@
   transition: 0.5s all;
 }
 .product-item:hover .info {
-  height: 9rem;
+  height: 45%;
 }
 
 .product-item .description {
